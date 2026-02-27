@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { stripe } from "@/lib/stripe";
+import { getStripe } from "@/lib/stripe";
 import { getCourseBySlug } from "@/lib/courses";
 import { CheckCircle2, Download, ArrowLeft } from "lucide-react";
 import Link from "next/link";
@@ -35,7 +35,7 @@ export default async function SuccessPage({
   let paid = false;
 
   try {
-    const session = await stripe.checkout.sessions.retrieve(session_id);
+    const session = await getStripe().checkout.sessions.retrieve(session_id);
     paid = session.payment_status === "paid";
     courseSlug = (session.metadata?.courseSlug as string) || "";
     const course = getCourseBySlug(courseSlug);
