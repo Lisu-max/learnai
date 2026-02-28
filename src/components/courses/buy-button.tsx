@@ -41,7 +41,7 @@ export function BuyButton({
       onClick={handleCheckout}
       disabled={loading}
       size="lg"
-      className="btn-gradient w-full border-0 py-6 text-base font-semibold text-white"
+      className="btn-gradient-glow w-full border-0 py-6 text-base font-semibold text-white"
     >
       {loading ? (
         <>
