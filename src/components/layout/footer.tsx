@@ -5,8 +5,12 @@ import { siteConfig } from "@/config/site";
 
 export function Footer() {
   return (
-    <footer className="border-t border-border/50 bg-background">
-      <div className="mx-auto max-w-6xl px-4 py-12">
+    <footer className="relative bg-background">
+      <div className="section-divider" />
+      {/* Subtle glow at top */}
+      <div className="pointer-events-none absolute left-1/2 top-0 h-[200px] w-[400px] -translate-x-1/2 bg-purple-600/5 blur-[80px]" />
+
+      <div className="relative mx-auto max-w-6xl px-4 py-12">
         <div className="grid gap-8 md:grid-cols-3">
           <div>
             <Link href="/" className="flex items-center gap-2">

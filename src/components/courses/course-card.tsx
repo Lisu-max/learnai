@@ -13,10 +13,10 @@ const levelColors: Record<string, string> = {
 export function CourseCard({ course }: { course: Course }) {
   return (
     <Link href={`/cours/${course.slug}`} className="group block">
-      <div className="card-gradient flex h-full flex-col p-6 transition-transform duration-300 group-hover:scale-[1.02]">
-        {/* Color accent bar */}
+      <div className="card-glass flex h-full flex-col p-6">
+        {/* Expanding color accent bar */}
         <div
-          className={`mb-4 h-1.5 w-12 rounded-full bg-gradient-to-r ${course.color}`}
+          className={`mb-4 h-1.5 w-12 rounded-full bg-gradient-to-r transition-all duration-500 group-hover:w-full ${course.color}`}
         />
 
         <div className="mb-3 flex items-center gap-2">
@@ -45,11 +45,12 @@ export function CourseCard({ course }: { course: Course }) {
         </div>
 
         <div className="flex items-center justify-between">
-          <span className="text-2xl font-bold gradient-text">
+          <span className="text-2xl font-bold gradient-text-animated">
             {course.priceFormatted}
           </span>
-          <span className="text-sm text-muted-foreground transition-colors group-hover:text-foreground">
-            Voir le détail &rarr;
+          <span className="flex items-center gap-1 text-sm text-muted-foreground transition-all group-hover:text-foreground">
+            Voir le détail
+            <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">&rarr;</span>
           </span>
         </div>
       </div>

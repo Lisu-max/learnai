@@ -1,4 +1,5 @@
 import { Star } from "lucide-react";
+import { Reveal } from "@/components/ui/reveal";
 
 const testimonials = [
   {
@@ -27,28 +28,37 @@ const testimonials = [
 export function Testimonials() {
   return (
     <section className="mx-auto max-w-6xl px-4 py-20">
-      <div className="mb-12 text-center">
-        <h2 className="mb-4 text-3xl font-bold">
-          Ce que disent nos <span className="gradient-text">étudiants</span>
-        </h2>
-        <p className="mx-auto max-w-2xl text-muted-foreground">
-          Plus de 2 000 personnes ont déjà accéléré leur maîtrise de l&apos;IA
-          avec nos formations.
-        </p>
-      </div>
+      <div className="section-divider mb-20" />
 
-      <div className="grid gap-6 md:grid-cols-3">
+      <Reveal>
+        <div className="mb-12 text-center">
+          <h2 className="mb-4 text-3xl font-bold">
+            Ce que disent nos <span className="gradient-text-animated">étudiants</span>
+          </h2>
+          <p className="mx-auto max-w-2xl text-muted-foreground">
+            Plus de 2 000 personnes ont déjà accéléré leur maîtrise de l&apos;IA
+            avec nos formations.
+          </p>
+        </div>
+      </Reveal>
+
+      <Reveal className="reveal-stagger grid gap-6 md:grid-cols-3">
         {testimonials.map((testimonial) => (
-          <div key={testimonial.name} className="card-gradient p-6">
+          <div key={testimonial.name} className="card-glass relative overflow-hidden p-6">
+            {/* Decorative quote mark */}
+            <span className="pointer-events-none absolute -top-2 right-4 select-none font-serif text-7xl text-purple-500/10">
+              &ldquo;
+            </span>
+
             <div className="mb-3 flex gap-1">
               {Array.from({ length: testimonial.rating }).map((_, i) => (
                 <Star
                   key={i}
-                  className="h-4 w-4 fill-amber-400 text-amber-400"
+                  className="star-shimmer h-4 w-4 fill-amber-400 text-amber-400"
                 />
               ))}
             </div>
-            <p className="mb-4 text-sm text-muted-foreground">
+            <p className="relative mb-4 text-sm text-muted-foreground">
               &ldquo;{testimonial.content}&rdquo;
             </p>
             <div>
@@ -59,7 +69,7 @@ export function Testimonials() {
             </div>
           </div>
         ))}
-      </div>
+      </Reveal>
     </section>
   );
 }
