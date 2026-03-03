@@ -4,9 +4,11 @@ import Link from "next/link";
 import { useState } from "react";
 import { siteConfig } from "@/config/site";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu, Brain } from "lucide-react";
+import { Menu, Brain, LogIn, LogOut, User } from "lucide-react";
+import { logout } from "@/app/(auth)/actions";
+import type { User as SupabaseUser } from "@supabase/supabase-js";
 
-export function MobileNav() {
+export function MobileNav({ user }: { user: SupabaseUser | null }) {
   const [open, setOpen] = useState(false);
 
   return (
@@ -34,13 +36,49 @@ export function MobileNav() {
               {item.label}
             </Link>
           ))}
-          <Link
-            href="/cours"
-            onClick={() => setOpen(false)}
-            className="btn-gradient mt-4 rounded-lg px-4 py-3 text-center font-medium text-white"
-          >
-            Voir les formations
-          </Link>
+
+          <div className="my-2 h-px bg-border/50" />
+
+          {user ? (
+            <>
+              <Link
+                href="/compte"
+                onClick={() => setOpen(false)}
+                className="flex items-center gap-3 text-lg text-muted-foreground transition-colors hover:text-foreground"
+              >
+                <User className="h-5 w-5" />
+                Mon compte
+              </Link>
+              <form action={logout}>
+                <button
+                  type="submit"
+                  onClick={() => setOpen(false)}
+                  className="flex items-center gap-3 text-lg text-muted-foreground transition-colors hover:text-foreground"
+                >
+                  <LogOut className="h-5 w-5" />
+                  Déconnexion
+                </button>
+              </form>
+            </>
+          ) : (
+            <>
+              <Link
+                href="/connexion"
+                onClick={() => setOpen(false)}
+                className="flex items-center gap-3 text-lg text-muted-foreground transition-colors hover:text-foreground"
+              >
+                <LogIn className="h-5 w-5" />
+                Se connecter
+              </Link>
+              <Link
+                href="/inscription"
+                onClick={() => setOpen(false)}
+                className="btn-gradient mt-2 rounded-lg px-4 py-3 text-center font-medium text-white"
+              >
+                S&apos;inscrire
+              </Link>
+            </>
+          )}
         </nav>
       </SheetContent>
     </Sheet>

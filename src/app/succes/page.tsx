@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { getStripe } from "@/lib/stripe";
 import { getCourseBySlug } from "@/lib/courses";
-import { CheckCircle2, Download, ArrowLeft } from "lucide-react";
+import { createClient } from "@/lib/supabase/server";
+import { CheckCircle2, Download, ArrowLeft, User } from "lucide-react";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -41,6 +42,20 @@ export default async function SuccessPage({
     const course = getCourseBySlug(courseSlug);
     if (course) {
       courseName = course.title;
+    }
+
+    // Record purchase in Supabase if paid
+    if (paid && session.metadata?.userId) {
+      const supabase = await createClient();
+      await supabase.from("purchases").upsert(
+        {
+          user_id: session.metadata.userId,
+          course_slug: courseSlug,
+          stripe_session_id: session_id,
+          amount_paid: session.amount_total || 0,
+        },
+        { onConflict: "user_id,course_slug" }
+      );
     }
   } catch {
     // Session invalid or Stripe error
@@ -87,7 +102,14 @@ export default async function SuccessPage({
             Télécharger le PDF
           </a>
 
-          <div className="mt-8">
+          <div className="mt-8 flex flex-col items-center gap-3">
+            <Link
+              href="/compte"
+              className="inline-flex items-center gap-2 text-sm text-purple-400 hover:text-purple-300"
+            >
+              <User className="h-4 w-4" />
+              Voir mes formations
+            </Link>
             <Link
               href="/cours"
               className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"

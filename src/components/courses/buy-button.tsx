@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Loader2, ShoppingCart } from "lucide-react";
 
@@ -12,6 +13,7 @@ export function BuyButton({
   priceFormatted: string;
 }) {
   const [loading, setLoading] = useState(false);
+  const router = useRouter();
 
   async function handleCheckout() {
     setLoading(true);
@@ -21,6 +23,11 @@ export function BuyButton({
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ courseSlug }),
       });
+
+      if (res.status === 401) {
+        router.push("/connexion");
+        return;
+      }
 
       const data = await res.json();
 

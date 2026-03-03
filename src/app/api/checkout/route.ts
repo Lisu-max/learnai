@@ -1,9 +1,22 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getStripe } from "@/lib/stripe";
 import { getCourseBySlug } from "@/lib/courses";
+import { createClient } from "@/lib/supabase/server";
 
 export async function POST(req: NextRequest) {
   try {
+    const supabase = await createClient();
+    const {
+      data: { user },
+    } = await supabase.auth.getUser();
+
+    if (!user) {
+      return NextResponse.json(
+        { error: "Vous devez être connecté pour acheter." },
+        { status: 401 }
+      );
+    }
+
     const { courseSlug } = await req.json();
 
     const course = getCourseBySlug(courseSlug);
@@ -32,8 +45,10 @@ export async function POST(req: NextRequest) {
       mode: "payment",
       success_url: `${process.env.NEXT_PUBLIC_BASE_URL}/succes?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${process.env.NEXT_PUBLIC_BASE_URL}/cours/${course.slug}`,
+      customer_email: user.email,
       metadata: {
         courseSlug: course.slug,
+        userId: user.id,
       },
     });
 
