@@ -4,24 +4,10 @@ import Link from "next/link";
 import { useState } from "react";
 import { siteConfig } from "@/config/site";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu, Brain, LogIn, LogOut, User } from "lucide-react";
-import type { User as SupabaseUser } from "@supabase/supabase-js";
+import { Menu, Brain, LogIn } from "lucide-react";
 
-export function MobileNav({ user }: { user: SupabaseUser | null }) {
+export function MobileNav() {
   const [open, setOpen] = useState(false);
-
-  async function handleLogout() {
-    try {
-      const { createClient } = require("@/lib/supabase/client");
-      const supabase = createClient();
-      if (supabase) {
-        await supabase.auth.signOut();
-        window.location.href = "/";
-      }
-    } catch {
-      // ignore
-    }
-  }
 
   return (
     <Sheet open={open} onOpenChange={setOpen}>
@@ -51,46 +37,21 @@ export function MobileNav({ user }: { user: SupabaseUser | null }) {
 
           <div className="my-2 h-px bg-border/50" />
 
-          {user ? (
-            <>
-              <Link
-                href="/compte"
-                onClick={() => setOpen(false)}
-                className="flex items-center gap-3 text-lg text-muted-foreground transition-colors hover:text-foreground"
-              >
-                <User className="h-5 w-5" />
-                Mon compte
-              </Link>
-              <button
-                onClick={() => {
-                  setOpen(false);
-                  handleLogout();
-                }}
-                className="flex items-center gap-3 text-lg text-muted-foreground transition-colors hover:text-foreground"
-              >
-                <LogOut className="h-5 w-5" />
-                Déconnexion
-              </button>
-            </>
-          ) : (
-            <>
-              <Link
-                href="/connexion"
-                onClick={() => setOpen(false)}
-                className="flex items-center gap-3 text-lg text-muted-foreground transition-colors hover:text-foreground"
-              >
-                <LogIn className="h-5 w-5" />
-                Se connecter
-              </Link>
-              <Link
-                href="/inscription"
-                onClick={() => setOpen(false)}
-                className="btn-gradient mt-2 rounded-lg px-4 py-3 text-center font-medium text-white"
-              >
-                S&apos;inscrire
-              </Link>
-            </>
-          )}
+          <Link
+            href="/connexion"
+            onClick={() => setOpen(false)}
+            className="flex items-center gap-3 text-lg text-muted-foreground transition-colors hover:text-foreground"
+          >
+            <LogIn className="h-5 w-5" />
+            Se connecter
+          </Link>
+          <Link
+            href="/inscription"
+            onClick={() => setOpen(false)}
+            className="btn-gradient mt-2 rounded-lg px-4 py-3 text-center font-medium text-white"
+          >
+            S&apos;inscrire
+          </Link>
         </nav>
       </SheetContent>
     </Sheet>
