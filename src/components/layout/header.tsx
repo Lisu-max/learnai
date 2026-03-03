@@ -5,27 +5,44 @@ import { useEffect, useState } from "react";
 import { siteConfig } from "@/config/site";
 import { MobileNav } from "./mobile-nav";
 import { Brain, LogIn, LogOut, User } from "lucide-react";
-import { createClient } from "@/lib/supabase/client";
-import { logout } from "@/app/(auth)/actions";
 import type { User as SupabaseUser } from "@supabase/supabase-js";
 
 export function Header() {
   const [user, setUser] = useState<SupabaseUser | null>(null);
 
   useEffect(() => {
-    const supabase = createClient();
-    if (!supabase) return;
+    try {
+      const { createClient } = require("@/lib/supabase/client");
+      const supabase = createClient();
+      if (!supabase) return;
 
-    supabase.auth.getUser().then(({ data }) => setUser(data.user));
+      supabase.auth.getUser().then(({ data }: { data: { user: SupabaseUser | null } }) => setUser(data.user));
 
-    const {
-      data: { subscription },
-    } = supabase.auth.onAuthStateChange((_event, session) => {
-      setUser(session?.user ?? null);
-    });
+      const {
+        data: { subscription },
+      } = supabase.auth.onAuthStateChange((_event: string, session: { user: SupabaseUser | null } | null) => {
+        setUser(session?.user ?? null);
+      });
 
-    return () => subscription.unsubscribe();
+      return () => subscription.unsubscribe();
+    } catch {
+      // Supabase not available, continue without auth
+    }
   }, []);
+
+  async function handleLogout() {
+    try {
+      const { createClient } = require("@/lib/supabase/client");
+      const supabase = createClient();
+      if (supabase) {
+        await supabase.auth.signOut();
+        setUser(null);
+        window.location.href = "/";
+      }
+    } catch {
+      // ignore
+    }
+  }
 
   return (
     <header className="sticky top-0 z-50 bg-background/80 backdrop-blur-xl">
@@ -57,15 +74,13 @@ export function Header() {
                 <User className="h-4 w-4" />
                 Mon compte
               </Link>
-              <form action={logout}>
-                <button
-                  type="submit"
-                  className="flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-foreground"
-                >
-                  <LogOut className="h-4 w-4" />
-                  Déconnexion
-                </button>
-              </form>
+              <button
+                onClick={handleLogout}
+                className="flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-foreground"
+              >
+                <LogOut className="h-4 w-4" />
+                Déconnexion
+              </button>
             </>
           ) : (
             <>

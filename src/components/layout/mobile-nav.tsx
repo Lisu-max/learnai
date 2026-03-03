@@ -5,11 +5,23 @@ import { useState } from "react";
 import { siteConfig } from "@/config/site";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu, Brain, LogIn, LogOut, User } from "lucide-react";
-import { logout } from "@/app/(auth)/actions";
 import type { User as SupabaseUser } from "@supabase/supabase-js";
 
 export function MobileNav({ user }: { user: SupabaseUser | null }) {
   const [open, setOpen] = useState(false);
+
+  async function handleLogout() {
+    try {
+      const { createClient } = require("@/lib/supabase/client");
+      const supabase = createClient();
+      if (supabase) {
+        await supabase.auth.signOut();
+        window.location.href = "/";
+      }
+    } catch {
+      // ignore
+    }
+  }
 
   return (
     <Sheet open={open} onOpenChange={setOpen}>
@@ -49,16 +61,16 @@ export function MobileNav({ user }: { user: SupabaseUser | null }) {
                 <User className="h-5 w-5" />
                 Mon compte
               </Link>
-              <form action={logout}>
-                <button
-                  type="submit"
-                  onClick={() => setOpen(false)}
-                  className="flex items-center gap-3 text-lg text-muted-foreground transition-colors hover:text-foreground"
-                >
-                  <LogOut className="h-5 w-5" />
-                  Déconnexion
-                </button>
-              </form>
+              <button
+                onClick={() => {
+                  setOpen(false);
+                  handleLogout();
+                }}
+                className="flex items-center gap-3 text-lg text-muted-foreground transition-colors hover:text-foreground"
+              >
+                <LogOut className="h-5 w-5" />
+                Déconnexion
+              </button>
             </>
           ) : (
             <>
