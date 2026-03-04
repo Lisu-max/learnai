@@ -1,6 +1,5 @@
 "use server";
 
-import { redirect } from "next/navigation";
 import { createClient } from "@supabase/supabase-js";
 
 function getSupabase() {
@@ -30,7 +29,7 @@ export async function signup(formData: FormData) {
     return { error: error.message };
   }
 
-  redirect("/connexion?verified=check");
+  return { success: true, redirectTo: "/connexion?verified=check" };
 }
 
 export async function login(formData: FormData) {
@@ -48,7 +47,7 @@ export async function login(formData: FormData) {
     return { error: error.message };
   }
 
-  redirect("/");
+  return { success: true, redirectTo: "/" };
 }
 
 export async function loginWithGoogle() {
@@ -68,12 +67,8 @@ export async function loginWithGoogle() {
   }
 
   if (data.url) {
-    redirect(data.url);
+    return { success: true, redirectTo: data.url };
   }
-}
 
-export async function logout() {
-  const supabase = getSupabase();
-  await supabase.auth.signOut();
-  redirect("/");
+  return { error: "Une erreur est survenue." };
 }

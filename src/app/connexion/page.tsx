@@ -2,12 +2,13 @@
 
 import { Suspense, useState } from "react";
 import Link from "next/link";
-import { useSearchParams } from "next/navigation";
+import { useSearchParams, useRouter } from "next/navigation";
 import { login, loginWithGoogle } from "@/app/(auth)/actions";
 import { Brain, Loader2, LogIn } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 function ConnexionForm() {
+  const router = useRouter();
   const searchParams = useSearchParams();
   const justRegistered = searchParams.get("verified") === "check";
   const authError = searchParams.get("error") === "auth";
@@ -28,6 +29,8 @@ function ConnexionForm() {
     if (result?.error) {
       setError(result.error);
       setLoading(false);
+    } else if (result?.redirectTo) {
+      router.push(result.redirectTo);
     }
   }
 
@@ -37,6 +40,8 @@ function ConnexionForm() {
     if (result?.error) {
       setError(result.error);
       setGoogleLoading(false);
+    } else if (result?.redirectTo) {
+      window.location.href = result.redirectTo;
     }
   }
 

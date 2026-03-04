@@ -2,11 +2,13 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { signup, loginWithGoogle } from "@/app/(auth)/actions";
 import { Brain, Loader2, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export default function InscriptionPage() {
+  const router = useRouter();
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
   const [googleLoading, setGoogleLoading] = useState(false);
@@ -36,6 +38,8 @@ export default function InscriptionPage() {
     if (result?.error) {
       setError(result.error);
       setLoading(false);
+    } else if (result?.redirectTo) {
+      router.push(result.redirectTo);
     }
   }
 
@@ -45,6 +49,8 @@ export default function InscriptionPage() {
     if (result?.error) {
       setError(result.error);
       setGoogleLoading(false);
+    } else if (result?.redirectTo) {
+      window.location.href = result.redirectTo;
     }
   }
 
