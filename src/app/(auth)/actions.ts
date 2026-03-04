@@ -1,27 +1,22 @@
 "use server";
 
-import { createClient } from "@supabase/supabase-js";
-
-function getSupabase() {
-  return createClient(
-    process.env.NEXT_PUBLIC_SUPABASE_URL!,
-    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
-  );
-}
+import { createClient } from "@/lib/supabase/server";
+import { headers } from "next/headers";
 
 export async function signup(formData: FormData) {
-  const supabase = getSupabase();
+  const supabase = await createClient();
 
   const email = formData.get("email") as string;
   const password = formData.get("password") as string;
 
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://learnai-gules.vercel.app";
+  const headersList = await headers();
+  const origin = headersList.get("origin") || process.env.NEXT_PUBLIC_BASE_URL || "https://learnai-gules.vercel.app";
 
   const { error } = await supabase.auth.signUp({
     email,
     password,
     options: {
-      emailRedirectTo: `${baseUrl}/auth/callback`,
+      emailRedirectTo: `${origin}/auth/callback`,
     },
   });
 
@@ -33,7 +28,7 @@ export async function signup(formData: FormData) {
 }
 
 export async function login(formData: FormData) {
-  const supabase = getSupabase();
+  const supabase = await createClient();
 
   const email = formData.get("email") as string;
   const password = formData.get("password") as string;
@@ -51,14 +46,15 @@ export async function login(formData: FormData) {
 }
 
 export async function loginWithGoogle() {
-  const supabase = getSupabase();
+  const supabase = await createClient();
 
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://learnai-gules.vercel.app";
+  const headersList = await headers();
+  const origin = headersList.get("origin") || process.env.NEXT_PUBLIC_BASE_URL || "https://learnai-gules.vercel.app";
 
   const { data, error } = await supabase.auth.signInWithOAuth({
     provider: "google",
     options: {
-      redirectTo: `${baseUrl}/auth/callback`,
+      redirectTo: `${origin}/auth/callback`,
     },
   });
 
