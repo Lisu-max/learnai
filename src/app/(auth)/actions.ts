@@ -9,9 +9,14 @@ export async function signup(formData: FormData) {
   const email = formData.get("email") as string;
   const password = formData.get("password") as string;
 
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://learnai-gules.vercel.app";
+
   const { error } = await supabase.auth.signUp({
     email,
     password,
+    options: {
+      emailRedirectTo: `${baseUrl}/auth/callback`,
+    },
   });
 
   if (error) {
@@ -45,7 +50,7 @@ export async function loginWithGoogle() {
   const { data, error } = await supabase.auth.signInWithOAuth({
     provider: "google",
     options: {
-      redirectTo: `${process.env.NEXT_PUBLIC_BASE_URL}/auth/callback`,
+      redirectTo: `${process.env.NEXT_PUBLIC_BASE_URL || "https://learnai-gules.vercel.app"}/auth/callback`,
     },
   });
 
