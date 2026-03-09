@@ -17,7 +17,7 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    const { courseSlug } = await req.json();
+    const { courseSlug, courseLang } = await req.json();
 
     const course = getCourseBySlug(courseSlug);
     if (!course) {
@@ -49,6 +49,7 @@ export async function POST(req: NextRequest) {
       metadata: {
         courseSlug: course.slug,
         userId: user.id,
+        courseLang: courseLang || "fr",
       },
     });
 

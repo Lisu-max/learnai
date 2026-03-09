@@ -251,6 +251,9 @@ export const translations = {
       buyFor: "Acheter —",
       redirecting: "Redirection...",
       error: "Une erreur est survenue. Veuillez réessayer.",
+      courseLanguage: "Langue de la formation",
+      french: "Français",
+      english: "English",
     },
     // Success page
     success: {
@@ -517,6 +520,9 @@ export const translations = {
       buyFor: "Buy —",
       redirecting: "Redirecting...",
       error: "An error occurred. Please try again.",
+      courseLanguage: "Course language",
+      french: "Français",
+      english: "English",
     },
     success: {
       sessionNotFound: "Payment session not found.",
@@ -622,7 +628,7 @@ export interface Translations {
     otherTrainings: string; otherTrainingsHighlight: string; otherTrainingsSubtitle: string;
     chapters: string; pages: string; viewDetail: string;
   };
-  buy: { buyFor: string; redirecting: string; error: string };
+  buy: { buyFor: string; redirecting: string; error: string; courseLanguage: string; french: string; english: string };
   success: {
     sessionNotFound: string; backToCourses: string; paymentNotVerified: string;
     thankYou: string; paymentConfirmed: string; paymentConfirmedSuffix: string;
