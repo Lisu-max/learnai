@@ -1,13 +1,17 @@
+"use client";
+
 import Link from "next/link";
 import { Brain } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 import { siteConfig } from "@/config/site";
+import { useTranslation } from "@/lib/i18n/context";
 
 export function Footer() {
+  const { t } = useTranslation();
+
   return (
     <footer className="relative bg-background">
       <div className="section-divider" />
-      {/* Subtle glow at top */}
       <div className="pointer-events-none absolute left-1/2 top-0 h-[200px] w-[400px] -translate-x-1/2 bg-purple-600/5 blur-[80px]" />
 
       <div className="relative mx-auto max-w-6xl px-4 py-12">
@@ -20,43 +24,48 @@ export function Footer() {
               <span className="text-lg font-bold">{siteConfig.name}</span>
             </Link>
             <p className="mt-3 text-sm text-muted-foreground">
-              Formations premium en intelligence artificielle. Apprenez à votre
-              rythme avec nos guides PDF complets.
+              {t.footer.description}
             </p>
           </div>
 
           <div>
-            <h3 className="mb-3 text-sm font-semibold">Navigation</h3>
+            <h3 className="mb-3 text-sm font-semibold">{t.footer.navigation}</h3>
             <ul className="space-y-2">
-              {siteConfig.navigation.map((item) => (
-                <li key={item.href}>
-                  <Link
-                    href={item.href}
-                    className="text-sm text-muted-foreground transition-colors hover:text-foreground"
-                  >
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
+              <li>
+                <Link
+                  href="/"
+                  className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+                >
+                  {t.nav.home}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/cours"
+                  className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+                >
+                  {t.nav.courses}
+                </Link>
+              </li>
             </ul>
           </div>
 
           <div>
-            <h3 className="mb-3 text-sm font-semibold">Légal</h3>
+            <h3 className="mb-3 text-sm font-semibold">{t.footer.legal}</h3>
             <ul className="space-y-2">
               <li>
                 <span className="text-sm text-muted-foreground">
-                  Conditions générales de vente
+                  {t.footer.terms}
                 </span>
               </li>
               <li>
                 <span className="text-sm text-muted-foreground">
-                  Politique de confidentialité
+                  {t.footer.privacy}
                 </span>
               </li>
               <li>
                 <span className="text-sm text-muted-foreground">
-                  Mentions légales
+                  {t.footer.legalNotice}
                 </span>
               </li>
             </ul>
@@ -66,8 +75,7 @@ export function Footer() {
         <Separator className="my-8 bg-border/50" />
 
         <p className="text-center text-sm text-muted-foreground">
-          &copy; {new Date().getFullYear()} {siteConfig.name}. Tous droits
-          réservés.
+          &copy; {new Date().getFullYear()} {siteConfig.name}. {t.footer.copyright}
         </p>
       </div>
     </footer>

@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Loader2, ShoppingCart } from "lucide-react";
+import { useTranslation } from "@/lib/i18n/context";
 
 export function BuyButton({
   courseSlug,
@@ -14,6 +15,7 @@ export function BuyButton({
 }) {
   const [loading, setLoading] = useState(false);
   const router = useRouter();
+  const { t } = useTranslation();
 
   async function handleCheckout() {
     setLoading(true);
@@ -34,11 +36,11 @@ export function BuyButton({
       if (data.url) {
         window.location.href = data.url;
       } else {
-        alert("Une erreur est survenue. Veuillez réessayer.");
+        alert(t.buy.error);
         setLoading(false);
       }
     } catch {
-      alert("Une erreur est survenue. Veuillez réessayer.");
+      alert(t.buy.error);
       setLoading(false);
     }
   }
@@ -53,12 +55,12 @@ export function BuyButton({
       {loading ? (
         <>
           <Loader2 className="mr-2 h-5 w-5 animate-spin" />
-          Redirection...
+          {t.buy.redirecting}
         </>
       ) : (
         <>
           <ShoppingCart className="mr-2 h-5 w-5" />
-          Acheter — {priceFormatted}
+          {t.buy.buyFor} {priceFormatted}
         </>
       )}
     </Button>

@@ -1,5 +1,6 @@
-import { notFound } from "next/navigation";
-import type { Metadata } from "next";
+"use client";
+
+import { notFound, useParams } from "next/navigation";
 import { courses, getCourseBySlug } from "@/lib/courses";
 import { CourseCard } from "@/components/courses/course-card";
 import { BuyButton } from "@/components/courses/buy-button";
@@ -17,24 +18,7 @@ import {
   Sparkles,
 } from "lucide-react";
 import Link from "next/link";
-
-export function generateStaticParams() {
-  return courses.map((course) => ({ slug: course.slug }));
-}
-
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<{ slug: string }>;
-}): Promise<Metadata> {
-  const { slug } = await params;
-  const course = getCourseBySlug(slug);
-  if (!course) return {};
-  return {
-    title: course.title,
-    description: course.description,
-  };
-}
+import { useTranslation } from "@/lib/i18n/context";
 
 const levelColors: Record<string, string> = {
   Débutant: "bg-emerald-500/10 text-emerald-400 border-emerald-500/20",
@@ -43,12 +27,17 @@ const levelColors: Record<string, string> = {
   Bundle: "bg-purple-500/10 text-purple-400 border-purple-500/20",
 };
 
-export default async function CourseDetailPage({
-  params,
-}: {
-  params: Promise<{ slug: string }>;
-}) {
-  const { slug } = await params;
+const levelTranslationKeys: Record<string, "beginner" | "intermediate" | "advanced" | "bundle"> = {
+  Débutant: "beginner",
+  Intermédiaire: "intermediate",
+  Avancé: "advanced",
+  Bundle: "bundle",
+};
+
+export default function CourseDetailPage() {
+  const params = useParams();
+  const slug = params.slug as string;
+  const { t } = useTranslation();
   const course = getCourseBySlug(slug);
   if (!course) notFound();
 
@@ -60,7 +49,6 @@ export default async function CourseDetailPage({
     <div className="relative">
       {/* Hero banner with gradient background */}
       <section className="relative overflow-hidden border-b border-border/50">
-        {/* Animated orbs */}
         <div className="hero-orb-1 pointer-events-none absolute -top-40 left-1/2 h-[400px] w-[400px] -translate-x-1/2 rounded-full bg-purple-600/15 blur-[120px]" />
         <div className="hero-orb-2 pointer-events-none absolute -top-20 right-1/4 h-[250px] w-[250px] rounded-full bg-blue-600/10 blur-[100px]" />
 
@@ -70,18 +58,17 @@ export default async function CourseDetailPage({
             className="group mb-8 inline-flex items-center gap-1.5 text-sm text-muted-foreground transition-colors hover:text-foreground"
           >
             <ArrowLeft className="h-4 w-4 transition-transform group-hover:-translate-x-1" />
-            Retour aux formations
+            {t.courseDetail.backToCourses}
           </Link>
 
           <div className="grid gap-10 lg:grid-cols-5">
-            {/* Course info */}
             <div className="lg:col-span-3 animate-fade-in">
               <div className="mb-4 flex items-center gap-3">
                 <div
                   className={`h-2 w-20 rounded-full bg-gradient-to-r ${course.color}`}
                 />
                 <Badge variant="outline" className={levelColors[course.level]}>
-                  {course.level}
+                  {t.levels[levelTranslationKeys[course.level]]}
                 </Badge>
               </div>
 
@@ -93,7 +80,6 @@ export default async function CourseDetailPage({
                 {course.longDescription}
               </p>
 
-              {/* Stats pills */}
               <div className="flex flex-wrap gap-3">
                 <div className="card-glass inline-flex items-center gap-2 px-4 py-2.5">
                   <Clock className="h-4 w-4 text-purple-400" />
@@ -101,11 +87,11 @@ export default async function CourseDetailPage({
                 </div>
                 <div className="card-glass inline-flex items-center gap-2 px-4 py-2.5">
                   <FileText className="h-4 w-4 text-blue-400" />
-                  <span className="text-sm font-medium">{course.chapters} chapitres</span>
+                  <span className="text-sm font-medium">{course.chapters} {t.courseDetail.chapters}</span>
                 </div>
                 <div className="card-glass inline-flex items-center gap-2 px-4 py-2.5">
                   <BookOpen className="h-4 w-4 text-cyan-400" />
-                  <span className="text-sm font-medium">{course.pages} pages</span>
+                  <span className="text-sm font-medium">{course.pages} {t.courseDetail.pages}</span>
                 </div>
               </div>
             </div>
@@ -113,7 +99,6 @@ export default async function CourseDetailPage({
             {/* Purchase card */}
             <div className="lg:col-span-2 animate-fade-in-delay-1">
               <div className="card-glass sticky top-24 overflow-hidden">
-                {/* Gradient top accent */}
                 <div className={`h-1 w-full bg-gradient-to-r ${course.color}`} />
 
                 <div className="p-6">
@@ -122,7 +107,7 @@ export default async function CourseDetailPage({
                       {course.priceFormatted}
                     </span>
                     <p className="mt-2 text-sm text-muted-foreground">
-                      Paiement unique — Accès à vie
+                      {t.courseDetail.singlePaymentLifetime}
                     </p>
                   </div>
 
@@ -136,19 +121,19 @@ export default async function CourseDetailPage({
                   <ul className="space-y-3 text-sm text-muted-foreground">
                     <li className="flex items-center gap-2.5">
                       <Download className="h-4 w-4 text-emerald-400" />
-                      Téléchargement immédiat (PDF)
+                      {t.courseDetail.instantDownload}
                     </li>
                     <li className="flex items-center gap-2.5">
                       <RefreshCw className="h-4 w-4 text-emerald-400" />
-                      Mises à jour gratuites à vie
+                      {t.courseDetail.freeUpdatesLifetime}
                     </li>
                     <li className="flex items-center gap-2.5">
                       <Shield className="h-4 w-4 text-emerald-400" />
-                      Paiement sécurisé via Stripe
+                      {t.courseDetail.secureStripe}
                     </li>
                     <li className="flex items-center gap-2.5">
                       <CheckCircle2 className="h-4 w-4 text-emerald-400" />
-                      Garantie 30 jours satisfait ou remboursé
+                      {t.courseDetail.guarantee}
                     </li>
                   </ul>
                 </div>
@@ -163,10 +148,11 @@ export default async function CourseDetailPage({
         <div className="mx-auto max-w-5xl px-4 py-16">
           <Reveal>
             <h2 className="mb-2 text-2xl font-bold">
-              Ce que vous allez <span className="gradient-text-animated">apprendre</span>
+              {t.courseDetail.whatYouLearn}{" "}
+              <span className="gradient-text-animated">{t.courseDetail.whatYouLearnHighlight}</span>
             </h2>
             <p className="mb-8 text-muted-foreground">
-              Tout le contenu inclus dans cette formation.
+              {t.courseDetail.whatYouLearnSubtitle}
             </p>
           </Reveal>
 
@@ -196,15 +182,15 @@ export default async function CourseDetailPage({
           <Reveal className="reveal-stagger grid grid-cols-3 gap-8 text-center">
             <div>
               <p className="text-3xl font-bold gradient-text-animated">{course.pages}+</p>
-              <p className="mt-1 text-sm text-muted-foreground">Pages de contenu</p>
+              <p className="mt-1 text-sm text-muted-foreground">{t.courseDetail.pagesOfContent}</p>
             </div>
             <div>
               <p className="text-3xl font-bold gradient-text-animated">{course.chapters}</p>
-              <p className="mt-1 text-sm text-muted-foreground">Chapitres complets</p>
+              <p className="mt-1 text-sm text-muted-foreground">{t.courseDetail.completeChapters}</p>
             </div>
             <div>
               <p className="text-3xl font-bold gradient-text-animated">PDF</p>
-              <p className="mt-1 text-sm text-muted-foreground">Format universel</p>
+              <p className="mt-1 text-sm text-muted-foreground">{t.courseDetail.universalFormat}</p>
             </div>
           </Reveal>
         </div>
@@ -221,19 +207,19 @@ export default async function CourseDetailPage({
               <div className="text-center">
                 <div className="mb-3 inline-flex items-center gap-2 rounded-full border border-purple-500/20 bg-purple-500/10 px-4 py-1 text-sm text-purple-300">
                   <Sparkles className="h-3.5 w-3.5" />
-                  Économisez plus de 50€
+                  {t.courseDetail.saveMore}
                 </div>
                 <h2 className="mb-3 text-2xl font-bold">
-                  Envie d&apos;aller plus loin ?
+                  {t.courseDetail.goFurther}
                 </h2>
                 <p className="mb-6 text-muted-foreground">
-                  Obtenez toutes nos formations avec le Pack Complet IA 2026.
+                  {t.courseDetail.getAllTrainings}
                 </p>
                 <Link
                   href="/cours/pack-complet-ia-2026"
                   className="btn-gradient-glow inline-flex items-center gap-2 rounded-lg px-8 py-3.5 font-semibold text-white"
                 >
-                  Découvrir le Pack Complet — 89,99€
+                  {t.courseDetail.discoverBundle}
                 </Link>
               </div>
             </Reveal>
@@ -247,10 +233,11 @@ export default async function CourseDetailPage({
         <div className="mx-auto max-w-5xl px-4 py-16">
           <Reveal>
             <h2 className="mb-2 text-2xl font-bold">
-              Autres <span className="gradient-text-animated">formations</span>
+              {t.courseDetail.otherTrainings}{" "}
+              <span className="gradient-text-animated">{t.courseDetail.otherTrainingsHighlight}</span>
             </h2>
             <p className="mb-8 text-muted-foreground">
-              Découvrez nos autres guides pour compléter votre parcours.
+              {t.courseDetail.otherTrainingsSubtitle}
             </p>
           </Reveal>
 

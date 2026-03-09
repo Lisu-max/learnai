@@ -1,34 +1,35 @@
+"use client";
+
 import { Zap, Shield, BookOpen, RefreshCw } from "lucide-react";
 import { Reveal } from "@/components/ui/reveal";
-
-const values = [
-  {
-    icon: BookOpen,
-    title: "Contenu Expert",
-    description:
-      "Des guides rédigés par des professionnels de l'IA, avec des exemples concrets et des exercices pratiques.",
-  },
-  {
-    icon: Zap,
-    title: "Accès Immédiat",
-    description:
-      "Téléchargez vos formations en PDF instantanément après le paiement. Lisez-les où et quand vous voulez.",
-  },
-  {
-    icon: RefreshCw,
-    title: "Mises à Jour Gratuites",
-    description:
-      "L'IA évolue vite. Recevez toutes les mises à jour de vos formations gratuitement, à vie.",
-  },
-  {
-    icon: Shield,
-    title: "Paiement Sécurisé",
-    description:
-      "Vos transactions sont protégées par Stripe, le leader mondial du paiement en ligne.",
-  },
-];
+import { useTranslation } from "@/lib/i18n/context";
 
 export function ValueProposition() {
+  const { t } = useTranslation();
+
+  const values = [
+    {
+      icon: BookOpen,
+      title: t.values.expertContent,
+      description: t.values.expertDesc,
+    },
+    {
+      icon: Zap,
+      title: t.values.instantAccess,
+      description: t.values.instantDesc,
+    },
+    {
+      icon: RefreshCw,
+      title: t.values.freeUpdates,
+      description: t.values.updatesDesc,
+    },
+    {
+      icon: Shield,
+      title: t.values.securePayment,
+      description: t.values.paymentDesc,
+    },
+  ];
+
   return (
     <section className="mx-auto max-w-6xl px-4 py-20">
       <div className="section-divider mb-20" />
@@ -36,11 +37,10 @@ export function ValueProposition() {
       <Reveal>
         <div className="mb-12 text-center">
           <h2 className="mb-4 text-3xl font-bold">
-            Pourquoi choisir <span className="gradient-text-animated">LearnAI</span> ?
+            {t.values.title} <span className="gradient-text-animated">LearnAI</span> ?
           </h2>
           <p className="mx-auto max-w-2xl text-muted-foreground">
-            Nous créons les meilleures ressources francophones pour apprendre
-            l&apos;intelligence artificielle.
+            {t.values.subtitle}
           </p>
         </div>
       </Reveal>

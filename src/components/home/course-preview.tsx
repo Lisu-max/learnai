@@ -1,10 +1,14 @@
+"use client";
+
 import Link from "next/link";
 import { courses } from "@/lib/courses";
 import { CourseCard } from "@/components/courses/course-card";
 import { ArrowRight } from "lucide-react";
 import { Reveal } from "@/components/ui/reveal";
+import { useTranslation } from "@/lib/i18n/context";
 
 export function CoursePreview() {
+  const { t } = useTranslation();
   const featured = courses.slice(0, 3);
 
   return (
@@ -15,11 +19,12 @@ export function CoursePreview() {
         <Reveal>
           <div className="mb-12 text-center">
             <h2 className="mb-4 text-3xl font-bold">
-              Nos <span className="gradient-text-animated">Formations</span> Populaires
+              {t.coursePreview.title}{" "}
+              <span className="gradient-text-animated">{t.coursePreview.titleHighlight}</span>{" "}
+              {t.coursePreview.titleSuffix}
             </h2>
             <p className="mx-auto max-w-2xl text-muted-foreground">
-              Découvrez nos formations les plus demandées pour débuter ou approfondir
-              vos compétences en IA.
+              {t.coursePreview.subtitle}
             </p>
           </div>
         </Reveal>
@@ -36,7 +41,7 @@ export function CoursePreview() {
               href="/cours"
               className="group inline-flex items-center gap-2 text-sm font-medium text-purple-400 transition-colors hover:text-purple-300"
             >
-              Voir toutes les formations
+              {t.coursePreview.viewAll}
               <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
             </Link>
           </div>

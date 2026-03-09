@@ -6,17 +6,26 @@ import { useSearchParams, useRouter } from "next/navigation";
 import { createClient } from "@/lib/supabase/client";
 import { Brain, Loader2, LogIn } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { PasswordInput } from "@/components/ui/password-input";
+import { useTranslation } from "@/lib/i18n/context";
+
+const SITE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://learnai-gules.vercel.app";
 
 function ConnexionForm() {
   const router = useRouter();
   const searchParams = useSearchParams();
+  const { t } = useTranslation();
   const justRegistered = searchParams.get("verified") === "check";
   const authError = searchParams.get("error") === "auth";
 
   const [error, setError] = useState<string | null>(
-    authError ? "Erreur d'authentification. Veuillez réessayer." : null
+    authError ? t.auth.authError : null
   );
   const [loading, setLoading] = useState(false);
+
+  function translateError(message: string): string {
+    return t.auth.errors[message] || message;
+  }
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -28,11 +37,6 @@ function ConnexionForm() {
     const password = formData.get("password") as string;
 
     const supabase = createClient();
-    if (!supabase) {
-      setError("Service indisponible. Réessayez plus tard.");
-      setLoading(false);
-      return;
-    }
 
     const { error: loginError } = await supabase.auth.signInWithPassword({
       email,
@@ -40,7 +44,7 @@ function ConnexionForm() {
     });
 
     if (loginError) {
-      setError(loginError.message);
+      setError(translateError(loginError.message));
       setLoading(false);
       return;
     }
@@ -50,17 +54,16 @@ function ConnexionForm() {
 
   async function handleGoogle() {
     const supabase = createClient();
-    if (!supabase) return;
 
     const { data, error: oauthError } = await supabase.auth.signInWithOAuth({
       provider: "google",
       options: {
-        redirectTo: `${window.location.origin}/auth/callback`,
+        redirectTo: `${SITE_URL}/auth/callback`,
       },
     });
 
     if (oauthError) {
-      setError(oauthError.message);
+      setError(translateError(oauthError.message));
       return;
     }
 
@@ -75,13 +78,13 @@ function ConnexionForm() {
         <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-purple-500 to-blue-500">
           <Brain className="h-7 w-7 text-white" />
         </div>
-        <h1 className="text-2xl font-bold">Se connecter</h1>
-        <p className="mt-2 text-sm text-muted-foreground">Accédez à votre espace LearnAI</p>
+        <h1 className="text-2xl font-bold">{t.auth.loginTitle}</h1>
+        <p className="mt-2 text-sm text-muted-foreground">{t.auth.loginSubtitle}</p>
       </div>
 
       {justRegistered && (
         <div className="mb-6 rounded-lg bg-emerald-500/10 px-4 py-3 text-center text-sm text-emerald-400">
-          Compte créé avec succès ! Connectez-vous maintenant.
+          {t.auth.accountCreated}
         </div>
       )}
 
@@ -96,23 +99,27 @@ function ConnexionForm() {
             <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05" />
             <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335" />
           </svg>
-          Continuer avec Google
+          {t.auth.continueWithGoogle}
         </button>
 
         <div className="my-6 flex items-center gap-3">
           <div className="h-px flex-1 bg-border/50" />
-          <span className="text-xs text-muted-foreground">ou</span>
+          <span className="text-xs text-muted-foreground">{t.auth.or}</span>
           <div className="h-px flex-1 bg-border/50" />
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
-            <label htmlFor="email" className="mb-1.5 block text-sm font-medium">Email</label>
-            <input id="email" name="email" type="email" required placeholder="vous@exemple.com" className="w-full rounded-lg border border-border/50 bg-background px-4 py-3 text-sm outline-none transition-colors placeholder:text-muted-foreground focus:border-purple-500 focus:ring-1 focus:ring-purple-500" />
+            <label htmlFor="email" className="mb-1.5 block text-sm font-medium">{t.auth.email}</label>
+            <input id="email" name="email" type="email" required placeholder={t.auth.emailPlaceholder} className="w-full rounded-lg border border-border/50 bg-background px-4 py-3 text-sm outline-none transition-colors placeholder:text-muted-foreground focus:border-purple-500 focus:ring-1 focus:ring-purple-500" />
           </div>
           <div>
-            <label htmlFor="password" className="mb-1.5 block text-sm font-medium">Mot de passe</label>
-            <input id="password" name="password" type="password" required placeholder="Votre mot de passe" className="w-full rounded-lg border border-border/50 bg-background px-4 py-3 text-sm outline-none transition-colors placeholder:text-muted-foreground focus:border-purple-500 focus:ring-1 focus:ring-purple-500" />
+            <label htmlFor="password" className="mb-1.5 block text-sm font-medium">{t.auth.password}</label>
+            <PasswordInput
+              id="password"
+              name="password"
+              placeholder={t.auth.passwordLoginPlaceholder}
+            />
           </div>
 
           {error && (
@@ -121,14 +128,14 @@ function ConnexionForm() {
 
           <Button type="submit" disabled={loading} className="btn-gradient w-full border-0 py-6 text-sm font-semibold text-white">
             {loading ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : <LogIn className="mr-2 h-4 w-4" />}
-            {loading ? "Connexion..." : "Se connecter"}
+            {loading ? t.auth.loggingIn : t.auth.loginButton}
           </Button>
         </form>
       </div>
 
       <p className="mt-6 text-center text-sm text-muted-foreground">
-        Pas encore de compte ?{" "}
-        <Link href="/inscription" className="font-medium text-purple-400 hover:text-purple-300">S&apos;inscrire</Link>
+        {t.auth.noAccount}{" "}
+        <Link href="/inscription" className="font-medium text-purple-400 hover:text-purple-300">{t.nav.signup}</Link>
       </p>
     </div>
   );

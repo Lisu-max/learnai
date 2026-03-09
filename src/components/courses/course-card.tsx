@@ -1,7 +1,10 @@
+"use client";
+
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 import { BookOpen, Clock } from "lucide-react";
 import type { Course } from "@/lib/courses";
+import { useTranslation } from "@/lib/i18n/context";
 
 const levelColors: Record<string, string> = {
   Débutant: "bg-emerald-500/10 text-emerald-400 border-emerald-500/20",
@@ -10,11 +13,19 @@ const levelColors: Record<string, string> = {
   Bundle: "bg-purple-500/10 text-purple-400 border-purple-500/20",
 };
 
+const levelTranslationKeys: Record<string, "beginner" | "intermediate" | "advanced" | "bundle"> = {
+  Débutant: "beginner",
+  Intermédiaire: "intermediate",
+  Avancé: "advanced",
+  Bundle: "bundle",
+};
+
 export function CourseCard({ course }: { course: Course }) {
+  const { t } = useTranslation();
+
   return (
     <Link href={`/cours/${course.slug}`} className="group block">
       <div className="card-glass flex h-full flex-col p-6">
-        {/* Expanding color accent bar */}
         <div
           className={`mb-4 h-1.5 w-12 rounded-full bg-gradient-to-r transition-all duration-500 group-hover:w-full ${course.color}`}
         />
@@ -24,7 +35,7 @@ export function CourseCard({ course }: { course: Course }) {
             variant="outline"
             className={levelColors[course.level]}
           >
-            {course.level}
+            {t.levels[levelTranslationKeys[course.level]]}
           </Badge>
         </div>
 
@@ -40,7 +51,7 @@ export function CourseCard({ course }: { course: Course }) {
           </span>
           <span className="flex items-center gap-1">
             <BookOpen className="h-3.5 w-3.5" />
-            {course.pages} pages
+            {course.pages} {t.courseDetail.pages}
           </span>
         </div>
 
@@ -49,7 +60,7 @@ export function CourseCard({ course }: { course: Course }) {
             {course.priceFormatted}
           </span>
           <span className="flex items-center gap-1 text-sm text-muted-foreground transition-all group-hover:text-foreground">
-            Voir le détail
+            {t.courseDetail.viewDetail}
             <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">&rarr;</span>
           </span>
         </div>

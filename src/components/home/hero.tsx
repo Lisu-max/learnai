@@ -1,8 +1,13 @@
+"use client";
+
 import Link from "next/link";
 import { ArrowRight, Sparkles } from "lucide-react";
 import { Reveal } from "@/components/ui/reveal";
+import { useTranslation } from "@/lib/i18n/context";
 
 export function Hero() {
+  const { t } = useTranslation();
+
   return (
     <section className="relative overflow-hidden bg-grid">
       {/* Animated gradient orbs */}
@@ -21,18 +26,16 @@ export function Hero() {
         <div className="mx-auto max-w-3xl text-center">
           <div className="animate-fade-in mb-6 inline-flex items-center gap-2 rounded-full border border-purple-500/20 bg-purple-500/10 px-4 py-1.5 text-sm text-purple-300">
             <Sparkles className="h-4 w-4" />
-            Formations PDF Premium
+            {t.hero.badge}
           </div>
 
           <h1 className="animate-fade-in-delay-1 mb-6 text-4xl font-bold leading-tight md:text-6xl">
-            Maîtrisez{" "}
-            <span className="gradient-text-animated">l&apos;Intelligence Artificielle</span>
+            {t.hero.title}{" "}
+            <span className="gradient-text-animated">{t.hero.titleHighlight}</span>
           </h1>
 
           <p className="animate-fade-in-delay-2 mb-8 text-lg text-muted-foreground md:text-xl">
-            Des guides complets et pratiques pour comprendre, utiliser et
-            maîtriser l&apos;IA. Apprenez à votre rythme avec nos formations PDF
-            conçues par des experts.
+            {t.hero.description}
           </p>
 
           <div className="animate-fade-in-delay-3 flex flex-col items-center justify-center gap-4 sm:flex-row">
@@ -40,14 +43,14 @@ export function Hero() {
               href="/cours"
               className="btn-gradient-glow inline-flex items-center gap-2 rounded-lg px-8 py-3.5 font-semibold text-white"
             >
-              Découvrir les formations
+              {t.hero.cta}
               <ArrowRight className="h-4 w-4" />
             </Link>
             <Link
               href="#formations"
               className="inline-flex items-center gap-2 rounded-lg border border-border/50 px-8 py-3.5 font-medium text-muted-foreground transition-colors hover:border-border hover:text-foreground"
             >
-              En savoir plus
+              {t.hero.learnMore}
             </Link>
           </div>
 
@@ -55,15 +58,15 @@ export function Hero() {
           <Reveal className="reveal-stagger mt-16 grid grid-cols-3 gap-8 border-t border-border/50 pt-8">
             <div>
               <p className="animated-underline text-4xl font-bold gradient-text-animated md:text-5xl">6</p>
-              <p className="mt-2 text-sm text-muted-foreground">Formations</p>
+              <p className="mt-2 text-sm text-muted-foreground">{t.hero.statCourses}</p>
             </div>
             <div>
               <p className="animated-underline text-4xl font-bold gradient-text-animated md:text-5xl">715+</p>
-              <p className="mt-2 text-sm text-muted-foreground">Pages de contenu</p>
+              <p className="mt-2 text-sm text-muted-foreground">{t.hero.statPages}</p>
             </div>
             <div>
               <p className="animated-underline text-4xl font-bold gradient-text-animated md:text-5xl">2k+</p>
-              <p className="mt-2 text-sm text-muted-foreground">Étudiants</p>
+              <p className="mt-2 text-sm text-muted-foreground">{t.hero.statStudents}</p>
             </div>
           </Reveal>
         </div>

@@ -1,0 +1,633 @@
+export const translations = {
+  fr: {
+    // Navigation
+    nav: {
+      home: "Accueil",
+      courses: "Formations",
+      login: "Se connecter",
+      signup: "S'inscrire",
+    },
+    // Hero
+    hero: {
+      badge: "Formations PDF Premium",
+      title: "Maîtrisez",
+      titleHighlight: "l'Intelligence Artificielle",
+      description:
+        "Des guides complets et pratiques pour comprendre, utiliser et maîtriser l'IA. Apprenez à votre rythme avec nos formations PDF conçues par des experts.",
+      cta: "Découvrir les formations",
+      learnMore: "En savoir plus",
+      statCourses: "Formations",
+      statPages: "Pages de contenu",
+      statStudents: "Étudiants",
+    },
+    // Value Proposition
+    values: {
+      title: "Pourquoi choisir",
+      subtitle:
+        "Nous créons les meilleures ressources francophones pour apprendre l'intelligence artificielle.",
+      expertContent: "Contenu Expert",
+      expertDesc:
+        "Des guides rédigés par des professionnels de l'IA, avec des exemples concrets et des exercices pratiques.",
+      instantAccess: "Accès Immédiat",
+      instantDesc:
+        "Téléchargez vos formations en PDF instantanément après le paiement. Lisez-les où et quand vous voulez.",
+      freeUpdates: "Mises à Jour Gratuites",
+      updatesDesc:
+        "L'IA évolue vite. Recevez toutes les mises à jour de vos formations gratuitement, à vie.",
+      securePayment: "Paiement Sécurisé",
+      paymentDesc:
+        "Vos transactions sont protégées par Stripe, le leader mondial du paiement en ligne.",
+    },
+    // Course Preview
+    coursePreview: {
+      title: "Nos",
+      titleHighlight: "Formations",
+      titleSuffix: "Populaires",
+      subtitle:
+        "Découvrez nos formations les plus demandées pour débuter ou approfondir vos compétences en IA.",
+      viewAll: "Voir toutes les formations",
+    },
+    // Testimonials
+    testimonials: {
+      title: "Ce que disent nos",
+      titleHighlight: "étudiants",
+      subtitle:
+        "Plus de 2 000 personnes ont déjà accéléré leur maîtrise de l'IA avec nos formations.",
+      items: [
+        {
+          name: "Sophie L.",
+          role: "Entrepreneure",
+          content:
+            "Le Pack Complet m'a permis d'intégrer l'IA dans mon business en quelques semaines. Le contenu est clair, pratique et directement applicable. Je recommande à 100% !",
+        },
+        {
+          name: "Thomas M.",
+          role: "Développeur",
+          content:
+            "La formation Prompt Engineering Pro est une pépite. J'ai complètement changé ma façon d'interagir avec les IA. Les résultats sont bluffants.",
+        },
+        {
+          name: "Marie D.",
+          role: "Directrice Marketing",
+          content:
+            "Maîtriser les Outils IA m'a fait gagner un temps considérable au quotidien. Les templates de prompts sont un vrai plus pour mon équipe.",
+        },
+      ],
+    },
+    // CTA Banner
+    cta: {
+      badge: "Offre Pack Complet",
+      title: "Prêt à maîtriser",
+      titleHighlight: "l'IA",
+      subtitle:
+        "Accédez à toutes nos formations avec le Pack Complet et économisez plus de 50€.",
+      button: "Découvrir le Pack Complet",
+    },
+    // FAQ
+    faq: {
+      title: "Questions",
+      titleHighlight: "fréquentes",
+      subtitle: "Tout ce que vous devez savoir avant de commencer.",
+      items: [
+        {
+          question: "Dans quel format sont les formations ?",
+          answer:
+            "Toutes nos formations sont au format PDF, téléchargeables immédiatement après le paiement. Vous pouvez les lire sur votre ordinateur, tablette ou smartphone.",
+        },
+        {
+          question: "Les formations sont-elles mises à jour ?",
+          answer:
+            "Oui ! L'IA évolue rapidement et nous mettons régulièrement à jour nos formations. Toutes les mises à jour sont gratuites et à vie pour les acheteurs.",
+        },
+        {
+          question: "Quel niveau faut-il pour commencer ?",
+          answer:
+            "Nous proposons des formations pour tous les niveaux. \"L'IA de A à Z\" est parfaite pour les débutants, tandis que les formations intermédiaires et avancées s'adressent à ceux qui ont déjà des bases.",
+        },
+        {
+          question: "Comment fonctionne le paiement ?",
+          answer:
+            "Le paiement est sécurisé via Stripe. Vous payez une seule fois et accédez à votre formation immédiatement. Nous acceptons les cartes bancaires (Visa, Mastercard, etc.).",
+        },
+        {
+          question: "Puis-je obtenir un remboursement ?",
+          answer:
+            "Oui, nous offrons une garantie satisfait ou remboursé de 30 jours. Si la formation ne vous convient pas, contactez-nous pour un remboursement intégral.",
+        },
+        {
+          question: "Qu'est-ce que le Pack Complet ?",
+          answer:
+            "Le Pack Complet IA 2026 regroupe nos 5 formations dans un seul package à prix réduit. Vous économisez plus de 50€ par rapport à l'achat séparé, avec en plus un accès prioritaire aux futures formations.",
+        },
+      ],
+    },
+    // Footer
+    footer: {
+      description:
+        "Formations premium en intelligence artificielle. Apprenez à votre rythme avec nos guides PDF complets.",
+      navigation: "Navigation",
+      legal: "Légal",
+      terms: "Conditions générales de vente",
+      privacy: "Politique de confidentialité",
+      legalNotice: "Mentions légales",
+      copyright: "Tous droits réservés.",
+    },
+    // Auth
+    auth: {
+      createAccount: "Créer un compte",
+      createAccountSubtitle: "Rejoignez LearnAI et accédez à vos formations",
+      firstName: "Prénom",
+      firstNamePlaceholder: "Votre prénom",
+      lastName: "Nom",
+      lastNamePlaceholder: "Votre nom",
+      birthDate: "Date de naissance",
+      firstNameRequired: "Le prénom est requis.",
+      lastNameRequired: "Le nom est requis.",
+      birthDateRequired: "La date de naissance est requise.",
+      birthDateTooYoung: "Vous devez avoir au moins 13 ans pour vous inscrire.",
+      loginTitle: "Se connecter",
+      loginSubtitle: "Accédez à votre espace LearnAI",
+      continueWithGoogle: "Continuer avec Google",
+      or: "ou",
+      email: "Email",
+      emailPlaceholder: "vous@exemple.com",
+      password: "Mot de passe",
+      passwordPlaceholder: "6 caractères minimum",
+      passwordLoginPlaceholder: "Votre mot de passe",
+      confirmPassword: "Confirmer le mot de passe",
+      confirmPasswordPlaceholder: "Retapez votre mot de passe",
+      signupButton: "S'inscrire",
+      signingUp: "Création du compte...",
+      loginButton: "Se connecter",
+      loggingIn: "Connexion...",
+      alreadyHaveAccount: "Déjà un compte ?",
+      noAccount: "Pas encore de compte ?",
+      accountCreated: "Compte créé ! Vérifiez votre email puis connectez-vous.",
+      authError: "Erreur d'authentification. Veuillez réessayer.",
+      serviceUnavailable: "Service indisponible. Réessayez plus tard.",
+      passwordMismatch: "Les mots de passe ne correspondent pas.",
+      passwordTooShort: "Le mot de passe doit contenir au moins 6 caractères.",
+      // Supabase error translations
+      errors: {
+        "Invalid login credentials": "Email ou mot de passe incorrect.",
+        "User already registered": "Un compte existe déjà avec cet email.",
+        "Email not confirmed": "Veuillez confirmer votre email avant de vous connecter.",
+        "Password should be at least 6 characters": "Le mot de passe doit contenir au moins 6 caractères.",
+        "Unable to validate email address: invalid format": "Format d'email invalide.",
+        "Signup requires a valid password": "Un mot de passe valide est requis.",
+      },
+    },
+    // Account
+    account: {
+      title: "Mon compte",
+      myTrainings: "Mes formations",
+      noTrainings: "Vous n'avez pas encore de formation.",
+      discoverTrainings: "Découvrir nos formations",
+      purchasedOn: "Acheté le",
+      download: "Télécharger",
+      profileInfo: "Informations du profil",
+      yearsOld: "ans",
+      progress: "Progression",
+      pagesRead: "pages lues",
+      pagesRemaining: "pages restantes",
+      completed: "Terminé",
+      updateProgress: "Mettre à jour",
+      currentPage: "Page actuelle",
+      save: "Enregistrer",
+      cancel: "Annuler",
+      overallProgress: "Progression globale",
+      logout: "Se déconnecter",
+    },
+    // Courses page
+    coursesPage: {
+      badge: "6 formations disponibles",
+      title: "Nos",
+      titleHighlight: "Formations",
+      subtitle:
+        "Des guides PDF complets pour maîtriser l'intelligence artificielle, du débutant à l'expert. Choisissez votre parcours.",
+      pages: "Pages",
+      chapters: "Chapitres",
+      levels: "Niveaux",
+      bestOffer: "Meilleure offre",
+      discoverBundle: "Découvrir le Pack Complet",
+      individualTitle: "Formations",
+      individualHighlight: "individuelles",
+      individualSubtitle:
+        "Choisissez la formation qui correspond à votre niveau et vos objectifs.",
+      dontKnow: "Vous ne savez pas par où commencer ?",
+      bundleIncludes:
+        "Le Pack Complet inclut toutes les formations et vous guide de débutant à expert.",
+      viewBundle: "Voir le Pack Complet",
+      singlePayment: "Paiement unique",
+    },
+    // Course detail
+    courseDetail: {
+      backToCourses: "Retour aux formations",
+      singlePaymentLifetime: "Paiement unique — Accès à vie",
+      instantDownload: "Téléchargement immédiat (PDF)",
+      freeUpdatesLifetime: "Mises à jour gratuites à vie",
+      secureStripe: "Paiement sécurisé via Stripe",
+      guarantee: "Garantie 30 jours satisfait ou remboursé",
+      whatYouLearn: "Ce que vous allez",
+      whatYouLearnHighlight: "apprendre",
+      whatYouLearnSubtitle: "Tout le contenu inclus dans cette formation.",
+      pagesOfContent: "Pages de contenu",
+      completeChapters: "Chapitres complets",
+      universalFormat: "Format universel",
+      saveMore: "Économisez plus de 50€",
+      goFurther: "Envie d'aller plus loin ?",
+      getAllTrainings: "Obtenez toutes nos formations avec le Pack Complet IA 2026.",
+      discoverBundle: "Découvrir le Pack Complet — 89,99€",
+      otherTrainings: "Autres",
+      otherTrainingsHighlight: "formations",
+      otherTrainingsSubtitle:
+        "Découvrez nos autres guides pour compléter votre parcours.",
+      chapters: "chapitres",
+      pages: "pages",
+      viewDetail: "Voir le détail",
+    },
+    // Buy button
+    buy: {
+      buyFor: "Acheter —",
+      redirecting: "Redirection...",
+      error: "Une erreur est survenue. Veuillez réessayer.",
+    },
+    // Success page
+    success: {
+      sessionNotFound: "Session de paiement introuvable.",
+      backToCourses: "Retour aux formations",
+      paymentNotVerified:
+        "Le paiement n'a pas pu être vérifié. Si vous pensez qu'il s'agit d'une erreur, contactez-nous.",
+      thankYou: "Merci pour votre achat !",
+      paymentConfirmed: "Votre paiement pour",
+      paymentConfirmedSuffix: "a bien été confirmé. Vous pouvez télécharger votre formation ci-dessous.",
+      downloadPdf: "Télécharger le PDF",
+      viewMyTrainings: "Voir mes formations",
+      discoverOther: "Découvrir nos autres formations",
+      yourTraining: "votre formation",
+    },
+    // Course levels
+    levels: {
+      beginner: "Débutant",
+      intermediate: "Intermédiaire",
+      advanced: "Avancé",
+      bundle: "Bundle",
+    },
+    // Language
+    language: {
+      fr: "Français",
+      en: "English",
+    },
+  },
+  en: {
+    nav: {
+      home: "Home",
+      courses: "Courses",
+      login: "Log in",
+      signup: "Sign up",
+    },
+    hero: {
+      badge: "Premium PDF Courses",
+      title: "Master",
+      titleHighlight: "Artificial Intelligence",
+      description:
+        "Comprehensive and practical guides to understand, use and master AI. Learn at your own pace with our expert-designed PDF courses.",
+      cta: "Discover courses",
+      learnMore: "Learn more",
+      statCourses: "Courses",
+      statPages: "Pages of content",
+      statStudents: "Students",
+    },
+    values: {
+      title: "Why choose",
+      subtitle:
+        "We create the best resources for learning artificial intelligence.",
+      expertContent: "Expert Content",
+      expertDesc:
+        "Guides written by AI professionals, with real-world examples and hands-on exercises.",
+      instantAccess: "Instant Access",
+      instantDesc:
+        "Download your PDF courses instantly after payment. Read them wherever and whenever you want.",
+      freeUpdates: "Free Updates",
+      updatesDesc:
+        "AI evolves fast. Get all updates to your courses for free, forever.",
+      securePayment: "Secure Payment",
+      paymentDesc:
+        "Your transactions are protected by Stripe, the world leader in online payments.",
+    },
+    coursePreview: {
+      title: "Our",
+      titleHighlight: "Popular",
+      titleSuffix: "Courses",
+      subtitle:
+        "Discover our most popular courses to start or deepen your AI skills.",
+      viewAll: "View all courses",
+    },
+    testimonials: {
+      title: "What our",
+      titleHighlight: "students",
+      subtitle:
+        "Over 2,000 people have already accelerated their AI mastery with our courses.",
+      items: [
+        {
+          name: "Sophie L.",
+          role: "Entrepreneur",
+          content:
+            "The Complete Pack allowed me to integrate AI into my business in just a few weeks. The content is clear, practical and immediately applicable. I recommend it 100%!",
+        },
+        {
+          name: "Thomas M.",
+          role: "Developer",
+          content:
+            "The Prompt Engineering Pro course is a gem. I completely changed the way I interact with AI. The results are stunning.",
+        },
+        {
+          name: "Marie D.",
+          role: "Marketing Director",
+          content:
+            "Mastering AI Tools has saved me a considerable amount of time every day. The prompt templates are a real plus for my team.",
+        },
+      ],
+    },
+    cta: {
+      badge: "Complete Pack Offer",
+      title: "Ready to master",
+      titleHighlight: "AI",
+      subtitle:
+        "Access all our courses with the Complete Pack and save over 50€.",
+      button: "Discover the Complete Pack",
+    },
+    faq: {
+      title: "Frequently Asked",
+      titleHighlight: "Questions",
+      subtitle: "Everything you need to know before getting started.",
+      items: [
+        {
+          question: "What format are the courses in?",
+          answer:
+            "All our courses are in PDF format, downloadable immediately after payment. You can read them on your computer, tablet or smartphone.",
+        },
+        {
+          question: "Are the courses updated?",
+          answer:
+            "Yes! AI evolves rapidly and we regularly update our courses. All updates are free and lifetime for buyers.",
+        },
+        {
+          question: "What level do I need to start?",
+          answer:
+            "We offer courses for all levels. \"AI from A to Z\" is perfect for beginners, while intermediate and advanced courses are for those who already have some knowledge.",
+        },
+        {
+          question: "How does payment work?",
+          answer:
+            "Payment is secured via Stripe. You pay once and access your course immediately. We accept credit cards (Visa, Mastercard, etc.).",
+        },
+        {
+          question: "Can I get a refund?",
+          answer:
+            "Yes, we offer a 30-day money-back guarantee. If the course doesn't suit you, contact us for a full refund.",
+        },
+        {
+          question: "What is the Complete Pack?",
+          answer:
+            "The Complete AI Pack 2026 bundles all 5 courses into one package at a reduced price. You save over 50€ compared to buying separately, plus you get priority access to future courses.",
+        },
+      ],
+    },
+    footer: {
+      description:
+        "Premium artificial intelligence courses. Learn at your own pace with our comprehensive PDF guides.",
+      navigation: "Navigation",
+      legal: "Legal",
+      terms: "Terms of Service",
+      privacy: "Privacy Policy",
+      legalNotice: "Legal Notice",
+      copyright: "All rights reserved.",
+    },
+    auth: {
+      createAccount: "Create an account",
+      createAccountSubtitle: "Join LearnAI and access your courses",
+      firstName: "First name",
+      firstNamePlaceholder: "Your first name",
+      lastName: "Last name",
+      lastNamePlaceholder: "Your last name",
+      birthDate: "Date of birth",
+      firstNameRequired: "First name is required.",
+      lastNameRequired: "Last name is required.",
+      birthDateRequired: "Date of birth is required.",
+      birthDateTooYoung: "You must be at least 13 years old to sign up.",
+      loginTitle: "Log in",
+      loginSubtitle: "Access your LearnAI space",
+      continueWithGoogle: "Continue with Google",
+      or: "or",
+      email: "Email",
+      emailPlaceholder: "you@example.com",
+      password: "Password",
+      passwordPlaceholder: "6 characters minimum",
+      passwordLoginPlaceholder: "Your password",
+      confirmPassword: "Confirm password",
+      confirmPasswordPlaceholder: "Re-enter your password",
+      signupButton: "Sign up",
+      signingUp: "Creating account...",
+      loginButton: "Log in",
+      loggingIn: "Logging in...",
+      alreadyHaveAccount: "Already have an account?",
+      noAccount: "Don't have an account?",
+      accountCreated: "Account created! Check your email then log in.",
+      authError: "Authentication error. Please try again.",
+      serviceUnavailable: "Service unavailable. Please try again later.",
+      passwordMismatch: "Passwords do not match.",
+      passwordTooShort: "Password must be at least 6 characters.",
+      errors: {
+        "Invalid login credentials": "Incorrect email or password.",
+        "User already registered": "An account already exists with this email.",
+        "Email not confirmed": "Please confirm your email before logging in.",
+        "Password should be at least 6 characters": "Password must be at least 6 characters.",
+        "Unable to validate email address: invalid format": "Invalid email format.",
+        "Signup requires a valid password": "A valid password is required.",
+      },
+    },
+    account: {
+      title: "My account",
+      myTrainings: "My courses",
+      noTrainings: "You don't have any courses yet.",
+      discoverTrainings: "Discover our courses",
+      purchasedOn: "Purchased on",
+      download: "Download",
+      profileInfo: "Profile information",
+      yearsOld: "years old",
+      progress: "Progress",
+      pagesRead: "pages read",
+      pagesRemaining: "pages remaining",
+      completed: "Completed",
+      updateProgress: "Update",
+      currentPage: "Current page",
+      save: "Save",
+      cancel: "Cancel",
+      overallProgress: "Overall progress",
+      logout: "Log out",
+    },
+    coursesPage: {
+      badge: "6 courses available",
+      title: "Our",
+      titleHighlight: "Courses",
+      subtitle:
+        "Comprehensive PDF guides to master artificial intelligence, from beginner to expert. Choose your path.",
+      pages: "Pages",
+      chapters: "Chapters",
+      levels: "Levels",
+      bestOffer: "Best offer",
+      discoverBundle: "Discover the Complete Pack",
+      individualTitle: "Individual",
+      individualHighlight: "courses",
+      individualSubtitle:
+        "Choose the course that matches your level and goals.",
+      dontKnow: "Not sure where to start?",
+      bundleIncludes:
+        "The Complete Pack includes all courses and guides you from beginner to expert.",
+      viewBundle: "View the Complete Pack",
+      singlePayment: "One-time payment",
+    },
+    courseDetail: {
+      backToCourses: "Back to courses",
+      singlePaymentLifetime: "One-time payment — Lifetime access",
+      instantDownload: "Instant download (PDF)",
+      freeUpdatesLifetime: "Free lifetime updates",
+      secureStripe: "Secure payment via Stripe",
+      guarantee: "30-day money-back guarantee",
+      whatYouLearn: "What you will",
+      whatYouLearnHighlight: "learn",
+      whatYouLearnSubtitle: "All content included in this course.",
+      pagesOfContent: "Pages of content",
+      completeChapters: "Complete chapters",
+      universalFormat: "Universal format",
+      saveMore: "Save over 50€",
+      goFurther: "Want to go further?",
+      getAllTrainings: "Get all our courses with the Complete AI Pack 2026.",
+      discoverBundle: "Discover the Complete Pack — 89.99€",
+      otherTrainings: "Other",
+      otherTrainingsHighlight: "courses",
+      otherTrainingsSubtitle:
+        "Discover our other guides to complete your learning path.",
+      chapters: "chapters",
+      pages: "pages",
+      viewDetail: "View details",
+    },
+    buy: {
+      buyFor: "Buy —",
+      redirecting: "Redirecting...",
+      error: "An error occurred. Please try again.",
+    },
+    success: {
+      sessionNotFound: "Payment session not found.",
+      backToCourses: "Back to courses",
+      paymentNotVerified:
+        "The payment could not be verified. If you believe this is an error, please contact us.",
+      thankYou: "Thank you for your purchase!",
+      paymentConfirmed: "Your payment for",
+      paymentConfirmedSuffix: "has been confirmed. You can download your course below.",
+      downloadPdf: "Download PDF",
+      viewMyTrainings: "View my courses",
+      discoverOther: "Discover our other courses",
+      yourTraining: "your course",
+    },
+    levels: {
+      beginner: "Beginner",
+      intermediate: "Intermediate",
+      advanced: "Advanced",
+      bundle: "Bundle",
+    },
+    language: {
+      fr: "Français",
+      en: "English",
+    },
+  },
+};
+
+export type Locale = "fr" | "en";
+
+interface FaqItem {
+  question: string;
+  answer: string;
+}
+
+interface TestimonialItem {
+  name: string;
+  role: string;
+  content: string;
+}
+
+export interface Translations {
+  nav: { home: string; courses: string; login: string; signup: string };
+  hero: {
+    badge: string; title: string; titleHighlight: string; description: string;
+    cta: string; learnMore: string; statCourses: string; statPages: string; statStudents: string;
+  };
+  values: {
+    title: string; subtitle: string;
+    expertContent: string; expertDesc: string;
+    instantAccess: string; instantDesc: string;
+    freeUpdates: string; updatesDesc: string;
+    securePayment: string; paymentDesc: string;
+  };
+  coursePreview: { title: string; titleHighlight: string; titleSuffix: string; subtitle: string; viewAll: string };
+  testimonials: { title: string; titleHighlight: string; subtitle: string; items: TestimonialItem[] };
+  cta: { badge: string; title: string; titleHighlight: string; subtitle: string; button: string };
+  faq: { title: string; titleHighlight: string; subtitle: string; items: FaqItem[] };
+  footer: {
+    description: string; navigation: string; legal: string;
+    terms: string; privacy: string; legalNotice: string; copyright: string;
+  };
+  auth: {
+    createAccount: string; createAccountSubtitle: string;
+    firstName: string; firstNamePlaceholder: string;
+    lastName: string; lastNamePlaceholder: string;
+    birthDate: string;
+    firstNameRequired: string; lastNameRequired: string;
+    birthDateRequired: string; birthDateTooYoung: string;
+    loginTitle: string; loginSubtitle: string;
+    continueWithGoogle: string; or: string;
+    email: string; emailPlaceholder: string;
+    password: string; passwordPlaceholder: string; passwordLoginPlaceholder: string;
+    confirmPassword: string; confirmPasswordPlaceholder: string;
+    signupButton: string; signingUp: string;
+    loginButton: string; loggingIn: string;
+    alreadyHaveAccount: string; noAccount: string;
+    accountCreated: string; authError: string; serviceUnavailable: string;
+    passwordMismatch: string; passwordTooShort: string;
+    errors: Record<string, string>;
+  };
+  account: {
+    title: string; myTrainings: string; noTrainings: string;
+    discoverTrainings: string; purchasedOn: string; download: string;
+    profileInfo: string; yearsOld: string; progress: string;
+    pagesRead: string; pagesRemaining: string; completed: string;
+    updateProgress: string; currentPage: string; save: string; cancel: string;
+    overallProgress: string; logout: string;
+  };
+  coursesPage: {
+    badge: string; title: string; titleHighlight: string; subtitle: string;
+    pages: string; chapters: string; levels: string;
+    bestOffer: string; discoverBundle: string;
+    individualTitle: string; individualHighlight: string; individualSubtitle: string;
+    dontKnow: string; bundleIncludes: string; viewBundle: string; singlePayment: string;
+  };
+  courseDetail: {
+    backToCourses: string; singlePaymentLifetime: string;
+    instantDownload: string; freeUpdatesLifetime: string;
+    secureStripe: string; guarantee: string;
+    whatYouLearn: string; whatYouLearnHighlight: string; whatYouLearnSubtitle: string;
+    pagesOfContent: string; completeChapters: string; universalFormat: string;
+    saveMore: string; goFurther: string; getAllTrainings: string; discoverBundle: string;
+    otherTrainings: string; otherTrainingsHighlight: string; otherTrainingsSubtitle: string;
+    chapters: string; pages: string; viewDetail: string;
+  };
+  buy: { buyFor: string; redirecting: string; error: string };
+  success: {
+    sessionNotFound: string; backToCourses: string; paymentNotVerified: string;
+    thankYou: string; paymentConfirmed: string; paymentConfirmedSuffix: string;
+    downloadPdf: string; viewMyTrainings: string; discoverOther: string; yourTraining: string;
+  };
+  levels: { beginner: string; intermediate: string; advanced: string; bundle: string };
+  language: { fr: string; en: string };
+}

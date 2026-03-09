@@ -1,4 +1,5 @@
-import type { Metadata } from "next";
+"use client";
+
 import Link from "next/link";
 import { courses } from "@/lib/courses";
 import { CourseCard } from "@/components/courses/course-card";
@@ -11,14 +12,10 @@ import {
   ArrowRight,
   CheckCircle2,
 } from "lucide-react";
-
-export const metadata: Metadata = {
-  title: "Nos Formations IA",
-  description:
-    "Découvrez toutes nos formations en intelligence artificielle. Du débutant à l'expert, trouvez le parcours qui vous correspond.",
-};
+import { useTranslation } from "@/lib/i18n/context";
 
 export default function CoursPage() {
+  const { t } = useTranslation();
   const bundle = courses.find((c) => c.level === "Bundle")!;
   const individualCourses = courses.filter((c) => c.level !== "Bundle");
 
@@ -36,31 +33,31 @@ export default function CoursPage() {
         <div className="relative mx-auto max-w-6xl px-4 py-16 text-center md:py-20">
           <div className="animate-fade-in mb-4 inline-flex items-center gap-2 rounded-full border border-purple-500/20 bg-purple-500/10 px-4 py-1.5 text-sm text-purple-300">
             <GraduationCap className="h-4 w-4" />
-            6 formations disponibles
+            {t.coursesPage.badge}
           </div>
 
           <h1 className="animate-fade-in-delay-1 mb-4 text-4xl font-bold md:text-5xl">
-            Nos <span className="gradient-text-animated">Formations</span>
+            {t.coursesPage.title}{" "}
+            <span className="gradient-text-animated">{t.coursesPage.titleHighlight}</span>
           </h1>
 
           <p className="animate-fade-in-delay-2 mx-auto mb-10 max-w-2xl text-lg text-muted-foreground">
-            Des guides PDF complets pour maîtriser l&apos;intelligence artificielle,
-            du débutant à l&apos;expert. Choisissez votre parcours.
+            {t.coursesPage.subtitle}
           </p>
 
           {/* Stats bar */}
           <div className="animate-fade-in-delay-3 mx-auto grid max-w-lg grid-cols-3 gap-6">
             <div className="card-glass px-4 py-3 text-center">
               <p className="text-xl font-bold gradient-text-animated">715+</p>
-              <p className="text-xs text-muted-foreground">Pages</p>
+              <p className="text-xs text-muted-foreground">{t.coursesPage.pages}</p>
             </div>
             <div className="card-glass px-4 py-3 text-center">
               <p className="text-xl font-bold gradient-text-animated">97</p>
-              <p className="text-xs text-muted-foreground">Chapitres</p>
+              <p className="text-xs text-muted-foreground">{t.coursesPage.chapters}</p>
             </div>
             <div className="card-glass px-4 py-3 text-center">
               <p className="text-xl font-bold gradient-text-animated">4</p>
-              <p className="text-xs text-muted-foreground">Niveaux</p>
+              <p className="text-xs text-muted-foreground">{t.coursesPage.levels}</p>
             </div>
           </div>
         </div>
@@ -76,12 +73,11 @@ export default function CoursPage() {
             <div className="card-glass overflow-hidden">
               <div className="h-1 w-full bg-gradient-to-r from-purple-600 to-blue-600" />
               <div className="flex flex-col items-center gap-8 p-8 md:flex-row md:p-10">
-                {/* Left content */}
                 <div className="flex-1">
                   <div className="mb-3 flex items-center gap-2">
                     <Badge variant="outline" className="bg-purple-500/10 text-purple-400 border-purple-500/20">
                       <Sparkles className="mr-1 h-3 w-3" />
-                      Meilleure offre
+                      {t.coursesPage.bestOffer}
                     </Badge>
                     <Badge variant="outline" className="bg-emerald-500/10 text-emerald-400 border-emerald-500/20">
                       -50€
@@ -105,21 +101,20 @@ export default function CoursPage() {
                     href={`/cours/${bundle.slug}`}
                     className="btn-gradient-glow inline-flex items-center gap-2 rounded-lg px-8 py-3.5 font-semibold text-white"
                   >
-                    Découvrir le Pack Complet
+                    {t.coursesPage.discoverBundle}
                     <ArrowRight className="h-4 w-4" />
                   </Link>
                 </div>
 
-                {/* Right price */}
                 <div className="flex shrink-0 flex-col items-center text-center">
                   <p className="mb-1 text-sm text-muted-foreground line-through">139,95€</p>
                   <p className="text-5xl font-bold gradient-text-animated md:text-6xl">
                     {bundle.priceFormatted}
                   </p>
-                  <p className="mt-2 text-sm text-muted-foreground">Paiement unique</p>
+                  <p className="mt-2 text-sm text-muted-foreground">{t.coursesPage.singlePayment}</p>
                   <div className="mt-3 flex items-center gap-2 text-xs text-muted-foreground">
                     <BookOpen className="h-3.5 w-3.5" />
-                    {bundle.pages} pages · {bundle.chapters} chapitres
+                    {bundle.pages} {t.courseDetail.pages} · {bundle.chapters} {t.courseDetail.chapters}
                   </div>
                 </div>
               </div>
@@ -135,10 +130,11 @@ export default function CoursPage() {
         <Reveal>
           <div className="mb-10">
             <h2 className="mb-2 text-2xl font-bold">
-              Formations <span className="gradient-text-animated">individuelles</span>
+              {t.coursesPage.individualTitle}{" "}
+              <span className="gradient-text-animated">{t.coursesPage.individualHighlight}</span>
             </h2>
             <p className="text-muted-foreground">
-              Choisissez la formation qui correspond à votre niveau et vos objectifs.
+              {t.coursesPage.individualSubtitle}
             </p>
           </div>
         </Reveal>
@@ -155,16 +151,16 @@ export default function CoursPage() {
         <div className="mx-auto max-w-6xl px-4 py-14 text-center">
           <Reveal>
             <p className="mb-2 text-lg font-semibold">
-              Vous ne savez pas par où commencer ?
+              {t.coursesPage.dontKnow}
             </p>
             <p className="mb-6 text-muted-foreground">
-              Le Pack Complet inclut toutes les formations et vous guide de débutant à expert.
+              {t.coursesPage.bundleIncludes}
             </p>
             <Link
               href={`/cours/${bundle.slug}`}
               className="group inline-flex items-center gap-2 text-sm font-medium text-purple-400 transition-colors hover:text-purple-300"
             >
-              Voir le Pack Complet — {bundle.priceFormatted}
+              {t.coursesPage.viewBundle} — {bundle.priceFormatted}
               <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
             </Link>
           </Reveal>
