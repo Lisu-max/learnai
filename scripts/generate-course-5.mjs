@@ -91,23 +91,23 @@ sectionTitle("2.1 Les Modeles de Diffusion");
 para("La majorite des generateurs d'images IA (Midjourney, DALL-E, Stable Diffusion) utilisent des modeles de diffusion. Le principe : on entraine le modele a « debruiter » des images. Pendant l'entrainement, on ajoute progressivement du bruit a des images reelles jusqu'a obtenir du bruit pur, et le modele apprend a inverser ce processus. Pour generer une nouvelle image, on part de bruit aleatoire et le modele le transforme progressivement en image coherente, guide par le prompt textuel.");
 para("Les Diffusion Transformers (DiT) combinent l'architecture Transformer avec les modeles de diffusion pour des resultats encore meilleurs. Cette architecture est au coeur des modeles les plus recents comme Stable Diffusion 3, DALL-E 3, et Sora pour la video.");
 sectionTitle("2.2 Les Grands Modeles de Langage pour la Creation");
-para("Les LLM comme Claude et GPT-4.5 ne sont pas seulement des outils de redaction — ce sont des moteurs creatifs polyvalents. Ils peuvent generer des histoires, des scripts, des poemes, des paroles de chansons, des concepts de jeux video, des descriptions de personnages, et meme du code creatif (generative art, animations, visualisations de donnees).");
+para("Les LLM comme Claude 4.6 et GPT-5.4 ne sont pas seulement des outils de redaction — ce sont des moteurs creatifs polyvalents. Avec des contextes d'1 million de tokens, ils peuvent generer des romans entiers en maintenant la coherence narrative, des scripts complets, des poemes, des paroles de chansons, des concepts de jeux video, des descriptions de personnages, et meme du code creatif (generative art, animations, visualisations de donnees).");
 summaryBox(["Les modeles de diffusion transforment du bruit en images", "Le prompt textuel guide la generation", "Les LLM sont des moteurs creatifs polyvalents", "Les DiT combinent Transformers et diffusion"]);
 
 chapterTitle(3, "Creation d'Images avec Midjourney");
 doc.moveDown(2);
 sectionTitle("3.1 Guide Complet de Midjourney");
-para("Midjourney est l'outil de reference pour la generation d'images IA de haute qualite artistique. Accessible via Discord et son site web, il excelle dans les rendus esthetiques, les portraits, les paysages, l'art conceptuel et le design. La version 6.1 (2026) offre un realisme et un controle sans precedent.");
+para("Midjourney est l'outil de reference pour la generation d'images IA de haute qualite artistique. Accessible via Discord et son site web, il excelle dans les rendus esthetiques, les portraits, les paysages, l'art conceptuel et le design. La V7 est le modele par defaut depuis juin 2025, avec des profils de personnalisation et l'omni-reference. La V8 Alpha, lancee le 17 mars 2026, introduit les images HD en 2K natif sans upscaling.");
 sectionTitle("3.2 Maitriser les Prompts Midjourney");
 subSection("Structure d'un Prompt Efficace");
-para("Un bon prompt Midjourney suit cette structure : [sujet] + [details du sujet] + [environnement] + [eclairage] + [style artistique] + [technique photographique/artistique] + [parametres]. Exemple : 'A majestic snow leopard resting on a mountain peak, golden sunset light, dramatic clouds, National Geographic photography style, telephoto lens 200mm, high detail --ar 16:9 --v 6.1 --s 500'.");
+para("Un bon prompt Midjourney suit cette structure : [sujet] + [details du sujet] + [environnement] + [eclairage] + [style artistique] + [technique photographique/artistique] + [parametres]. Exemple : 'A majestic snow leopard resting on a mountain peak, golden sunset light, dramatic clouds, National Geographic photography style, telephoto lens 200mm, high detail --ar 16:9 --v 7 --s 500'.");
 subSection("Les Parametres Essentiels");
-para("--ar : ratio d'aspect (16:9, 1:1, 9:16, 3:4). --v : version du modele (6.1 recommande). --s (stylize) : 0 = fidele au prompt, 1000 = tres artistique. --c (chaos) : 0 = coherent, 100 = variations extremes. --q : qualite (0.25, 0.5, 1, 2). --no : exclure des elements. --style raw : interpretation minimale.");
+para("--ar : ratio d'aspect (16:9, 1:1, 9:16, 3:4). --v : version du modele (7 par defaut, 8 en alpha). --s (stylize) : 0 = fidele au prompt, 1000 = tres artistique. --c (chaos) : 0 = coherent, 100 = variations extremes. --q : qualite (0.25, 0.5, 1, 2). --no : exclure des elements. --style raw : interpretation minimale. --oref : omni-reference pour la coherence de personnages. --hd : images 2K natif (V8 Alpha).");
 checkNewPage();
 sectionTitle("3.3 Techniques Avancees");
-para("Vary Region : selectionnez une zone de l'image et regenerez-la avec un nouveau prompt. Zoom Out : etendez l'image au-dela de ses bordures. Pan : deplacez le cadrage. Blend : combinez 2-5 images en une seule. Style References : utilisez une image de reference pour copier le style avec --sref. Character Reference : maintenez la coherence d'un personnage avec --cref.");
+para("Vary Region : selectionnez une zone de l'image et regenerez-la avec un nouveau prompt. Zoom Out : etendez l'image au-dela de ses bordures. Pan : deplacez le cadrage. Blend : combinez 2-5 images en une seule. Omni-Reference (--oref) : le nouveau systeme unifie pour maintenir la coherence de personnages et objets entre les generations, remplacant l'ancien --cref. Style References (--sref) : copiez le style d'une image de reference. Profils de personnalisation : le modele apprend vos preferences esthetiques. Mode Draft : 10x plus rapide, moitie prix — ideal pour l'ideation.");
 tip("Utilisez /describe sur une image existante pour obtenir des prompts similaires. C'est un excellent moyen d'apprendre le vocabulaire visuel.");
-summaryBox(["Structure : sujet + details + environnement + style + parametres", "Maitrisez --ar, --v, --s, --c, --q pour un controle precis", "Vary Region, Zoom Out, Blend pour l'edition avancee", "--sref pour le style, --cref pour la coherence de personnage"]);
+summaryBox(["V7 (defaut) + V8 Alpha (mars 2026) avec images HD 2K natif", "Parametres cles : --ar, --v, --s, --c, --oref, --hd", "Profils de personnalisation, Draft mode 10x plus rapide", "Omni-reference (--oref) pour la coherence de personnages et objets"]);
 
 chapterTitle(4, "DALL-E 3 : Generation d'Images Avancee");
 doc.moveDown(2);
@@ -144,12 +144,12 @@ summaryBox(["Galileo AI et Uizard : du texte aux wireframes", "v0 et Bolt : du d
 chapterTitle(9, "Generation Video avec Sora et Runway");
 doc.moveDown(2);
 sectionTitle("9.1 Sora : La Revolution Video");
-para("Sora d'OpenAI genere des videos de haute qualite a partir de descriptions textuelles. Il comprend la physique du monde reel, la coherence temporelle, et peut creer des mouvements de camera cinematographiques. En 2026, Sora genere des clips de 1-2 minutes en resolution HD avec un realisme impressionnant. Applications : teasers produits, publicites, contenu reseaux sociaux, pre-visualisation pour le cinema, clips musicaux.");
+para("Sora 2 d'OpenAI est la derniere evolution du generateur video IA (Sora 1 a ete deprecie le 13 mars 2026). Sora 2 genere des videos avec dialogues synchronises et effets sonores, une physique nettement plus realiste, et un controle accru. Une application sociale iOS dediee permet de creer et remixer les generations. L'integration dans ChatGPT est en cours, ce qui democratisera la creation video pour des centaines de millions d'utilisateurs. Applications : teasers produits, publicites, contenu reseaux sociaux, pre-visualisation pour le cinema, clips musicaux.");
 sectionTitle("9.2 Runway Gen-3");
 para("Runway est une plateforme de creation video IA complete. Gen-3 genere des videos a partir de texte ou d'images de reference. Les outils d'edition incluent : suppression d'objets, extension de clips, lip sync (synchronisation labiale), et transfert de style. Runway est plus accessible que Sora pour les debutants et offre plus de controle sur l'edition.");
 sectionTitle("9.3 Prompts Video Efficaces");
 para("Un bon prompt video decrit : le sujet et l'action, le mouvement de camera (dolly, pan, tilt, aerial, tracking shot), l'eclairage et l'ambiance, le rythme et le tempo, et le style visuel. Exemple : 'Cinematic tracking shot of a barista pouring latte art in slow motion, warm morning light streaming through a cafe window, shallow depth of field, 4K film grain, cozy atmosphere'.");
-summaryBox(["Sora : videos HD de 1-2 minutes a partir de texte", "Runway : plateforme complete avec edition avancee", "Decrivez le mouvement de camera et l'ambiance", "Applications : publicites, reseaux sociaux, cinema, clips"]);
+summaryBox(["Sora 2 : videos avec dialogues, effets sonores et physique realiste", "Runway Gen-3 : plateforme complete avec edition avancee", "Application sociale Sora + integration ChatGPT en cours", "Applications : publicites, reseaux sociaux, cinema, clips"]);
 
 chapterTitle(10, "Animation et Motion Design IA");
 doc.moveDown(2);

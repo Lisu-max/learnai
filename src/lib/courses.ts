@@ -52,7 +52,7 @@ export const courses: Course[] = [
     chapters: 18,
     pages: 120,
     features: [
-      "Guide complet ChatGPT (GPT-4)",
+      "Guide complet ChatGPT (GPT-5.4)",
       "Maîtriser Midjourney & DALL-E",
       "Claude, Gemini et les alternatives",
       "Automatisation avec Zapier + IA",

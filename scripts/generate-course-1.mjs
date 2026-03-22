@@ -123,7 +123,7 @@ doc.moveDown(2);
 sectionTitle("1.1 Définition de l'Intelligence Artificielle");
 para("L'Intelligence Artificielle (IA) est un domaine de l'informatique qui vise à créer des systèmes capables d'effectuer des tâches qui nécessitent normalement l'intelligence humaine. Ces tâches incluent la reconnaissance vocale, la prise de décision, la traduction linguistique, la perception visuelle et bien d'autres encore. L'IA ne se limite pas à un seul algorithme ou une seule technique : c'est un ensemble vaste de méthodes, d'approches et de technologies qui travaillent ensemble pour simuler certains aspects de la cognition humaine.");
 para("Le terme « Intelligence Artificielle » a été inventé en 1956 lors de la conférence de Dartmouth, organisée par John McCarthy, Marvin Minsky, Nathaniel Rochester et Claude Shannon. Ces pionniers avaient l'ambition de créer des machines capables de « penser » comme des êtres humains. Depuis lors, le domaine a connu des hauts et des bas, des périodes d'enthousiasme intense suivies de « hivers de l'IA » où le financement et l'intérêt diminuaient.");
-para("Aujourd'hui, en 2026, l'IA connaît une période de croissance sans précédent. Les avancées dans le deep learning, les modèles de langage comme GPT-4.5, Claude 4 et Gemini 2.0, ainsi que la disponibilité massive de données et de puissance de calcul, ont propulsé l'IA dans pratiquement tous les secteurs de l'économie et de la société.");
+para("Aujourd'hui, en 2026, l'IA connaît une période de croissance sans précédent. Les avancées dans le deep learning, les modèles de langage comme GPT-5.4, Claude 4.6 et Gemini 3.1, ainsi que la disponibilité massive de données et de puissance de calcul, ont propulsé l'IA dans pratiquement tous les secteurs de l'économie et de la société.");
 
 checkNewPage();
 sectionTitle("1.2 Les Différents Types d'IA");
@@ -141,7 +141,7 @@ sectionTitle("1.3 Histoire de l'IA : Les Grandes Étapes");
 para("1943 : Warren McCulloch et Walter Pitts créent le premier modèle mathématique d'un neurone artificiel. 1950 : Alan Turing publie son article fondateur « Computing Machinery and Intelligence » et propose le fameux Test de Turing. 1956 : La conférence de Dartmouth marque la naissance officielle de l'IA comme discipline académique.");
 para("1960-1970 : Premiers systèmes experts et programmes de résolution de problèmes. ELIZA, créé par Joseph Weizenbaum au MIT, simule un psychothérapeute. 1980-1990 : Essor des systèmes experts commerciaux, puis premier hiver de l'IA dû aux limitations techniques. 1997 : Deep Blue d'IBM bat le champion du monde d'échecs Garry Kasparov.");
 para("2012 : AlexNet révolutionne la vision par ordinateur lors du concours ImageNet, marquant le début de l'ère du deep learning. 2016 : AlphaGo de DeepMind bat le champion du monde de Go Lee Sedol. 2017 : Google publie « Attention Is All You Need », introduisant l'architecture Transformer qui révolutionnera le NLP.");
-para("2022-2023 : ChatGPT d'OpenAI démocratise l'IA auprès du grand public. Explosion de l'IA générative avec Midjourney, Stable Diffusion, et DALL-E. 2024-2025 : Les modèles multimodaux deviennent la norme. Claude 3.5, GPT-4o, Gemini 1.5 repoussent les limites. 2026 : L'IA est intégrée dans la majorité des outils professionnels et personnels. Les agents IA autonomes commencent à transformer les workflows.");
+para("2022-2023 : ChatGPT d'OpenAI démocratise l'IA auprès du grand public. Explosion de l'IA générative avec Midjourney, Stable Diffusion, et DALL-E. 2024-2025 : Les modèles multimodaux deviennent la norme. Claude 3.5 puis Claude 4, GPT-4o puis GPT-5, Gemini 1.5 puis Gemini 2.0 repoussent les limites. 2026 : GPT-5.4, Claude 4.6 et Gemini 3.1 atteignent le million de tokens de contexte. L'IA est intégrée dans la majorité des outils professionnels et personnels. Les agents IA autonomes avec Computer Use transforment les workflows. Les modèles de raisonnement (o1, o3, Deep Think) rivalisent avec les experts humains.");
 
 checkNewPage();
 sectionTitle("1.4 Comment Fonctionne l'IA ?");
@@ -219,7 +219,7 @@ checkNewPage();
 sectionTitle("3.2 L'Architecture des Réseaux de Neurones");
 para("Un réseau de neurones est organisé en couches (layers). La couche d'entrée reçoit les données brutes. Les couches cachées (hidden layers) effectuent les transformations. La couche de sortie produit le résultat final. Quand un réseau possède de nombreuses couches cachées, on parle de « deep learning » — apprentissage profond.");
 para("Chaque connexion entre deux neurones possède un poids. Pendant l'entraînement, ces poids sont ajustés par un algorithme appelé rétropropagation (backpropagation). L'algorithme calcule l'erreur entre la prédiction du réseau et la valeur attendue, puis propage cette erreur en arrière à travers le réseau pour ajuster les poids. Ce processus est répété des millions de fois avec différents exemples d'entraînement.");
-para("Les réseaux de neurones modernes peuvent avoir des milliards de paramètres. GPT-4, par exemple, est estimé à plus d'un trillion de paramètres. L'entraînement de tels modèles nécessite des milliers de GPU travaillant en parallèle pendant des semaines, ce qui représente un investissement de dizaines de millions de dollars.");
+para("Les réseaux de neurones modernes peuvent avoir des milliards de paramètres. GPT-5.4, par exemple, est estime a plusieurs trillions de parametres. L'entraînement de tels modèles nécessite des milliers de GPU travaillant en parallèle pendant des semaines, ce qui représente un investissement de dizaines de millions de dollars.");
 
 checkNewPage();
 sectionTitle("3.3 Les Réseaux de Neurones Convolutifs (CNN)");
@@ -308,14 +308,14 @@ para("Le fonctionnement est conceptuellement simple : le modèle a lu une quanti
 
 checkNewPage();
 sectionTitle("6.2 Les Principaux LLM en 2026");
-subSection("GPT-4.5 et GPT-5 (OpenAI)");
-para("OpenAI continue de repousser les limites avec ses modèles GPT. GPT-4.5, sorti fin 2025, a amélioré significativement le raisonnement mathématique et la réduction des hallucinations. La famille de modèles o1 et o3 a introduit le « raisonnement en chaîne » intégré, où le modèle « réfléchit » étape par étape avant de répondre. ChatGPT reste l'interface grand public la plus populaire avec des centaines de millions d'utilisateurs.");
+subSection("GPT-5.4 (OpenAI)");
+para("OpenAI domine le marche grand public avec sa famille GPT-5. Sorti le 5 mars 2026, GPT-5.4 est disponible en trois variantes : GPT-5.4 Standard (usage general), GPT-5.4 Thinking (raisonnement avance) et GPT-5.4 Pro (capacite maximale). Avec un contexte d'1,05 million de tokens, Computer Use natif (le modele peut controler un ordinateur), et une reduction de 33% des hallucinations par rapport a GPT-5.2, c'est un bond generationnel. GPT-5.4 mini et nano, sortis le 17 mars 2026, rendent cette puissance accessible a tous. ChatGPT reste l'interface grand public la plus populaire avec des centaines de millions d'utilisateurs.");
 
-subSection("Claude 4 (Anthropic)");
-para("Anthropic, fondée par d'anciens chercheurs d'OpenAI, développe Claude avec une emphase particulière sur la sécurité et la fiabilité. Claude 4, sorti début 2026, est reconnu pour sa capacité à suivre des instructions complexes, son honnêteté (il admet ne pas savoir plutôt que d'inventer), et ses performances exceptionnelles en rédaction et analyse de code. Claude Code, leur outil CLI, a transformé le développement logiciel assisté par IA.");
+subSection("Claude 4.6 (Anthropic)");
+para("Anthropic, fondée par d'anciens chercheurs d'OpenAI, développe Claude avec une emphase particulière sur la sécurité et la fiabilité. Claude Opus 4.6, sorti le 5 fevrier 2026, est le modele le plus capable du marche sur de nombreux benchmarks, avec une fenetre de contexte d'1 million de tokens, un horizon de completion de taches de 14,5 heures (le plus long de tous les modeles IA), et des performances de pointe en finance, code et raisonnement. Claude Sonnet 4.6 offre le meilleur equilibre performance/vitesse. Le Computer Use atteint 72,5% sur OSWorld. Claude Code, leur outil CLI, a transformé le développement logiciel assisté par IA.");
 
-subSection("Gemini 2.0 (Google DeepMind)");
-para("Google DeepMind a unifié ses efforts de recherche en IA avec Gemini, un modèle nativement multimodal capable de traiter du texte, des images, de la vidéo et de l'audio simultanément. Gemini 2.0 est intégré dans l'ensemble de l'écosystème Google : Search, Gmail, Docs, Sheets, et Android. Sa capacité à raisonner sur des contextes très longs (plus d'un million de tokens) le distingue de la concurrence.");
+subSection("Gemini 3.1 (Google DeepMind)");
+para("Google DeepMind a unifié ses efforts de recherche en IA avec Gemini, un modèle nativement multimodal capable de traiter du texte, des images, de la vidéo et de l'audio simultanément. Gemini 3.1 Pro, sorti en fevrier 2026, est le modele Pro le plus avance de Google avec un contexte d'1 million de tokens, un score de 77,1% sur ARC-AGI-2, et un raisonnement multimodal sur texte, images, audio, video et code. Il est intégré dans l'ensemble de l'écosystème Google : Search, Gmail, Docs, Sheets, Slides et Android.");
 
 subSection("LLaMA 4 (Meta) et l'Open Source");
 para("Meta a choisi la voie de l'open source avec LLaMA, permettant à la communauté de recherche et aux entreprises d'utiliser, modifier et déployer ces modèles librement. LLaMA 4, sorti début 2026, rivalise avec les modèles propriétaires en performance tout en étant accessible à tous. L'écosystème open source, incluant également Mistral (France), Qwen (Alibaba) et DeepSeek (Chine), a considérablement démocratisé l'accès à l'IA avancée.");
@@ -327,7 +327,7 @@ para("Le fine-tuning ajuste le modèle pour des tâches spécifiques ou pour sui
 
 summaryBox([
   "Les LLM prédisent le prochain token le plus probable dans une séquence",
-  "Les principaux LLM en 2026 : GPT-4.5/5, Claude 4, Gemini 2.0, LLaMA 4",
+  "Les principaux LLM en 2026 : GPT-5.4, Claude 4.6, Gemini 3.1, LLaMA 4, Qwen 3.5",
   "L'entraînement comprend le pré-entraînement, le fine-tuning et le RLHF",
   "Le contexte (context window) détermine la quantité de texte que le modèle peut traiter",
   "L'open source (LLaMA, Mistral) démocratise l'accès aux LLM puissants"
@@ -342,7 +342,7 @@ para("L'IA générative désigne les systèmes d'IA capables de créer du conten
 para("Le marché de l'IA générative est estimé à plus de 60 milliards de dollars en 2026 et continue de croître à un rythme exponentiel. Des millions de personnes utilisent quotidiennement des outils d'IA générative pour créer du contenu, automatiser des tâches, et augmenter leur productivité.");
 
 sectionTitle("7.2 Génération de Texte");
-para("La génération de texte est l'application la plus mature de l'IA générative. Les LLM comme GPT-4.5, Claude 4 et Gemini 2.0 peuvent rédiger des articles, des emails professionnels, des scripts, des poèmes, du code informatique, et pratiquement n'importe quel type de contenu textuel. La qualité est souvent indiscernable de celle d'un rédacteur humain, bien que des limites persistent (hallucinations, manque de créativité véritablement originale, biais).");
+para("La génération de texte est l'application la plus mature de l'IA générative. Les LLM comme GPT-5.4, Claude 4.6 et Gemini 3.1 peuvent rédiger des articles, des emails professionnels, des scripts, des poèmes, du code informatique, et pratiquement n'importe quel type de contenu textuel. La qualité est souvent indiscernable de celle d'un rédacteur humain, bien que des limites persistent (hallucinations, manque de créativité véritablement originale, biais).");
 
 checkNewPage();
 sectionTitle("7.3 Génération d'Images");
@@ -366,7 +366,7 @@ doc.moveDown(2);
 
 sectionTitle("8.1 Qu'est-ce qu'un Agent IA ?");
 para("Un agent IA est un système autonome qui peut percevoir son environnement, prendre des décisions, et agir pour atteindre des objectifs définis. Contrairement à un simple chatbot qui répond à des questions, un agent peut planifier une séquence d'actions, utiliser des outils (recherche web, exécution de code, manipulation de fichiers), et s'adapter en fonction des résultats obtenus. Les agents représentent l'évolution naturelle des chatbots vers des systèmes véritablement autonomes.");
-para("En 2026, les agents IA transforment la façon dont nous travaillons. Des outils comme Claude Code d'Anthropic, GitHub Copilot Workspace, et Devin permettent aux développeurs de déléguer des tâches complexes de programmation. Des agents de recherche peuvent analyser des dizaines de sources, synthétiser l'information, et produire des rapports détaillés. Des agents de support client gèrent des conversations complètes de manière autonome.");
+para("En mars 2026, les agents IA transforment la facon dont nous travaillons. La « capacite agentique » est devenue le critere numero un des nouvelles releases — chaque modele est desormais concu pour agir, pas seulement repondre. Claude Opus 4.6 peut maintenir une tache pendant 14,5 heures d'affilee. GPT-5.4 integre le Computer Use natif (controle d'un ordinateur). Des outils comme Claude Code d'Anthropic, GitHub Copilot Workspace, et Cursor Agent permettent aux developpeurs de deleguer des taches complexes de programmation. Des agents de support client gerent des conversations completes de maniere autonome avec des taux de resolution de 70-85%.");
 
 checkNewPage();
 sectionTitle("8.2 Architecture des Agents");
@@ -374,7 +374,7 @@ para("Un agent IA typique comprend plusieurs composants : un LLM comme « cervea
 para("Le paradigme ReAct (Reasoning + Acting) est l'un des plus populaires : l'agent alterne entre des phases de réflexion (Thought), d'action (Action), et d'observation des résultats (Observation). Cette boucle continue jusqu'à ce que l'objectif soit atteint ou que l'agent détermine qu'il ne peut pas accomplir la tâche.");
 
 sectionTitle("8.3 Les Outils des Agents");
-para("Les agents peuvent utiliser une variété d'outils : recherche sur le web, exécution de code Python ou JavaScript, lecture et écriture de fichiers, appels à des API externes, navigation web, et même contrôle d'applications. Le protocole MCP (Model Context Protocol), introduit par Anthropic, standardise la façon dont les agents interagissent avec les outils et les sources de données externes.");
+para("Les agents peuvent utiliser une variete d'outils : recherche sur le web, execution de code Python ou JavaScript, lecture et ecriture de fichiers, appels a des API externes, navigation web, et controle complet d'applications via le Computer Use (Claude 4.6 atteint 72,5% sur OSWorld, GPT-5.4 est le premier modele generaliste avec Computer Use natif). Le protocole MCP (Model Context Protocol), introduit par Anthropic et adopte par l'industrie, standardise la facon dont les agents interagissent avec les outils et les sources de donnees externes.");
 
 summaryBox([
   "Les agents IA sont des systèmes autonomes capables de planifier et d'agir",
@@ -473,8 +473,8 @@ para("Les chercheurs explorent plusieurs pistes vers l'AGI : les architectures h
 
 checkNewPage();
 sectionTitle("12.2 Tendances Clés pour 2026-2030");
-para("Les modèles multimodaux deviendront la norme : une seule IA capable de traiter et générer du texte, des images, de la vidéo, de l'audio et du code. Les agents IA deviendront de plus en plus autonomes et fiables, transformant les workflows professionnels. La personnalisation des modèles permettra à chaque utilisateur ou entreprise d'avoir une IA adaptée à ses besoins spécifiques.");
-para("L'IA embarquée (on-device AI) permettra d'exécuter des modèles puissants directement sur les smartphones, les ordinateurs portables et les objets connectés, sans dépendre du cloud. L'efficacité énergétique et computationnelle des modèles s'améliorera considérablement, rendant l'IA plus durable et accessible.");
+para("Les modeles multimodaux sont deja la norme en mars 2026 : GPT-5.4, Claude 4.6 et Gemini 3.1 traitent et generent du texte, des images, de la video, de l'audio et du code. Les agents IA sont de plus en plus autonomes — Claude 4.6 tient 14,5h sur une tache, GPT-5.4 controle un ordinateur nativement. La prochaine etape est la collaboration multi-agents : des equipes d'IA specialisees travaillant ensemble sur des projets complexes. Les modeles compacts comme Qwen 3.5 9B rivalisent avec des modeles 13x plus gros, democratisant le deploiement.");
+para("L'IA embarquee (on-device AI) est en plein essor grace aux NPU integres dans les processeurs (AMD Ryzen AI 400, Apple Neural Engine, Qualcomm). Les modeles comme GPT-5.4 nano sont concus pour tourner localement sur les appareils. La plateforme Vera Rubin de Nvidia, devoilee en 2026, cible les modeles a un trillion de parametres. L'efficacite energetique et computationnelle des modeles s'ameliore considerablement, rendant l'IA plus durable et accessible.");
 
 sectionTitle("12.3 Les Opportunités de Carrière");
 para("L'IA crée de nombreuses opportunités professionnelles. Les métiers les plus demandés incluent : ingénieur en machine learning, data scientist, prompt engineer, spécialiste en éthique de l'IA, architecte de solutions IA, et consultant en transformation IA. Mais au-delà de ces rôles spécialisés, la maîtrise des outils d'IA devient une compétence transversale précieuse dans pratiquement tous les métiers.");
@@ -485,8 +485,8 @@ para("Pour tirer le meilleur parti de la révolution IA, adoptez une mentalité 
 
 summaryBox([
   "L'AGI reste un objectif de recherche majeur mais n'est pas encore atteinte",
-  "Les modèles multimodaux et les agents autonomes sont les grandes tendances",
-  "L'IA embarquée et l'efficacité énergétique sont des axes de progrès importants",
+  "Les agents autonomes avec Computer Use sont la tendance majeure de 2026",
+  "L'IA embarquee (NPU, modeles nano) et les modeles compacts democratisent l'acces",
   "Les opportunités de carrière en IA sont nombreuses et bien rémunérées",
   "L'apprentissage continu et l'adaptabilité sont les clés du succès dans l'ère de l'IA"
 ]);
