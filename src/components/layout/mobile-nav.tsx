@@ -25,7 +25,7 @@ export function MobileNav({ user, loading }: MobileNavProps) {
   return (
     <Sheet open={open} onOpenChange={setOpen}>
       <SheetTrigger asChild className="md:hidden">
-        <button className="p-2 text-muted-foreground hover:text-foreground">
+        <button aria-label="Ouvrir le menu de navigation" className="p-2 text-muted-foreground hover:text-foreground">
           <Menu className="h-5 w-5" />
         </button>
       </SheetTrigger>

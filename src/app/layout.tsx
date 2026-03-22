@@ -22,6 +22,19 @@ export const metadata: Metadata = {
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
+  openGraph: {
+    title: `${siteConfig.name} — Formations IA Premium`,
+    description: siteConfig.description,
+    url: "https://learnai-gules.vercel.app",
+    siteName: siteConfig.name,
+    type: "website",
+    locale: "fr_FR",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${siteConfig.name} — Formations IA Premium`,
+    description: siteConfig.description,
+  },
 };
 
 export default function RootLayout({

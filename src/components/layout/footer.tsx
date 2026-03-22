@@ -54,19 +54,28 @@ export function Footer() {
             <h3 className="mb-3 text-sm font-semibold">{t.footer.legal}</h3>
             <ul className="space-y-2">
               <li>
-                <span className="text-sm text-muted-foreground">
+                <Link
+                  href="/cgv"
+                  className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+                >
                   {t.footer.terms}
-                </span>
+                </Link>
               </li>
               <li>
-                <span className="text-sm text-muted-foreground">
+                <Link
+                  href="/politique-confidentialite"
+                  className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+                >
                   {t.footer.privacy}
-                </span>
+                </Link>
               </li>
               <li>
-                <span className="text-sm text-muted-foreground">
+                <Link
+                  href="/mentions-legales"
+                  className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+                >
                   {t.footer.legalNotice}
-                </span>
+                </Link>
               </li>
             </ul>
           </div>

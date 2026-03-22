@@ -130,6 +130,12 @@ function ConnexionForm() {
             {loading ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : <LogIn className="mr-2 h-4 w-4" />}
             {loading ? t.auth.loggingIn : t.auth.loginButton}
           </Button>
+
+          <div className="mt-3 text-center">
+            <Link href="/reinitialisation-mot-de-passe" className="text-sm text-muted-foreground transition-colors hover:text-purple-400">
+              {t.auth.forgotPassword}
+            </Link>
+          </div>
         </form>
       </div>
 

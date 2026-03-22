@@ -167,6 +167,15 @@ export const translations = {
       serviceUnavailable: "Service indisponible. Réessayez plus tard.",
       passwordMismatch: "Les mots de passe ne correspondent pas.",
       passwordTooShort: "Le mot de passe doit contenir au moins 6 caractères.",
+      forgotPassword: "Mot de passe oublié ?",
+      resetTitle: "Réinitialiser le mot de passe",
+      resetSubtitle: "Entrez votre email pour recevoir un lien de réinitialisation",
+      resetEmailRequired: "L'adresse email est requise.",
+      resetButton: "Envoyer le lien",
+      resetSending: "Envoi en cours...",
+      resetSent: "Email envoyé !",
+      resetSentSubtitle: "Vérifiez votre boîte de réception et cliquez sur le lien pour réinitialiser votre mot de passe.",
+      backToLogin: "Retour à la connexion",
       // Supabase error translations
       errors: {
         "Invalid login credentials": "Email ou mot de passe incorrect.",
@@ -441,6 +450,15 @@ export const translations = {
       serviceUnavailable: "Service unavailable. Please try again later.",
       passwordMismatch: "Passwords do not match.",
       passwordTooShort: "Password must be at least 6 characters.",
+      forgotPassword: "Forgot your password?",
+      resetTitle: "Reset your password",
+      resetSubtitle: "Enter your email to receive a reset link",
+      resetEmailRequired: "Email address is required.",
+      resetButton: "Send reset link",
+      resetSending: "Sending...",
+      resetSent: "Email sent!",
+      resetSentSubtitle: "Check your inbox and click the link to reset your password.",
+      backToLogin: "Back to login",
       errors: {
         "Invalid login credentials": "Incorrect email or password.",
         "User already registered": "An account already exists with this email.",
@@ -601,6 +619,9 @@ export interface Translations {
     alreadyHaveAccount: string; noAccount: string;
     accountCreated: string; authError: string; serviceUnavailable: string;
     passwordMismatch: string; passwordTooShort: string;
+    forgotPassword: string; resetTitle: string; resetSubtitle: string;
+    resetEmailRequired: string; resetButton: string; resetSending: string;
+    resetSent: string; resetSentSubtitle: string; backToLogin: string;
     errors: Record<string, string>;
   };
   account: {

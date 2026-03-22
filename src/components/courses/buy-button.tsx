@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
-import { Loader2, ShoppingCart, Globe } from "lucide-react";
+import { Loader2, ShoppingCart, Globe, AlertCircle } from "lucide-react";
 import { useTranslation } from "@/lib/i18n/context";
 
 export function BuyButton({
@@ -14,12 +14,14 @@ export function BuyButton({
   priceFormatted: string;
 }) {
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   const [courseLang, setCourseLang] = useState<"fr" | "en">("fr");
   const router = useRouter();
   const { t } = useTranslation();
 
   async function handleCheckout() {
     setLoading(true);
+    setError(null);
     try {
       const res = await fetch("/api/checkout", {
         method: "POST",
@@ -37,11 +39,11 @@ export function BuyButton({
       if (data.url) {
         window.location.href = data.url;
       } else {
-        alert(t.buy.error);
+        setError(data.error || t.buy.error);
         setLoading(false);
       }
     } catch {
-      alert(t.buy.error);
+      setError(t.buy.error);
       setLoading(false);
     }
   }
@@ -97,6 +99,13 @@ export function BuyButton({
           </>
         )}
       </Button>
+
+      {error && (
+        <div className="flex items-start gap-2 rounded-lg bg-red-500/10 px-4 py-3 text-sm text-red-400">
+          <AlertCircle className="mt-0.5 h-4 w-4 shrink-0" />
+          <span>{error}</span>
+        </div>
+      )}
     </div>
   );
 }
