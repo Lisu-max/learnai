@@ -57,16 +57,16 @@ export function Hero() {
           {/* Stats */}
           <Reveal className="reveal-stagger mt-16 grid grid-cols-3 gap-8 border-t border-border/50 pt-8">
             <div>
-              <p className="animated-underline text-4xl font-bold gradient-text-animated md:text-5xl">6</p>
+              <p className="animated-underline text-4xl font-bold gradient-text-animated md:text-5xl">5</p>
               <p className="mt-2 text-sm text-muted-foreground">{t.hero.statCourses}</p>
             </div>
             <div>
-              <p className="animated-underline text-4xl font-bold gradient-text-animated md:text-5xl">715+</p>
-              <p className="mt-2 text-sm text-muted-foreground">{t.hero.statPages}</p>
+              <p className="animated-underline text-4xl font-bold gradient-text-animated md:text-5xl">97</p>
+              <p className="mt-2 text-sm text-muted-foreground">{t.hero.statChapters}</p>
             </div>
             <div>
-              <p className="animated-underline text-4xl font-bold gradient-text-animated md:text-5xl">2k+</p>
-              <p className="mt-2 text-sm text-muted-foreground">{t.hero.statStudents}</p>
+              <p className="animated-underline text-4xl font-bold gradient-text-animated md:text-5xl">140+</p>
+              <p className="mt-2 text-sm text-muted-foreground">{t.hero.statPages}</p>
             </div>
           </Reveal>
         </div>

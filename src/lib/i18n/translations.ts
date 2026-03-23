@@ -18,7 +18,7 @@ export const translations = {
       learnMore: "En savoir plus",
       statCourses: "Formations",
       statPages: "Pages de contenu",
-      statStudents: "Étudiants",
+      statChapters: "Chapitres",
     },
     // Value Proposition
     values: {
@@ -308,7 +308,7 @@ export const translations = {
       learnMore: "Learn more",
       statCourses: "Courses",
       statPages: "Pages of content",
-      statStudents: "Students",
+      statChapters: "Chapters",
     },
     values: {
       title: "Why choose",
@@ -585,7 +585,7 @@ export interface Translations {
   nav: { home: string; courses: string; login: string; signup: string };
   hero: {
     badge: string; title: string; titleHighlight: string; description: string;
-    cta: string; learnMore: string; statCourses: string; statPages: string; statStudents: string;
+    cta: string; learnMore: string; statCourses: string; statPages: string; statChapters: string;
   };
   values: {
     title: string; subtitle: string;

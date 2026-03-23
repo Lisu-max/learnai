@@ -48,7 +48,7 @@ export default function CoursPage() {
           {/* Stats bar */}
           <div className="animate-fade-in-delay-3 mx-auto grid max-w-lg grid-cols-3 gap-6">
             <div className="card-glass px-4 py-3 text-center">
-              <p className="text-xl font-bold gradient-text-animated">715+</p>
+              <p className="text-xl font-bold gradient-text-animated">140+</p>
               <p className="text-xs text-muted-foreground">{t.coursesPage.pages}</p>
             </div>
             <div className="card-glass px-4 py-3 text-center">
@@ -80,7 +80,7 @@ export default function CoursPage() {
                       {t.coursesPage.bestOffer}
                     </Badge>
                     <Badge variant="outline" className="bg-emerald-500/10 text-emerald-400 border-emerald-500/20">
-                      -50€
+                      -31%
                     </Badge>
                   </div>
                   <h2 className="mb-2 text-2xl font-bold md:text-3xl">
@@ -107,7 +107,7 @@ export default function CoursPage() {
                 </div>
 
                 <div className="flex shrink-0 flex-col items-center text-center">
-                  <p className="mb-1 text-sm text-muted-foreground line-through">139,95€</p>
+                  <p className="mb-1 text-sm text-muted-foreground line-through">36,95€</p>
                   <p className="text-5xl font-bold gradient-text-animated md:text-6xl">
                     {bundle.priceFormatted}
                   </p>
