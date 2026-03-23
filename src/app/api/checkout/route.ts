@@ -5,10 +5,23 @@ import { createClient } from "@/lib/supabase/server";
 
 export async function POST(req: NextRequest) {
   try {
+    if (!process.env.STRIPE_SECRET_KEY) {
+      console.error("STRIPE_SECRET_KEY is not set");
+      return NextResponse.json(
+        { error: "Configuration Stripe manquante sur le serveur." },
+        { status: 500 }
+      );
+    }
+
     const supabase = await createClient();
     const {
       data: { user },
+      error: authError,
     } = await supabase.auth.getUser();
+
+    if (authError) {
+      console.error("Auth error:", authError.message);
+    }
 
     if (!user) {
       return NextResponse.json(
@@ -55,9 +68,10 @@ export async function POST(req: NextRequest) {
 
     return NextResponse.json({ url: session.url });
   } catch (error) {
-    console.error("Stripe checkout error:", error);
+    const message = error instanceof Error ? error.message : "Unknown error";
+    console.error("Stripe checkout error:", message);
     return NextResponse.json(
-      { error: "Erreur lors de la création de la session de paiement" },
+      { error: `Erreur checkout: ${message}` },
       { status: 500 }
     );
   }
