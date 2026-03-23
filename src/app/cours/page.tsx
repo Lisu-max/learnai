@@ -80,7 +80,7 @@ export default function CoursPage() {
                       {t.coursesPage.bestOffer}
                     </Badge>
                     <Badge variant="outline" className="bg-emerald-500/10 text-emerald-400 border-emerald-500/20">
-                      -31%
+                      -44%
                     </Badge>
                   </div>
                   <h2 className="mb-2 text-2xl font-bold md:text-3xl">
@@ -107,7 +107,7 @@ export default function CoursPage() {
                 </div>
 
                 <div className="flex shrink-0 flex-col items-center text-center">
-                  <p className="mb-1 text-sm text-muted-foreground line-through">36,95€</p>
+                  <p className="mb-1 text-sm text-muted-foreground line-through">70,95€</p>
                   <p className="text-5xl font-bold gradient-text-animated md:text-6xl">
                     {bundle.priceFormatted}
                   </p>
