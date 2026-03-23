@@ -29,12 +29,14 @@ export function BuyButton({
         body: JSON.stringify({ courseSlug, courseLang }),
       });
 
+      const data = await res.json();
+
       if (res.status === 401) {
-        router.push("/connexion");
+        // Show error briefly then redirect
+        setError(data.error || "Connexion requise");
+        setTimeout(() => router.push("/connexion"), 1500);
         return;
       }
-
-      const data = await res.json();
 
       if (data.url) {
         window.location.href = data.url;
@@ -42,8 +44,8 @@ export function BuyButton({
         setError(data.error || t.buy.error);
         setLoading(false);
       }
-    } catch {
-      setError(t.buy.error);
+    } catch (err) {
+      setError(`${t.buy.error} (${err instanceof Error ? err.message : "réseau"})`);
       setLoading(false);
     }
   }
