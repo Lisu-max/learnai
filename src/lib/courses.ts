@@ -21,13 +21,13 @@ export const courses: Course[] = [
     description:
       "Découvrez les fondamentaux de l'intelligence artificielle. Le guide parfait pour débuter et comprendre les concepts clés de l'IA en 2026.",
     longDescription:
-      "Ce guide complet de 61 pages vous accompagne dans la découverte de l'intelligence artificielle. Vous apprendrez les concepts fondamentaux du machine learning, du deep learning, du NLP, de la vision par ordinateur, des modèles de langage (GPT-5.4, Claude 4.6, Gemini 3.1), de l'IA générative, des agents IA autonomes, et de l'éthique. Chaque chapitre inclut des points clés à retenir et des exemples concrets. Idéal pour les débutants complets.",
+      "Ce guide complet de 32 pages vous accompagne dans la découverte de l'intelligence artificielle. Vous apprendrez les concepts fondamentaux du machine learning, du deep learning, du NLP, de la vision par ordinateur, des modèles de langage (GPT-5.4, Claude 4.6, Gemini 3.1), de l'IA générative, des agents IA autonomes, et de l'éthique. Chaque chapitre inclut des points clés à retenir et des exemples concrets. Idéal pour les débutants complets.",
     price: 999,
     priceFormatted: "9,99€",
     level: "Débutant",
-    duration: "2h de lecture",
+    duration: "1h30 de lecture",
     chapters: 12,
-    pages: 61,
+    pages: 32,
     features: [
       "Les bases de l'IA expliquées simplement",
       "Machine Learning, Deep Learning et réseaux de neurones",
@@ -44,13 +44,13 @@ export const courses: Course[] = [
     description:
       "Guide pratique complet de tous les outils IA majeurs : ChatGPT, Claude, Gemini, Midjourney, Sora, Cursor et bien plus. Apprenez à choisir et utiliser le bon outil pour chaque tâche.",
     longDescription:
-      "Ce guide professionnel de 53 pages couvre en détail les 18 outils IA incontournables de 2026. Chaque chapitre est un tutoriel complet : ChatGPT (GPT-5.4 Standard/Thinking/Pro), Claude 4.6 (Opus, Sonnet, Haiku + Claude Code), Gemini 3.1, Midjourney V7/V8, DALL-E 3, Stable Diffusion, Sora 2, ElevenLabs, Suno, GitHub Copilot, Cursor et ses modes Agent, NotebookLM, Perplexity AI, Make/Zapier, et les API d'IA. Vous apprendrez à construire votre propre workflow IA personnalisé.",
+      "Ce guide professionnel de 27 pages couvre en détail les 18 outils IA incontournables de 2026. Chaque chapitre est un tutoriel complet : ChatGPT (GPT-5.4 Standard/Thinking/Pro), Claude 4.6 (Opus, Sonnet, Haiku + Claude Code), Gemini 3.1, Midjourney V7/V8, DALL-E 3, Stable Diffusion, Sora 2, ElevenLabs, Suno, GitHub Copilot, Cursor et ses modes Agent, NotebookLM, Perplexity AI, Make/Zapier, et les API d'IA. Vous apprendrez à construire votre propre workflow IA personnalisé.",
     price: 1999,
     priceFormatted: "19,99€",
     level: "Intermédiaire",
-    duration: "2h30 de lecture",
+    duration: "1h30 de lecture",
     chapters: 18,
-    pages: 53,
+    pages: 27,
     features: [
       "Guide complet ChatGPT GPT-5.4 et Claude 4.6",
       "Midjourney V7/V8 Alpha, DALL-E 3, Stable Diffusion",
@@ -67,13 +67,13 @@ export const courses: Course[] = [
     description:
       "Maîtrisez l'art du prompt engineering avec 20 techniques avancées. Du zero-shot au Chain-of-Thought, en passant par les system prompts et les agents IA.",
     longDescription:
-      "Ce guide avancé de 59 pages vous enseigne les techniques professionnelles de prompt engineering. Vous maîtriserez la tokenisation, le zero-shot, le few-shot, le Chain-of-Thought, le Tree of Thought, le Step-Back Prompting, le framework CRISPE, les personas, les system prompts, le meta-prompting et le prompt chaining. Des chapitres dédiés au prompting pour le code, l'écriture créative, l'analyse de données, les images (Midjourney), la vidéo et la musique. Inclut 3 études de cas réels avec résultats mesurés.",
+      "Ce guide avancé de 25 pages vous enseigne les techniques professionnelles de prompt engineering. Vous maîtriserez la tokenisation, le zero-shot, le few-shot, le Chain-of-Thought, le Tree of Thought, le Step-Back Prompting, le framework CRISPE, les personas, les system prompts, le meta-prompting et le prompt chaining. Des chapitres dédiés au prompting pour le code, l'écriture créative, l'analyse de données, les images (Midjourney), la vidéo et la musique. Inclut 3 études de cas réels avec résultats mesurés.",
     price: 2999,
     priceFormatted: "29,99€",
     level: "Intermédiaire",
-    duration: "2h30 de lecture",
+    duration: "1h30 de lecture",
     chapters: 20,
-    pages: 59,
+    pages: 25,
     features: [
       "20 techniques : zero-shot, few-shot, CoT, ToT, CRISPE",
       "Prompts spécialisés : code, images, vidéo, musique",
@@ -90,13 +90,13 @@ export const courses: Course[] = [
     description:
       "Stratégies concrètes pour intégrer l'IA dans votre entreprise. ROI, automatisation, marketing, ventes, RH, finance — avec un plan d'action en 90 jours.",
     longDescription:
-      "Ce guide stratégique de 57 pages est conçu pour les entrepreneurs et dirigeants. Il couvre l'état du marché IA en 2026 (250B$+), l'audit IA de votre entreprise, le calcul du ROI, et des chapitres détaillés pour chaque département : service client (chatbots 70-85% de résolution), marketing digital, personnalisation, ventes/CRM, opérations, RH, finance, supply chain, e-commerce et business intelligence. Inclut 3 études de cas (agence immobilière, cabinet comptable, e-commerce cosmétiques) avec métriques réelles, un plan d'action 90 jours, et les aspects juridiques RGPD/AI Act.",
+      "Ce guide stratégique de 29 pages est conçu pour les entrepreneurs et dirigeants. Il couvre l'état du marché IA en 2026 (250B$+), l'audit IA de votre entreprise, le calcul du ROI, et des chapitres détaillés pour chaque département : service client (chatbots 70-85% de résolution), marketing digital, personnalisation, ventes/CRM, opérations, RH, finance, supply chain, e-commerce et business intelligence. Inclut 3 études de cas (agence immobilière, cabinet comptable, e-commerce cosmétiques) avec métriques réelles, un plan d'action 90 jours, et les aspects juridiques RGPD/AI Act.",
     price: 4999,
     priceFormatted: "49,99€",
     level: "Avancé",
-    duration: "2h30 de lecture",
+    duration: "1h30 de lecture",
     chapters: 25,
-    pages: 57,
+    pages: 29,
     features: [
       "Audit IA et calcul de ROI pour votre entreprise",
       "Marketing, ventes, RH, finance, supply chain avec l'IA",
@@ -113,13 +113,13 @@ export const courses: Course[] = [
     description:
       "Le guide complet du créateur digital. Images, vidéo, musique, écriture, design UI/UX, logos, jeux vidéo, mode, architecture — et comment monétiser vos créations.",
     longDescription:
-      "Ce guide créatif de 53 pages vous apprend à utiliser l'IA comme partenaire de création. Maîtrisez Midjourney V7/V8 (prompts, paramètres, techniques avancées), DALL-E 3, Stable Diffusion, la retouche photo IA (Photoshop Generative Fill), la création de logos, le design UI/UX (Galileo AI, v0, Bolt), Sora 2 et Runway Gen-3 pour la vidéo, Suno et Udio pour la musique, ElevenLabs pour la voix, l'écriture créative avec les LLM, le contenu réseaux sociaux, le podcasting, les jeux vidéo, la mode et l'architecture. Chapitres sur la monétisation (1 000-10 000€/mois) et les droits d'auteur.",
+      "Ce guide créatif de 27 pages vous apprend à utiliser l'IA comme partenaire de création. Maîtrisez Midjourney V7/V8 (prompts, paramètres, techniques avancées), DALL-E 3, Stable Diffusion, la retouche photo IA (Photoshop Generative Fill), la création de logos, le design UI/UX (Galileo AI, v0, Bolt), Sora 2 et Runway Gen-3 pour la vidéo, Suno et Udio pour la musique, ElevenLabs pour la voix, l'écriture créative avec les LLM, le contenu réseaux sociaux, le podcasting, les jeux vidéo, la mode et l'architecture. Chapitres sur la monétisation (1 000-10 000€/mois) et les droits d'auteur.",
     price: 2999,
     priceFormatted: "29,99€",
     level: "Intermédiaire",
-    duration: "2h30 de lecture",
+    duration: "1h30 de lecture",
     chapters: 22,
-    pages: 53,
+    pages: 27,
     features: [
       "Midjourney V7/V8, DALL-E 3, Stable Diffusion en détail",
       "Sora 2, Runway Gen-3 pour la vidéo IA",
@@ -136,15 +136,15 @@ export const courses: Course[] = [
     description:
       "Les 5 formations réunies à prix réduit. 283 pages, 97 chapitres : de débutant à expert en IA. Économisez plus de 50€.",
     longDescription:
-      "Le Pack Complet IA 2026 regroupe nos 5 formations dans un seul package à prix avantageux. Vous recevez les 5 PDF complets : L'IA de A à Z (61p), Maîtriser les Outils IA (53p), Prompt Engineering Pro (59p), L'IA pour votre Business (57p), et Créer avec l'IA (53p). Au total 283 pages et 97 chapitres couvrant tous les aspects de l'intelligence artificielle en 2026. Économisez plus de 50€ par rapport à l'achat individuel.",
+      "Le Pack Complet IA 2026 regroupe nos 5 formations dans un seul package à prix avantageux. Vous recevez les 5 PDF complets : L'IA de A à Z (32p), Maîtriser les Outils IA (27p), Prompt Engineering Pro (25p), L'IA pour votre Business (29p), et Créer avec l'IA (27p). Au total 140 pages et 97 chapitres couvrant tous les aspects de l'intelligence artificielle en 2026. Économisez plus de 50€ par rapport à l'achat individuel.",
     price: 8999,
     priceFormatted: "89,99€",
     level: "Bundle",
-    duration: "12h de lecture",
+    duration: "7h de lecture",
     chapters: 97,
-    pages: 283,
+    pages: 140,
     features: [
-      "Les 5 formations complètes (283 pages, 97 chapitres)",
+      "Les 5 formations complètes (140 pages, 97 chapitres)",
       "Économisez plus de 50€ vs achat individuel",
       "Mises à jour gratuites à vie",
       "Accès prioritaire aux nouveautés",
