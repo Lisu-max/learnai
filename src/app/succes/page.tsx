@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { getStripe } from "@/lib/stripe";
-import { getCourseBySlug } from "@/lib/courses";
+import { getCourseBySlug, isPackSlug, INDIVIDUAL_COURSE_SLUGS } from "@/lib/courses";
 import { createClient } from "@/lib/supabase/server";
 import { CheckCircle2, Download, ArrowLeft, User } from "lucide-react";
 import Link from "next/link";
@@ -34,11 +34,13 @@ export default async function SuccessPage({
   let courseName = "votre formation";
   let courseSlug = "";
   let paid = false;
+  let isPack = false;
 
   try {
     const session = await getStripe().checkout.sessions.retrieve(session_id);
     paid = session.payment_status === "paid";
     courseSlug = (session.metadata?.courseSlug as string) || "";
+    isPack = isPackSlug(courseSlug);
     const course = getCourseBySlug(courseSlug);
     if (course) {
       courseName = course.title;
@@ -47,15 +49,33 @@ export default async function SuccessPage({
     // Record purchase in Supabase if paid
     if (paid && session.metadata?.userId) {
       const supabase = await createClient();
+      const userId = session.metadata.userId;
+
+      // Always record the purchased item
       await supabase.from("purchases").upsert(
         {
-          user_id: session.metadata.userId,
+          user_id: userId,
           course_slug: courseSlug,
           stripe_session_id: session_id,
           amount_paid: session.amount_total || 0,
         },
         { onConflict: "user_id,course_slug" }
       );
+
+      // If pack purchased, also unlock all 5 individual courses
+      if (isPack) {
+        for (const slug of INDIVIDUAL_COURSE_SLUGS) {
+          await supabase.from("purchases").upsert(
+            {
+              user_id: userId,
+              course_slug: slug,
+              stripe_session_id: session_id,
+              amount_paid: 0,
+            },
+            { onConflict: "user_id,course_slug" }
+          );
+        }
+      }
     }
   } catch {
     // Session invalid or Stripe error
@@ -79,6 +99,17 @@ export default async function SuccessPage({
     );
   }
 
+  // Build list of PDFs to download
+  const pdfs = isPack
+    ? [
+        { slug: "ia-de-a-a-z", title: "L'IA de A à Z" },
+        { slug: "maitriser-outils-ia", title: "Maîtriser les Outils IA" },
+        { slug: "prompt-engineering-pro", title: "Prompt Engineering Pro" },
+        { slug: "ia-pour-votre-business", title: "L'IA pour votre Business" },
+        { slug: "creer-avec-ia", title: "Créer avec l'IA" },
+      ]
+    : [{ slug: courseSlug, title: courseName }];
+
   return (
     <div className="bg-grid">
       <section className="mx-auto max-w-2xl px-4 py-24 text-center">
@@ -90,17 +121,22 @@ export default async function SuccessPage({
           <h1 className="mb-4 text-3xl font-bold">Merci pour votre achat !</h1>
           <p className="mb-8 text-lg text-muted-foreground">
             Votre paiement pour <strong>{courseName}</strong> a bien été
-            confirmé. Vous pouvez télécharger votre formation ci-dessous.
+            confirmé. {isPack ? "Téléchargez vos 5 formations ci-dessous." : "Vous pouvez télécharger votre formation ci-dessous."}
           </p>
 
-          <a
-            href={`/pdfs/${courseSlug}.pdf`}
-            download
-            className="btn-gradient inline-flex items-center gap-2 rounded-lg px-8 py-4 text-base font-semibold text-white"
-          >
-            <Download className="h-5 w-5" />
-            Télécharger le PDF
-          </a>
+          <div className="flex flex-col gap-3">
+            {pdfs.map((pdf) => (
+              <a
+                key={pdf.slug}
+                href={`/pdfs/${pdf.slug}.pdf`}
+                download
+                className="btn-gradient inline-flex items-center justify-center gap-2 rounded-lg px-8 py-4 text-base font-semibold text-white"
+              >
+                <Download className="h-5 w-5" />
+                {isPack ? pdf.title : "Télécharger le PDF"}
+              </a>
+            ))}
+          </div>
 
           <div className="mt-8 flex flex-col items-center gap-3">
             <Link

@@ -155,8 +155,22 @@ export const courses: Course[] = [
   },
 ];
 
+export const PACK_SLUG = "pack-complet-ia-2026";
+
+export const INDIVIDUAL_COURSE_SLUGS = [
+  "ia-de-a-a-z",
+  "maitriser-outils-ia",
+  "prompt-engineering-pro",
+  "ia-pour-votre-business",
+  "creer-avec-ia",
+];
+
 export function getCourseBySlug(slug: string): Course | undefined {
   return courses.find((course) => course.slug === slug);
+}
+
+export function isPackSlug(slug: string): boolean {
+  return slug === PACK_SLUG;
 }
 
 export function formatPrice(priceInCents: number): string {
