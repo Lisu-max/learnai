@@ -18,7 +18,7 @@ export async function POST() {
     }
 
     const customerId = await getOrCreateStripeCustomer(user.id, user.email);
-    const appUrl = process.env.NEXT_PUBLIC_APP_URL || process.env.NEXT_PUBLIC_BASE_URL;
+    const appUrl = (process.env.NEXT_PUBLIC_BASE_URL || process.env.NEXT_PUBLIC_APP_URL || "https://learnai-gules.vercel.app").trim();
 
     const session = await getStripe().checkout.sessions.create({
       customer: customerId,
