@@ -13,6 +13,7 @@ const content: CourseContent = {
         { type: "paragraph", content: "L'Intelligence Artificielle (IA) est un domaine de l'informatique qui vise a creer des systemes capables d'effectuer des taches qui necessitent normalement l'intelligence humaine. Ces taches incluent la reconnaissance vocale, la prise de decision, la traduction linguistique, la perception visuelle et bien d'autres encore." },
         { type: "paragraph", content: "L'IA ne se limite pas a un seul algorithme ou une seule technique : c'est un ensemble vaste de methodes, d'approches et de technologies qui travaillent ensemble pour simuler certains aspects de la cognition humaine." },
         { type: "callout", content: "Le terme \"Intelligence Artificielle\" a ete invente en 1956 lors de la conference de Dartmouth, organisee par John McCarthy, Marvin Minsky, Nathaniel Rochester et Claude Shannon." },
+        { type: "video", videoId: "ad79nYk2keg", label: "L'Intelligence Artificielle en 5 minutes" },
         { type: "heading", content: "Les Grandes Etapes de l'IA" },
         { type: "paragraph", content: "1943 : Warren McCulloch et Walter Pitts creent le premier modele mathematique d'un neurone artificiel. 1950 : Alan Turing publie son article fondateur \"Computing Machinery and Intelligence\" et propose le fameux Test de Turing. 1956 : La conference de Dartmouth marque la naissance officielle de l'IA." },
         { type: "paragraph", content: "2012 : AlexNet revolutionne la vision par ordinateur. 2016 : AlphaGo bat le champion du monde de Go. 2017 : Google publie \"Attention Is All You Need\", introduisant l'architecture Transformer." },
@@ -127,6 +128,7 @@ const content: CourseContent = {
         { type: "paragraph", content: "Trois facteurs ont converge pour revolutionner l'IA : 1) La disponibilite de donnees massives (Internet, smartphones). 2) La puissance de calcul (GPU, TPU). 3) Les avancees algorithmiques (Transformers en 2017)." },
         { type: "paragraph", content: "En 2012, AlexNet a demontre que le deep learning pouvait dominer la vision par ordinateur. Depuis, le deep learning a successivement revolutionne le NLP (traduction, generation de texte), la generation d'images (DALL-E, Midjourney), la video (Sora), et meme la decouverte scientifique (AlphaFold pour les proteines)." },
         { type: "callout", content: "L'architecture Transformer, introduite par Google en 2017 dans l'article \"Attention Is All You Need\", est la fondation de tous les grands modeles de langage actuels (GPT, Claude, Gemini)." },
+        { type: "video", videoId: "aircAruvnKk", label: "Comment fonctionne un reseau de neurones (3Blue1Brown)" },
         { type: "summary", items: [
           "Le Deep Learning est inspire du cerveau avec des couches de neurones artificiels",
           "\"Deep\" = nombreuses couches cachees pour des representations complexes",

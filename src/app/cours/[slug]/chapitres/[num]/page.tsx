@@ -5,6 +5,7 @@ import { getCourseContent, getChapter } from "@/content";
 import { hasAccessToCourse } from "@/lib/access";
 import { ChapterContent } from "@/components/chapter/chapter-content";
 import { ChapterNav } from "@/components/chapter/chapter-nav";
+import { InlineQuiz } from "@/components/quiz/inline-quiz";
 import { ArrowLeft, Clock, BookOpen } from "lucide-react";
 
 interface Props {
@@ -61,6 +62,16 @@ export default async function ChapterPage({ params }: Props) {
 
         {/* Chapter content */}
         <ChapterContent sections={chapter.sections} />
+
+        {/* Quiz inline */}
+        {chapter.quiz.length > 0 && (
+          <InlineQuiz
+            questions={chapter.quiz}
+            courseSlug={slug}
+            chapterNumber={chapter.number}
+            totalChapters={content.chapters.length}
+          />
+        )}
 
         {/* Navigation */}
         <ChapterNav
