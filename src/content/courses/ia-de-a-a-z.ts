@@ -1,0 +1,223 @@
+import type { CourseContent } from "../types";
+
+const content: CourseContent = {
+  slug: "ia-de-a-a-z",
+  chapters: [
+    {
+      number: 1,
+      title: "Qu'est-ce que l'Intelligence Artificielle ?",
+      description: "Comprendre les bases de l'IA, son histoire et son fonctionnement.",
+      estimatedMinutes: 8,
+      sections: [
+        { type: "heading", content: "Qu'est-ce que l'Intelligence Artificielle ?" },
+        { type: "paragraph", content: "L'Intelligence Artificielle (IA) est un domaine de l'informatique qui vise a creer des systemes capables d'effectuer des taches qui necessitent normalement l'intelligence humaine. Ces taches incluent la reconnaissance vocale, la prise de decision, la traduction linguistique, la perception visuelle et bien d'autres encore." },
+        { type: "paragraph", content: "L'IA ne se limite pas a un seul algorithme ou une seule technique : c'est un ensemble vaste de methodes, d'approches et de technologies qui travaillent ensemble pour simuler certains aspects de la cognition humaine." },
+        { type: "callout", content: "Le terme \"Intelligence Artificielle\" a ete invente en 1956 lors de la conference de Dartmouth, organisee par John McCarthy, Marvin Minsky, Nathaniel Rochester et Claude Shannon." },
+        { type: "heading", content: "Les Grandes Etapes de l'IA" },
+        { type: "paragraph", content: "1943 : Warren McCulloch et Walter Pitts creent le premier modele mathematique d'un neurone artificiel. 1950 : Alan Turing publie son article fondateur \"Computing Machinery and Intelligence\" et propose le fameux Test de Turing. 1956 : La conference de Dartmouth marque la naissance officielle de l'IA." },
+        { type: "paragraph", content: "2012 : AlexNet revolutionne la vision par ordinateur. 2016 : AlphaGo bat le champion du monde de Go. 2017 : Google publie \"Attention Is All You Need\", introduisant l'architecture Transformer." },
+        { type: "paragraph", content: "2022-2023 : ChatGPT democratise l'IA aupres du grand public. 2024-2025 : Les modeles multimodaux deviennent la norme. 2026 : GPT-5.4, Claude 4.6 et Gemini 3.1 atteignent le million de tokens de contexte. Les agents IA autonomes avec Computer Use transforment les workflows." },
+        { type: "heading", content: "Comment Fonctionne l'IA ?" },
+        { type: "paragraph", content: "A son niveau le plus fondamental, l'IA fonctionne en utilisant des algorithmes pour analyser des donnees, identifier des patterns, et prendre des decisions basees sur ces patterns." },
+        { type: "paragraph", content: "La collecte de donnees est la premiere etape : l'IA a besoin de grandes quantites de donnees pour apprendre. Ensuite vient l'entrainement : l'algorithme ajuste ses parametres pour minimiser ses erreurs. Enfin, l'inference : le modele entraine peut faire des predictions sur de nouvelles donnees." },
+        { type: "key-point", content: "L'IA n'est pas \"intelligente\" au sens humain. Elle excelle dans les taches specifiques pour lesquelles elle a ete entrainee, mais ne possede pas de conscience, d'emotions ou de comprehension veritable." },
+        { type: "summary", items: [
+          "L'IA est un ensemble de techniques pour simuler l'intelligence humaine",
+          "Le domaine a connu des phases d'enthousiasme et des \"hivers de l'IA\"",
+          "En 2026, l'IA est integree dans pratiquement tous les secteurs",
+          "L'IA fonctionne par collecte de donnees, entrainement et inference",
+          "Elle excelle dans les taches specifiques mais n'a pas de conscience"
+        ]},
+      ],
+      quiz: [
+        {
+          question: "En quelle annee le terme \"Intelligence Artificielle\" a-t-il ete invente ?",
+          options: ["1943", "1950", "1956", "1969"],
+          correctIndex: 2,
+          explanation: "Le terme \"Intelligence Artificielle\" a ete invente en 1956 lors de la conference de Dartmouth, consideree comme l'acte de naissance de l'IA comme discipline academique."
+        },
+        {
+          question: "Quel evenement a marque la democratisation de l'IA aupres du grand public ?",
+          options: ["La victoire d'AlphaGo en 2016", "Le lancement de ChatGPT en 2022", "La publication de GPT-5.4 en 2026", "La conference de Dartmouth en 1956"],
+          correctIndex: 1,
+          explanation: "ChatGPT, lance par OpenAI fin 2022, a ete le premier outil IA a atteindre des centaines de millions d'utilisateurs et a rendu l'IA accessible au grand public."
+        },
+        {
+          question: "Quelle est la premiere etape du fonctionnement d'un systeme d'IA ?",
+          options: ["L'inference", "L'optimisation", "La collecte de donnees", "Le deploiement"],
+          correctIndex: 2,
+          explanation: "La collecte de donnees est la premiere etape. L'IA a besoin de grandes quantites de donnees pour apprendre les patterns qui lui permettront de faire des predictions."
+        },
+        {
+          question: "L'IA en 2026 est capable de :",
+          options: ["Ressentir des emotions comme un humain", "Avoir une conscience de soi", "Exceller dans des taches specifiques pour lesquelles elle est entrainee", "Comprendre veritablement le sens des mots"],
+          correctIndex: 2,
+          explanation: "L'IA excelle dans les taches specifiques (generation de texte, reconnaissance d'images, etc.) mais ne possede pas de conscience, d'emotions ou de comprehension veritable."
+        },
+      ],
+    },
+    {
+      number: 2,
+      title: "Les Fondamentaux du Machine Learning",
+      description: "Decouvrir les 3 types d'apprentissage automatique et leurs applications.",
+      estimatedMinutes: 8,
+      sections: [
+        { type: "heading", content: "Qu'est-ce que le Machine Learning ?" },
+        { type: "paragraph", content: "Le Machine Learning (apprentissage automatique) est une branche de l'IA qui permet aux ordinateurs d'apprendre a partir de donnees sans etre explicitement programmes pour chaque tache. Au lieu d'ecrire des regles specifiques, on fournit des exemples au systeme et il decouvre les patterns par lui-meme." },
+        { type: "paragraph", content: "C'est la technologie au coeur de la plupart des applications IA modernes : recommandations Netflix, detection de spam, reconnaissance faciale, traduction automatique, et bien plus." },
+        { type: "heading", content: "Les 3 Types d'Apprentissage" },
+        { type: "subheading", content: "Apprentissage Supervise" },
+        { type: "paragraph", content: "L'algorithme apprend a partir d'exemples etiquetes. Par exemple, on lui montre des milliers de photos de chats et de chiens, chacune labellisee \"chat\" ou \"chien\", et il apprend a distinguer les deux. C'est le type le plus courant, utilise pour la classification, la prediction et la detection." },
+        { type: "subheading", content: "Apprentissage Non Supervise" },
+        { type: "paragraph", content: "L'algorithme decouvre des structures cachees dans des donnees non etiquetees. Il identifie des groupes (clustering), des anomalies, ou des patterns sans qu'on lui dise quoi chercher. Utilise pour la segmentation de clients, la detection de fraude, et la reduction de dimensionnalite." },
+        { type: "subheading", content: "Apprentissage par Renforcement" },
+        { type: "paragraph", content: "Un agent apprend a prendre des decisions en interagissant avec un environnement. Il recoit des recompenses positives ou negatives selon ses actions. C'est ce qui a permis a AlphaGo de battre les meilleurs joueurs de Go et c'est utilise pour les voitures autonomes et le fine-tuning des LLM (RLHF)." },
+        { type: "tip", content: "Pour retenir : Supervise = on lui montre la reponse. Non supervise = il trouve seul. Renforcement = il apprend par essai-erreur." },
+        { type: "heading", content: "Les Applications du Machine Learning" },
+        { type: "paragraph", content: "Le ML est partout : prediction de prix, diagnostic medical, filtrage de spam, recommandation de produits, traduction automatique, reconnaissance vocale, conduite autonome, trading algorithmique, et optimisation de publicites." },
+        { type: "summary", items: [
+          "Le Machine Learning permet aux machines d'apprendre a partir de donnees",
+          "3 types : supervise (avec exemples), non supervise (sans labels), renforcement (essai-erreur)",
+          "L'apprentissage supervise est le plus courant",
+          "Le ML est au coeur de la majorite des applications IA modernes",
+          "RLHF (renforcement par feedback humain) est utilise pour entrainer les LLM"
+        ]},
+      ],
+      quiz: [
+        {
+          question: "Qu'est-ce que le Machine Learning ?",
+          options: ["Un langage de programmation", "Une branche de l'IA qui apprend a partir de donnees", "Un type de processeur", "Un logiciel de creation graphique"],
+          correctIndex: 1,
+          explanation: "Le Machine Learning est une branche de l'IA qui permet aux systemes d'apprendre automatiquement a partir de donnees sans etre explicitement programmes pour chaque tache."
+        },
+        {
+          question: "Dans l'apprentissage supervise, les donnees d'entrainement sont :",
+          options: ["Non etiquetees", "Generees aleatoirement", "Etiquetees avec la bonne reponse", "Creees par l'algorithme lui-meme"],
+          correctIndex: 2,
+          explanation: "L'apprentissage supervise utilise des donnees etiquetees (avec la bonne reponse) pour que l'algorithme apprenne a associer des entrees a des sorties."
+        },
+        {
+          question: "AlphaGo a battu le champion du monde de Go grace a quel type d'apprentissage ?",
+          options: ["Apprentissage supervise", "Apprentissage non supervise", "Apprentissage par renforcement", "Apprentissage profond uniquement"],
+          correctIndex: 2,
+          explanation: "AlphaGo a utilise l'apprentissage par renforcement, jouant des millions de parties contre lui-meme pour apprendre les meilleures strategies."
+        },
+        {
+          question: "Que signifie RLHF ?",
+          options: ["Real Language High Frequency", "Reinforcement Learning from Human Feedback", "Recursive Learning for Huge Files", "Rapid Learning and High Fidelity"],
+          correctIndex: 1,
+          explanation: "RLHF (Reinforcement Learning from Human Feedback) est la technique utilisee pour affiner les grands modeles de langage en utilisant les retours d'evaluateurs humains."
+        },
+      ],
+    },
+    {
+      number: 3,
+      title: "Le Deep Learning Explique Simplement",
+      description: "Les reseaux de neurones, les couches, et pourquoi le deep learning a tout change.",
+      estimatedMinutes: 8,
+      sections: [
+        { type: "heading", content: "Des Neurones Biologiques aux Neurones Artificiels" },
+        { type: "paragraph", content: "Le Deep Learning (apprentissage profond) est inspire du fonctionnement du cerveau humain. Tout comme notre cerveau est compose de milliards de neurones interconnectes, un reseau de neurones artificiel est compose de couches de \"neurones\" mathematiques qui traitent l'information." },
+        { type: "paragraph", content: "Chaque neurone artificiel recoit des entrees, les multiplie par des poids, applique une fonction d'activation, et produit une sortie. C'est simple individuellement, mais la puissance emerge de la combinaison de millions de ces neurones en couches successives." },
+        { type: "heading", content: "L'Architecture d'un Reseau de Neurones" },
+        { type: "paragraph", content: "Un reseau de neurones typique comprend : une couche d'entree (recoit les donnees brutes), des couches cachees (traitent et transforment l'information), et une couche de sortie (produit le resultat final)." },
+        { type: "key-point", content: "Le \"deep\" dans \"deep learning\" fait reference au nombre de couches cachees. Plus il y a de couches, plus le reseau peut apprendre des representations complexes et abstraites." },
+        { type: "paragraph", content: "Les reseaux modernes comme GPT-5.4 peuvent avoir des centaines de couches et des trillions de parametres. L'entrainement necessite des milliers de GPU travaillant en parallele pendant des semaines." },
+        { type: "heading", content: "Pourquoi le Deep Learning a Tout Change" },
+        { type: "paragraph", content: "Trois facteurs ont converge pour revolutionner l'IA : 1) La disponibilite de donnees massives (Internet, smartphones). 2) La puissance de calcul (GPU, TPU). 3) Les avancees algorithmiques (Transformers en 2017)." },
+        { type: "paragraph", content: "En 2012, AlexNet a demontre que le deep learning pouvait dominer la vision par ordinateur. Depuis, le deep learning a successivement revolutionne le NLP (traduction, generation de texte), la generation d'images (DALL-E, Midjourney), la video (Sora), et meme la decouverte scientifique (AlphaFold pour les proteines)." },
+        { type: "callout", content: "L'architecture Transformer, introduite par Google en 2017 dans l'article \"Attention Is All You Need\", est la fondation de tous les grands modeles de langage actuels (GPT, Claude, Gemini)." },
+        { type: "summary", items: [
+          "Le Deep Learning est inspire du cerveau avec des couches de neurones artificiels",
+          "\"Deep\" = nombreuses couches cachees pour des representations complexes",
+          "3 facteurs : donnees massives + puissance de calcul + Transformers",
+          "AlexNet (2012) a lance la revolution, les Transformers (2017) l'ont acceleree",
+          "Le Deep Learning est derriere GPT-5.4, Claude 4.6, Midjourney, Sora, etc."
+        ]},
+      ],
+      quiz: [
+        {
+          question: "D'ou vient l'inspiration du Deep Learning ?",
+          options: ["Des circuits electroniques", "Du fonctionnement du cerveau humain", "De la mecanique quantique", "Des algorithmes genetiques"],
+          correctIndex: 1,
+          explanation: "Le Deep Learning est directement inspire du fonctionnement du cerveau humain, avec des couches de neurones artificiels qui imitent les neurones biologiques."
+        },
+        {
+          question: "Que signifie \"deep\" dans \"Deep Learning\" ?",
+          options: ["L'apprentissage est tres lent", "Le reseau utilise beaucoup de donnees", "Le reseau a de nombreuses couches cachees", "L'IA comprend les choses en profondeur"],
+          correctIndex: 2,
+          explanation: "\"Deep\" fait reference au nombre de couches cachees dans le reseau de neurones. Plus il y a de couches, plus le modele peut apprendre des representations abstraites et complexes."
+        },
+        {
+          question: "Quelle architecture est a la base de GPT, Claude et Gemini ?",
+          options: ["CNN (Convolutional Neural Network)", "RNN (Recurrent Neural Network)", "Transformer", "GAN (Generative Adversarial Network)"],
+          correctIndex: 2,
+          explanation: "L'architecture Transformer, introduite en 2017 par Google dans \"Attention Is All You Need\", est la fondation de tous les grands modeles de langage actuels."
+        },
+        {
+          question: "Quels sont les 3 facteurs qui ont permis la revolution du Deep Learning ?",
+          options: ["Argent + marketing + brevets", "Donnees massives + puissance de calcul + avancees algorithmiques", "Internet + smartphones + reseaux sociaux", "Gouvernements + universites + entreprises"],
+          correctIndex: 1,
+          explanation: "La convergence de donnees massives (Internet), de puissance de calcul (GPU) et d'avancees algorithmiques (Transformers) a rendu le Deep Learning extremement performant."
+        },
+      ],
+    },
+    {
+      number: 4,
+      title: "Le Traitement du Langage Naturel (NLP)",
+      description: "Comment les machines comprennent et generent du texte humain.",
+      estimatedMinutes: 7,
+      sections: [
+        { type: "heading", content: "Le NLP : Faire Comprendre le Langage aux Machines" },
+        { type: "paragraph", content: "Le Traitement du Langage Naturel (NLP) est la branche de l'IA dediee a l'interaction entre les ordinateurs et le langage humain. C'est la technologie qui permet a ChatGPT de comprendre vos questions et d'y repondre, a Google Translate de traduire des langues, et a Siri de comprendre vos commandes vocales." },
+        { type: "heading", content: "Les Etapes du Traitement" },
+        { type: "paragraph", content: "Le NLP comprend plusieurs etapes : la tokenisation (decoupage du texte en morceaux), l'analyse syntaxique (grammaire), l'analyse semantique (sens), et la generation (production de nouveau texte)." },
+        { type: "key-point", content: "La tokenisation est fondamentale : elle determine comment le modele \"voit\" votre texte. Le mot \"intelligence\" peut etre un seul token, tandis qu'un mot rare peut necessiter plusieurs tokens." },
+        { type: "heading", content: "L'Evolution : Des Regles aux Transformers" },
+        { type: "paragraph", content: "Le NLP est passe des systemes a regles manuelles (1960-2000) aux methodes statistiques (2000-2017), puis a l'ere des Transformers (2017-present). Les modeles pre-entraines comme BERT, GPT et Claude ont revolutionne le domaine en apprenant les structures du langage a partir de milliards de textes." },
+        { type: "summary", items: [
+          "Le NLP permet aux machines de comprendre et generer du langage humain",
+          "Etapes : tokenisation, analyse syntaxique, analyse semantique, generation",
+          "Les Transformers ont revolutionne le NLP depuis 2017",
+          "Les LLM modernes sont pre-entraines sur des milliards de textes"
+        ]},
+      ],
+      quiz: [
+        {
+          question: "Que signifie NLP ?",
+          options: ["Neural Language Processing", "Natural Language Programming", "Natural Language Processing", "Network Learning Protocol"],
+          correctIndex: 2,
+          explanation: "NLP signifie Natural Language Processing (Traitement du Langage Naturel), la branche de l'IA dediee a l'interaction entre ordinateurs et langage humain."
+        },
+        {
+          question: "Qu'est-ce que la tokenisation ?",
+          options: ["Chiffrer le texte pour la securite", "Decouper le texte en morceaux (tokens)", "Traduire le texte en code binaire", "Compresser le texte pour le stockage"],
+          correctIndex: 1,
+          explanation: "La tokenisation est le processus de decoupage du texte en morceaux (tokens) que le modele peut traiter. C'est la premiere etape du traitement NLP."
+        },
+        {
+          question: "Quelle revolution a transforme le NLP a partir de 2017 ?",
+          options: ["Les reseaux convolutifs", "Les Transformers", "Les bases de donnees SQL", "Le cloud computing"],
+          correctIndex: 1,
+          explanation: "L'architecture Transformer, introduite en 2017, a revolutionne le NLP en permettant aux modeles de traiter le contexte de maniere beaucoup plus efficace."
+        },
+        {
+          question: "ChatGPT utilise principalement quelle technologie NLP ?",
+          options: ["Des regles grammaticales manuelles", "Des methodes statistiques classiques", "Un modele de langage pre-entraine (LLM)", "Un dictionnaire electronique"],
+          correctIndex: 2,
+          explanation: "ChatGPT est base sur un LLM (Large Language Model), un modele de langage pre-entraine sur des milliards de textes puis affine par RLHF."
+        },
+      ],
+    },
+    { number: 5, title: "La Vision par Ordinateur", description: "Comment les machines analysent et comprennent les images et les videos.", estimatedMinutes: 6, sections: [{ type: "heading", content: "La Vision par Ordinateur" }, { type: "paragraph", content: "La vision par ordinateur permet aux machines de \"voir\" et d'interpreter les images et les videos. Reconnaissance faciale, detection d'objets, imagerie medicale, vehicules autonomes — cette technologie est partout." }, { type: "paragraph", content: "Les CNN (Convolutional Neural Networks) ont revolutionne ce domaine en 2012. Aujourd'hui, les modeles multimodaux comme GPT-5.4 et Gemini 3.1 combinent vision et langage pour analyser des images et repondre a des questions dessus." }, { type: "summary", items: ["La vision par ordinateur permet aux machines d'analyser images et videos", "Les CNN sont la base des systemes de vision modernes", "Les modeles multimodaux combinent vision et langage", "Applications : reconnaissance faciale, imagerie medicale, vehicules autonomes"] }], quiz: [{ question: "Quel type de reseau est specialise dans l'analyse d'images ?", options: ["RNN", "CNN", "GAN", "MLP"], correctIndex: 1, explanation: "Les CNN (Convolutional Neural Networks) sont specialises dans le traitement d'images grace a leurs filtres de convolution qui detectent les patterns visuels." }, { question: "Que signifie \"multimodal\" pour un modele IA ?", options: ["Il fonctionne sur plusieurs ordinateurs", "Il peut traiter differents types de donnees (texte, image, audio)", "Il a ete entraine dans plusieurs pays", "Il peut parler plusieurs langues"], correctIndex: 1, explanation: "Un modele multimodal peut traiter et generer differents types de donnees : texte, images, audio, video. GPT-5.4 et Gemini 3.1 sont multimodaux." }, { question: "AlexNet a revolutionne la vision par ordinateur en quelle annee ?", options: ["2006", "2012", "2017", "2020"], correctIndex: 1, explanation: "AlexNet a remporte le concours ImageNet en 2012, demontrant la superiorite du deep learning pour la vision par ordinateur." }, { question: "Quelle application n'utilise PAS la vision par ordinateur ?", options: ["Reconnaissance faciale", "Traduction de texte", "Vehicules autonomes", "Imagerie medicale"], correctIndex: 1, explanation: "La traduction de texte releve du NLP (Traitement du Langage Naturel), pas de la vision par ordinateur." }] },
+    { number: 6, title: "Les Modeles de Langage", description: "GPT-5.4, Claude 4.6, Gemini 3.1 — comment fonctionnent les LLM.", estimatedMinutes: 8, sections: [{ type: "heading", content: "Les Grands Modeles de Langage (LLM)" }, { type: "paragraph", content: "Les LLM sont des reseaux de neurones massifs entraines sur des quantites colossales de texte pour predire le mot suivant dans une sequence. Cette tache simple en apparence, repetee des trillions de fois, fait emerger des capacites surprenantes : raisonnement, programmation, creativite, et meme une forme de \"comprehension\"." }, { type: "subheading", content: "GPT-5.4 (OpenAI)" }, { type: "paragraph", content: "Sorti le 5 mars 2026, GPT-5.4 est disponible en trois variantes : Standard, Thinking (raisonnement avance) et Pro (capacite maximale). Contexte d'1,05 million de tokens, Computer Use natif, 33% moins d'hallucinations que GPT-5.2." }, { type: "subheading", content: "Claude 4.6 (Anthropic)" }, { type: "paragraph", content: "Claude Opus 4.6, lance le 5 fevrier 2026, offre 1 million de tokens de contexte, un horizon de tache de 14,5 heures, et le meilleur score sur le benchmark Finance Agent. Claude se distingue par sa precision et son honnetete." }, { type: "subheading", content: "Gemini 3.1 (Google DeepMind)" }, { type: "paragraph", content: "Gemini 3.1 Pro, sorti en fevrier 2026, est nativement multimodal avec 1 million de tokens de contexte et un score de 77,1% sur ARC-AGI-2. Integre dans tout l'ecosysteme Google." }, { type: "summary", items: ["Les LLM predisent le mot suivant — cette simplicite fait emerger des capacites complexes", "GPT-5.4 : 3 variantes, Computer Use natif, 1,05M tokens", "Claude 4.6 : precision, honnetete, 14,5h d'autonomie, 1M tokens", "Gemini 3.1 : multimodal natif, 77,1% ARC-AGI-2, integration Google", "Tous les LLM de pointe atteignent 1 million de tokens de contexte en 2026"] }], quiz: [{ question: "Comment les LLM apprennent-ils principalement ?", options: ["En memorisant des reponses", "En predisant le mot suivant dans une sequence", "En copiant des pages web", "En discutant avec des humains"], correctIndex: 1, explanation: "Les LLM sont entraines a predire le mot suivant dans une sequence de texte. Cette tache repetee des trillions de fois fait emerger des capacites de raisonnement et de generation." }, { question: "Combien de tokens de contexte les LLM de pointe supportent-ils en 2026 ?", options: ["32 000", "128 000", "500 000", "1 million+"], correctIndex: 3, explanation: "En mars 2026, GPT-5.4, Claude 4.6 et Gemini 3.1 supportent tous environ 1 million de tokens de contexte." }, { question: "Quel modele a le plus long horizon de completion de tache ?", options: ["GPT-5.4 Pro", "Claude Opus 4.6", "Gemini 3.1 Pro", "Qwen 3.5"], correctIndex: 1, explanation: "Claude Opus 4.6 peut maintenir une tache pendant 14,5 heures d'affilee — le plus long horizon de tous les modeles IA." }, { question: "Que signifie \"Computer Use\" pour un LLM ?", options: ["Le modele fonctionne sur un ordinateur", "Le modele peut controler un ordinateur comme un humain", "Le modele consomme beaucoup de ressources", "Le modele ne fonctionne qu'en local"], correctIndex: 1, explanation: "Le Computer Use permet au modele de controler un ordinateur (cliquer, taper, naviguer) comme un humain le ferait, ouvrant la voie aux agents autonomes." }] },
+    { number: 7, title: "L'IA Generative", description: "Comment l'IA cree du texte, des images, des videos et de la musique.", estimatedMinutes: 7, sections: [{ type: "heading", content: "L'IA Generative : Creer du Nouveau" }, { type: "paragraph", content: "L'IA generative designe les systemes capables de creer du contenu nouveau : texte, images, videos, musique, code. C'est la forme d'IA la plus visible et la plus utilisee en 2026." }, { type: "subheading", content: "Generation de Texte" }, { type: "paragraph", content: "Les LLM comme GPT-5.4 et Claude 4.6 generent du texte d'une qualite souvent indiscernable d'un redacteur humain : articles, emails, code, scripts, poemes, rapports." }, { type: "subheading", content: "Generation d'Images" }, { type: "paragraph", content: "Midjourney V7/V8, DALL-E 3 et Stable Diffusion transforment des descriptions textuelles en images. Midjourney excelle dans l'esthetique artistique, DALL-E dans le texte integre, et Stable Diffusion dans le controle total (open source)." }, { type: "subheading", content: "Generation de Video et Audio" }, { type: "paragraph", content: "Sora 2 d'OpenAI genere des videos avec dialogues synchronises et physique realiste. ElevenLabs produit des voix indiscernables de voix humaines. Suno cree de la musique complete avec voix, instruments et arrangement." }, { type: "summary", items: ["L'IA generative cree du contenu nouveau : texte, images, videos, musique", "Texte : GPT-5.4, Claude 4.6 — qualite professionnelle", "Images : Midjourney V7/V8, DALL-E 3, Stable Diffusion", "Video : Sora 2 avec dialogues et effets sonores", "Audio : ElevenLabs (voix), Suno (musique complete)"] }], quiz: [{ question: "Qu'est-ce que l'IA generative ?", options: ["Une IA qui analyse des donnees existantes", "Une IA qui cree du contenu nouveau", "Une IA qui supprime du contenu", "Une IA qui trie des informations"], correctIndex: 1, explanation: "L'IA generative est capable de creer du contenu entierement nouveau : texte, images, videos, musique, code — a partir de descriptions ou d'instructions." }, { question: "Quel outil excelle dans la generation d'images avec du texte integre ?", options: ["Midjourney", "DALL-E 3", "Stable Diffusion", "Sora"], correctIndex: 1, explanation: "DALL-E 3 se distingue par sa capacite a generer du texte lisible et precis a l'interieur des images, ce qui est utile pour les logos, affiches et infographies." }, { question: "Sora 2 est specialise dans :", options: ["La generation de texte", "La generation de musique", "La generation de video", "La traduction automatique"], correctIndex: 2, explanation: "Sora 2 d'OpenAI est un modele de generation video qui cree des clips avec dialogues synchronises, effets sonores et physique realiste." }, { question: "Quel outil permet de creer de la musique complete avec voix ?", options: ["ElevenLabs", "Suno", "Midjourney", "ChatGPT"], correctIndex: 1, explanation: "Suno permet de creer de la musique complete — melodie, arrangement, instruments et voix — a partir d'une simple description textuelle." }] },
+    { number: 8, title: "Les Agents IA", description: "Les systemes autonomes qui planifient, agissent et utilisent des outils.", estimatedMinutes: 8, sections: [{ type: "heading", content: "Qu'est-ce qu'un Agent IA ?" }, { type: "paragraph", content: "Un agent IA est un systeme autonome qui peut percevoir son environnement, prendre des decisions, et agir pour atteindre des objectifs. Contrairement a un simple chatbot, un agent peut planifier une sequence d'actions, utiliser des outils, et s'adapter en fonction des resultats." }, { type: "paragraph", content: "En mars 2026, les agents IA transforment le travail. Claude Opus 4.6 peut maintenir une tache pendant 14,5 heures. GPT-5.4 integre le Computer Use natif. Des outils comme Claude Code et Cursor Agent delegent des taches complexes de programmation." }, { type: "heading", content: "Architecture d'un Agent" }, { type: "paragraph", content: "Un agent typique comprend : un LLM comme \"cerveau\" pour le raisonnement, un ensemble d'outils (recherche web, execution de code, manipulation de fichiers), une memoire, et un mecanisme de planification." }, { type: "key-point", content: "Le paradigme ReAct (Reasoning + Acting) : l'agent alterne entre reflexion, action, et observation des resultats. Cette boucle continue jusqu'a ce que l'objectif soit atteint." }, { type: "paragraph", content: "Le protocole MCP (Model Context Protocol), introduit par Anthropic et adopte par l'industrie, standardise la facon dont les agents interagissent avec les outils et les sources de donnees externes." }, { type: "summary", items: ["Les agents IA sont des systemes autonomes capables de planifier et d'agir", "Ils combinent un LLM, des outils, une memoire et un mecanisme de planification", "Le paradigme ReAct alterne reflexion, action et observation", "MCP standardise l'interaction entre agents et outils", "Computer Use : les agents controlent des ordinateurs comme des humains"] }], quiz: [{ question: "Qu'est-ce qui differencie un agent IA d'un chatbot ?", options: ["Un agent est plus rapide", "Un agent peut planifier des actions et utiliser des outils", "Un agent est gratuit", "Un agent n'a pas besoin d'Internet"], correctIndex: 1, explanation: "Un agent IA peut planifier une sequence d'actions, utiliser des outils externes (recherche, code, fichiers), et s'adapter aux resultats — un chatbot ne fait que repondre." }, { question: "Que signifie ReAct dans le contexte des agents IA ?", options: ["Reaction rapide", "Reasoning + Acting", "Real-time Action", "Recursive Agent Technology"], correctIndex: 1, explanation: "ReAct (Reasoning + Acting) est un paradigme ou l'agent alterne entre phases de reflexion (Thought), d'action (Action), et d'observation (Observation)." }, { question: "Qu'est-ce que le protocole MCP ?", options: ["Un format de fichier", "Un standard pour la communication entre agents et outils", "Un type de processeur", "Un langage de programmation"], correctIndex: 1, explanation: "MCP (Model Context Protocol), cree par Anthropic, standardise la facon dont les agents interagissent avec les outils et les sources de donnees externes." }, { question: "Quel modele peut maintenir une tache pendant 14,5 heures ?", options: ["GPT-5.4 Pro", "Gemini 3.1 Ultra", "Claude Opus 4.6", "Qwen 3.5"], correctIndex: 2, explanation: "Claude Opus 4.6 a l'horizon de completion de tache le plus long du marche : 14,5 heures d'execution autonome." }] },
+    { number: 9, title: "L'Ethique de l'IA", description: "Biais, transparence, vie privee, deepfakes — les enjeux ethiques majeurs.", estimatedMinutes: 7, sections: [{ type: "heading", content: "Les Enjeux Ethiques de l'IA" }, { type: "paragraph", content: "L'IA souleve des questions ethiques fondamentales : biais algorithmiques, transparence des decisions, vie privee, impact sur l'emploi, deepfakes, et concentration du pouvoir technologique." }, { type: "subheading", content: "Les Biais Algorithmiques" }, { type: "paragraph", content: "Les systemes d'IA apprennent a partir de donnees humaines qui contiennent des biais. Un systeme de recrutement entraine sur des donnees historiques pourrait discriminer certains groupes. La solution : diversifier les donnees, auditer regulierement les modeles, et maintenir une supervision humaine." }, { type: "subheading", content: "Deepfakes et Desinformation" }, { type: "paragraph", content: "L'IA generative peut creer des contenus trompeurs : fausses videos, faux audios, fausses images de personnes reelles. La lutte contre les deepfakes passe par le watermarking, la detection automatique, et l'education du public." }, { type: "heading", content: "La Regulation en 2026" }, { type: "paragraph", content: "L'AI Act europeen impose des obligations selon le niveau de risque des systemes IA. Le RGPD encadre le traitement des donnees personnelles. Ces cadres reglementaires visent a equilibrer innovation et protection des citoyens." }, { type: "summary", items: ["L'IA herite des biais presents dans les donnees d'entrainement", "Les deepfakes sont une menace croissante pour la confiance publique", "L'AI Act europeen classe les systemes IA par niveau de risque", "La supervision humaine reste essentielle pour une IA ethique", "L'education et la transparence sont les meilleurs remparts"] }], quiz: [{ question: "D'ou viennent les biais dans les systemes d'IA ?", options: ["Du code source", "Des donnees d'entrainement", "Du hardware", "Des utilisateurs finaux"], correctIndex: 1, explanation: "Les biais proviennent principalement des donnees d'entrainement. Si les donnees refletent des prejudices humains, le modele les reproduira." }, { question: "Qu'est-ce qu'un deepfake ?", options: ["Un bug dans un programme IA", "Un contenu mediatique faux genere par l'IA", "Un type de ransomware", "Une technique de compression de donnees"], correctIndex: 1, explanation: "Un deepfake est un contenu mediatique (video, audio, image) faux genere par l'IA, suffisamment realiste pour tromper les spectateurs." }, { question: "Que reglemente l'AI Act europeen ?", options: ["Les prix des outils IA", "Le niveau de risque des systemes IA", "La vitesse des processeurs", "Les brevets technologiques"], correctIndex: 1, explanation: "L'AI Act europeen classe les systemes IA par niveau de risque (minimal, limite, eleve, inacceptable) et impose des obligations proportionnelles." }, { question: "Quel est le meilleur rempart contre les biais de l'IA ?", options: ["Interdire l'IA", "Diversifier les donnees et auditer regulierement les modeles", "Utiliser uniquement des modeles open source", "Ne pas utiliser de donnees personnelles"], correctIndex: 1, explanation: "Diversifier les donnees d'entrainement, auditer regulierement les modeles, et maintenir une supervision humaine sont les pratiques recommandees." }] },
+    { number: 10, title: "L'IA dans la Vie Quotidienne", description: "Comment l'IA transforme la sante, l'education, la finance et les transports.", estimatedMinutes: 6, sections: [{ type: "heading", content: "L'IA au Quotidien" }, { type: "paragraph", content: "L'IA est deja partout dans notre vie quotidienne, souvent sans qu'on s'en rende compte : recommandations de contenu, assistants vocaux, navigation GPS, filtrage de spam, traduction instantanee, et reconnaissance faciale pour deverrouiller votre telephone." }, { type: "paragraph", content: "Dans la sante, l'IA detecte des cancers plus tot que les medecins. En education, elle personnalise l'apprentissage. En finance, elle detecte les fraudes en temps reel. Dans les transports, elle optimise les itineraires et developpe les vehicules autonomes." }, { type: "summary", items: ["L'IA est presente dans la plupart de nos interactions quotidiennes", "Sante : diagnostic precoce, decouverte de medicaments", "Education : apprentissage personnalise, tuteurs IA 24/7", "Finance : detection de fraude, trading algorithmique", "Transports : navigation optimisee, vehicules autonomes"] }], quiz: [{ question: "Dans quel domaine l'IA peut-elle detecter des maladies plus tot que les medecins ?", options: ["L'education", "La finance", "La sante", "Les transports"], correctIndex: 2, explanation: "En sante, l'IA peut detecter certains cancers dans les images medicales avec une precision superieure a celle des medecins humains." }, { question: "Comment l'IA est-elle utilisee dans la finance ?", options: ["Pour imprimer des billets", "Pour detecter les fraudes en temps reel", "Pour compter les pieces de monnaie", "Pour concevoir des distributeurs automatiques"], correctIndex: 1, explanation: "L'IA analyse les transactions en temps reel pour detecter les patterns suspects et prevenir les fraudes bancaires." }, { question: "Quelle technologie IA est utilisee pour deverrouiller votre telephone ?", options: ["Le NLP", "La vision par ordinateur (reconnaissance faciale)", "Le renforcement", "La generation de texte"], correctIndex: 1, explanation: "La reconnaissance faciale utilise la vision par ordinateur pour analyser les traits de votre visage et deverrouiller l'appareil." }, { question: "Comment l'IA ameliore-t-elle l'education ?", options: ["En remplacant les enseignants", "En personnalisant l'apprentissage pour chaque eleve", "En supprimant les examens", "En automatisant les inscriptions"], correctIndex: 1, explanation: "L'IA personnalise les parcours d'apprentissage, identifie les lacunes de chaque eleve, et fournit des tuteurs disponibles 24/7." }] },
+    { number: 11, title: "Commencer avec l'IA : Guide Pratique", description: "Les premiers pas concrets pour utiliser l'IA dans votre quotidien.", estimatedMinutes: 7, sections: [{ type: "heading", content: "Par ou Commencer ?" }, { type: "paragraph", content: "Vous n'avez besoin d'aucune competence technique pour commencer a utiliser l'IA. Les outils modernes sont concus pour etre accessibles a tous. Voici un parcours recommande pour debuter." }, { type: "subheading", content: "Etape 1 : Testez les Chatbots" }, { type: "paragraph", content: "Commencez par ChatGPT (gratuit) ou Claude (gratuit). Posez des questions, demandez de l'aide pour rediger un email, resumez un article, ou explorez un sujet qui vous interesse. L'objectif est de vous familiariser avec l'interaction." }, { type: "subheading", content: "Etape 2 : Identifiez vos Besoins" }, { type: "paragraph", content: "Quelles taches repetitives pourriez-vous automatiser ? Redaction, recherche, traduction, analyse de donnees, creation de visuels ? L'IA est un accelerateur — elle amplifie ce que vous faites deja." }, { type: "subheading", content: "Etape 3 : Experimentez" }, { type: "paragraph", content: "Testez Midjourney pour les images, Suno pour la musique, Perplexity pour la recherche. Chaque outil a ses forces. L'experimentation est la meilleure facon d'apprendre." }, { type: "tip", content: "Commencez par les versions gratuites de chaque outil. Vous n'avez pas besoin de depenser un centime pour decouvrir la puissance de l'IA." }, { type: "summary", items: ["Aucune competence technique requise pour commencer", "Etape 1 : tester ChatGPT ou Claude gratuitement", "Etape 2 : identifier vos taches repetitives a automatiser", "Etape 3 : experimenter avec differents outils specialises", "Les versions gratuites suffisent pour debuter"] }], quiz: [{ question: "Quel est le meilleur premier pas pour decouvrir l'IA ?", options: ["Acheter un abonnement premium", "Apprendre a programmer en Python", "Tester ChatGPT ou Claude gratuitement", "Lire des articles de recherche"], correctIndex: 2, explanation: "Le meilleur premier pas est simplement de tester ChatGPT ou Claude dans leur version gratuite, en posant des questions et en explorant les possibilites." }, { question: "Faut-il savoir programmer pour utiliser l'IA ?", options: ["Oui, c'est indispensable", "Non, les outils modernes sont accessibles a tous", "Seulement pour les outils avances", "Il faut au minimum connaitre Python"], correctIndex: 1, explanation: "Les outils IA modernes sont concus pour etre utilises en langage naturel, sans aucune competence en programmation." }, { question: "Quel outil est recommande pour la recherche d'information ?", options: ["Midjourney", "Suno", "Perplexity", "ElevenLabs"], correctIndex: 2, explanation: "Perplexity AI est un moteur de recherche IA qui fournit des reponses detaillees et sourcees, ideal pour la recherche d'information." }, { question: "Pourquoi l'experimentation est-elle importante avec l'IA ?", options: ["Pour trouver des bugs", "Pour chaque outil a ses forces et vous devez trouver ceux qui vous conviennent", "Pour publier des articles de recherche", "Pour devenir programmeur"], correctIndex: 1, explanation: "Chaque outil IA a ses forces et faiblesses. L'experimentation vous permet de decouvrir ceux qui correspondent le mieux a vos besoins." }] },
+    { number: 12, title: "L'Avenir de l'IA", description: "AGI, tendances 2026-2030, carrieres et comment se preparer.", estimatedMinutes: 7, sections: [{ type: "heading", content: "Vers l'Intelligence Artificielle Generale (AGI)" }, { type: "paragraph", content: "L'AGI — une IA capable de comprendre et d'accomplir n'importe quelle tache intellectuelle humaine — reste le Saint Graal de la recherche. En 2026, nous nous en rapprochons mais ne l'avons pas encore atteinte. Les LLM actuels montrent des capacites impressionnantes mais ont encore des limitations." }, { type: "heading", content: "Tendances 2026-2030" }, { type: "paragraph", content: "Les modeles multimodaux sont deja la norme. Les agents IA autonomes avec Computer Use transforment les workflows. Les modeles compacts comme Qwen 3.5 9B rivalisent avec des modeles 13x plus gros. L'IA embarquee se developpe grace aux NPU (AMD Ryzen AI 400, Apple Neural Engine)." }, { type: "heading", content: "Carrieres en IA" }, { type: "paragraph", content: "Les metiers les plus demandes : ingenieur ML, data scientist, prompt engineer, architecte IA, consultant en transformation IA. Mais au-dela des roles specialises, la maitrise des outils d'IA est devenue une competence transversale precieuse dans tous les metiers." }, { type: "tip", content: "Vous n'avez pas besoin de devenir specialiste en IA pour en beneficier. Apprendre a utiliser efficacement les outils IA peut significativement augmenter votre productivite et votre valeur sur le marche du travail." }, { type: "summary", items: ["L'AGI reste un objectif de recherche majeur mais n'est pas encore atteinte", "Tendances : agents autonomes, modeles compacts, IA embarquee", "Les carrieres en IA sont nombreuses et bien remunerees", "La maitrise des outils IA est une competence transversale precieuse", "L'apprentissage continu est la cle du succes dans l'ere de l'IA"] }], quiz: [{ question: "Que signifie AGI ?", options: ["Artificial General Intelligence", "Advanced GPU Infrastructure", "Automated Google Integration", "Applied Gradient Iteration"], correctIndex: 0, explanation: "AGI signifie Artificial General Intelligence — une IA hypothetique capable d'accomplir n'importe quelle tache intellectuelle humaine." }, { question: "Quelle est une tendance majeure de l'IA en 2026 ?", options: ["L'IA remplace tous les emplois", "Les modeles compacts rivalisent avec les gros modeles", "L'IA n'est plus utilisee", "Les couts augmentent"], correctIndex: 1, explanation: "Des modeles compacts comme Qwen 3.5 9B rivalisent avec des modeles 13x plus gros, democratisant l'acces a l'IA performante." }, { question: "Quel metier est directement lie a l'IA ?", options: ["Plombier", "Prompt engineer", "Pharmacien", "Architecte batiment"], correctIndex: 1, explanation: "Le prompt engineer est un metier directement lie a l'IA, specialise dans la creation de prompts optimises pour obtenir les meilleurs resultats des modeles IA." }, { question: "Quelle est la cle du succes dans l'ere de l'IA ?", options: ["Eviter l'IA", "Memoriser des formules", "L'apprentissage continu et l'adaptabilite", "Avoir le meilleur materiel"], correctIndex: 2, explanation: "L'IA evolue tres rapidement. L'apprentissage continu et l'adaptabilite sont les competences les plus precieuses pour rester pertinent." }] },
+  ],
+};
+
+export default content;
