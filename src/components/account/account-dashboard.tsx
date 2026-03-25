@@ -91,9 +91,9 @@ export function AccountDashboard({ user, purchasedCourses }: AccountDashboardPro
 
   // Calculate overall progress
   const coursesWithProgress = purchasedCourses
-    .filter((item) => item.course && item.course.level !== "Bundle")
+    .filter((item) => item.course)
     .map((item) => {
-      const totalPages = item.course!.pages;
+      const totalPages = item.course!.chapters;
       const pagesRead = progressMap[item.course_slug] || 0;
       const percentage = totalPages > 0 ? (pagesRead / totalPages) * 100 : 0;
       return { ...item, totalPages, pagesRead, percentage: Math.min(percentage, 100) };
@@ -208,10 +208,10 @@ export function AccountDashboard({ user, purchasedCourses }: AccountDashboardPro
             ) : (
               <div className="grid gap-4">
                 {purchasedCourses.map((item) => {
-                  const totalPages = item.course?.pages || 0;
+                  const totalPages = item.course?.chapters || 0;
                   const pagesRead = progressMap[item.course_slug] || 0;
                   const percentage = totalPages > 0 ? Math.min((pagesRead / totalPages) * 100, 100) : 0;
-                  const isBundle = item.course?.level === "Bundle";
+                  const isBundle = false;
                   const isEditing = editingSlug === item.course_slug;
 
                   return (

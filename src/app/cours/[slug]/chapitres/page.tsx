@@ -149,16 +149,11 @@ export default async function ChaptersPage({ params }: Props) {
           })}
         </div>
 
-        {/* PDF download */}
+        {/* Encouragement */}
         <div className="mt-10 rounded-xl border border-border/50 bg-card/50 p-4 text-center">
-          <p className="mb-2 text-sm text-muted-foreground">Vous préférez lire hors ligne ?</p>
-          <a
-            href={`/pdfs/${slug}.pdf`}
-            download
-            className="text-sm font-medium text-purple-400 hover:text-purple-300"
-          >
-            Télécharger le PDF
-          </a>
+          <p className="text-sm text-muted-foreground">
+            Terminez chaque quiz pour débloquer le chapitre suivant et suivre votre progression.
+          </p>
         </div>
       </div>
     </div>

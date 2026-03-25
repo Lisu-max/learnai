@@ -1,35 +1,29 @@
 "use client";
 
-import Link from "next/link";
 import { courses } from "@/lib/courses";
 import { CourseCard } from "@/components/courses/course-card";
 import { Reveal } from "@/components/ui/reveal";
-import { Badge } from "@/components/ui/badge";
+import { UpgradeButton } from "@/components/UpgradeButton";
 import {
-  BookOpen,
   GraduationCap,
   Sparkles,
-  ArrowRight,
   CheckCircle2,
+  BookOpen,
+  Lock,
 } from "lucide-react";
 import { useTranslation } from "@/lib/i18n/context";
 
 export default function CoursPage() {
   const { t } = useTranslation();
-  const bundle = courses.find((c) => c.level === "Bundle")!;
-  const individualCourses = courses.filter((c) => c.level !== "Bundle");
+  const freeCourses = courses.filter((c) => c.tier === "free");
+  const premiumCourses = courses.filter((c) => c.tier === "premium");
+  const totalChapters = courses.reduce((sum, c) => sum + c.chapters, 0);
 
   return (
     <div className="relative">
-      {/* Hero banner */}
+      {/* Hero */}
       <section className="relative overflow-hidden border-b border-border/50">
         <div className="hero-orb-1 pointer-events-none absolute -top-32 left-1/2 h-[400px] w-[400px] -translate-x-1/2 rounded-full bg-purple-600/15 blur-[120px]" />
-        <div className="hero-orb-3 pointer-events-none absolute top-20 right-1/4 h-[200px] w-[200px] rounded-full bg-blue-600/10 blur-[100px]" />
-
-        <span className="floating-dot top-[25%] left-[8%]" style={{ animationDelay: "0s" }} />
-        <span className="floating-dot top-[60%] right-[12%]" style={{ animationDelay: "2s" }} />
-        <span className="floating-dot top-[35%] right-[35%]" style={{ animationDelay: "1s" }} />
-
         <div className="relative mx-auto max-w-6xl px-4 py-16 text-center md:py-20">
           <div className="animate-fade-in mb-4 inline-flex items-center gap-2 rounded-full border border-purple-500/20 bg-purple-500/10 px-4 py-1.5 text-sm text-purple-300">
             <GraduationCap className="h-4 w-4" />
@@ -37,132 +31,117 @@ export default function CoursPage() {
           </div>
 
           <h1 className="animate-fade-in-delay-1 mb-4 text-4xl font-bold md:text-5xl">
-            {t.coursesPage.title}{" "}
-            <span className="gradient-text-animated">{t.coursesPage.titleHighlight}</span>
+            Apprenez l&apos;IA{" "}
+            <span className="gradient-text-animated">gratuitement</span>
           </h1>
 
           <p className="animate-fade-in-delay-2 mx-auto mb-10 max-w-2xl text-lg text-muted-foreground">
-            {t.coursesPage.subtitle}
+            2 formations gratuites pour débuter, 3 formations premium pour aller plus loin.
+            Chapitres interactifs, vidéos et quiz.
           </p>
 
-          {/* Stats bar */}
           <div className="animate-fade-in-delay-3 mx-auto grid max-w-lg grid-cols-3 gap-6">
             <div className="card-glass px-4 py-3 text-center">
-              <p className="text-xl font-bold gradient-text-animated">140+</p>
-              <p className="text-xs text-muted-foreground">{t.coursesPage.pages}</p>
+              <p className="text-xl font-bold text-emerald-400">2</p>
+              <p className="text-xs text-muted-foreground">Cours gratuits</p>
             </div>
             <div className="card-glass px-4 py-3 text-center">
-              <p className="text-xl font-bold gradient-text-animated">97</p>
-              <p className="text-xs text-muted-foreground">{t.coursesPage.chapters}</p>
+              <p className="text-xl font-bold gradient-text-animated">{totalChapters}</p>
+              <p className="text-xs text-muted-foreground">Chapitres</p>
             </div>
             <div className="card-glass px-4 py-3 text-center">
-              <p className="text-xl font-bold gradient-text-animated">4</p>
-              <p className="text-xs text-muted-foreground">{t.coursesPage.levels}</p>
+              <p className="text-xl font-bold gradient-text-animated">5</p>
+              <p className="text-xs text-muted-foreground">Formations</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Bundle highlight */}
-      <section className="relative overflow-hidden">
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-purple-600/5 via-blue-600/5 to-purple-600/5" />
-        <div className="pointer-events-none absolute left-1/2 top-1/2 h-[200px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-purple-600/10 blur-[80px]" />
-
-        <div className="relative mx-auto max-w-6xl px-4 py-14">
-          <Reveal>
-            <div className="card-glass overflow-hidden">
-              <div className="h-1 w-full bg-gradient-to-r from-purple-600 to-blue-600" />
-              <div className="flex flex-col items-center gap-8 p-8 md:flex-row md:p-10">
-                <div className="flex-1">
-                  <div className="mb-3 flex items-center gap-2">
-                    <Badge variant="outline" className="bg-purple-500/10 text-purple-400 border-purple-500/20">
-                      <Sparkles className="mr-1 h-3 w-3" />
-                      {t.coursesPage.bestOffer}
-                    </Badge>
-                    <Badge variant="outline" className="bg-emerald-500/10 text-emerald-400 border-emerald-500/20">
-                      -44%
-                    </Badge>
-                  </div>
-                  <h2 className="mb-2 text-2xl font-bold md:text-3xl">
-                    {bundle.title}
-                  </h2>
-                  <p className="mb-4 text-muted-foreground">
-                    {bundle.description}
-                  </p>
-                  <ul className="mb-6 grid gap-2 sm:grid-cols-2">
-                    {bundle.features.slice(0, 4).map((f) => (
-                      <li key={f} className="flex items-center gap-2 text-sm text-muted-foreground">
-                        <CheckCircle2 className="h-4 w-4 shrink-0 text-emerald-400" />
-                        {f}
-                      </li>
-                    ))}
-                  </ul>
-                  <Link
-                    href={`/cours/${bundle.slug}`}
-                    className="btn-gradient-glow inline-flex items-center gap-2 rounded-lg px-8 py-3.5 font-semibold text-white"
-                  >
-                    {t.coursesPage.discoverBundle}
-                    <ArrowRight className="h-4 w-4" />
-                  </Link>
-                </div>
-
-                <div className="flex shrink-0 flex-col items-center text-center">
-                  <p className="mb-1 text-sm text-muted-foreground line-through">70,95€</p>
-                  <p className="text-5xl font-bold gradient-text-animated md:text-6xl">
-                    {bundle.priceFormatted}
-                  </p>
-                  <p className="mt-2 text-sm text-muted-foreground">{t.coursesPage.singlePayment}</p>
-                  <div className="mt-3 flex items-center gap-2 text-xs text-muted-foreground">
-                    <BookOpen className="h-3.5 w-3.5" />
-                    {bundle.pages} {t.courseDetail.pages} · {bundle.chapters} {t.courseDetail.chapters}
-                  </div>
-                </div>
-              </div>
-            </div>
-          </Reveal>
-        </div>
-      </section>
-
-      <div className="section-divider" />
-
-      {/* Individual courses */}
+      {/* Free courses */}
       <section className="mx-auto max-w-6xl px-4 py-16">
         <Reveal>
-          <div className="mb-10">
-            <h2 className="mb-2 text-2xl font-bold">
-              {t.coursesPage.individualTitle}{" "}
-              <span className="gradient-text-animated">{t.coursesPage.individualHighlight}</span>
+          <div className="mb-8">
+            <h2 className="mb-2 flex items-center gap-2 text-2xl font-bold">
+              <BookOpen className="h-6 w-6 text-emerald-400" />
+              Formations gratuites
             </h2>
             <p className="text-muted-foreground">
-              {t.coursesPage.individualSubtitle}
+              Commencez immédiatement, sans inscription ni paiement.
             </p>
           </div>
         </Reveal>
 
-        <Reveal className="reveal-stagger grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {individualCourses.map((course) => (
+        <Reveal className="reveal-stagger grid gap-6 sm:grid-cols-2">
+          {freeCourses.map((course) => (
             <CourseCard key={course.slug} course={course} />
           ))}
         </Reveal>
       </section>
 
-      {/* Bottom CTA */}
+      <div className="section-divider" />
+
+      {/* Premium courses */}
+      <section className="mx-auto max-w-6xl px-4 py-16">
+        <Reveal>
+          <div className="mb-8">
+            <h2 className="mb-2 flex items-center gap-2 text-2xl font-bold">
+              <Sparkles className="h-6 w-6 text-purple-400" />
+              Formations Premium
+            </h2>
+            <p className="text-muted-foreground">
+              Allez plus loin avec un abonnement à{" "}
+              <span className="font-semibold text-purple-400">9,99€/mois</span>.
+              Annulable à tout moment.
+            </p>
+          </div>
+        </Reveal>
+
+        <Reveal className="reveal-stagger grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {premiumCourses.map((course) => (
+            <CourseCard key={course.slug} course={course} />
+          ))}
+        </Reveal>
+      </section>
+
+      {/* CTA */}
       <section className="border-t border-border/50">
-        <div className="mx-auto max-w-6xl px-4 py-14 text-center">
+        <div className="mx-auto max-w-6xl px-4 py-14">
           <Reveal>
-            <p className="mb-2 text-lg font-semibold">
-              {t.coursesPage.dontKnow}
-            </p>
-            <p className="mb-6 text-muted-foreground">
-              {t.coursesPage.bundleIncludes}
-            </p>
-            <Link
-              href={`/cours/${bundle.slug}`}
-              className="group inline-flex items-center gap-2 text-sm font-medium text-purple-400 transition-colors hover:text-purple-300"
-            >
-              {t.coursesPage.viewBundle} — {bundle.priceFormatted}
-              <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-            </Link>
+            <div className="card-glass overflow-hidden">
+              <div className="h-1 w-full bg-gradient-to-r from-purple-600 to-blue-600" />
+              <div className="flex flex-col items-center gap-6 p-8 text-center md:p-10">
+                <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-purple-500/10">
+                  <Lock className="h-7 w-7 text-purple-400" />
+                </div>
+                <div>
+                  <h2 className="mb-2 text-2xl font-bold">
+                    Débloquez tout pour{" "}
+                    <span className="gradient-text-animated">9,99€/mois</span>
+                  </h2>
+                  <p className="mx-auto max-w-xl text-muted-foreground">
+                    Accédez aux 3 formations premium ({premiumCourses.reduce((s, c) => s + c.chapters, 0)} chapitres),
+                    aux quiz interactifs et au suivi de progression complet.
+                  </p>
+                </div>
+                <div className="flex flex-col items-center gap-3">
+                  <UpgradeButton label="S'abonner — 9,99€/mois" className="px-10 py-4 text-base" />
+                  <div className="flex flex-wrap justify-center gap-4 text-xs text-muted-foreground">
+                    <span className="flex items-center gap-1">
+                      <CheckCircle2 className="h-3.5 w-3.5 text-emerald-400" />
+                      Annulable à tout moment
+                    </span>
+                    <span className="flex items-center gap-1">
+                      <CheckCircle2 className="h-3.5 w-3.5 text-emerald-400" />
+                      Mises à jour incluses
+                    </span>
+                    <span className="flex items-center gap-1">
+                      <CheckCircle2 className="h-3.5 w-3.5 text-emerald-400" />
+                      Paiement sécurisé Stripe
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </Reveal>
         </div>
       </section>
