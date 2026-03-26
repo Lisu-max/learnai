@@ -89,7 +89,7 @@ export default function CoursPage() {
               Formations Premium
             </h2>
             <p className="text-muted-foreground">
-              <span className="font-semibold text-purple-400">999€ par formation</span> — paiement unique, accès à vie.
+              <span className="font-semibold text-purple-400">9,99€ par formation</span> — paiement unique, accès à vie.
             </p>
           </div>
         </Reveal>
@@ -114,7 +114,7 @@ export default function CoursPage() {
                 <div>
                   <h2 className="mb-2 text-2xl font-bold">
                     Chaque formation à{" "}
-                    <span className="gradient-text-animated">999€</span>
+                    <span className="gradient-text-animated">9,99€</span>
                   </h2>
                   <p className="mx-auto max-w-xl text-muted-foreground">
                     Achetez la ou les formations qui vous intéressent. Accès à vie, vidéos et textes

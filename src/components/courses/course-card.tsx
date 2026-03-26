@@ -69,7 +69,7 @@ export function CourseCard({ course }: { course: Course }) {
             </span>
           ) : (
             <span className="text-sm font-semibold gradient-text-animated">
-              999€ <span className="font-normal text-muted-foreground">/ formation</span>
+              9,99€ <span className="font-normal text-muted-foreground">/ formation</span>
             </span>
           )}
           <span className="flex items-center gap-1 text-sm text-muted-foreground transition-all group-hover:text-foreground">

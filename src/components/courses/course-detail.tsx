@@ -144,10 +144,10 @@ export function CourseDetail({ slug }: { slug: string }) {
                       <Lock className="h-3 w-3" />
                       Formation Premium
                     </div>
-                    <p className="mt-2 text-3xl font-bold gradient-text-animated">999€</p>
+                    <p className="mt-2 text-3xl font-bold gradient-text-animated">9,99€</p>
                     <p className="mt-0.5 text-sm text-muted-foreground">par formation · paiement unique</p>
                   </div>
-                  <BuyButton courseSlug={slug} priceFormatted="999€" />
+                  <BuyButton courseSlug={slug} priceFormatted="9,99€" />
                 </>
               )}
 
