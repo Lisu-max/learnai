@@ -8,24 +8,33 @@ export function usePurchase(courseSlug: string) {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const supabase = createClient();
+    let cancelled = false;
 
     async function check() {
-      const { data: { user } } = await supabase.auth.getUser();
-      if (!user) { setLoading(false); return; }
+      try {
+        const supabase = createClient();
+        const { data: { user } } = await supabase.auth.getUser();
+        if (cancelled) return;
+        if (!user) { setLoading(false); return; }
 
-      const { data } = await supabase
-        .from("purchases")
-        .select("id")
-        .eq("user_id", user.id)
-        .eq("course_slug", courseSlug)
-        .single();
+        const { data } = await supabase
+          .from("purchases")
+          .select("id")
+          .eq("user_id", user.id)
+          .eq("course_slug", courseSlug)
+          .single();
 
-      setHasPurchased(!!data);
-      setLoading(false);
+        if (!cancelled) {
+          setHasPurchased(!!data);
+          setLoading(false);
+        }
+      } catch {
+        if (!cancelled) setLoading(false);
+      }
     }
 
     check();
+    return () => { cancelled = true; };
   }, [courseSlug]);
 
   return { hasPurchased, loading };
