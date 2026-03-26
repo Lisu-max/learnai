@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: `${siteConfig.name} — Formations IA Premium`,
     description: siteConfig.description,
-    url: "https://learnai-gules.vercel.app",
+    url: "https://learnai-csa3.vercel.app",
     siteName: siteConfig.name,
     type: "website",
     locale: "fr_FR",

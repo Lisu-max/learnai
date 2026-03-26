@@ -47,7 +47,7 @@ export default function MentionsLegalesPage() {
           <section>
             <h2 className="mb-3 text-lg font-semibold text-foreground">3. Propriété intellectuelle</h2>
             <p>
-              L&apos;ensemble du contenu du site LearnAI (textes, images, logos, graphiques, formations PDF)
+              L&apos;ensemble du contenu du site LearnAI (textes, images, logos, graphiques, formations)
               est protégé par le droit d&apos;auteur et le droit de la propriété intellectuelle.
               Toute reproduction, même partielle, est interdite sans autorisation écrite préalable.
             </p>

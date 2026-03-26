@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { courses } from "@/lib/courses";
 
-const BASE_URL = "https://learnai-gules.vercel.app";
+const BASE_URL = "https://learnai-csa3.vercel.app";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const coursePages = courses.map((course) => ({

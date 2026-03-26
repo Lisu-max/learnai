@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button";
 import { PasswordInput } from "@/components/ui/password-input";
 import { useTranslation } from "@/lib/i18n/context";
 
-const SITE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://learnai-gules.vercel.app";
+const SITE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://learnai-csa3.vercel.app";
 
 function ConnexionForm() {
   const router = useRouter();

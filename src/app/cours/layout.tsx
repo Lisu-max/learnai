@@ -3,11 +3,11 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Nos Formations IA",
   description:
-    "Des guides PDF complets pour maîtriser l'intelligence artificielle, du débutant à l'expert.",
+    "Des formations interactives complètes pour maîtriser l'intelligence artificielle, du débutant à l'expert.",
   openGraph: {
     title: "Nos Formations IA | LearnAI",
     description:
-      "Des guides PDF complets pour maîtriser l'intelligence artificielle, du débutant à l'expert.",
+      "Des formations interactives complètes pour maîtriser l'intelligence artificielle, du débutant à l'expert.",
   },
 };
 

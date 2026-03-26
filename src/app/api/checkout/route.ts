@@ -65,7 +65,7 @@ export async function POST(req: NextRequest) {
 
   // Step 5: Create Stripe session
   try {
-    const baseUrl = (process.env.NEXT_PUBLIC_BASE_URL || process.env.NEXT_PUBLIC_APP_URL || "https://learnai-gules.vercel.app").trim();
+    const baseUrl = (process.env.NEXT_PUBLIC_BASE_URL || process.env.NEXT_PUBLIC_APP_URL || "https://learnai-csa3.vercel.app").trim();
     const session = await getStripe().checkout.sessions.create({
       payment_method_types: ["card"],
       line_items: [

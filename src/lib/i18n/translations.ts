@@ -9,11 +9,11 @@ export const translations = {
     },
     // Hero
     hero: {
-      badge: "Formations PDF Premium",
+      badge: "Formations Premium",
       title: "Maîtrisez",
       titleHighlight: "l'Intelligence Artificielle",
       description:
-        "Des guides complets et pratiques pour comprendre, utiliser et maîtriser l'IA. Apprenez à votre rythme avec nos formations PDF conçues par des experts.",
+        "Des formations interactives complètes pour comprendre, utiliser et maîtriser l'IA. Apprenez à votre rythme avec des chapitres, vidéos et quiz.",
       cta: "Découvrir les formations",
       learnMore: "En savoir plus",
       statCourses: "Formations",
@@ -30,7 +30,7 @@ export const translations = {
         "Des guides rédigés par des professionnels de l'IA, avec des exemples concrets et des exercices pratiques.",
       instantAccess: "Accès Immédiat",
       instantDesc:
-        "Téléchargez vos formations en PDF instantanément après le paiement. Lisez-les où et quand vous voulez.",
+        "Accédez à vos formations en ligne instantanément après le paiement. Apprenez où et quand vous voulez.",
       freeUpdates: "Mises à Jour Gratuites",
       updatesDesc:
         "L'IA évolue vite. Recevez toutes les mises à jour de vos formations gratuitement, à vie.",
@@ -90,9 +90,9 @@ export const translations = {
       subtitle: "Tout ce que vous devez savoir avant de commencer.",
       items: [
         {
-          question: "Dans quel format sont les formations ?",
+          question: "Comment accéder aux formations ?",
           answer:
-            "Toutes nos formations sont au format PDF, téléchargeables immédiatement après le paiement. Vous pouvez les lire sur votre ordinateur, tablette ou smartphone.",
+            "Toutes nos formations sont accessibles directement sur le site, avec des chapitres interactifs, des vidéos et des quiz. Vous pouvez les suivre sur votre ordinateur, tablette ou smartphone.",
         },
         {
           question: "Les formations sont-elles mises à jour ?",
@@ -124,7 +124,7 @@ export const translations = {
     // Footer
     footer: {
       description:
-        "Formations premium en intelligence artificielle. Apprenez à votre rythme avec nos guides PDF complets.",
+        "Formations premium en intelligence artificielle. Apprenez à votre rythme avec nos cours interactifs.",
       navigation: "Navigation",
       legal: "Légal",
       terms: "Conditions générales de vente",
@@ -213,7 +213,7 @@ export const translations = {
       title: "Nos",
       titleHighlight: "Formations",
       subtitle:
-        "Des guides PDF complets pour maîtriser l'intelligence artificielle, du débutant à l'expert. Choisissez votre parcours.",
+        "Des formations interactives pour maîtriser l'intelligence artificielle, du débutant à l'expert. Choisissez votre parcours.",
       pages: "Pages",
       chapters: "Chapitres",
       levels: "Niveaux",
@@ -233,7 +233,7 @@ export const translations = {
     courseDetail: {
       backToCourses: "Retour aux formations",
       singlePaymentLifetime: "Paiement unique — Accès à vie",
-      instantDownload: "Téléchargement immédiat (PDF)",
+      instantDownload: "Accès immédiat en ligne",
       freeUpdatesLifetime: "Mises à jour gratuites à vie",
       secureStripe: "Paiement sécurisé via Stripe",
       guarantee: "Garantie 30 jours satisfait ou remboursé",
@@ -272,8 +272,8 @@ export const translations = {
         "Le paiement n'a pas pu être vérifié. Si vous pensez qu'il s'agit d'une erreur, contactez-nous.",
       thankYou: "Merci pour votre achat !",
       paymentConfirmed: "Votre paiement pour",
-      paymentConfirmedSuffix: "a bien été confirmé. Vous pouvez télécharger votre formation ci-dessous.",
-      downloadPdf: "Télécharger le PDF",
+      paymentConfirmedSuffix: "a bien été confirmé. Vous pouvez accéder à votre formation ci-dessous.",
+      downloadPdf: "Accéder à ma formation",
       viewMyTrainings: "Voir mes formations",
       discoverOther: "Découvrir nos autres formations",
       yourTraining: "votre formation",
@@ -299,11 +299,11 @@ export const translations = {
       signup: "Sign up",
     },
     hero: {
-      badge: "Premium PDF Courses",
+      badge: "Premium Courses",
       title: "Master",
       titleHighlight: "Artificial Intelligence",
       description:
-        "Comprehensive and practical guides to understand, use and master AI. Learn at your own pace with our expert-designed PDF courses.",
+        "Comprehensive and interactive courses to understand, use and master AI. Learn at your own pace with chapters, videos and quizzes.",
       cta: "Discover courses",
       learnMore: "Learn more",
       statCourses: "Courses",
@@ -319,7 +319,7 @@ export const translations = {
         "Guides written by AI professionals, with real-world examples and hands-on exercises.",
       instantAccess: "Instant Access",
       instantDesc:
-        "Download your PDF courses instantly after payment. Read them wherever and whenever you want.",
+        "Access your courses online instantly after payment. Learn wherever and whenever you want.",
       freeUpdates: "Free Updates",
       updatesDesc:
         "AI evolves fast. Get all updates to your courses for free, forever.",
@@ -375,9 +375,9 @@ export const translations = {
       subtitle: "Everything you need to know before getting started.",
       items: [
         {
-          question: "What format are the courses in?",
+          question: "How do I access the courses?",
           answer:
-            "All our courses are in PDF format, downloadable immediately after payment. You can read them on your computer, tablet or smartphone.",
+            "All our courses are accessible directly on the site, with interactive chapters, videos and quizzes. You can follow them on your computer, tablet or smartphone.",
         },
         {
           question: "Are the courses updated?",
@@ -408,7 +408,7 @@ export const translations = {
     },
     footer: {
       description:
-        "Premium artificial intelligence courses. Learn at your own pace with our comprehensive PDF guides.",
+        "Premium artificial intelligence courses. Learn at your own pace with our interactive online courses.",
       navigation: "Navigation",
       legal: "Legal",
       terms: "Terms of Service",
@@ -493,7 +493,7 @@ export const translations = {
       title: "Our",
       titleHighlight: "Courses",
       subtitle:
-        "Comprehensive PDF guides to master artificial intelligence, from beginner to expert. Choose your path.",
+        "Comprehensive interactive courses to master artificial intelligence, from beginner to expert. Choose your path.",
       pages: "Pages",
       chapters: "Chapters",
       levels: "Levels",
@@ -512,7 +512,7 @@ export const translations = {
     courseDetail: {
       backToCourses: "Back to courses",
       singlePaymentLifetime: "One-time payment — Lifetime access",
-      instantDownload: "Instant download (PDF)",
+      instantDownload: "Instant online access",
       freeUpdatesLifetime: "Free lifetime updates",
       secureStripe: "Secure payment via Stripe",
       guarantee: "30-day money-back guarantee",
@@ -549,8 +549,8 @@ export const translations = {
         "The payment could not be verified. If you believe this is an error, please contact us.",
       thankYou: "Thank you for your purchase!",
       paymentConfirmed: "Your payment for",
-      paymentConfirmedSuffix: "has been confirmed. You can download your course below.",
-      downloadPdf: "Download PDF",
+      paymentConfirmedSuffix: "has been confirmed. You can access your course below.",
+      downloadPdf: "Access my course",
       viewMyTrainings: "View my courses",
       discoverOther: "Discover our other courses",
       yourTraining: "your course",

@@ -34,15 +34,8 @@ export default async function ChaptersPage({ params }: Props) {
           <h1 className="mb-2 text-2xl font-bold">Formation en cours de préparation</h1>
           <p className="text-muted-foreground">
             Le contenu interactif de cette formation sera bientôt disponible.
-            En attendant, vous pouvez télécharger le PDF.
+            Revenez bientôt !
           </p>
-          <a
-            href={`/pdfs/${slug}.pdf`}
-            download
-            className="btn-gradient mt-6 inline-flex items-center gap-2 rounded-lg px-6 py-3 text-sm font-semibold text-white"
-          >
-            Télécharger le PDF
-          </a>
         </div>
       </div>
     );

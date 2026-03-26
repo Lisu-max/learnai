@@ -10,7 +10,7 @@ import { PasswordInput } from "@/components/ui/password-input";
 import { BirthDateInput } from "@/components/ui/birth-date-input";
 import { useTranslation } from "@/lib/i18n/context";
 
-const SITE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://learnai-gules.vercel.app";
+const SITE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://learnai-csa3.vercel.app";
 
 export default function InscriptionPage() {
   const router = useRouter();

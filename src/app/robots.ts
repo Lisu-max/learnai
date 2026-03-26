@@ -9,6 +9,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ["/compte", "/api/", "/auth/"],
       },
     ],
-    sitemap: "https://learnai-gules.vercel.app/sitemap.xml",
+    sitemap: "https://learnai-csa3.vercel.app/sitemap.xml",
   };
 }

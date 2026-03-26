@@ -26,15 +26,15 @@ export default function CGVPage() {
             <h2 className="mb-3 text-lg font-semibold text-foreground">1. Objet</h2>
             <p>
               Les présentes Conditions Générales de Vente (CGV) régissent les ventes de formations numériques
-              au format PDF proposées sur le site LearnAI.
+              en ligne proposées sur le site LearnAI.
             </p>
           </section>
 
           <section>
             <h2 className="mb-3 text-lg font-semibold text-foreground">2. Produits</h2>
             <p>
-              LearnAI propose des guides pratiques au format PDF sur l&apos;intelligence artificielle.
-              Chaque formation est décrite sur sa page dédiée avec le nombre exact de pages, de chapitres,
+              LearnAI propose des formations interactives en ligne sur l&apos;intelligence artificielle.
+              Chaque formation est décrite sur sa page dédiée avec le nombre de chapitres,
               le niveau et le prix. Le contenu est mis à jour régulièrement pour refléter les dernières
               évolutions de l&apos;IA.
             </p>
@@ -61,8 +61,8 @@ export default function CGVPage() {
           <section>
             <h2 className="mb-3 text-lg font-semibold text-foreground">5. Livraison</h2>
             <p>
-              Les formations étant des produits numériques, la livraison est <strong>immédiate</strong> après
-              confirmation du paiement. Le fichier PDF est disponible en téléchargement depuis votre
+              Les formations étant des produits numériques, l&apos;accès est <strong>immédiat</strong> après
+              confirmation du paiement. Vous pouvez accéder à votre formation depuis votre
               espace compte et sur la page de confirmation.
             </p>
           </section>
@@ -92,7 +92,7 @@ export default function CGVPage() {
             <h2 className="mb-3 text-lg font-semibold text-foreground">8. Mises à jour gratuites</h2>
             <p>
               Les formations achetées bénéficient de mises à jour gratuites. Lorsque le contenu est mis à jour
-              (nouvelles versions des outils IA, nouveaux modèles), la nouvelle version du PDF est mise à disposition
+              (nouvelles versions des outils IA, nouveaux modèles), le nouveau contenu est mis à disposition
               dans votre espace compte.
             </p>
           </section>
