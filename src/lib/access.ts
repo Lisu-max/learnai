@@ -33,16 +33,5 @@ export async function hasAccessToCourse(courseSlug: string): Promise<{
 
   if (purchase) return { hasAccess: true, userId: user.id, isPro: false };
 
-  // Legacy: check subscription status (for existing subscribers)
-  const { data: profile } = await supabase
-    .from("profiles")
-    .select("subscription_status")
-    .eq("id", user.id)
-    .single();
-
-  if (profile?.subscription_status === "pro") {
-    return { hasAccess: true, userId: user.id, isPro: true };
-  }
-
   return { hasAccess: false, userId: user.id, isPro: false };
 }
