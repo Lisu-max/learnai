@@ -42,7 +42,7 @@ export const courses: Course[] = [
     longDescription:
       "Tutoriels complets pour chaque outil : ChatGPT (GPT-5.4), Claude 4.6, Gemini 3.1, Midjourney V7/V8, DALL-E 3, Stable Diffusion, Sora 2, ElevenLabs, Suno, GitHub Copilot, Cursor, NotebookLM, Perplexity, Make/Zapier et les API d'IA. Construisez votre workflow IA personnalisé.",
     level: "Intermédiaire",
-    tier: "free",
+    tier: "premium",
     duration: "3h",
     chapters: 18,
     features: [
@@ -120,8 +120,8 @@ export const courses: Course[] = [
   },
 ];
 
-export const FREE_SLUGS = ["ia-de-a-a-z", "maitriser-outils-ia"];
-export const PREMIUM_SLUGS = ["prompt-engineering-pro", "ia-pour-votre-business", "creer-avec-ia"];
+export const FREE_SLUGS = ["ia-de-a-a-z"];
+export const PREMIUM_SLUGS = ["maitriser-outils-ia", "prompt-engineering-pro", "ia-pour-votre-business", "creer-avec-ia"];
 
 export function getCourseBySlug(slug: string): Course | undefined {
   return courses.find((course) => course.slug === slug);

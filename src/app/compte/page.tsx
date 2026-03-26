@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { redirect } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
-import { getCourseBySlug } from "@/lib/courses";
+import { getCourseBySlug, FREE_SLUGS } from "@/lib/courses";
 import { AccountDashboard } from "@/components/account/account-dashboard";
 
 export const metadata: Metadata = {
@@ -28,6 +28,18 @@ export default async function ComptePage() {
     course: getCourseBySlug(p.course_slug),
   }));
 
+  // Add free courses to the dashboard (they're always accessible)
+  const purchasedSlugs = new Set(purchasedCourses.map((p) => p.course_slug));
+  const freeCourseEntries = FREE_SLUGS.filter((slug) => !purchasedSlugs.has(slug)).map((slug) => ({
+    id: `free-${slug}`,
+    course_slug: slug,
+    created_at: user.created_at || new Date().toISOString(),
+    course: getCourseBySlug(slug),
+    isFree: true,
+  }));
+
+  const allCourses = [...freeCourseEntries, ...purchasedCourses];
+
   const userProfile = {
     email: user.email || "",
     firstName: (user.user_metadata?.first_name as string) || "",
@@ -38,7 +50,7 @@ export default async function ComptePage() {
   return (
     <AccountDashboard
       user={userProfile}
-      purchasedCourses={purchasedCourses}
+      purchasedCourses={allCourses}
     />
   );
 }

@@ -3,16 +3,15 @@
 import Link from "next/link";
 import { courses, getCourseBySlug } from "@/lib/courses";
 import { CourseCard } from "@/components/courses/course-card";
+import { BuyButton } from "@/components/courses/buy-button";
 import { Badge } from "@/components/ui/badge";
-import { UpgradeButton } from "@/components/UpgradeButton";
-import { useSubscription } from "@/hooks/useSubscription";
+import { usePurchase } from "@/hooks/usePurchase";
 import { Reveal } from "@/components/ui/reveal";
 import {
   BookOpen,
   Clock,
   CheckCircle2,
   ArrowLeft,
-  ArrowRight,
   Lock,
   Sparkles,
   PlayCircle,
@@ -28,12 +27,12 @@ const levelColors: Record<string, string> = {
 export function CourseDetail({ slug }: { slug: string }) {
   const course = getCourseBySlug(slug);
   const { t } = useTranslation();
-  const { isPro, loading: subLoading } = useSubscription();
+  const { hasPurchased, loading: purchaseLoading } = usePurchase(slug);
 
   if (!course) return null;
 
   const isFree = course.tier === "free";
-  const canAccess = isFree || isPro;
+  const canAccess = isFree || hasPurchased;
   const otherCourses = courses.filter((c) => c.slug !== slug).slice(0, 3);
 
   return (
@@ -65,7 +64,7 @@ export function CourseDetail({ slug }: { slug: string }) {
                 ) : (
                   <Badge variant="outline" className="bg-purple-500/10 text-purple-400 border-purple-500/20">
                     <Sparkles className="mr-1 h-3 w-3" />
-                    PRO
+                    PREMIUM
                   </Badge>
                 )}
               </div>
@@ -121,12 +120,12 @@ export function CourseDetail({ slug }: { slug: string }) {
                     Commencer la formation
                   </Link>
                 </>
-              ) : canAccess ? (
+              ) : !purchaseLoading && canAccess ? (
                 <>
                   <div className="mb-4 text-center">
                     <div className="mb-2 inline-flex items-center gap-1 rounded-full bg-purple-500/10 px-3 py-1 text-xs font-medium text-purple-400">
                       <Sparkles className="h-3 w-3" />
-                      Membre PRO
+                      Formation débloquée
                     </div>
                     <p className="text-sm text-muted-foreground">Vous avez accès à cette formation</p>
                   </div>
@@ -145,15 +144,10 @@ export function CourseDetail({ slug }: { slug: string }) {
                       <Lock className="h-3 w-3" />
                       Formation Premium
                     </div>
-                    <p className="mt-2 text-3xl font-bold gradient-text-animated">
-                      9,99€<span className="text-lg font-normal text-muted-foreground">/mois</span>
-                    </p>
-                    <p className="mt-1 text-sm text-muted-foreground">Accès à toutes les formations premium</p>
+                    <p className="mt-2 text-3xl font-bold gradient-text-animated">999€</p>
+                    <p className="mt-0.5 text-sm text-muted-foreground">par formation · paiement unique</p>
                   </div>
-                  <UpgradeButton label="S'abonner — 9,99€/mois" className="w-full py-4 text-base" />
-                  <p className="mt-3 text-center text-xs text-muted-foreground">
-                    Annulable à tout moment
-                  </p>
+                  <BuyButton courseSlug={slug} priceFormatted="999€" />
                 </>
               )}
 
@@ -165,11 +159,11 @@ export function CourseDetail({ slug }: { slug: string }) {
                 </div>
                 <div className="flex items-center gap-2 text-xs text-muted-foreground">
                   <CheckCircle2 className="h-3.5 w-3.5 text-emerald-400" />
-                  Vidéos et quiz inclus
+                  Vidéos et textes explicatifs
                 </div>
                 <div className="flex items-center gap-2 text-xs text-muted-foreground">
                   <CheckCircle2 className="h-3.5 w-3.5 text-emerald-400" />
-                  Mises à jour régulières
+                  Accès à vie — mises à jour incluses
                 </div>
               </div>
             </div>

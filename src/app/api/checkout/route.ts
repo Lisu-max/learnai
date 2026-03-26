@@ -76,7 +76,7 @@ export async function POST(req: NextRequest) {
               name: course.title,
               description: course.description.substring(0, 500),
             },
-            unit_amount: 999, // legacy one-time purchase
+            unit_amount: 99900, // 999€ par formation
           },
           quantity: 1,
         },

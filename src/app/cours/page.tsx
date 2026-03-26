@@ -3,15 +3,15 @@
 import { courses } from "@/lib/courses";
 import { CourseCard } from "@/components/courses/course-card";
 import { Reveal } from "@/components/ui/reveal";
-import { UpgradeButton } from "@/components/UpgradeButton";
 import {
   GraduationCap,
   Sparkles,
   CheckCircle2,
   BookOpen,
-  Lock,
+  ShoppingCart,
 } from "lucide-react";
 import { useTranslation } from "@/lib/i18n/context";
+import Link from "next/link";
 
 export default function CoursPage() {
   const { t } = useTranslation();
@@ -31,19 +31,19 @@ export default function CoursPage() {
           </div>
 
           <h1 className="animate-fade-in-delay-1 mb-4 text-4xl font-bold md:text-5xl">
-            Apprenez l&apos;IA{" "}
-            <span className="gradient-text-animated">gratuitement</span>
+            Maîtrisez l&apos;IA{" "}
+            <span className="gradient-text-animated">à votre rythme</span>
           </h1>
 
           <p className="animate-fade-in-delay-2 mx-auto mb-10 max-w-2xl text-lg text-muted-foreground">
-            2 formations gratuites pour débuter, 3 formations premium pour aller plus loin.
-            Chapitres interactifs, vidéos et quiz.
+            1 formation gratuite pour débuter, 4 formations premium pour aller plus loin.
+            Vidéos explicatives, textes et quiz interactifs.
           </p>
 
           <div className="animate-fade-in-delay-3 mx-auto grid max-w-lg grid-cols-3 gap-6">
             <div className="card-glass px-4 py-3 text-center">
-              <p className="text-xl font-bold text-emerald-400">2</p>
-              <p className="text-xs text-muted-foreground">Cours gratuits</p>
+              <p className="text-xl font-bold text-emerald-400">1</p>
+              <p className="text-xs text-muted-foreground">Cours gratuit</p>
             </div>
             <div className="card-glass px-4 py-3 text-center">
               <p className="text-xl font-bold gradient-text-animated">{totalChapters}</p>
@@ -57,13 +57,13 @@ export default function CoursPage() {
         </div>
       </section>
 
-      {/* Free courses */}
+      {/* Free course */}
       <section className="mx-auto max-w-6xl px-4 py-16">
         <Reveal>
           <div className="mb-8">
             <h2 className="mb-2 flex items-center gap-2 text-2xl font-bold">
               <BookOpen className="h-6 w-6 text-emerald-400" />
-              Formations gratuites
+              Formation d&apos;introduction gratuite
             </h2>
             <p className="text-muted-foreground">
               Commencez immédiatement, sans inscription ni paiement.
@@ -89,9 +89,7 @@ export default function CoursPage() {
               Formations Premium
             </h2>
             <p className="text-muted-foreground">
-              Allez plus loin avec un abonnement à{" "}
-              <span className="font-semibold text-purple-400">9,99€/mois</span>.
-              Annulable à tout moment.
+              <span className="font-semibold text-purple-400">999€ par formation</span> — paiement unique, accès à vie.
             </p>
           </div>
         </Reveal>
@@ -111,28 +109,34 @@ export default function CoursPage() {
               <div className="h-1 w-full bg-gradient-to-r from-purple-600 to-blue-600" />
               <div className="flex flex-col items-center gap-6 p-8 text-center md:p-10">
                 <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-purple-500/10">
-                  <Lock className="h-7 w-7 text-purple-400" />
+                  <ShoppingCart className="h-7 w-7 text-purple-400" />
                 </div>
                 <div>
                   <h2 className="mb-2 text-2xl font-bold">
-                    Débloquez tout pour{" "}
-                    <span className="gradient-text-animated">9,99€/mois</span>
+                    Chaque formation à{" "}
+                    <span className="gradient-text-animated">999€</span>
                   </h2>
                   <p className="mx-auto max-w-xl text-muted-foreground">
-                    Accédez aux 3 formations premium ({premiumCourses.reduce((s, c) => s + c.chapters, 0)} chapitres),
-                    aux quiz interactifs et au suivi de progression complet.
+                    Achetez la ou les formations qui vous intéressent. Accès à vie, vidéos et textes
+                    inclus ({premiumCourses.reduce((s, c) => s + c.chapters, 0)} chapitres au total).
                   </p>
                 </div>
                 <div className="flex flex-col items-center gap-3">
-                  <UpgradeButton label="S'abonner — 9,99€/mois" className="px-10 py-4 text-base" />
+                  <Link
+                    href="#formations-premium"
+                    className="btn-gradient inline-flex items-center gap-2 rounded-lg px-10 py-4 text-base font-semibold text-white"
+                  >
+                    <Sparkles className="h-5 w-5" />
+                    Voir les formations
+                  </Link>
                   <div className="flex flex-wrap justify-center gap-4 text-xs text-muted-foreground">
                     <span className="flex items-center gap-1">
                       <CheckCircle2 className="h-3.5 w-3.5 text-emerald-400" />
-                      Annulable à tout moment
+                      Paiement unique
                     </span>
                     <span className="flex items-center gap-1">
                       <CheckCircle2 className="h-3.5 w-3.5 text-emerald-400" />
-                      Mises à jour incluses
+                      Accès à vie
                     </span>
                     <span className="flex items-center gap-1">
                       <CheckCircle2 className="h-3.5 w-3.5 text-emerald-400" />

@@ -40,7 +40,7 @@ export function CourseCard({ course }: { course: Course }) {
           ) : (
             <Badge variant="outline" className="bg-purple-500/10 text-purple-400 border-purple-500/20">
               <Sparkles className="mr-1 h-3 w-3" />
-              PRO
+              PREMIUM
             </Badge>
           )}
         </div>
@@ -69,7 +69,7 @@ export function CourseCard({ course }: { course: Course }) {
             </span>
           ) : (
             <span className="text-sm font-semibold gradient-text-animated">
-              9,99€/mois
+              999€ <span className="font-normal text-muted-foreground">/ formation</span>
             </span>
           )}
           <span className="flex items-center gap-1 text-sm text-muted-foreground transition-all group-hover:text-foreground">

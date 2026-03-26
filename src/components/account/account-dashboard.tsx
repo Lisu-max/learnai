@@ -7,14 +7,13 @@ import { createClient } from "@/lib/supabase/client";
 import { useTranslation } from "@/lib/i18n/context";
 import { CircularProgress } from "@/components/ui/circular-progress";
 import {
-  User,
   Mail,
   Calendar,
   BookOpen,
-  Download,
   LogOut,
   TrendingUp,
   ChevronRight,
+  PlayCircle,
 } from "lucide-react";
 import type { Course } from "@/lib/courses";
 
@@ -23,6 +22,7 @@ interface PurchasedCourse {
   course_slug: string;
   created_at: string;
   course: Course | undefined;
+  isFree?: boolean;
 }
 
 interface UserProfile {
@@ -213,6 +213,7 @@ export function AccountDashboard({ user, purchasedCourses }: AccountDashboardPro
                   const percentage = totalPages > 0 ? Math.min((pagesRead / totalPages) * 100, 100) : 0;
                   const isBundle = false;
                   const isEditing = editingSlug === item.course_slug;
+                  const isFreeItem = (item as PurchasedCourse).isFree === true;
 
                   return (
                     <div
@@ -236,12 +237,7 @@ export function AccountDashboard({ user, purchasedCourses }: AccountDashboardPro
                               {item.course?.title || item.course_slug}
                             </h3>
                             <p className="text-sm text-muted-foreground">
-                              {t.account.purchasedOn}{" "}
-                              {new Date(item.created_at).toLocaleDateString(dateLocale, {
-                                day: "numeric",
-                                month: "long",
-                                year: "numeric",
-                              })}
+                              {isFreeItem ? "Formation gratuite" : `${t.account.purchasedOn} ${new Date(item.created_at).toLocaleDateString(dateLocale, { day: "numeric", month: "long", year: "numeric" })}`}
                             </p>
                             {!isBundle && (
                               <div className="mt-2">
@@ -303,14 +299,13 @@ export function AccountDashboard({ user, purchasedCourses }: AccountDashboardPro
                               </button>
                             </div>
                           )}
-                          <a
-                            href={`/pdfs/${item.course_slug}.pdf`}
-                            download
+                          <Link
+                            href={`/cours/${item.course_slug}/chapitres`}
                             className="flex items-center gap-1.5 rounded-lg bg-purple-500/10 px-3 py-2 text-xs font-medium text-purple-400 transition-colors hover:bg-purple-500/20"
                           >
-                            <Download className="h-3.5 w-3.5" />
-                            {t.account.download}
-                          </a>
+                            <PlayCircle className="h-3.5 w-3.5" />
+                            Accéder
+                          </Link>
                         </div>
                       </div>
                     </div>
