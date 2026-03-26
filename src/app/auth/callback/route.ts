@@ -20,9 +20,12 @@ export async function GET(request: Request) {
   if (token_hash && type) {
     const { error } = await supabase.auth.verifyOtp({
       token_hash,
-      type: type as "signup" | "email",
+      type: type as "signup" | "email" | "recovery",
     });
     if (!error) {
+      if (type === "recovery") {
+        return NextResponse.redirect(`${origin}/nouveau-mot-de-passe`);
+      }
       return NextResponse.redirect(`${origin}${next}`);
     }
   }
