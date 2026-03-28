@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { getStripe } from "@/lib/stripe";
 import { getCourseBySlug } from "@/lib/courses";
 import { createClient } from "@/lib/supabase/server";
-import { CheckCircle2, ArrowRight, ArrowLeft, User, PlayCircle } from "lucide-react";
+import { CheckCircle2, ArrowLeft, User, PlayCircle } from "lucide-react";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -12,43 +12,10 @@ export const metadata: Metadata = {
 export default async function SuccessPage({
   searchParams,
 }: {
-  searchParams: Promise<{ session_id?: string; success?: string }>;
+  searchParams: Promise<{ session_id?: string }>;
 }) {
-  const { session_id, success } = await searchParams;
+  const { session_id } = await searchParams;
 
-  // Subscription success (from /api/stripe/checkout)
-  if (success === "true") {
-    return (
-      <div className="bg-grid">
-        <section className="mx-auto max-w-2xl px-4 py-24 text-center">
-          <div className="animate-fade-in">
-            <div className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-emerald-500/10">
-              <CheckCircle2 className="h-10 w-10 text-emerald-400" />
-            </div>
-            <h1 className="mb-4 text-3xl font-bold">Bienvenue dans LearnAI Pro !</h1>
-            <p className="mb-8 text-lg text-muted-foreground">
-              Vous avez maintenant accès à toutes les formations premium.
-              Commencez à apprendre dès maintenant.
-            </p>
-            <div className="flex flex-col items-center gap-3">
-              <Link
-                href="/cours"
-                className="btn-gradient-glow inline-flex items-center gap-2 rounded-lg px-8 py-4 text-base font-semibold text-white"
-              >
-                <PlayCircle className="h-5 w-5" />
-                Découvrir les formations
-              </Link>
-              <Link href="/compte" className="text-sm text-purple-400 hover:text-purple-300">
-                Voir mon compte
-              </Link>
-            </div>
-          </div>
-        </section>
-      </div>
-    );
-  }
-
-  // One-time purchase success (legacy)
   if (!session_id) {
     return (
       <div className="mx-auto max-w-2xl px-4 py-24 text-center">

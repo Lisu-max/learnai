@@ -32,8 +32,7 @@ export function BuyButton({
       const data = await res.json();
 
       if (res.status === 401) {
-        // Show error briefly then redirect
-        setError(data.error || "Connexion requise");
+        setError(t.buy.loginRequired);
         setTimeout(() => router.push("/connexion"), 1500);
         return;
       }
