@@ -1,10 +1,10 @@
 import { redirect, notFound } from "next/navigation";
 import Link from "next/link";
-import { getCourseBySlug } from "@/lib/courses";
+import { getCourseBySlug, getCourseLocalized } from "@/lib/courses";
 import { getCourseContent } from "@/content";
 import { hasAccessToCourse } from "@/lib/access";
 import { createClient } from "@/lib/supabase/server";
-import { getServerTranslation } from "@/lib/i18n/server";
+import { getServerTranslation, getServerLocale } from "@/lib/i18n/server";
 import {
   ArrowLeft,
   BookOpen,
@@ -20,8 +20,10 @@ interface Props {
 export default async function ChaptersPage({ params }: Props) {
   const { slug } = await params;
   const t = await getServerTranslation();
+  const locale = await getServerLocale();
   const course = getCourseBySlug(slug);
   if (!course) notFound();
+  const lc = getCourseLocalized(course, locale);
 
   const { hasAccess, userId } = await hasAccessToCourse(slug);
   if (!hasAccess) redirect(`/cours/${slug}`);
@@ -71,8 +73,8 @@ export default async function ChaptersPage({ params }: Props) {
 
         {/* Course header */}
         <div className="mb-10">
-          <h1 className="mb-2 text-3xl font-bold">{course.title}</h1>
-          <p className="mb-4 text-muted-foreground">{course.description}</p>
+          <h1 className="mb-2 text-3xl font-bold">{lc.title}</h1>
+          <p className="mb-4 text-muted-foreground">{lc.description}</p>
 
           {/* Progress bar */}
           <div className="rounded-xl border border-border/50 bg-card/50 p-4">

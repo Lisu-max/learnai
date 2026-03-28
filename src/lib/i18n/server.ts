@@ -1,9 +1,13 @@
 import { cookies } from "next/headers";
 import { translations, type Translations } from "./translations";
 
-export async function getServerTranslation(): Promise<Translations> {
+export async function getServerLocale(): Promise<string> {
   const cookieStore = await cookies();
-  const locale = cookieStore.get("learnai-locale")?.value;
+  return cookieStore.get("learnai-locale")?.value || "fr";
+}
+
+export async function getServerTranslation(): Promise<Translations> {
+  const locale = await getServerLocale();
   if (locale === "en") return translations.en;
   return translations.fr;
 }

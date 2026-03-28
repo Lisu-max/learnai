@@ -1,3 +1,10 @@
+export interface CourseTranslation {
+  title: string;
+  description: string;
+  longDescription: string;
+  features: string[];
+}
+
 export interface Course {
   slug: string;
   title: string;
@@ -10,6 +17,7 @@ export interface Course {
   features: string[];
   image: string;
   color: string;
+  en?: CourseTranslation;
 }
 
 export const courses: Course[] = [
@@ -33,6 +41,20 @@ export const courses: Course[] = [
     ],
     image: "/images/courses/ia-de-a-a-z.jpg",
     color: "from-blue-500 to-cyan-500",
+    en: {
+      title: "AI from A to Z",
+      description:
+        "Discover the fundamentals of artificial intelligence. The perfect guide to getting started and understanding the key AI concepts in 2026.",
+      longDescription:
+        "Learn the core concepts of machine learning, deep learning, NLP, computer vision, language models (GPT-5.4, Claude 4.6, Gemini 3.1), generative AI, autonomous AI agents, and ethics. Each chapter includes videos, key points and an interactive quiz.",
+      features: [
+        "12 interactive chapters with videos",
+        "Quiz after each chapter to validate your knowledge",
+        "Machine Learning, Deep Learning, neural networks",
+        "GPT-5.4, Claude 4.6, Gemini 3.1 explained",
+        "AI agents, ethics and the future of AI",
+      ],
+    },
   },
   {
     slug: "maitriser-outils-ia",
@@ -54,6 +76,20 @@ export const courses: Course[] = [
     ],
     image: "/images/courses/maitriser-outils-ia.jpg",
     color: "from-purple-500 to-pink-500",
+    en: {
+      title: "Mastering AI Tools",
+      description:
+        "Practical guide to all major AI tools: ChatGPT, Claude, Gemini, Midjourney, Sora, Cursor and much more.",
+      longDescription:
+        "Complete tutorials for each tool: ChatGPT (GPT-5.4), Claude 4.6, Gemini 3.1, Midjourney V7/V8, DALL-E 3, Stable Diffusion, Sora 2, ElevenLabs, Suno, GitHub Copilot, Cursor, NotebookLM, Perplexity, Make/Zapier and AI APIs. Build your personalized AI workflow.",
+      features: [
+        "18 AI tools covered in depth",
+        "ChatGPT GPT-5.4, Claude 4.6, Gemini 3.1",
+        "Midjourney V7/V8, Sora 2, ElevenLabs, Suno",
+        "Cursor, Copilot, Claude Code for coding",
+        "Step-by-step personalized AI workflow",
+      ],
+    },
   },
   {
     slug: "prompt-engineering-pro",
@@ -75,6 +111,20 @@ export const courses: Course[] = [
     ],
     image: "/images/courses/prompt-engineering-pro.jpg",
     color: "from-violet-500 to-purple-500",
+    en: {
+      title: "Prompt Engineering Pro",
+      description:
+        "Master the art of prompt engineering with 20 advanced techniques. The most sought-after skill of 2026.",
+      longDescription:
+        "Tokenization, zero-shot, few-shot, Chain-of-Thought, Tree of Thought, CRISPE framework, personas, system prompts, meta-prompting, prompt chaining. Dedicated chapters for code, creative writing, images, video and music. 3 real case studies with measured ROI.",
+      features: [
+        "20 advanced prompting techniques",
+        "Prompts for code, images, video, music",
+        "System prompts and AI agents",
+        "3 real case studies with ROI",
+        "Reduce hallucinations",
+      ],
+    },
   },
   {
     slug: "ia-pour-votre-business",
@@ -96,6 +146,20 @@ export const courses: Course[] = [
     ],
     image: "/images/courses/ia-pour-votre-business.jpg",
     color: "from-amber-500 to-orange-500",
+    en: {
+      title: "AI for your Business",
+      description:
+        "Concrete strategies to integrate AI into your company. ROI, automation, marketing, sales — with a 90-day action plan.",
+      longDescription:
+        "AI audit, ROI calculation, customer service (chatbots 70-85%), digital marketing, personalization, sales/CRM, operations, HR, finance, supply chain, e-commerce. 3 case studies with real metrics, 90-day action plan, GDPR/AI Act compliance.",
+      features: [
+        "AI audit and ROI calculation",
+        "Marketing, sales, HR, finance with AI",
+        "3 case studies (revenue +35%, costs -60%)",
+        "90-day action plan",
+        "GDPR, AI Act — legal compliance",
+      ],
+    },
   },
   {
     slug: "creer-avec-ia",
@@ -117,6 +181,20 @@ export const courses: Course[] = [
     ],
     image: "/images/courses/creer-avec-ia.jpg",
     color: "from-emerald-500 to-teal-500",
+    en: {
+      title: "Create with AI",
+      description:
+        "Images, video, music, writing, design, logos, video games — the complete digital creator's guide with AI.",
+      longDescription:
+        "Midjourney V7/V8, DALL-E 3, Stable Diffusion, AI photo editing, logos, UI/UX (Galileo AI, v0, Bolt), Sora 2, Runway Gen-3, Suno, Udio, ElevenLabs, creative writing, social media, podcasting, video games, fashion, architecture. Monetization and copyright.",
+      features: [
+        "Midjourney V7/V8, DALL-E 3, Stable Diffusion",
+        "Sora 2, Runway Gen-3 for video",
+        "Suno, Udio, ElevenLabs for audio",
+        "UI/UX design, logos, fashion, architecture",
+        "Monetization and copyright",
+      ],
+    },
   },
 ];
 
@@ -129,4 +207,11 @@ export function getCourseBySlug(slug: string): Course | undefined {
 
 export function isFreeCourse(slug: string): boolean {
   return FREE_SLUGS.includes(slug);
+}
+
+export function getCourseLocalized(course: Course, locale: string): Course {
+  if (locale === "en" && course.en) {
+    return { ...course, ...course.en };
+  }
+  return course;
 }

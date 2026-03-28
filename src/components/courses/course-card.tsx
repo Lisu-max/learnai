@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 import { BookOpen, Clock, Sparkles, PlayCircle } from "lucide-react";
 import type { Course } from "@/lib/courses";
+import { getCourseLocalized } from "@/lib/courses";
 import { useTranslation } from "@/lib/i18n/context";
 
 const levelColors: Record<string, string> = {
@@ -19,7 +20,8 @@ const levelTranslationKeys: Record<string, "beginner" | "intermediate" | "advanc
 };
 
 export function CourseCard({ course }: { course: Course }) {
-  const { t } = useTranslation();
+  const { t, locale } = useTranslation();
+  const localizedCourse = getCourseLocalized(course, locale);
   const isFree = course.tier === "free";
 
   return (
@@ -45,9 +47,9 @@ export function CourseCard({ course }: { course: Course }) {
           )}
         </div>
 
-        <h3 className="mb-2 text-lg font-bold">{course.title}</h3>
+        <h3 className="mb-2 text-lg font-bold">{localizedCourse.title}</h3>
         <p className="mb-4 flex-1 text-sm text-muted-foreground">
-          {course.description}
+          {localizedCourse.description}
         </p>
 
         <div className="mb-4 flex items-center gap-4 text-xs text-muted-foreground">

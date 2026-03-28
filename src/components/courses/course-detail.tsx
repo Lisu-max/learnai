@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { courses, getCourseBySlug } from "@/lib/courses";
+import { courses, getCourseBySlug, getCourseLocalized } from "@/lib/courses";
 import { CourseCard } from "@/components/courses/course-card";
 import { BuyButton } from "@/components/courses/buy-button";
 import { Badge } from "@/components/ui/badge";
@@ -26,11 +26,12 @@ const levelColors: Record<string, string> = {
 
 export function CourseDetail({ slug }: { slug: string }) {
   const course = getCourseBySlug(slug);
-  const { t } = useTranslation();
+  const { t, locale } = useTranslation();
   const { hasPurchased, loading: purchaseLoading } = usePurchase(slug);
 
   if (!course) return null;
 
+  const lc = getCourseLocalized(course, locale);
   const isFree = course.tier === "free";
   const canAccess = isFree || hasPurchased;
   const otherCourses = courses.filter((c) => c.slug !== slug).slice(0, 3);
@@ -69,8 +70,8 @@ export function CourseDetail({ slug }: { slug: string }) {
                 )}
               </div>
 
-              <h1 className="mb-4 text-3xl font-bold md:text-4xl">{course.title}</h1>
-              <p className="mb-6 text-lg text-muted-foreground">{course.longDescription}</p>
+              <h1 className="mb-4 text-3xl font-bold md:text-4xl">{lc.title}</h1>
+              <p className="mb-6 text-lg text-muted-foreground">{lc.longDescription}</p>
 
               <div className="mb-8 flex flex-wrap gap-4 text-sm text-muted-foreground">
                 <span className="flex items-center gap-1.5">
@@ -89,7 +90,7 @@ export function CourseDetail({ slug }: { slug: string }) {
               <div className="mb-8 rounded-xl border border-border/50 bg-card/50 p-6">
                 <h2 className="mb-4 text-lg font-semibold">{t.courseDetail.whatYouLearnSimple}</h2>
                 <ul className="grid gap-3 sm:grid-cols-2">
-                  {course.features.map((feature) => (
+                  {lc.features.map((feature) => (
                     <li key={feature} className="flex items-start gap-2 text-sm text-muted-foreground">
                       <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" />
                       {feature}
