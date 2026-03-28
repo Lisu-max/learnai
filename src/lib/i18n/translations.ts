@@ -228,6 +228,21 @@ export const translations = {
         "Le Pack Complet inclut toutes les formations et vous guide de débutant à expert.",
       viewBundle: "Voir le Pack Complet",
       singlePayment: "Paiement unique",
+      heroTitle: "Maîtrisez l'IA",
+      heroTitleHighlight: "à votre rythme",
+      heroSubtitle: "1 formation gratuite pour débuter, 4 formations premium pour aller plus loin. Vidéos explicatives, textes et quiz interactifs.",
+      freeStat: "Cours gratuit",
+      formationsStat: "Formations",
+      freeSectionTitle: "Formation d'introduction gratuite",
+      freeSectionSubtitle: "Commencez immédiatement, sans inscription ni paiement.",
+      premiumSectionTitle: "Formations Premium",
+      premiumSectionSubtitle: "par formation — paiement unique, accès à vie.",
+      ctaTitle: "Chaque formation à",
+      ctaBody: "Achetez la ou les formations qui vous intéressent. Accès à vie, vidéos et textes inclus",
+      ctaButton: "Voir les formations",
+      trustPaymentUnique: "Paiement unique",
+      trustLifetime: "Accès à vie",
+      trustStripe: "Paiement sécurisé Stripe",
     },
     // Course detail
     courseDetail: {
@@ -254,6 +269,33 @@ export const translations = {
       chapters: "chapitres",
       pages: "pages",
       viewDetail: "Voir le détail",
+      free: "GRATUIT",
+      premium: "PREMIUM",
+      whatYouLearnSimple: "Ce que vous apprendrez",
+      freePrice: "Gratuit",
+      freeAccessSubtitle: "Accès immédiat, sans inscription",
+      startCourse: "Commencer la formation",
+      courseUnlocked: "Formation débloquée",
+      youHaveAccess: "Vous avez accès à cette formation",
+      premiumCourse: "Formation Premium",
+      perCourseOneTime: "par formation · paiement unique",
+      interactiveChapters: "chapitres interactifs",
+      videosAndTexts: "Vidéos et textes explicatifs",
+      lifetimeAccess: "Accès à vie — mises à jour incluses",
+      discoverMore: "Découvrez aussi",
+      startFree: "Commencer gratuitement",
+    },
+    // Paywall
+    paywall: {
+      title: "Formation Premium",
+      subtitle: "Débloquez cette formation et accédez à vie à son contenu",
+      feature1: "Vidéos explicatives et textes",
+      feature2: "Quiz interactifs et suivi de progression",
+      feature3: "Accès à vie — mises à jour incluses",
+      feature4: "Paiement unique, sans abonnement",
+      priceSubtitle: "par formation · paiement unique",
+      orFree: "Ou commencez par notre",
+      freeLink: "formation gratuite d'introduction",
     },
     // Buy button
     buy: {
@@ -509,6 +551,21 @@ export const translations = {
         "The Complete Pack includes all courses and guides you from beginner to expert.",
       viewBundle: "View the Complete Pack",
       singlePayment: "One-time payment",
+      heroTitle: "Master AI",
+      heroTitleHighlight: "at your own pace",
+      heroSubtitle: "1 free course to get started, 4 premium courses to go further. Explanatory videos, texts and interactive quizzes.",
+      freeStat: "Free course",
+      formationsStat: "Courses",
+      freeSectionTitle: "Free introduction course",
+      freeSectionSubtitle: "Start immediately, no registration or payment needed.",
+      premiumSectionTitle: "Premium Courses",
+      premiumSectionSubtitle: "per course — one-time payment, lifetime access.",
+      ctaTitle: "Each course for",
+      ctaBody: "Buy the course(s) you're interested in. Lifetime access, videos and texts included",
+      ctaButton: "View courses",
+      trustPaymentUnique: "One-time payment",
+      trustLifetime: "Lifetime access",
+      trustStripe: "Secure Stripe payment",
     },
     courseDetail: {
       backToCourses: "Back to courses",
@@ -534,6 +591,32 @@ export const translations = {
       chapters: "chapters",
       pages: "pages",
       viewDetail: "View details",
+      free: "FREE",
+      premium: "PREMIUM",
+      whatYouLearnSimple: "What you'll learn",
+      freePrice: "Free",
+      freeAccessSubtitle: "Immediate access, no registration",
+      startCourse: "Start course",
+      courseUnlocked: "Course unlocked",
+      youHaveAccess: "You have access to this course",
+      premiumCourse: "Premium Course",
+      perCourseOneTime: "per course · one-time payment",
+      interactiveChapters: "interactive chapters",
+      videosAndTexts: "Explanatory videos and texts",
+      lifetimeAccess: "Lifetime access — updates included",
+      discoverMore: "Discover also",
+      startFree: "Start for free",
+    },
+    paywall: {
+      title: "Premium Course",
+      subtitle: "Unlock this course and get lifetime access to its content",
+      feature1: "Explanatory videos and texts",
+      feature2: "Interactive quizzes and progress tracking",
+      feature3: "Lifetime access — updates included",
+      feature4: "One-time payment, no subscription",
+      priceSubtitle: "per course · one-time payment",
+      orFree: "Or start with our",
+      freeLink: "free introduction course",
     },
     buy: {
       buyFor: "Buy —",
@@ -640,6 +723,12 @@ export interface Translations {
     bestOffer: string; discoverBundle: string;
     individualTitle: string; individualHighlight: string; individualSubtitle: string;
     dontKnow: string; bundleIncludes: string; viewBundle: string; singlePayment: string;
+    heroTitle: string; heroTitleHighlight: string; heroSubtitle: string;
+    freeStat: string; formationsStat: string;
+    freeSectionTitle: string; freeSectionSubtitle: string;
+    premiumSectionTitle: string; premiumSectionSubtitle: string;
+    ctaTitle: string; ctaBody: string; ctaButton: string;
+    trustPaymentUnique: string; trustLifetime: string; trustStripe: string;
   };
   courseDetail: {
     backToCourses: string; singlePaymentLifetime: string;
@@ -650,6 +739,16 @@ export interface Translations {
     saveMore: string; goFurther: string; getAllTrainings: string; discoverBundle: string;
     otherTrainings: string; otherTrainingsHighlight: string; otherTrainingsSubtitle: string;
     chapters: string; pages: string; viewDetail: string;
+    free: string; premium: string; whatYouLearnSimple: string;
+    freePrice: string; freeAccessSubtitle: string; startCourse: string;
+    courseUnlocked: string; youHaveAccess: string; premiumCourse: string;
+    perCourseOneTime: string; interactiveChapters: string; videosAndTexts: string;
+    lifetimeAccess: string; discoverMore: string; startFree: string;
+  };
+  paywall: {
+    title: string; subtitle: string;
+    feature1: string; feature2: string; feature3: string; feature4: string;
+    priceSubtitle: string; orFree: string; freeLink: string;
   };
   buy: { buyFor: string; redirecting: string; error: string; loginRequired: string; courseLanguage: string; french: string; english: string };
   success: {

@@ -31,27 +31,26 @@ export default function CoursPage() {
           </div>
 
           <h1 className="animate-fade-in-delay-1 mb-4 text-4xl font-bold md:text-5xl">
-            Maîtrisez l&apos;IA{" "}
-            <span className="gradient-text-animated">à votre rythme</span>
+            {t.coursesPage.heroTitle}{" "}
+            <span className="gradient-text-animated">{t.coursesPage.heroTitleHighlight}</span>
           </h1>
 
           <p className="animate-fade-in-delay-2 mx-auto mb-10 max-w-2xl text-lg text-muted-foreground">
-            1 formation gratuite pour débuter, 4 formations premium pour aller plus loin.
-            Vidéos explicatives, textes et quiz interactifs.
+            {t.coursesPage.heroSubtitle}
           </p>
 
           <div className="animate-fade-in-delay-3 mx-auto grid max-w-lg grid-cols-3 gap-6">
             <div className="card-glass px-4 py-3 text-center">
               <p className="text-xl font-bold text-emerald-400">1</p>
-              <p className="text-xs text-muted-foreground">Cours gratuit</p>
+              <p className="text-xs text-muted-foreground">{t.coursesPage.freeStat}</p>
             </div>
             <div className="card-glass px-4 py-3 text-center">
               <p className="text-xl font-bold gradient-text-animated">{totalChapters}</p>
-              <p className="text-xs text-muted-foreground">Chapitres</p>
+              <p className="text-xs text-muted-foreground">{t.coursesPage.chapters}</p>
             </div>
             <div className="card-glass px-4 py-3 text-center">
               <p className="text-xl font-bold gradient-text-animated">5</p>
-              <p className="text-xs text-muted-foreground">Formations</p>
+              <p className="text-xs text-muted-foreground">{t.coursesPage.formationsStat}</p>
             </div>
           </div>
         </div>
@@ -63,10 +62,10 @@ export default function CoursPage() {
           <div className="mb-8">
             <h2 className="mb-2 flex items-center gap-2 text-2xl font-bold">
               <BookOpen className="h-6 w-6 text-emerald-400" />
-              Formation d&apos;introduction gratuite
+              {t.coursesPage.freeSectionTitle}
             </h2>
             <p className="text-muted-foreground">
-              Commencez immédiatement, sans inscription ni paiement.
+              {t.coursesPage.freeSectionSubtitle}
             </p>
           </div>
         </Reveal>
@@ -86,10 +85,10 @@ export default function CoursPage() {
           <div className="mb-8">
             <h2 className="mb-2 flex items-center gap-2 text-2xl font-bold">
               <Sparkles className="h-6 w-6 text-purple-400" />
-              Formations Premium
+              {t.coursesPage.premiumSectionTitle}
             </h2>
             <p className="text-muted-foreground">
-              <span className="font-semibold text-purple-400">9,99€ par formation</span> — paiement unique, accès à vie.
+              <span className="font-semibold text-purple-400">9,99€ </span>{t.coursesPage.premiumSectionSubtitle}
             </p>
           </div>
         </Reveal>
@@ -113,12 +112,11 @@ export default function CoursPage() {
                 </div>
                 <div>
                   <h2 className="mb-2 text-2xl font-bold">
-                    Chaque formation à{" "}
+                    {t.coursesPage.ctaTitle}{" "}
                     <span className="gradient-text-animated">9,99€</span>
                   </h2>
                   <p className="mx-auto max-w-xl text-muted-foreground">
-                    Achetez la ou les formations qui vous intéressent. Accès à vie, vidéos et textes
-                    inclus ({premiumCourses.reduce((s, c) => s + c.chapters, 0)} chapitres au total).
+                    {t.coursesPage.ctaBody} ({premiumCourses.reduce((s, c) => s + c.chapters, 0)} chapitres au total).
                   </p>
                 </div>
                 <div className="flex flex-col items-center gap-3">
@@ -127,20 +125,20 @@ export default function CoursPage() {
                     className="btn-gradient inline-flex items-center gap-2 rounded-lg px-10 py-4 text-base font-semibold text-white"
                   >
                     <Sparkles className="h-5 w-5" />
-                    Voir les formations
+                    {t.coursesPage.ctaButton}
                   </Link>
                   <div className="flex flex-wrap justify-center gap-4 text-xs text-muted-foreground">
                     <span className="flex items-center gap-1">
                       <CheckCircle2 className="h-3.5 w-3.5 text-emerald-400" />
-                      Paiement unique
+                      {t.coursesPage.trustPaymentUnique}
                     </span>
                     <span className="flex items-center gap-1">
                       <CheckCircle2 className="h-3.5 w-3.5 text-emerald-400" />
-                      Accès à vie
+                      {t.coursesPage.trustLifetime}
                     </span>
                     <span className="flex items-center gap-1">
                       <CheckCircle2 className="h-3.5 w-3.5 text-emerald-400" />
-                      Paiement sécurisé Stripe
+                      {t.coursesPage.trustStripe}
                     </span>
                   </div>
                 </div>

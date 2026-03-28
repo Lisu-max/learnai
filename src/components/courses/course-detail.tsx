@@ -43,7 +43,7 @@ export function CourseDetail({ slug }: { slug: string }) {
           className="group mb-8 inline-flex items-center gap-1.5 text-sm text-muted-foreground transition-colors hover:text-foreground"
         >
           <ArrowLeft className="h-4 w-4 transition-transform group-hover:-translate-x-1" />
-          Toutes les formations
+          {t.courseDetail.backToCourses}
         </Link>
 
         <div className="grid gap-10 lg:grid-cols-3">
@@ -59,12 +59,12 @@ export function CourseDetail({ slug }: { slug: string }) {
                 </Badge>
                 {isFree ? (
                   <Badge variant="outline" className="bg-emerald-500/10 text-emerald-400 border-emerald-500/20">
-                    GRATUIT
+                    {t.courseDetail.free}
                   </Badge>
                 ) : (
                   <Badge variant="outline" className="bg-purple-500/10 text-purple-400 border-purple-500/20">
                     <Sparkles className="mr-1 h-3 w-3" />
-                    PREMIUM
+                    {t.courseDetail.premium}
                   </Badge>
                 )}
               </div>
@@ -75,7 +75,7 @@ export function CourseDetail({ slug }: { slug: string }) {
               <div className="mb-8 flex flex-wrap gap-4 text-sm text-muted-foreground">
                 <span className="flex items-center gap-1.5">
                   <BookOpen className="h-4 w-4 text-purple-400" />
-                  {course.chapters} chapitres
+                  {course.chapters} {t.courseDetail.chapters}
                 </span>
                 <span className="flex items-center gap-1.5">
                   <Clock className="h-4 w-4 text-purple-400" />
@@ -87,7 +87,7 @@ export function CourseDetail({ slug }: { slug: string }) {
             {/* Features */}
             <Reveal>
               <div className="mb-8 rounded-xl border border-border/50 bg-card/50 p-6">
-                <h2 className="mb-4 text-lg font-semibold">Ce que vous apprendrez</h2>
+                <h2 className="mb-4 text-lg font-semibold">{t.courseDetail.whatYouLearnSimple}</h2>
                 <ul className="grid gap-3 sm:grid-cols-2">
                   {course.features.map((feature) => (
                     <li key={feature} className="flex items-start gap-2 text-sm text-muted-foreground">
@@ -109,15 +109,15 @@ export function CourseDetail({ slug }: { slug: string }) {
               {isFree ? (
                 <>
                   <div className="mb-4 text-center">
-                    <p className="text-3xl font-bold text-emerald-400">Gratuit</p>
-                    <p className="mt-1 text-sm text-muted-foreground">Accès immédiat, sans inscription</p>
+                    <p className="text-3xl font-bold text-emerald-400">{t.courseDetail.freePrice}</p>
+                    <p className="mt-1 text-sm text-muted-foreground">{t.courseDetail.freeAccessSubtitle}</p>
                   </div>
                   <Link
                     href={`/cours/${slug}/chapitres`}
                     className="btn-gradient-glow flex w-full items-center justify-center gap-2 rounded-lg py-4 font-semibold text-white"
                   >
                     <PlayCircle className="h-5 w-5" />
-                    Commencer la formation
+                    {t.courseDetail.startCourse}
                   </Link>
                 </>
               ) : !purchaseLoading && canAccess ? (
@@ -125,16 +125,16 @@ export function CourseDetail({ slug }: { slug: string }) {
                   <div className="mb-4 text-center">
                     <div className="mb-2 inline-flex items-center gap-1 rounded-full bg-purple-500/10 px-3 py-1 text-xs font-medium text-purple-400">
                       <Sparkles className="h-3 w-3" />
-                      Formation débloquée
+                      {t.courseDetail.courseUnlocked}
                     </div>
-                    <p className="text-sm text-muted-foreground">Vous avez accès à cette formation</p>
+                    <p className="text-sm text-muted-foreground">{t.courseDetail.youHaveAccess}</p>
                   </div>
                   <Link
                     href={`/cours/${slug}/chapitres`}
                     className="btn-gradient-glow flex w-full items-center justify-center gap-2 rounded-lg py-4 font-semibold text-white"
                   >
                     <PlayCircle className="h-5 w-5" />
-                    Commencer la formation
+                    {t.courseDetail.startCourse}
                   </Link>
                 </>
               ) : (
@@ -142,10 +142,10 @@ export function CourseDetail({ slug }: { slug: string }) {
                   <div className="mb-4 text-center">
                     <div className="mb-2 inline-flex items-center gap-1 rounded-full bg-purple-500/10 px-3 py-1 text-xs font-medium text-purple-400">
                       <Lock className="h-3 w-3" />
-                      Formation Premium
+                      {t.courseDetail.premiumCourse}
                     </div>
                     <p className="mt-2 text-3xl font-bold gradient-text-animated">9,99€</p>
-                    <p className="mt-0.5 text-sm text-muted-foreground">par formation · paiement unique</p>
+                    <p className="mt-0.5 text-sm text-muted-foreground">{t.courseDetail.perCourseOneTime}</p>
                   </div>
                   <BuyButton courseSlug={slug} priceFormatted="9,99€" />
                 </>
@@ -155,15 +155,15 @@ export function CourseDetail({ slug }: { slug: string }) {
               <div className="mt-6 space-y-2 border-t border-border/50 pt-4">
                 <div className="flex items-center gap-2 text-xs text-muted-foreground">
                   <CheckCircle2 className="h-3.5 w-3.5 text-emerald-400" />
-                  {course.chapters} chapitres interactifs
+                  {course.chapters} {t.courseDetail.interactiveChapters}
                 </div>
                 <div className="flex items-center gap-2 text-xs text-muted-foreground">
                   <CheckCircle2 className="h-3.5 w-3.5 text-emerald-400" />
-                  Vidéos et textes explicatifs
+                  {t.courseDetail.videosAndTexts}
                 </div>
                 <div className="flex items-center gap-2 text-xs text-muted-foreground">
                   <CheckCircle2 className="h-3.5 w-3.5 text-emerald-400" />
-                  Accès à vie — mises à jour incluses
+                  {t.courseDetail.lifetimeAccess}
                 </div>
               </div>
             </div>
@@ -172,7 +172,7 @@ export function CourseDetail({ slug }: { slug: string }) {
 
         {/* Other courses */}
         <div className="mt-16">
-          <h2 className="mb-6 text-xl font-bold">Découvrez aussi</h2>
+          <h2 className="mb-6 text-xl font-bold">{t.courseDetail.discoverMore}</h2>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {otherCourses.map((c) => (
               <CourseCard key={c.slug} course={c} />

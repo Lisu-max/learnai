@@ -35,12 +35,12 @@ export function CourseCard({ course }: { course: Course }) {
           </Badge>
           {isFree ? (
             <Badge variant="outline" className="bg-emerald-500/10 text-emerald-400 border-emerald-500/20">
-              GRATUIT
+              {t.courseDetail.free}
             </Badge>
           ) : (
             <Badge variant="outline" className="bg-purple-500/10 text-purple-400 border-purple-500/20">
               <Sparkles className="mr-1 h-3 w-3" />
-              PREMIUM
+              {t.courseDetail.premium}
             </Badge>
           )}
         </div>
@@ -57,7 +57,7 @@ export function CourseCard({ course }: { course: Course }) {
           </span>
           <span className="flex items-center gap-1">
             <BookOpen className="h-3.5 w-3.5" />
-            {course.chapters} chapitres
+            {course.chapters} {t.courseDetail.chapters}
           </span>
         </div>
 
@@ -65,7 +65,7 @@ export function CourseCard({ course }: { course: Course }) {
           {isFree ? (
             <span className="flex items-center gap-1.5 text-sm font-semibold text-emerald-400">
               <PlayCircle className="h-4 w-4" />
-              Commencer gratuitement
+              {t.courseDetail.startFree}
             </span>
           ) : (
             <span className="text-sm font-semibold gradient-text-animated">
