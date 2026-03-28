@@ -28,7 +28,7 @@ export default async function ChaptersPage({ params }: Props) {
   const { hasAccess, userId } = await hasAccessToCourse(slug);
   if (!hasAccess) redirect(`/cours/${slug}`);
 
-  const content = await getCourseContent(slug);
+  const content = await getCourseContent(slug, locale);
   if (!content) {
     return (
       <div className="bg-grid">

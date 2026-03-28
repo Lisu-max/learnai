@@ -6,7 +6,7 @@ import { hasAccessToCourse } from "@/lib/access";
 import { ChapterContent } from "@/components/chapter/chapter-content";
 import { ChapterNav } from "@/components/chapter/chapter-nav";
 import { InlineQuiz } from "@/components/quiz/inline-quiz";
-import { getServerTranslation } from "@/lib/i18n/server";
+import { getServerTranslation, getServerLocale } from "@/lib/i18n/server";
 import { ArrowLeft, Clock, BookOpen } from "lucide-react";
 
 interface Props {
@@ -16,6 +16,7 @@ interface Props {
 export default async function ChapterPage({ params }: Props) {
   const { slug, num } = await params;
   const t = await getServerTranslation();
+  const locale = await getServerLocale();
   const chapterNum = parseInt(num, 10);
 
   const course = getCourseBySlug(slug);
@@ -24,7 +25,7 @@ export default async function ChapterPage({ params }: Props) {
   const { hasAccess } = await hasAccessToCourse(slug);
   if (!hasAccess) redirect(`/cours/${slug}`);
 
-  const content = await getCourseContent(slug);
+  const content = await getCourseContent(slug, locale);
   if (!content) notFound();
 
   const chapter = getChapter(content, chapterNum);
