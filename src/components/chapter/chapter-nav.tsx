@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { ArrowLeft, ArrowRight, Brain } from "lucide-react";
+import { useTranslation } from "@/lib/i18n/context";
 
 interface ChapterNavProps {
   courseSlug: string;
@@ -11,6 +12,7 @@ interface ChapterNavProps {
 }
 
 export function ChapterNav({ courseSlug, chapterNumber, totalChapters, chapterTitle }: ChapterNavProps) {
+  const { t } = useTranslation();
   const hasQuiz = true;
 
   return (
@@ -21,7 +23,7 @@ export function ChapterNav({ courseSlug, chapterNumber, totalChapters, chapterTi
           className="btn-gradient-glow flex w-full items-center justify-center gap-2 rounded-xl py-4 font-semibold text-white"
         >
           <Brain className="h-5 w-5" />
-          Tester mes connaissances
+          {t.quiz.testKnowledge}
         </Link>
       )}
 
@@ -32,7 +34,7 @@ export function ChapterNav({ courseSlug, chapterNumber, totalChapters, chapterTi
             className="flex items-center gap-2 rounded-lg border border-border/50 px-4 py-2.5 text-sm text-muted-foreground transition-colors hover:text-foreground"
           >
             <ArrowLeft className="h-4 w-4" />
-            Chapitre précédent
+            {t.quiz.previousChapter}
           </Link>
         ) : (
           <Link
@@ -40,7 +42,7 @@ export function ChapterNav({ courseSlug, chapterNumber, totalChapters, chapterTi
             className="flex items-center gap-2 rounded-lg border border-border/50 px-4 py-2.5 text-sm text-muted-foreground transition-colors hover:text-foreground"
           >
             <ArrowLeft className="h-4 w-4" />
-            Sommaire
+            {t.quiz.tableOfContents}
           </Link>
         )}
 
@@ -49,7 +51,7 @@ export function ChapterNav({ courseSlug, chapterNumber, totalChapters, chapterTi
             href={`/cours/${courseSlug}/chapitres/${chapterNumber + 1}`}
             className="flex items-center gap-2 rounded-lg border border-border/50 px-4 py-2.5 text-sm text-muted-foreground transition-colors hover:text-foreground"
           >
-            Chapitre suivant
+            {t.quiz.nextChapter}
             <ArrowRight className="h-4 w-4" />
           </Link>
         )}

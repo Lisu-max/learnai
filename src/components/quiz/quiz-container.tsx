@@ -6,6 +6,7 @@ import { Trophy, RotateCcw, ArrowRight, PartyPopper } from "lucide-react";
 import type { QuizQuestion } from "@/content/types";
 import { QuizQuestionCard } from "./quiz-question";
 import { createClient } from "@/lib/supabase/client";
+import { useTranslation } from "@/lib/i18n/context";
 
 interface QuizContainerProps {
   questions: QuizQuestion[];
@@ -21,6 +22,7 @@ export function QuizContainer({
   totalChapters,
 }: QuizContainerProps) {
   const router = useRouter();
+  const { t } = useTranslation();
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
   const [revealed, setRevealed] = useState(false);
@@ -111,12 +113,12 @@ export function QuizContainer({
         </div>
 
         <h2 className="mb-2 text-2xl font-bold">
-          {passed ? "Bravo, chapitre validé !" : "Presque..."}
+          {passed ? t.quiz.passed : t.quiz.almostPassed}
         </h2>
         <p className="mb-2 text-4xl font-bold gradient-text-animated">{percentage}%</p>
         <p className="mb-8 text-muted-foreground">
-          {score}/{questions.length} réponses correctes
-          {!passed && " — Il faut 70% pour valider le chapitre."}
+          {score}/{questions.length} {t.quiz.correctAnswers}
+          {!passed && ` ${t.quiz.needToPass}`}
         </p>
 
         <div className="flex flex-col items-center gap-3">
@@ -125,7 +127,7 @@ export function QuizContainer({
               onClick={() => router.push(`/cours/${courseSlug}/chapitres/${chapterNumber + 1}`)}
               className="btn-gradient-glow inline-flex items-center gap-2 rounded-lg px-8 py-3.5 font-semibold text-white"
             >
-              Chapitre suivant
+              {t.quiz.nextChapter}
               <ArrowRight className="h-4 w-4" />
             </button>
           )}
@@ -135,7 +137,7 @@ export function QuizContainer({
               className="btn-gradient-glow inline-flex items-center gap-2 rounded-lg px-8 py-3.5 font-semibold text-white"
             >
               <Trophy className="h-4 w-4" />
-              Formation terminée !
+              {t.quiz.courseCompleted}
             </button>
           )}
           {!passed && (
@@ -144,18 +146,18 @@ export function QuizContainer({
               className="inline-flex items-center gap-2 rounded-lg border border-border/50 px-8 py-3.5 font-medium text-muted-foreground transition-colors hover:text-foreground"
             >
               <RotateCcw className="h-4 w-4" />
-              Réessayer le quiz
+              {t.quiz.retry}
             </button>
           )}
           <button
             onClick={() => router.push(`/cours/${courseSlug}/chapitres/${chapterNumber}`)}
             className="text-sm text-muted-foreground hover:text-foreground"
           >
-            Relire le chapitre
+            {t.quiz.rereadChapter}
           </button>
         </div>
 
-        {saving && <p className="mt-4 text-xs text-muted-foreground">Sauvegarde en cours...</p>}
+        {saving && <p className="mt-4 text-xs text-muted-foreground">{t.quiz.saving}</p>}
       </div>
     );
   }
@@ -177,7 +179,7 @@ export function QuizContainer({
             onClick={handleNext}
             className="btn-gradient inline-flex items-center gap-2 rounded-lg px-6 py-3 font-semibold text-white"
           >
-            {currentQuestion + 1 < questions.length ? "Question suivante" : "Voir les résultats"}
+            {currentQuestion + 1 < questions.length ? t.quiz.nextQuestion : t.quiz.seeResults}
             <ArrowRight className="h-4 w-4" />
           </button>
         </div>

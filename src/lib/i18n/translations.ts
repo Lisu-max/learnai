@@ -333,6 +333,40 @@ export const translations = {
       fr: "Français",
       en: "English",
     },
+    chapters: {
+      backToCourse: "Retour à la formation",
+      progress: "Progression",
+      chaptersCompleted: "chapitres terminés",
+      comingSoon: "Formation en cours de préparation",
+      comingSoonDesc: "Le contenu interactif de cette formation sera bientôt disponible. Revenez bientôt !",
+      encouragement: "Terminez chaque quiz pour débloquer le chapitre suivant et suivre votre progression.",
+      chapterOf: "Chapitre",
+      backToChapter: "Retour au chapitre",
+      quizTitle: "Quiz — Chapitre",
+      questionsToPass: "questions — 70% pour valider",
+    },
+    quiz: {
+      testKnowledge: "Tester mes connaissances",
+      previousChapter: "Chapitre précédent",
+      tableOfContents: "Sommaire",
+      nextChapter: "Chapitre suivant",
+      passed: "Bravo, chapitre validé !",
+      almostPassed: "Presque...",
+      correctAnswers: "réponses correctes",
+      needToPass: "— Il faut 70% pour valider le chapitre.",
+      needToPassShort: "— Il faut 70% pour valider.",
+      courseCompleted: "Formation terminée !",
+      retry: "Réessayer le quiz",
+      retryShort: "Réessayer",
+      rereadChapter: "Relire le chapitre",
+      saving: "Sauvegarde en cours...",
+      nextQuestion: "Question suivante",
+      seeResults: "Voir les résultats",
+      testYourKnowledge: "Testez vos connaissances",
+      questionsToValidate: "questions — 70% pour valider ce chapitre",
+      startQuiz: "Commencer le quiz",
+      question: "Question",
+    },
   },
   en: {
     nav: {
@@ -650,6 +684,40 @@ export const translations = {
       fr: "Français",
       en: "English",
     },
+    chapters: {
+      backToCourse: "Back to course",
+      progress: "Progress",
+      chaptersCompleted: "chapters completed",
+      comingSoon: "Course coming soon",
+      comingSoonDesc: "The interactive content for this course will be available soon. Check back later!",
+      encouragement: "Complete each quiz to unlock the next chapter and track your progress.",
+      chapterOf: "Chapter",
+      backToChapter: "Back to chapter",
+      quizTitle: "Quiz — Chapter",
+      questionsToPass: "questions — 70% to pass",
+    },
+    quiz: {
+      testKnowledge: "Test my knowledge",
+      previousChapter: "Previous chapter",
+      tableOfContents: "Table of contents",
+      nextChapter: "Next chapter",
+      passed: "Well done, chapter completed!",
+      almostPassed: "Almost...",
+      correctAnswers: "correct answers",
+      needToPass: "— You need 70% to pass the chapter.",
+      needToPassShort: "— You need 70% to pass.",
+      courseCompleted: "Course completed!",
+      retry: "Retry quiz",
+      retryShort: "Retry",
+      rereadChapter: "Re-read chapter",
+      saving: "Saving...",
+      nextQuestion: "Next question",
+      seeResults: "See results",
+      testYourKnowledge: "Test your knowledge",
+      questionsToValidate: "questions — 70% to complete this chapter",
+      startQuiz: "Start quiz",
+      question: "Question",
+    },
   },
 };
 
@@ -758,4 +826,16 @@ export interface Translations {
   };
   levels: { beginner: string; intermediate: string; advanced: string; bundle: string };
   language: { fr: string; en: string };
+  chapters: {
+    backToCourse: string; progress: string; chaptersCompleted: string;
+    comingSoon: string; comingSoonDesc: string; encouragement: string;
+    chapterOf: string; backToChapter: string; quizTitle: string; questionsToPass: string;
+  };
+  quiz: {
+    testKnowledge: string; previousChapter: string; tableOfContents: string; nextChapter: string;
+    passed: string; almostPassed: string; correctAnswers: string; needToPass: string; needToPassShort: string;
+    courseCompleted: string; retry: string; retryShort: string; rereadChapter: string;
+    saving: string; nextQuestion: string; seeResults: string; testYourKnowledge: string;
+    questionsToValidate: string; startQuiz: string; question: string;
+  };
 }

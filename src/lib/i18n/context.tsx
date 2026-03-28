@@ -22,12 +22,14 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
     const saved = localStorage.getItem("learnai-locale") as Locale | null;
     if (saved && translations[saved]) {
       setLocaleState(saved);
+      document.cookie = `learnai-locale=${saved};path=/;max-age=31536000;SameSite=Lax`;
     }
   }, []);
 
   const setLocale = useCallback((newLocale: Locale) => {
     setLocaleState(newLocale);
     localStorage.setItem("learnai-locale", newLocale);
+    document.cookie = `learnai-locale=${newLocale};path=/;max-age=31536000;SameSite=Lax`;
   }, []);
 
   return (

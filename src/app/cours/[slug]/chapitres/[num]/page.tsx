@@ -6,6 +6,7 @@ import { hasAccessToCourse } from "@/lib/access";
 import { ChapterContent } from "@/components/chapter/chapter-content";
 import { ChapterNav } from "@/components/chapter/chapter-nav";
 import { InlineQuiz } from "@/components/quiz/inline-quiz";
+import { getServerTranslation } from "@/lib/i18n/server";
 import { ArrowLeft, Clock, BookOpen } from "lucide-react";
 
 interface Props {
@@ -14,6 +15,7 @@ interface Props {
 
 export default async function ChapterPage({ params }: Props) {
   const { slug, num } = await params;
+  const t = await getServerTranslation();
   const chapterNum = parseInt(num, 10);
 
   const course = getCourseBySlug(slug);
@@ -53,7 +55,7 @@ export default async function ChapterPage({ params }: Props) {
               </span>
               <span className="flex items-center gap-1">
                 <BookOpen className="h-3.5 w-3.5" />
-                Chapitre {chapter.number}/{content.chapters.length}
+                {t.chapters.chapterOf} {chapter.number}/{content.chapters.length}
               </span>
             </div>
           </div>

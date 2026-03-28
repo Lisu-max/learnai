@@ -4,12 +4,12 @@ import { getCourseBySlug } from "@/lib/courses";
 import { getCourseContent } from "@/content";
 import { hasAccessToCourse } from "@/lib/access";
 import { createClient } from "@/lib/supabase/server";
+import { getServerTranslation } from "@/lib/i18n/server";
 import {
   ArrowLeft,
   BookOpen,
   CheckCircle2,
   Clock,
-  Lock,
   PlayCircle,
 } from "lucide-react";
 
@@ -19,6 +19,7 @@ interface Props {
 
 export default async function ChaptersPage({ params }: Props) {
   const { slug } = await params;
+  const t = await getServerTranslation();
   const course = getCourseBySlug(slug);
   if (!course) notFound();
 
@@ -31,10 +32,9 @@ export default async function ChaptersPage({ params }: Props) {
       <div className="bg-grid">
         <div className="mx-auto max-w-3xl px-4 py-16 text-center">
           <BookOpen className="mx-auto mb-4 h-12 w-12 text-muted-foreground/50" />
-          <h1 className="mb-2 text-2xl font-bold">Formation en cours de préparation</h1>
+          <h1 className="mb-2 text-2xl font-bold">{t.chapters.comingSoon}</h1>
           <p className="text-muted-foreground">
-            Le contenu interactif de cette formation sera bientôt disponible.
-            Revenez bientôt !
+            {t.chapters.comingSoonDesc}
           </p>
         </div>
       </div>
@@ -66,7 +66,7 @@ export default async function ChaptersPage({ params }: Props) {
           className="group mb-8 inline-flex items-center gap-1.5 text-sm text-muted-foreground transition-colors hover:text-foreground"
         >
           <ArrowLeft className="h-4 w-4 transition-transform group-hover:-translate-x-1" />
-          Retour à la formation
+          {t.chapters.backToCourse}
         </Link>
 
         {/* Course header */}
@@ -77,7 +77,7 @@ export default async function ChaptersPage({ params }: Props) {
           {/* Progress bar */}
           <div className="rounded-xl border border-border/50 bg-card/50 p-4">
             <div className="mb-2 flex items-center justify-between text-sm">
-              <span className="text-muted-foreground">Progression</span>
+              <span className="text-muted-foreground">{t.chapters.progress}</span>
               <span className="font-semibold gradient-text-animated">{progress}%</span>
             </div>
             <div className="h-2 w-full overflow-hidden rounded-full bg-border/30">
@@ -87,7 +87,7 @@ export default async function ChaptersPage({ params }: Props) {
               />
             </div>
             <p className="mt-2 text-xs text-muted-foreground">
-              {totalCompleted}/{totalChapters} chapitres terminés
+              {totalCompleted}/{totalChapters} {t.chapters.chaptersCompleted}
             </p>
           </div>
         </div>
@@ -145,7 +145,7 @@ export default async function ChaptersPage({ params }: Props) {
         {/* Encouragement */}
         <div className="mt-10 rounded-xl border border-border/50 bg-card/50 p-4 text-center">
           <p className="text-sm text-muted-foreground">
-            Terminez chaque quiz pour débloquer le chapitre suivant et suivre votre progression.
+            {t.chapters.encouragement}
           </p>
         </div>
       </div>

@@ -4,6 +4,7 @@ import { getCourseBySlug } from "@/lib/courses";
 import { getCourseContent, getChapter } from "@/content";
 import { hasAccessToCourse } from "@/lib/access";
 import { QuizContainer } from "@/components/quiz/quiz-container";
+import { getServerTranslation } from "@/lib/i18n/server";
 import { ArrowLeft, Brain } from "lucide-react";
 
 interface Props {
@@ -12,6 +13,7 @@ interface Props {
 
 export default async function QuizPage({ params }: Props) {
   const { slug, num } = await params;
+  const t = await getServerTranslation();
   const chapterNum = parseInt(num, 10);
 
   const course = getCourseBySlug(slug);
@@ -34,17 +36,17 @@ export default async function QuizPage({ params }: Props) {
           className="group mb-8 inline-flex items-center gap-1.5 text-sm text-muted-foreground transition-colors hover:text-foreground"
         >
           <ArrowLeft className="h-4 w-4 transition-transform group-hover:-translate-x-1" />
-          Retour au chapitre
+          {t.chapters.backToChapter}
         </Link>
 
         <div className="mb-10 text-center">
           <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-2xl bg-purple-500/10">
             <Brain className="h-8 w-8 text-purple-400" />
           </div>
-          <h1 className="mb-2 text-2xl font-bold">Quiz — Chapitre {chapterNum}</h1>
+          <h1 className="mb-2 text-2xl font-bold">{t.chapters.quizTitle} {chapterNum}</h1>
           <p className="text-muted-foreground">{chapter.title}</p>
           <p className="mt-1 text-sm text-muted-foreground/70">
-            {chapter.quiz.length} questions — 70% pour valider
+            {chapter.quiz.length} {t.chapters.questionsToPass}
           </p>
         </div>
 

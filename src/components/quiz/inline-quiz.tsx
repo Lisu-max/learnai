@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { Brain, Trophy, RotateCcw, ArrowRight, PartyPopper, CheckCircle2, XCircle } from "lucide-react";
 import type { QuizQuestion } from "@/content/types";
 import { createClient } from "@/lib/supabase/client";
+import { useTranslation } from "@/lib/i18n/context";
 
 interface InlineQuizProps {
   questions: QuizQuestion[];
@@ -15,6 +16,7 @@ interface InlineQuizProps {
 
 export function InlineQuiz({ questions, courseSlug, chapterNumber, totalChapters }: InlineQuizProps) {
   const router = useRouter();
+  const { t } = useTranslation();
   const [started, setStarted] = useState(false);
   const [currentQ, setCurrentQ] = useState(0);
   const [selected, setSelected] = useState<number | null>(null);
@@ -80,16 +82,16 @@ export function InlineQuiz({ questions, courseSlug, chapterNumber, totalChapters
         <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-2xl bg-purple-500/10">
           <Brain className="h-8 w-8 text-purple-400" />
         </div>
-        <h3 className="mb-2 text-xl font-bold">Testez vos connaissances</h3>
+        <h3 className="mb-2 text-xl font-bold">{t.quiz.testYourKnowledge}</h3>
         <p className="mb-6 text-sm text-muted-foreground">
-          {questions.length} questions — 70% pour valider ce chapitre
+          {questions.length} {t.quiz.questionsToValidate}
         </p>
         <button
           onClick={() => setStarted(true)}
           className="btn-gradient-glow inline-flex items-center gap-2 rounded-lg px-8 py-3.5 font-semibold text-white"
         >
           <Brain className="h-5 w-5" />
-          Commencer le quiz
+          {t.quiz.startQuiz}
         </button>
       </div>
     );
@@ -103,11 +105,11 @@ export function InlineQuiz({ questions, courseSlug, chapterNumber, totalChapters
         <div className={`mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-full ${passed ? "bg-emerald-500/10" : "bg-amber-500/10"}`}>
           {passed ? <PartyPopper className="h-10 w-10 text-emerald-400" /> : <Trophy className="h-10 w-10 text-amber-400" />}
         </div>
-        <h3 className="mb-2 text-2xl font-bold">{passed ? "Bravo, chapitre validé !" : "Presque..."}</h3>
+        <h3 className="mb-2 text-2xl font-bold">{passed ? t.quiz.passed : t.quiz.almostPassed}</h3>
         <p className="mb-1 text-4xl font-bold gradient-text-animated">{pct}%</p>
         <p className="mb-6 text-muted-foreground">
-          {score}/{questions.length} réponses correctes
-          {!passed && " — Il faut 70% pour valider."}
+          {score}/{questions.length} {t.quiz.correctAnswers}
+          {!passed && ` ${t.quiz.needToPassShort}`}
         </p>
         <div className="flex flex-col items-center gap-3">
           {passed && chapterNumber < totalChapters && (
@@ -115,7 +117,7 @@ export function InlineQuiz({ questions, courseSlug, chapterNumber, totalChapters
               onClick={() => router.push(`/cours/${courseSlug}/chapitres/${chapterNumber + 1}`)}
               className="btn-gradient-glow inline-flex items-center gap-2 rounded-lg px-8 py-3.5 font-semibold text-white"
             >
-              Chapitre suivant <ArrowRight className="h-4 w-4" />
+              {t.quiz.nextChapter} <ArrowRight className="h-4 w-4" />
             </button>
           )}
           {passed && chapterNumber === totalChapters && (
@@ -123,12 +125,12 @@ export function InlineQuiz({ questions, courseSlug, chapterNumber, totalChapters
               onClick={() => router.push(`/cours/${courseSlug}/chapitres`)}
               className="btn-gradient-glow inline-flex items-center gap-2 rounded-lg px-8 py-3.5 font-semibold text-white"
             >
-              <Trophy className="h-4 w-4" /> Formation terminée !
+              <Trophy className="h-4 w-4" /> {t.quiz.courseCompleted}
             </button>
           )}
           {!passed && (
             <button onClick={handleRetry} className="inline-flex items-center gap-2 rounded-lg border border-border/50 px-8 py-3.5 font-medium text-muted-foreground hover:text-foreground">
-              <RotateCcw className="h-4 w-4" /> Réessayer
+              <RotateCcw className="h-4 w-4" /> {t.quiz.retryShort}
             </button>
           )}
         </div>
@@ -143,7 +145,7 @@ export function InlineQuiz({ questions, courseSlug, chapterNumber, totalChapters
       <div className="mb-6 flex items-center justify-between">
         <span className="flex items-center gap-2 text-sm text-purple-400">
           <Brain className="h-4 w-4" />
-          Question {currentQ + 1}/{questions.length}
+          {t.quiz.question} {currentQ + 1}/{questions.length}
         </span>
         <div className="flex gap-1">
           {questions.map((_, i) => (
@@ -202,7 +204,7 @@ export function InlineQuiz({ questions, courseSlug, chapterNumber, totalChapters
               onClick={handleNext}
               className="btn-gradient inline-flex items-center gap-2 rounded-lg px-6 py-3 font-semibold text-white"
             >
-              {currentQ + 1 < questions.length ? "Question suivante" : "Voir les résultats"}
+              {currentQ + 1 < questions.length ? t.quiz.nextQuestion : t.quiz.seeResults}
               <ArrowRight className="h-4 w-4" />
             </button>
           </div>
