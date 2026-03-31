@@ -366,6 +366,8 @@ export const translations = {
       questionsToValidate: "questions — 70% pour valider ce chapitre",
       startQuiz: "Commencer le quiz",
       question: "Question",
+      keyPoints: "Points clés à retenir",
+      result: "Résultat",
     },
   },
   en: {
@@ -717,6 +719,8 @@ export const translations = {
       questionsToValidate: "questions — 70% to complete this chapter",
       startQuiz: "Start quiz",
       question: "Question",
+      keyPoints: "Key takeaways",
+      result: "Result",
     },
   },
 };
@@ -836,6 +840,6 @@ export interface Translations {
     passed: string; almostPassed: string; correctAnswers: string; needToPass: string; needToPassShort: string;
     courseCompleted: string; retry: string; retryShort: string; rereadChapter: string;
     saving: string; nextQuestion: string; seeResults: string; testYourKnowledge: string;
-    questionsToValidate: string; startQuiz: string; question: string;
+    questionsToValidate: string; startQuiz: string; question: string; keyPoints: string; result: string;
   };
 }

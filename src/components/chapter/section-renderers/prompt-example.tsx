@@ -1,4 +1,7 @@
+"use client";
+
 import { MessageSquare } from "lucide-react";
+import { useTranslation } from "@/lib/i18n/context";
 
 export function PromptExample({
   label,
@@ -9,6 +12,7 @@ export function PromptExample({
   prompt?: string;
   result?: string;
 }) {
+  const { t } = useTranslation();
   return (
     <div className="my-6 overflow-hidden rounded-xl border border-indigo-500/20 bg-indigo-500/5">
       {label && (
@@ -26,7 +30,7 @@ export function PromptExample({
         )}
         {result && (
           <div>
-            <span className="mb-1 text-xs font-medium uppercase tracking-wider text-emerald-400/60">Résultat</span>
+            <span className="mb-1 text-xs font-medium uppercase tracking-wider text-emerald-400/60">{t.quiz.result}</span>
             <p className="rounded-lg bg-emerald-500/5 p-3 text-sm text-emerald-300/80">{result}</p>
           </div>
         )}
