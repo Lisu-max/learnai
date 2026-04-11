@@ -10,8 +10,6 @@ import { PasswordInput } from "@/components/ui/password-input";
 import { BirthDateInput } from "@/components/ui/birth-date-input";
 import { useTranslation } from "@/lib/i18n/context";
 
-const SITE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://learnai-csa3.vercel.app";
-
 export default function InscriptionPage() {
   const router = useRouter();
   const { t } = useTranslation();
@@ -85,7 +83,7 @@ export default function InscriptionPage() {
       email,
       password,
       options: {
-        emailRedirectTo: `${SITE_URL}/auth/callback`,
+        emailRedirectTo: `${window.location.origin}/auth/callback`,
         data: {
           first_name: firstName,
           last_name: lastName,
@@ -109,7 +107,7 @@ export default function InscriptionPage() {
     const { data, error: oauthError } = await supabase.auth.signInWithOAuth({
       provider: "google",
       options: {
-        redirectTo: `${SITE_URL}/auth/callback`,
+        redirectTo: `${window.location.origin}/auth/callback`,
       },
     });
 

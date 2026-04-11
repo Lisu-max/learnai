@@ -13,8 +13,13 @@ export async function GET(request: Request) {
   if (code) {
     const { error } = await supabase.auth.exchangeCodeForSession(code);
     if (!error) {
+      if (type === "recovery") {
+        return NextResponse.redirect(`${origin}/nouveau-mot-de-passe`);
+      }
       return NextResponse.redirect(`${origin}${next}`);
     }
+    // Code exchange failed — redirect to error
+    return NextResponse.redirect(`${origin}/connexion?error=auth`);
   }
 
   if (token_hash && type) {
@@ -28,8 +33,10 @@ export async function GET(request: Request) {
       }
       return NextResponse.redirect(`${origin}${next}`);
     }
+    // OTP verification failed — redirect to error
+    return NextResponse.redirect(`${origin}/connexion?error=auth`);
   }
 
-  // If no code or token_hash, redirect to a client page that can read hash fragments
+  // No code or token_hash — redirect to client page that handles hash fragments
   return NextResponse.redirect(`${origin}/auth/confirm`);
 }

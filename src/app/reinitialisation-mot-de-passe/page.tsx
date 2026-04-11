@@ -7,8 +7,6 @@ import { Brain, Loader2, Mail, ArrowLeft, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useTranslation } from "@/lib/i18n/context";
 
-const SITE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://learnai-csa3.vercel.app";
-
 export default function ResetPasswordPage() {
   const { t } = useTranslation();
   const [error, setError] = useState<string | null>(null);
@@ -32,7 +30,7 @@ export default function ResetPasswordPage() {
     const supabase = createClient();
 
     const { error: resetError } = await supabase.auth.resetPasswordForEmail(email, {
-      redirectTo: `${SITE_URL}/auth/callback?next=/nouveau-mot-de-passe`,
+      redirectTo: `${window.location.origin}/auth/callback?next=/nouveau-mot-de-passe`,
     });
 
     if (resetError) {
