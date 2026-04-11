@@ -1,6 +1,7 @@
 "use client";
 
 import { Suspense, useState } from "react";
+import { Loader2 as ConnexionLoader } from "lucide-react";
 import Link from "next/link";
 import { useSearchParams, useRouter } from "next/navigation";
 import { createClient } from "@/lib/supabase/client";
@@ -151,7 +152,7 @@ export default function ConnexionPage() {
   return (
     <div className="bg-grid">
       <section className="mx-auto flex min-h-[calc(100vh-4rem)] max-w-md flex-col justify-center px-4 py-16">
-        <Suspense>
+        <Suspense fallback={<div className="flex justify-center py-12"><ConnexionLoader className="h-6 w-6 animate-spin text-purple-500" /></div>}>
           <ConnexionForm />
         </Suspense>
       </section>

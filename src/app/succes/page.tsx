@@ -2,11 +2,12 @@ import type { Metadata } from "next";
 import { getStripe } from "@/lib/stripe";
 import { getCourseBySlug } from "@/lib/courses";
 import { createClient } from "@/lib/supabase/server";
+import { getServerTranslation } from "@/lib/i18n/server";
 import { CheckCircle2, ArrowLeft, User, PlayCircle } from "lucide-react";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Bienvenue !",
+  title: "Merci !",
 };
 
 export default async function SuccessPage({
@@ -15,19 +16,20 @@ export default async function SuccessPage({
   searchParams: Promise<{ session_id?: string }>;
 }) {
   const { session_id } = await searchParams;
+  const t = await getServerTranslation();
 
   if (!session_id) {
     return (
       <div className="mx-auto max-w-2xl px-4 py-24 text-center">
-        <p className="text-muted-foreground">Session introuvable.</p>
+        <p className="text-muted-foreground">{t.success.sessionNotFound}</p>
         <Link href="/cours" className="mt-4 inline-flex items-center gap-1 text-sm text-purple-400 hover:text-purple-300">
-          <ArrowLeft className="h-4 w-4" /> Retour aux formations
+          <ArrowLeft className="h-4 w-4" /> {t.success.backToCourses}
         </Link>
       </div>
     );
   }
 
-  let courseName = "votre formation";
+  let courseName = t.success.yourTraining;
   let courseSlug = "";
   let paid = false;
 
@@ -50,9 +52,9 @@ export default async function SuccessPage({
   if (!paid) {
     return (
       <div className="mx-auto max-w-2xl px-4 py-24 text-center">
-        <p className="text-muted-foreground">Le paiement n&apos;a pas pu être vérifié.</p>
+        <p className="text-muted-foreground">{t.success.paymentNotVerified}</p>
         <Link href="/cours" className="mt-4 inline-flex items-center gap-1 text-sm text-purple-400 hover:text-purple-300">
-          <ArrowLeft className="h-4 w-4" /> Retour aux formations
+          <ArrowLeft className="h-4 w-4" /> {t.success.backToCourses}
         </Link>
       </div>
     );
@@ -65,20 +67,20 @@ export default async function SuccessPage({
           <div className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-emerald-500/10">
             <CheckCircle2 className="h-10 w-10 text-emerald-400" />
           </div>
-          <h1 className="mb-4 text-3xl font-bold">Merci pour votre achat !</h1>
+          <h1 className="mb-4 text-3xl font-bold">{t.success.thankYou}</h1>
           <p className="mb-8 text-lg text-muted-foreground">
-            Votre accès à <strong>{courseName}</strong> est confirmé.
+            {t.success.paymentConfirmed} <strong>{courseName}</strong> {t.success.paymentConfirmedSuffix}
           </p>
           <Link
             href={`/cours/${courseSlug}/chapitres`}
             className="btn-gradient inline-flex items-center gap-2 rounded-lg px-8 py-4 text-base font-semibold text-white"
           >
             <PlayCircle className="h-5 w-5" />
-            Commencer la formation
+            {t.success.downloadPdf}
           </Link>
           <div className="mt-6">
             <Link href="/compte" className="inline-flex items-center gap-2 text-sm text-purple-400 hover:text-purple-300">
-              <User className="h-4 w-4" /> Mon compte
+              <User className="h-4 w-4" /> {t.account.title}
             </Link>
           </div>
         </div>

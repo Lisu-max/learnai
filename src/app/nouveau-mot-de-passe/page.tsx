@@ -5,9 +5,11 @@ import { useRouter } from "next/navigation";
 import { createClient } from "@/lib/supabase/client";
 import { Brain, Loader2, Lock, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useTranslation } from "@/lib/i18n/context";
 
 export default function NewPasswordPage() {
   const router = useRouter();
+  const { t } = useTranslation();
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
   const [done, setDone] = useState(false);
@@ -22,13 +24,13 @@ export default function NewPasswordPage() {
     const confirm = formData.get("confirm") as string;
 
     if (password !== confirm) {
-      setError("Les mots de passe ne correspondent pas.");
+      setError(t.auth.passwordMismatch);
       setLoading(false);
       return;
     }
 
     if (password.length < 8) {
-      setError("Le mot de passe doit contenir au moins 8 caractères.");
+      setError(t.auth.passwordTooShort8);
       setLoading(false);
       return;
     }
@@ -58,9 +60,9 @@ export default function NewPasswordPage() {
             <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-purple-500 to-blue-500">
               <Brain className="h-7 w-7 text-white" />
             </div>
-            <h1 className="text-2xl font-bold">Nouveau mot de passe</h1>
+            <h1 className="text-2xl font-bold">{t.auth.newPasswordTitle}</h1>
             <p className="mt-2 text-sm text-muted-foreground">
-              Choisissez un nouveau mot de passe sécurisé.
+              {t.auth.newPasswordSubtitle}
             </p>
           </div>
 
@@ -68,16 +70,16 @@ export default function NewPasswordPage() {
             {done ? (
               <div className="text-center">
                 <CheckCircle2 className="mx-auto mb-4 h-10 w-10 text-emerald-400" />
-                <p className="mb-2 font-medium">Mot de passe mis à jour !</p>
+                <p className="mb-2 font-medium">{t.auth.passwordUpdated}</p>
                 <p className="text-sm text-muted-foreground">
-                  Vous allez être redirigé vers la page de connexion…
+                  {t.auth.passwordUpdatedRedirect}
                 </p>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
                   <label htmlFor="password" className="mb-1.5 block text-sm font-medium">
-                    Nouveau mot de passe
+                    {t.auth.newPasswordLabel}
                   </label>
                   <input
                     id="password"
@@ -85,14 +87,14 @@ export default function NewPasswordPage() {
                     type="password"
                     required
                     minLength={8}
-                    placeholder="Min. 8 caractères"
+                    placeholder={t.auth.newPasswordPlaceholder}
                     className={inputClass}
                   />
                 </div>
 
                 <div>
                   <label htmlFor="confirm" className="mb-1.5 block text-sm font-medium">
-                    Confirmer le mot de passe
+                    {t.auth.confirmPassword}
                   </label>
                   <input
                     id="confirm"
@@ -100,7 +102,7 @@ export default function NewPasswordPage() {
                     type="password"
                     required
                     minLength={8}
-                    placeholder="Répétez le mot de passe"
+                    placeholder={t.auth.confirmPasswordRepeatPlaceholder}
                     className={inputClass}
                   />
                 </div>
@@ -119,7 +121,7 @@ export default function NewPasswordPage() {
                   ) : (
                     <Lock className="mr-2 h-4 w-4" />
                   )}
-                  {loading ? "Mise à jour…" : "Enregistrer le mot de passe"}
+                  {loading ? t.auth.updatingPassword : t.auth.savePassword}
                 </Button>
               </form>
             )}

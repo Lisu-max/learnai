@@ -1,21 +1,21 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { createClient } from "@/lib/supabase/client";
 import { Loader2 } from "lucide-react";
-import { Suspense } from "react";
+import { useTranslation } from "@/lib/i18n/context";
 
 function ConfirmContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
+  const { t } = useTranslation();
   const [error, setError] = useState(false);
 
   useEffect(() => {
     const handleAuth = async () => {
       const supabase = createClient();
 
-      // Handle token_hash from email confirmation link
       const tokenHash = searchParams.get("token_hash");
       const type = searchParams.get("type");
 
@@ -30,14 +30,12 @@ function ConfirmContent() {
         }
       }
 
-      // Check if session exists already (set by hash fragment or middleware)
       const { data: { session } } = await supabase.auth.getSession();
       if (session) {
         router.replace("/");
         return;
       }
 
-      // Wait and retry once
       await new Promise((r) => setTimeout(r, 2000));
       const { data: { session: retrySession } } = await supabase.auth.getSession();
       if (retrySession) {
@@ -57,15 +55,15 @@ function ConfirmContent() {
       <div className="text-center">
         {error ? (
           <div>
-            <p className="text-red-400 text-lg mb-2">
-              Erreur de confirmation. Redirection...
+            <p className="mb-2 text-lg text-red-400">
+              {t.auth.confirmError}
             </p>
           </div>
         ) : (
           <div>
-            <Loader2 className="h-8 w-8 animate-spin text-purple-500 mx-auto mb-4" />
+            <Loader2 className="mx-auto mb-4 h-8 w-8 animate-spin text-purple-500" />
             <p className="text-muted-foreground">
-              Confirmation en cours...
+              {t.auth.confirmingAccount}
             </p>
           </div>
         )}
@@ -76,7 +74,11 @@ function ConfirmContent() {
 
 export default function AuthConfirmPage() {
   return (
-    <Suspense>
+    <Suspense fallback={
+      <div className="flex min-h-screen items-center justify-center">
+        <Loader2 className="h-8 w-8 animate-spin text-purple-500" />
+      </div>
+    }>
       <ConfirmContent />
     </Suspense>
   );

@@ -176,6 +176,18 @@ export const translations = {
       resetSent: "Email envoyé !",
       resetSentSubtitle: "Vérifiez votre boîte de réception et cliquez sur le lien pour réinitialiser votre mot de passe.",
       backToLogin: "Retour à la connexion",
+      newPasswordTitle: "Nouveau mot de passe",
+      newPasswordSubtitle: "Choisissez un nouveau mot de passe sécurisé.",
+      newPasswordLabel: "Nouveau mot de passe",
+      newPasswordPlaceholder: "Min. 8 caractères",
+      confirmPasswordRepeatPlaceholder: "Répétez le mot de passe",
+      passwordUpdated: "Mot de passe mis à jour !",
+      passwordUpdatedRedirect: "Vous allez être redirigé vers la page de connexion…",
+      updatingPassword: "Mise à jour…",
+      savePassword: "Enregistrer le mot de passe",
+      passwordTooShort8: "Le mot de passe doit contenir au moins 8 caractères.",
+      confirmingAccount: "Confirmation en cours...",
+      confirmError: "Erreur de confirmation. Redirection...",
       // Supabase error translations
       errors: {
         "Invalid login credentials": "Email ou mot de passe incorrect.",
@@ -206,6 +218,7 @@ export const translations = {
       cancel: "Annuler",
       overallProgress: "Progression globale",
       logout: "Se déconnecter",
+      freeCourse: "Formation gratuite",
     },
     // Courses page
     coursesPage: {
@@ -538,6 +551,18 @@ export const translations = {
       resetSent: "Email sent!",
       resetSentSubtitle: "Check your inbox and click the link to reset your password.",
       backToLogin: "Back to login",
+      newPasswordTitle: "New password",
+      newPasswordSubtitle: "Choose a new secure password.",
+      newPasswordLabel: "New password",
+      newPasswordPlaceholder: "Min. 8 characters",
+      confirmPasswordRepeatPlaceholder: "Repeat your password",
+      passwordUpdated: "Password updated!",
+      passwordUpdatedRedirect: "You will be redirected to the login page…",
+      updatingPassword: "Updating…",
+      savePassword: "Save password",
+      passwordTooShort8: "Password must be at least 8 characters.",
+      confirmingAccount: "Confirming your account...",
+      confirmError: "Confirmation error. Redirecting...",
       errors: {
         "Invalid login credentials": "Incorrect email or password.",
         "User already registered": "An account already exists with this email.",
@@ -566,6 +591,7 @@ export const translations = {
       cancel: "Cancel",
       overallProgress: "Overall progress",
       logout: "Log out",
+      freeCourse: "Free course",
     },
     coursesPage: {
       badge: "6 courses available",
@@ -775,10 +801,15 @@ export interface Translations {
     loginButton: string; loggingIn: string;
     alreadyHaveAccount: string; noAccount: string;
     accountCreated: string; authError: string; serviceUnavailable: string;
-    passwordMismatch: string; passwordTooShort: string;
+    passwordMismatch: string; passwordTooShort: string; passwordTooShort8: string;
     forgotPassword: string; resetTitle: string; resetSubtitle: string;
     resetEmailRequired: string; resetButton: string; resetSending: string;
     resetSent: string; resetSentSubtitle: string; backToLogin: string;
+    newPasswordTitle: string; newPasswordSubtitle: string; newPasswordLabel: string;
+    newPasswordPlaceholder: string; confirmPasswordRepeatPlaceholder: string;
+    passwordUpdated: string; passwordUpdatedRedirect: string;
+    updatingPassword: string; savePassword: string;
+    confirmingAccount: string; confirmError: string;
     errors: Record<string, string>;
   };
   account: {
@@ -787,7 +818,7 @@ export interface Translations {
     profileInfo: string; yearsOld: string; progress: string;
     pagesRead: string; pagesRemaining: string; completed: string;
     updateProgress: string; currentPage: string; save: string; cancel: string;
-    overallProgress: string; logout: string;
+    overallProgress: string; logout: string; freeCourse: string;
   };
   coursesPage: {
     badge: string; title: string; titleHighlight: string; subtitle: string;

@@ -237,7 +237,7 @@ export function AccountDashboard({ user, purchasedCourses }: AccountDashboardPro
                               {item.course?.title || item.course_slug}
                             </h3>
                             <p className="text-sm text-muted-foreground">
-                              {isFreeItem ? "Formation gratuite" : `${t.account.purchasedOn} ${new Date(item.created_at).toLocaleDateString(dateLocale, { day: "numeric", month: "long", year: "numeric" })}`}
+                              {isFreeItem ? t.account.freeCourse : `${t.account.purchasedOn} ${new Date(item.created_at).toLocaleDateString(dateLocale, { day: "numeric", month: "long", year: "numeric" })}`}
                             </p>
                             {!isBundle && (
                               <div className="mt-2">
@@ -304,7 +304,7 @@ export function AccountDashboard({ user, purchasedCourses }: AccountDashboardPro
                             className="flex items-center gap-1.5 rounded-lg bg-purple-500/10 px-3 py-2 text-xs font-medium text-purple-400 transition-colors hover:bg-purple-500/20"
                           >
                             <PlayCircle className="h-3.5 w-3.5" />
-                            Accéder
+                            {t.courseDetail.startCourse}
                           </Link>
                         </div>
                       </div>
