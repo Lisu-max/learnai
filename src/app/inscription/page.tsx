@@ -79,7 +79,7 @@ export default function InscriptionPage() {
 
     const supabase = createClient();
 
-    const { error: signUpError } = await supabase.auth.signUp({
+    const { data, error: signUpError } = await supabase.auth.signUp({
       email,
       password,
       options: {
@@ -98,7 +98,18 @@ export default function InscriptionPage() {
       return;
     }
 
-    router.push("/connexion?verified=check");
+    // If Supabase returns a session immediately (email confirmation disabled),
+    // the user is already logged in — redirect to account page directly.
+    if (data.session) {
+      router.push("/compte");
+    } else if (data.user && data.user.identities && data.user.identities.length === 0) {
+      // Supabase silently returns success for already-registered emails
+      // but with empty identities array — show a specific error
+      setError(t.auth.errors["User already registered"]);
+      setLoading(false);
+    } else {
+      router.push("/connexion?verified=check");
+    }
   }
 
   async function handleGoogle() {

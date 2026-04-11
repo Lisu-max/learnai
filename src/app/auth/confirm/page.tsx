@@ -16,6 +16,7 @@ function ConfirmContent() {
     const handleAuth = async () => {
       const supabase = createClient();
 
+      // Handle token_hash from query params (email OTP flow)
       const tokenHash = searchParams.get("token_hash");
       const type = searchParams.get("type");
 
@@ -30,12 +31,26 @@ function ConfirmContent() {
         }
       }
 
+      // Handle hash fragment (implicit flow: #access_token=...&type=signup)
+      const hash = window.location.hash;
+      if (hash && hash.includes("access_token")) {
+        // The browser Supabase client processes hash fragments automatically
+        // via onAuthStateChange — just wait for the session to be set
+        const { data: { session } } = await supabase.auth.getSession();
+        if (session) {
+          router.replace("/");
+          return;
+        }
+      }
+
+      // Check if session already exists (set by middleware or prior auth)
       const { data: { session } } = await supabase.auth.getSession();
       if (session) {
         router.replace("/");
         return;
       }
 
+      // Wait and retry once for async auth state propagation
       await new Promise((r) => setTimeout(r, 2000));
       const { data: { session: retrySession } } = await supabase.auth.getSession();
       if (retrySession) {
