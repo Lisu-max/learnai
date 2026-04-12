@@ -27,7 +27,7 @@ export function CTABanner() {
             {t.cta.subtitle}
           </p>
           <Link
-            href="/cours/pack-complet-ia-2026"
+            href="/cours"
             className="btn-gradient-glow inline-flex items-center gap-2 rounded-lg px-10 py-4 text-lg font-semibold text-white"
           >
             {t.cta.button}

@@ -20,7 +20,7 @@ export default function CoursPage() {
   const totalChapters = courses.reduce((sum, c) => sum + c.chapters, 0);
 
   return (
-    <div className="relative">
+    <div className="relative overflow-x-hidden">
       {/* Hero */}
       <section className="relative overflow-hidden border-b border-border/50">
         <div className="hero-orb-1 pointer-events-none absolute -top-32 left-1/2 h-[400px] w-[400px] -translate-x-1/2 rounded-full bg-purple-600/15 blur-[120px]" />
