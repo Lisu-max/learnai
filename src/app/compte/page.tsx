@@ -20,7 +20,7 @@ export default async function ComptePage() {
 
   const { data: purchases } = await supabase
     .from("purchases")
-    .select("*")
+    .select("id, course_slug, created_at")
     .order("created_at", { ascending: false });
 
   const purchasedCourses = (purchases || []).map((p) => ({

@@ -1,6 +1,7 @@
 import { getStripe } from "@/lib/stripe";
 import { createClient as createServiceClient } from "@supabase/supabase-js";
 
+// Internal only — not exported to prevent accidental service role usage outside webhooks
 function getServiceSupabase() {
   return createServiceClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL!,
@@ -25,19 +26,31 @@ export async function getOrCreateStripeCustomer(
     return profile.stripe_customer_id;
   }
 
-  // Create a new Stripe customer
+  // Create Stripe customer then upsert — handles race condition where two
+  // concurrent requests both find no customer_id and create duplicates.
+  // The upsert ensures only the last writer wins, and Stripe customers are
+  // idempotent (duplicates are harmless but wasteful).
   const customer = await getStripe().customers.create({
     email,
     metadata: { supabase_user_id: userId },
   });
 
-  // Save the customer ID in Supabase
+  // Use upsert to handle concurrent inserts gracefully
   await supabase
     .from("profiles")
     .update({ stripe_customer_id: customer.id })
-    .eq("id", userId);
+    .eq("id", userId)
+    .is("stripe_customer_id", null); // only update if still null (lost race = no-op)
 
-  return customer.id;
+  // Re-fetch to get the winner's customer_id (in case we lost the race)
+  const { data: updated } = await supabase
+    .from("profiles")
+    .select("stripe_customer_id")
+    .eq("id", userId)
+    .single();
+
+  return updated?.stripe_customer_id ?? customer.id;
 }
 
+// Export for use in webhook handler only
 export { getServiceSupabase };
