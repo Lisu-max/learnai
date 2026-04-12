@@ -47,6 +47,32 @@ export async function POST(req: NextRequest) {
     switch (event.type) {
       case "checkout.session.completed": {
         const session = event.data.object as Stripe.Checkout.Session;
+
+        // One-time course purchase
+        if (session.mode === "payment") {
+          const userId = session.metadata?.userId;
+          const courseSlug = session.metadata?.courseSlug;
+          if (userId && courseSlug && session.payment_status === "paid") {
+            await supabase.from("purchases").upsert(
+              {
+                user_id: userId,
+                course_slug: courseSlug,
+                stripe_session_id: session.id,
+                amount_paid: session.amount_total || 0,
+              },
+              { onConflict: "user_id,course_slug" }
+            );
+            // Link Stripe customer to profile
+            if (session.customer) {
+              await supabase
+                .from("profiles")
+                .update({ stripe_customer_id: session.customer as string })
+                .eq("id", userId);
+            }
+          }
+        }
+
+        // Subscription purchase
         if (session.mode === "subscription" && session.subscription) {
           const userId = session.metadata?.supabase_user_id;
           if (userId) {
