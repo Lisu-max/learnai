@@ -66,7 +66,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h3 className="mb-3 text-sm font-semibold">Contact</h3>
+            <h3 className="mb-3 text-sm font-semibold">{t.footer.contact}</h3>
             <a
               href="mailto:milanechoux@gmail.com"
               className="inline-flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-purple-400"
@@ -75,7 +75,7 @@ export function Footer() {
               milanechoux@gmail.com
             </a>
             <p className="mt-3 text-xs text-muted-foreground/70">
-              Réponse sous 24h — Remboursement sous 30 jours
+              {t.footer.responseTime}
             </p>
           </div>
         </div>
@@ -85,7 +85,7 @@ export function Footer() {
         <div className="flex flex-col items-center gap-2 text-center text-sm text-muted-foreground">
           <p>&copy; {new Date().getFullYear()} {siteConfig.name}. {t.footer.copyright}</p>
           <p className="text-xs text-muted-foreground/50">
-            Paiement sécurisé par Stripe — Satisfait ou remboursé 30 jours
+            {t.footer.securePayment}
           </p>
         </div>
       </div>

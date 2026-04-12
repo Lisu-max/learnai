@@ -1,7 +1,12 @@
+"use client";
+
 import Link from "next/link";
 import { Brain, Home, BookOpen } from "lucide-react";
+import { useTranslation } from "@/lib/i18n/context";
 
 export default function NotFound() {
+  const { t } = useTranslation();
+
   return (
     <div className="bg-grid">
       <section className="mx-auto flex min-h-[calc(100vh-4rem)] max-w-md flex-col items-center justify-center px-4 py-16 text-center">
@@ -11,9 +16,9 @@ export default function NotFound() {
           </div>
 
           <h1 className="mb-2 text-6xl font-bold gradient-text-animated">404</h1>
-          <p className="mb-2 text-xl font-semibold">Page introuvable</p>
+          <p className="mb-2 text-xl font-semibold">{t.notFound.title}</p>
           <p className="mb-8 text-muted-foreground">
-            La page que vous cherchez n&apos;existe pas ou a été déplacée.
+            {t.notFound.description}
           </p>
 
           <div className="flex flex-col gap-3 sm:flex-row sm:justify-center">
@@ -22,14 +27,14 @@ export default function NotFound() {
               className="btn-gradient inline-flex items-center justify-center gap-2 rounded-lg px-6 py-3 text-sm font-semibold text-white"
             >
               <Home className="h-4 w-4" />
-              Retour à l&apos;accueil
+              {t.notFound.backHome}
             </Link>
             <Link
               href="/cours"
               className="inline-flex items-center justify-center gap-2 rounded-lg border border-border/50 px-6 py-3 text-sm font-medium text-muted-foreground transition-colors hover:bg-accent hover:text-foreground"
             >
               <BookOpen className="h-4 w-4" />
-              Voir les formations
+              {t.notFound.viewCourses}
             </Link>
           </div>
         </div>

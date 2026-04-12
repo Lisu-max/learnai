@@ -19,6 +19,8 @@ export const translations = {
       statCourses: "Formations",
       statPages: "Pages de contenu",
       statChapters: "Chapitres",
+      statFreeCourse: "Cours gratuit",
+      statInteractiveChapters: "Chapitres interactifs",
     },
     // Value Proposition
     values: {
@@ -131,6 +133,25 @@ export const translations = {
       privacy: "Politique de confidentialité",
       legalNotice: "Mentions légales",
       copyright: "Tous droits réservés.",
+      contact: "Contact",
+      responseTime: "Réponse sous 24h — Remboursement sous 30 jours",
+      securePayment: "Paiement sécurisé par Stripe — Satisfait ou remboursé 30 jours",
+    },
+    notFound: {
+      title: "Page introuvable",
+      description: "La page que vous cherchez n'existe pas ou a été déplacée.",
+      backHome: "Retour à l'accueil",
+      viewCourses: "Voir les formations",
+    },
+    common: {
+      loading: "Chargement...",
+      redirecting: "Redirection...",
+      error: "Une erreur est survenue. Veuillez réessayer.",
+      manageBilling: "Gérer mon abonnement",
+      billingError: "Erreur lors de l'ouverture du portail",
+      upgradePro: "Passer Pro",
+      stripeRedirectError: "Erreur lors de la redirection vers Stripe",
+      openMenu: "Ouvrir le menu de navigation",
     },
     // Auth
     auth: {
@@ -256,6 +277,8 @@ export const translations = {
       trustPaymentUnique: "Paiement unique",
       trustLifetime: "Accès à vie",
       trustStripe: "Paiement sécurisé Stripe",
+      chaptersTotal: "chapitres au total",
+      perCourse: "/ formation",
     },
     // Course detail
     courseDetail: {
@@ -401,6 +424,8 @@ export const translations = {
       statCourses: "Courses",
       statPages: "Pages of content",
       statChapters: "Chapters",
+      statFreeCourse: "Free course",
+      statInteractiveChapters: "Interactive chapters",
     },
     values: {
       title: "Why choose",
@@ -507,6 +532,25 @@ export const translations = {
       privacy: "Privacy Policy",
       legalNotice: "Legal Notice",
       copyright: "All rights reserved.",
+      contact: "Contact",
+      responseTime: "Response within 24h — 30-day refund policy",
+      securePayment: "Secure payment by Stripe — 30-day money-back guarantee",
+    },
+    notFound: {
+      title: "Page not found",
+      description: "The page you are looking for does not exist or has been moved.",
+      backHome: "Back to home",
+      viewCourses: "View courses",
+    },
+    common: {
+      loading: "Loading...",
+      redirecting: "Redirecting...",
+      error: "An error occurred. Please try again.",
+      manageBilling: "Manage my subscription",
+      billingError: "Error opening billing portal",
+      upgradePro: "Upgrade to Pro",
+      stripeRedirectError: "Error redirecting to Stripe",
+      openMenu: "Open navigation menu",
     },
     auth: {
       createAccount: "Create an account",
@@ -628,6 +672,8 @@ export const translations = {
       trustPaymentUnique: "One-time payment",
       trustLifetime: "Lifetime access",
       trustStripe: "Secure Stripe payment",
+      chaptersTotal: "chapters in total",
+      perCourse: "/ course",
     },
     courseDetail: {
       backToCourses: "Back to courses",
@@ -769,6 +815,7 @@ export interface Translations {
   hero: {
     badge: string; title: string; titleHighlight: string; description: string;
     cta: string; learnMore: string; statCourses: string; statPages: string; statChapters: string;
+    statFreeCourse: string; statInteractiveChapters: string;
   };
   values: {
     title: string; subtitle: string;
@@ -784,6 +831,15 @@ export interface Translations {
   footer: {
     description: string; navigation: string; legal: string;
     terms: string; privacy: string; legalNotice: string; copyright: string;
+    contact: string; responseTime: string; securePayment: string;
+  };
+  notFound: {
+    title: string; description: string; backHome: string; viewCourses: string;
+  };
+  common: {
+    loading: string; redirecting: string; error: string;
+    manageBilling: string; billingError: string;
+    upgradePro: string; stripeRedirectError: string; openMenu: string;
   };
   auth: {
     createAccount: string; createAccountSubtitle: string;
@@ -832,6 +888,7 @@ export interface Translations {
     premiumSectionTitle: string; premiumSectionSubtitle: string;
     ctaTitle: string; ctaBody: string; ctaButton: string;
     trustPaymentUnique: string; trustLifetime: string; trustStripe: string;
+    chaptersTotal: string; perCourse: string;
   };
   courseDetail: {
     backToCourses: string; singlePaymentLifetime: string;

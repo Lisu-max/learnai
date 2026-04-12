@@ -2,17 +2,17 @@
 
 import { useState } from "react";
 import { Loader2, Sparkles } from "lucide-react";
+import { useTranslation } from "@/lib/i18n/context";
 
 interface UpgradeButtonProps {
   className?: string;
-  label?: string;
 }
 
 export function UpgradeButton({
   className = "",
-  label = "Passer Pro",
 }: UpgradeButtonProps) {
   const [loading, setLoading] = useState(false);
+  const { t } = useTranslation();
 
   async function handleUpgrade() {
     setLoading(true);
@@ -23,11 +23,11 @@ export function UpgradeButton({
       if (data.url) {
         window.location.href = data.url;
       } else {
-        alert(data.error || "Erreur lors de la redirection vers Stripe");
+        alert(data.error || t.common.stripeRedirectError);
         setLoading(false);
       }
     } catch {
-      alert("Une erreur est survenue. Veuillez réessayer.");
+      alert(t.common.error);
       setLoading(false);
     }
   }
@@ -41,12 +41,12 @@ export function UpgradeButton({
       {loading ? (
         <>
           <Loader2 className="h-4 w-4 animate-spin" />
-          Redirection...
+          {t.common.redirecting}
         </>
       ) : (
         <>
           <Sparkles className="h-4 w-4" />
-          {label}
+          {t.common.upgradePro}
         </>
       )}
     </button>

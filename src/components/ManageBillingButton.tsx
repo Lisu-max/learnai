@@ -2,17 +2,17 @@
 
 import { useState } from "react";
 import { Loader2, CreditCard } from "lucide-react";
+import { useTranslation } from "@/lib/i18n/context";
 
 interface ManageBillingButtonProps {
   className?: string;
-  label?: string;
 }
 
 export function ManageBillingButton({
   className = "",
-  label = "Gérer mon abonnement",
 }: ManageBillingButtonProps) {
   const [loading, setLoading] = useState(false);
+  const { t } = useTranslation();
 
   async function handlePortal() {
     setLoading(true);
@@ -23,11 +23,11 @@ export function ManageBillingButton({
       if (data.url) {
         window.location.href = data.url;
       } else {
-        alert(data.error || "Erreur lors de l'ouverture du portail");
+        alert(data.error || t.common.billingError);
         setLoading(false);
       }
     } catch {
-      alert("Une erreur est survenue. Veuillez réessayer.");
+      alert(t.common.error);
       setLoading(false);
     }
   }
@@ -41,12 +41,12 @@ export function ManageBillingButton({
       {loading ? (
         <>
           <Loader2 className="h-4 w-4 animate-spin" />
-          Chargement...
+          {t.common.loading}
         </>
       ) : (
         <>
           <CreditCard className="h-4 w-4" />
-          {label}
+          {t.common.manageBilling}
         </>
       )}
     </button>

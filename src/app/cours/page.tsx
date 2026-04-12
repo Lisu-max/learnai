@@ -116,7 +116,7 @@ export default function CoursPage() {
                     <span className="gradient-text-animated">9,99€</span>
                   </h2>
                   <p className="mx-auto max-w-xl text-muted-foreground">
-                    {t.coursesPage.ctaBody} ({premiumCourses.reduce((s, c) => s + c.chapters, 0)} chapitres au total).
+                    {t.coursesPage.ctaBody} ({premiumCourses.reduce((s, c) => s + c.chapters, 0)} {t.coursesPage.chaptersTotal}).
                   </p>
                 </div>
                 <div className="flex flex-col items-center gap-3">
