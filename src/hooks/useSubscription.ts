@@ -15,6 +15,7 @@ export function useSubscription(): UseSubscriptionReturn {
 
   useEffect(() => {
     const supabase = createClient();
+    let channelRef: ReturnType<typeof supabase.channel> | null = null;
 
     async function fetchSubscription() {
       const {
@@ -37,7 +38,7 @@ export function useSubscription(): UseSubscriptionReturn {
       setLoading(false);
 
       // Subscribe to realtime changes
-      const channel = supabase
+      channelRef = supabase
         .channel("subscription-status")
         .on(
           "postgres_changes",
@@ -55,13 +56,15 @@ export function useSubscription(): UseSubscriptionReturn {
           }
         )
         .subscribe();
-
-      return () => {
-        supabase.removeChannel(channel);
-      };
     }
 
     fetchSubscription();
+
+    return () => {
+      if (channelRef) {
+        supabase.removeChannel(channelRef);
+      }
+    };
   }, []);
 
   return {
