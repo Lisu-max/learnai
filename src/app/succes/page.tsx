@@ -40,14 +40,18 @@ export default async function SuccessPage({
     const course = getCourseBySlug(courseSlug);
     if (course) courseName = course.title;
 
+    // Verify the session belongs to the connected user
     if (paid && session.metadata?.userId) {
       const supabase = await createClient();
-      await supabase.from("purchases").upsert(
-        { user_id: session.metadata.userId, course_slug: courseSlug, stripe_session_id: session_id, amount_paid: session.amount_total || 0 },
-        { onConflict: "user_id,course_slug" }
-      );
+      const { data: { user } } = await supabase.auth.getUser();
+      if (!user || user.id !== session.metadata.userId) {
+        paid = false; // Block replay by another user
+      }
     }
-  } catch { /* ignore */ }
+    // Note: purchase insertion is handled by the Stripe webhook only
+  } catch {
+    console.error("Success page: failed to verify session", session_id);
+  }
 
   if (!paid) {
     return (

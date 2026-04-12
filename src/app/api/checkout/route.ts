@@ -1,8 +1,14 @@
 import { NextRequest, NextResponse } from "next/server";
+import { z } from "zod";
 import { getStripe, getStripePriceId } from "@/lib/stripe";
 import { getOrCreateStripeCustomer } from "@/lib/stripe-helpers";
 import { getCourseBySlug, isFreeCourse } from "@/lib/courses";
 import { createClient } from "@/lib/supabase/server";
+
+const CheckoutSchema = z.object({
+  courseSlug: z.string().min(1).max(100).regex(/^[a-z0-9-]+$/),
+  courseLang: z.enum(["fr", "en"]).default("fr"),
+});
 
 export async function POST(req: NextRequest) {
   if (!process.env.STRIPE_SECRET_KEY) {
@@ -23,16 +29,16 @@ export async function POST(req: NextRequest) {
     );
   }
 
-  // Parse body
+  // Parse & validate body
   let courseSlug: string;
-  let courseLang: string;
+  let courseLang: "fr" | "en";
   try {
-    const body = await req.json();
-    courseSlug = body.courseSlug;
-    courseLang = body.courseLang || "fr";
-    if (!courseSlug || typeof courseSlug !== "string") {
-      return NextResponse.json({ error: "courseSlug requis" }, { status: 400 });
+    const parsed = CheckoutSchema.safeParse(await req.json());
+    if (!parsed.success) {
+      return NextResponse.json({ error: "Paramètres invalides" }, { status: 400 });
     }
+    courseSlug = parsed.data.courseSlug;
+    courseLang = parsed.data.courseLang;
   } catch {
     return NextResponse.json({ error: "Body invalide" }, { status: 400 });
   }

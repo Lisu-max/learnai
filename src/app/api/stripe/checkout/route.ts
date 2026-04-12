@@ -32,9 +32,9 @@ export async function POST() {
       success_url: `${appUrl}/compte?success=true`,
       cancel_url: `${appUrl}/cours?canceled=true`,
       subscription_data: {
-        metadata: { supabase_user_id: user.id },
+        metadata: { userId: user.id },
       },
-      metadata: { supabase_user_id: user.id },
+      metadata: { userId: user.id },
     });
 
     return NextResponse.json({ url: session.url });

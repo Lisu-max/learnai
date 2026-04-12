@@ -74,7 +74,7 @@ export async function POST(req: NextRequest) {
 
         // Subscription purchase
         if (session.mode === "subscription" && session.subscription) {
-          const userId = session.metadata?.supabase_user_id;
+          const userId = session.metadata?.userId || session.metadata?.supabase_user_id;
           if (userId) {
             const sub = await getStripe().subscriptions.retrieve(
               session.subscription as string,
@@ -96,7 +96,7 @@ export async function POST(req: NextRequest) {
 
       case "customer.subscription.updated": {
         const subscription = event.data.object as Stripe.Subscription;
-        const userId = subscription.metadata?.supabase_user_id;
+        const userId = subscription.metadata?.userId || subscription.metadata?.supabase_user_id;
         if (userId) {
           let status: string;
           switch (subscription.status) {
@@ -127,7 +127,7 @@ export async function POST(req: NextRequest) {
 
       case "customer.subscription.deleted": {
         const subscription = event.data.object as Stripe.Subscription;
-        const userId = subscription.metadata?.supabase_user_id;
+        const userId = subscription.metadata?.userId || subscription.metadata?.supabase_user_id;
         if (userId) {
           await supabase
             .from("profiles")

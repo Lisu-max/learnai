@@ -31,7 +31,7 @@ export async function POST() {
       );
     }
 
-    const appUrl = process.env.NEXT_PUBLIC_APP_URL || process.env.NEXT_PUBLIC_BASE_URL;
+    const appUrl = (process.env.NEXT_PUBLIC_APP_URL || process.env.NEXT_PUBLIC_BASE_URL || "https://learnai-csa3.vercel.app").trim();
 
     const portalSession = await getStripe().billingPortal.sessions.create({
       customer: profile.stripe_customer_id,

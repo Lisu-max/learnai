@@ -17,13 +17,23 @@ export async function hasAccessToCourse(courseSlug: string): Promise<{
     }
   }
 
-  // Premium courses: need a purchase
+  // Premium courses: need auth
   const supabase = await createClient();
   const { data: { user } } = await supabase.auth.getUser();
 
   if (!user) return { hasAccess: false, userId: null, isPro: false };
 
-  // Check purchase
+  // Check if user is Pro subscriber (has access to all premium courses)
+  const { data: profile } = await supabase
+    .from("profiles")
+    .select("subscription_status")
+    .eq("id", user.id)
+    .single();
+
+  const isPro = profile?.subscription_status === "pro";
+  if (isPro) return { hasAccess: true, userId: user.id, isPro: true };
+
+  // Check individual purchase
   const { data: purchase } = await supabase
     .from("purchases")
     .select("id")

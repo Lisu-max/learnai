@@ -17,6 +17,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://learnai-csa3.vercel.app"),
   title: {
     default: `${siteConfig.name} — Formations IA Premium`,
     template: `%s | ${siteConfig.name}`,
@@ -29,11 +30,13 @@ export const metadata: Metadata = {
     siteName: siteConfig.name,
     type: "website",
     locale: "fr_FR",
+    images: ["/opengraph-image"],
   },
   twitter: {
     card: "summary_large_image",
     title: `${siteConfig.name} — Formations IA Premium`,
     description: siteConfig.description,
+    images: ["/opengraph-image"],
   },
 };
 
