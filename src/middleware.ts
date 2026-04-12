@@ -26,7 +26,7 @@ function isRateLimited(ip: string): boolean {
 
 const RATE_LIMITED_PATHS = ["/api/checkout", "/api/stripe/checkout", "/api/stripe/portal"];
 
-export async function proxy(request: NextRequest) {
+export async function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
   // Block direct PDF access
