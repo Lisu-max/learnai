@@ -4,6 +4,7 @@ import { getStripe, getStripePriceId } from "@/lib/stripe";
 import { getOrCreateStripeCustomer } from "@/lib/stripe-helpers";
 import { getCourseBySlug, isFreeCourse } from "@/lib/courses";
 import { createClient } from "@/lib/supabase/server";
+import { logRequest, logError } from "@/lib/logger";
 
 const CheckoutSchema = z.object({
   courseSlug: z.string().min(1).max(100).regex(/^[a-z0-9-]+$/),
@@ -87,10 +88,10 @@ export async function POST(req: NextRequest) {
       },
     });
 
+    logRequest("/api/checkout", 200, user.id);
     return NextResponse.json({ url: session.url });
   } catch (e) {
-    const msg = e instanceof Error ? e.message : String(e);
-    console.error("Stripe checkout error:", msg);
+    logError("/api/checkout", e);
     return NextResponse.json(
       { error: "Erreur lors de la création du paiement." },
       { status: 500 }

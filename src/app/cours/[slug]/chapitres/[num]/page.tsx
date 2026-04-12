@@ -9,6 +9,19 @@ import { InlineQuiz } from "@/components/quiz/inline-quiz";
 import { getServerTranslation, getServerLocale } from "@/lib/i18n/server";
 import { ArrowLeft, Clock, BookOpen } from "lucide-react";
 
+// Chapter content is static — revalidate every 24h
+export const revalidate = 86400;
+
+export async function generateStaticParams() {
+  const { courses } = await import("@/lib/courses");
+  return courses.flatMap((course) =>
+    Array.from({ length: course.chapters }, (_, i) => ({
+      slug: course.slug,
+      num: String(i + 1),
+    }))
+  );
+}
+
 interface Props {
   params: Promise<{ slug: string; num: string }>;
 }

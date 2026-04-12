@@ -1,0 +1,4 @@
+Contact: mailto:security@learnai.fr
+Preferred-Languages: fr, en
+Policy: https://learnai.fr/politique-confidentialite
+Expires: 2027-01-01T00:00:00.000Z

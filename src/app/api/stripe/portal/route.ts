@@ -1,7 +1,6 @@
 import { NextResponse } from "next/server";
 import { getStripe } from "@/lib/stripe";
 import { createClient } from "@/lib/supabase/server";
-import { getServiceSupabase } from "@/lib/stripe-helpers";
 
 export async function POST() {
   try {
@@ -17,8 +16,8 @@ export async function POST() {
       );
     }
 
-    const serviceSupabase = getServiceSupabase();
-    const { data: profile } = await serviceSupabase
+    // Use authenticated user client (RLS-scoped) — service role not needed here
+    const { data: profile } = await supabase
       .from("profiles")
       .select("stripe_customer_id")
       .eq("id", user.id)
