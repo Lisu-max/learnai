@@ -152,9 +152,9 @@ export function AccountDashboard({ user, purchasedCourses }: AccountDashboardPro
                 <TrendingUp className="h-5 w-5 text-purple-400" />
                 {t.account.overallProgress}
               </h2>
-              <div className="flex items-center gap-8">
+              <div className="flex flex-col items-center gap-6 sm:flex-row sm:gap-8">
                 <CircularProgress percentage={overallPercentage} size={100} strokeWidth={8} />
-                <div className="flex-1">
+                <div className="w-full flex-1">
                   {/* Progress bar */}
                   <div className="mb-3 h-3 w-full overflow-hidden rounded-full bg-border/30">
                     <div
@@ -162,7 +162,7 @@ export function AccountDashboard({ user, purchasedCourses }: AccountDashboardPro
                       style={{ width: `${overallPercentage}%` }}
                     />
                   </div>
-                  <div className="grid grid-cols-3 gap-4 text-center">
+                  <div className="grid grid-cols-3 gap-2 text-center sm:gap-4">
                     <div>
                       <p className="text-2xl font-bold gradient-text-animated">
                         {coursesWithProgress.length}

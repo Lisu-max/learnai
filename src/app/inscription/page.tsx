@@ -171,7 +171,7 @@ export default function InscriptionPage() {
 
             <form onSubmit={handleSubmit} className="space-y-4">
               {/* First name & Last name */}
-              <div className="grid grid-cols-2 gap-3">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <div>
                   <label htmlFor="firstName" className="mb-1.5 block text-sm font-medium">
                     {t.auth.firstName}

@@ -222,7 +222,7 @@ export const translations = {
     },
     // Courses page
     coursesPage: {
-      badge: "6 formations disponibles",
+      badge: "5 formations disponibles",
       title: "Nos",
       titleHighlight: "Formations",
       subtitle:
@@ -594,7 +594,7 @@ export const translations = {
       freeCourse: "Free course",
     },
     coursesPage: {
-      badge: "6 courses available",
+      badge: "5 courses available",
       title: "Our",
       titleHighlight: "Courses",
       subtitle:
