@@ -22,7 +22,7 @@ export function usePurchase(courseSlug: string) {
           .select("id")
           .eq("user_id", user.id)
           .eq("course_slug", courseSlug)
-          .single();
+          .maybeSingle();
 
         if (!cancelled) {
           setHasPurchased(!!data);

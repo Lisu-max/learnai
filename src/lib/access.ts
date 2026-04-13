@@ -39,7 +39,7 @@ export async function hasAccessToCourse(courseSlug: string): Promise<{
     .select("id")
     .eq("user_id", user.id)
     .eq("course_slug", courseSlug)
-    .single();
+    .maybeSingle();
 
   if (purchase) return { hasAccess: true, userId: user.id, isPro: false };
 
