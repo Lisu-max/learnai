@@ -48,7 +48,7 @@ export async function POST(req: NextRequest) {
   const course = getCourseBySlug(courseSlug);
   if (!course) {
     return NextResponse.json(
-      { error: `Formation introuvable: ${courseSlug}` },
+      { error: "Formation introuvable." },
       { status: 404 }
     );
   }
@@ -71,9 +71,8 @@ export async function POST(req: NextRequest) {
   }
 
   try {
-    // Get or create Stripe customer (linked to Supabase user)
     const customerId = await getOrCreateStripeCustomer(user.id, user.email);
-    const baseUrl = (process.env.NEXT_PUBLIC_BASE_URL || process.env.NEXT_PUBLIC_APP_URL || "https://learnai-csa3.vercel.app").trim();
+    const baseUrl = (process.env.NEXT_PUBLIC_BASE_URL || process.env.NEXT_PUBLIC_APP_URL || "https://learnai-gules.vercel.app").trim();
 
     const session = await getStripe().checkout.sessions.create({
       customer: customerId,
@@ -91,7 +90,7 @@ export async function POST(req: NextRequest) {
     logRequest("/api/checkout", 200, user.id);
     return NextResponse.json({ url: session.url });
   } catch (e) {
-    logError("/api/checkout", e);
+    logError("/api/checkout", e, user.id);
     return NextResponse.json(
       { error: "Erreur lors de la création du paiement." },
       { status: 500 }

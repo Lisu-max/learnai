@@ -3,10 +3,12 @@ import { createClient as createServiceClient } from "@supabase/supabase-js";
 
 // Internal only — not exported to prevent accidental service role usage outside webhooks
 function getServiceSupabase() {
-  return createServiceClient(
-    process.env.NEXT_PUBLIC_SUPABASE_URL!,
-    process.env.SUPABASE_SERVICE_ROLE_KEY!
-  );
+  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+  const serviceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+  if (!supabaseUrl || !serviceRoleKey) {
+    throw new Error("NEXT_PUBLIC_SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY must be set");
+  }
+  return createServiceClient(supabaseUrl, serviceRoleKey);
 }
 
 export async function getOrCreateStripeCustomer(

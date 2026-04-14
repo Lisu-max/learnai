@@ -20,12 +20,21 @@ export async function POST() {
     const customerId = await getOrCreateStripeCustomer(user.id, user.email);
     const appUrl = (process.env.NEXT_PUBLIC_BASE_URL || process.env.NEXT_PUBLIC_APP_URL || "https://learnai-csa3.vercel.app").trim();
 
+    const priceId = process.env.STRIPE_PRICE_PRO_MONTHLY;
+    if (!priceId) {
+      console.error("STRIPE_PRICE_PRO_MONTHLY environment variable is not set");
+      return NextResponse.json(
+        { error: "Configuration de paiement manquante." },
+        { status: 500 }
+      );
+    }
+
     const session = await getStripe().checkout.sessions.create({
       customer: customerId,
       mode: "subscription",
       line_items: [
         {
-          price: process.env.STRIPE_PRICE_PRO_MONTHLY!,
+          price: priceId,
           quantity: 1,
         },
       ],

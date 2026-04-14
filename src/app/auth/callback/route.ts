@@ -1,12 +1,19 @@
 import { NextResponse } from "next/server";
 import { createClient } from "@/lib/supabase/server";
 
+function safeRedirectPath(next: string | null): string {
+  if (!next) return "/";
+  // Only allow relative paths — reject absolute URLs and protocol-relative paths (//)
+  if (next.startsWith("/") && !next.startsWith("//")) return next;
+  return "/";
+}
+
 export async function GET(request: Request) {
   const { searchParams, origin } = new URL(request.url);
   const code = searchParams.get("code");
   const token_hash = searchParams.get("token_hash");
   const type = searchParams.get("type");
-  const next = searchParams.get("next") ?? "/";
+  const next = safeRedirectPath(searchParams.get("next"));
 
   const supabase = await createClient();
 

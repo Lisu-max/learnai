@@ -4,6 +4,8 @@ import { createClient } from "@/lib/supabase/server";
 import { getCourseBySlug, FREE_SLUGS } from "@/lib/courses";
 import { AccountDashboard } from "@/components/account/account-dashboard";
 
+export const dynamic = "force-dynamic";
+
 export const metadata: Metadata = {
   title: "Mon compte",
 };

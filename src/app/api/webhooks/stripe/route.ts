@@ -9,7 +9,6 @@ function getSubscriptionPeriodEnd(subscription: Stripe.Subscription): string | n
   if (firstItem?.current_period_end) {
     return new Date(firstItem.current_period_end * 1000).toISOString();
   }
-  // Fallback to cancel_at if available
   if (subscription.cancel_at) {
     return new Date(subscription.cancel_at * 1000).toISOString();
   }
@@ -62,7 +61,6 @@ export async function POST(req: NextRequest) {
               },
               { onConflict: "user_id,course_slug" }
             );
-            // Link Stripe customer to profile
             if (session.customer) {
               await supabase
                 .from("profiles")
@@ -96,7 +94,19 @@ export async function POST(req: NextRequest) {
 
       case "customer.subscription.updated": {
         const subscription = event.data.object as Stripe.Subscription;
-        const userId = subscription.metadata?.userId || subscription.metadata?.supabase_user_id;
+        let userId = subscription.metadata?.userId || subscription.metadata?.supabase_user_id;
+
+        // Fallback: find user by stripe_customer_id if metadata is missing
+        if (!userId) {
+          const customerId = subscription.customer as string;
+          const { data: profile } = await supabase
+            .from("profiles")
+            .select("id")
+            .eq("stripe_customer_id", customerId)
+            .single();
+          userId = profile?.id;
+        }
+
         if (userId) {
           let status: string;
           switch (subscription.status) {
@@ -121,13 +131,27 @@ export async function POST(req: NextRequest) {
               subscription_end_date: getSubscriptionPeriodEnd(subscription),
             })
             .eq("id", userId);
+        } else {
+          console.error("customer.subscription.updated: could not resolve user for subscription", subscription.id);
         }
         break;
       }
 
       case "customer.subscription.deleted": {
         const subscription = event.data.object as Stripe.Subscription;
-        const userId = subscription.metadata?.userId || subscription.metadata?.supabase_user_id;
+        let userId = subscription.metadata?.userId || subscription.metadata?.supabase_user_id;
+
+        // Fallback: find user by stripe_customer_id if metadata is missing
+        if (!userId) {
+          const customerId = subscription.customer as string;
+          const { data: profile } = await supabase
+            .from("profiles")
+            .select("id")
+            .eq("stripe_customer_id", customerId)
+            .single();
+          userId = profile?.id;
+        }
+
         if (userId) {
           await supabase
             .from("profiles")
@@ -137,6 +161,8 @@ export async function POST(req: NextRequest) {
               subscription_end_date: null,
             })
             .eq("id", userId);
+        } else {
+          console.error("customer.subscription.deleted: could not resolve user for subscription", subscription.id);
         }
         break;
       }

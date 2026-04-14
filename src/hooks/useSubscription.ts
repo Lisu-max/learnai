@@ -2,20 +2,23 @@
 
 import { useState, useEffect } from "react";
 import { createClient } from "@/lib/supabase/client";
+import type { RealtimeChannel } from "@supabase/supabase-js";
+
+type SubscriptionStatus = "free" | "pro" | "past_due" | string;
 
 interface UseSubscriptionReturn {
   isPro: boolean;
-  status: string;
+  status: SubscriptionStatus;
   loading: boolean;
 }
 
 export function useSubscription(): UseSubscriptionReturn {
-  const [status, setStatus] = useState("free");
+  const [status, setStatus] = useState<SubscriptionStatus>("free");
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const supabase = createClient();
-    let channelRef: ReturnType<typeof supabase.channel> | null = null;
+    let channel: RealtimeChannel | null = null;
 
     async function fetchSubscription() {
       const {
@@ -38,7 +41,7 @@ export function useSubscription(): UseSubscriptionReturn {
       setLoading(false);
 
       // Subscribe to realtime changes
-      channelRef = supabase
+      channel = supabase
         .channel("subscription-status")
         .on(
           "postgres_changes",
@@ -61,9 +64,7 @@ export function useSubscription(): UseSubscriptionReturn {
     fetchSubscription();
 
     return () => {
-      if (channelRef) {
-        supabase.removeChannel(channelRef);
-      }
+      if (channel) supabase.removeChannel(channel);
     };
   }, []);
 
