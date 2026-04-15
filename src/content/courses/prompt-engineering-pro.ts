@@ -22,7 +22,7 @@ const content: CourseContent = {
           { label: "Instruction", sub: "La tâche précise à accomplir", color: "emerald" },
           { label: "Format", sub: "Longueur, structure de la réponse", color: "amber" },
         ]},
-        { type: "video", videoId: "qAGAa6f2beg", label: "Comment fonctionne ChatGPT ? Comprendre les LLM" },
+        { type: "video", videoId: "7ell8KEbhJo", label: "Comment fonctionne ChatGPT ? Comprendre les LLM" },
         { type: "summary", items: [
           "Le prompt engineering est l'art de formuler des instructions précises pour l'IA",
           "C'est l'une des compétences les plus recherchées et mieux rémunérées de 2026",

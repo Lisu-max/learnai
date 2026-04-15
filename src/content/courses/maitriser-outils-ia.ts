@@ -60,7 +60,7 @@ const content: CourseContent = {
           { label: "Thinking", sub: "Raisonnement étape par étape, problèmes complexes", color: "purple" },
           { label: "Pro", sub: "Capacité maximale, usage intensif", color: "emerald" },
         ]},
-        { type: "video", videoId: "qAGAa6f2beg", label: "Comment fonctionne ChatGPT ?" },
+        { type: "video", videoId: "7ell8KEbhJo", label: "Comment fonctionne ChatGPT ?" },
         { type: "summary", items: [
           "GPT-5.4 existe en 3 variantes : Standard, Thinking et Pro",
           "1,05 million de tokens de contexte — l'équivalent d'un roman entier",
