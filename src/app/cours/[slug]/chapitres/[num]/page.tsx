@@ -7,7 +7,19 @@ import { ChapterContent } from "@/components/chapter/chapter-content";
 import { ChapterNav } from "@/components/chapter/chapter-nav";
 import { InlineQuiz } from "@/components/quiz/inline-quiz";
 import { getServerTranslation, getServerLocale } from "@/lib/i18n/server";
-import { ArrowLeft, Clock, BookOpen } from "lucide-react";
+import { ArrowLeft, Clock, BookOpen, Video } from "lucide-react";
+import type { ChapterSection } from "@/content/types";
+
+function computeReadingTime(sections: ChapterSection[]): { textMin: number; videoCount: number } {
+  let wordCount = 0;
+  let videoCount = 0;
+  for (const s of sections) {
+    if (s.type === "video") { videoCount++; continue; }
+    const texts = [s.content, s.label, s.prompt, s.result, ...(s.items || [])].filter(Boolean);
+    wordCount += texts.join(" ").split(/\s+/).length;
+  }
+  return { textMin: Math.max(1, Math.round(wordCount / 200)), videoCount };
+}
 
 // Chapter content is static — revalidate every 24h
 export const revalidate = 86400;
@@ -44,6 +56,8 @@ export default async function ChapterPage({ params }: Props) {
   const chapter = getChapter(content, chapterNum);
   if (!chapter) notFound();
 
+  const { textMin, videoCount } = computeReadingTime(chapter.sections);
+
   return (
     <div className="bg-grid">
       <div className="mx-auto max-w-3xl px-4 py-12">
@@ -65,8 +79,14 @@ export default async function ChapterPage({ params }: Props) {
             <div className="flex items-center gap-3 text-sm text-muted-foreground">
               <span className="flex items-center gap-1">
                 <Clock className="h-3.5 w-3.5" />
-                {chapter.estimatedMinutes} min
+                {textMin} min lecture
               </span>
+              {videoCount > 0 && (
+                <span className="flex items-center gap-1">
+                  <Video className="h-3.5 w-3.5" />
+                  {videoCount} vidéo{videoCount > 1 ? "s" : ""}
+                </span>
+              )}
               <span className="flex items-center gap-1">
                 <BookOpen className="h-3.5 w-3.5" />
                 {t.chapters.chapterOf} {chapter.number}/{content.chapters.length}

@@ -53,12 +53,16 @@ export function TextToSpeech({ sections }: { sections: ChapterSection[] }) {
 
     const utterance = new SpeechSynthesisUtterance(chunksRef.current[indexRef.current]);
     utterance.lang = "fr-FR";
-    utterance.rate = 0.95;
+    utterance.rate = 0.9;
+    utterance.pitch = 1.05;
 
-    // Prefer a French voice if available
+    // Prefer high-quality French voices (neural/enhanced voices first)
     const voices = window.speechSynthesis.getVoices();
-    const frVoice = voices.find((v) => v.lang.startsWith("fr"));
-    if (frVoice) utterance.voice = frVoice;
+    const frVoices = voices.filter((v) => v.lang.startsWith("fr"));
+    const preferred = frVoices.find((v) =>
+      /thomas|amelie|marie|nicolas|enhanced|neural|premium|natural/i.test(v.name)
+    ) || frVoices.find((v) => v.localService) || frVoices[0];
+    if (preferred) utterance.voice = preferred;
 
     utterance.onend = () => {
       indexRef.current += 1;
