@@ -10,6 +10,7 @@ import { PromptExample } from "./section-renderers/prompt-example";
 import { KeyPoint } from "./section-renderers/key-point";
 import { Callout } from "./section-renderers/callout";
 import { CaseStudy } from "./section-renderers/case-study";
+import { DiagramBlock } from "./section-renderers/diagram-block";
 
 function renderSection(section: ChapterSection, index: number) {
   switch (section.type) {
@@ -37,6 +38,8 @@ function renderSection(section: ChapterSection, index: number) {
       return <Callout key={index} content={section.content || ""} />;
     case "case-study":
       return <CaseStudy key={index} label={section.label} content={section.content} />;
+    case "diagram":
+      return <DiagramBlock key={index} label={section.label} nodes={section.nodes || []} flow={section.flow} />;
     default:
       return null;
   }

@@ -6,6 +6,7 @@ import { Brain, Trophy, RotateCcw, ArrowRight, PartyPopper, CheckCircle2, XCircl
 import type { QuizQuestion } from "@/content/types";
 import { createClient } from "@/lib/supabase/client";
 import { useTranslation } from "@/lib/i18n/context";
+import { Confetti } from "@/components/ui/confetti";
 
 interface InlineQuizProps {
   questions: QuizQuestion[];
@@ -101,6 +102,8 @@ export function InlineQuiz({ questions, courseSlug, chapterNumber, totalChapters
   if (finished) {
     const pct = Math.round((score / questions.length) * 100);
     return (
+      <>
+        <Confetti active={passed} />
       <div className="my-12 rounded-2xl border border-purple-500/20 bg-gradient-to-b from-purple-500/5 to-transparent p-8 text-center">
         <div className={`mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-full ${passed ? "bg-emerald-500/10" : "bg-amber-500/10"}`}>
           {passed ? <PartyPopper className="h-10 w-10 text-emerald-400" /> : <Trophy className="h-10 w-10 text-amber-400" />}
@@ -135,6 +138,7 @@ export function InlineQuiz({ questions, courseSlug, chapterNumber, totalChapters
           )}
         </div>
       </div>
+      </>
     );
   }
 

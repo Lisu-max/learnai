@@ -7,6 +7,7 @@ import type { QuizQuestion } from "@/content/types";
 import { QuizQuestionCard } from "./quiz-question";
 import { createClient } from "@/lib/supabase/client";
 import { useTranslation } from "@/lib/i18n/context";
+import { Confetti } from "@/components/ui/confetti";
 
 interface QuizContainerProps {
   questions: QuizQuestion[];
@@ -101,6 +102,8 @@ export function QuizContainer({
     const percentage = Math.round((score / questions.length) * 100);
 
     return (
+      <>
+      <Confetti active={passed} />
       <div className="animate-fade-in mx-auto max-w-lg text-center">
         <div className={`mx-auto mb-6 flex h-24 w-24 items-center justify-center rounded-full ${
           passed ? "bg-emerald-500/10" : "bg-amber-500/10"
@@ -159,6 +162,7 @@ export function QuizContainer({
 
         {saving && <p className="mt-4 text-xs text-muted-foreground">{t.quiz.saving}</p>}
       </div>
+      </>
     );
   }
 

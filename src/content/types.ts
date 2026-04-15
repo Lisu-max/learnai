@@ -1,3 +1,9 @@
+export interface DiagramNode {
+  label: string;
+  sub?: string;
+  color?: "purple" | "blue" | "emerald" | "amber" | "pink";
+}
+
 export interface ChapterSection {
   type:
     | "paragraph"
@@ -9,13 +15,16 @@ export interface ChapterSection {
     | "callout"
     | "prompt-example"
     | "case-study"
-    | "key-point";
+    | "key-point"
+    | "diagram";
   content?: string;
   items?: string[];
   label?: string;
   videoId?: string;
   prompt?: string;
   result?: string;
+  nodes?: DiagramNode[];
+  flow?: "horizontal" | "vertical" | "cycle";
 }
 
 export interface QuizQuestion {

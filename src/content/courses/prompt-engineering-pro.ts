@@ -16,6 +16,13 @@ const content: CourseContent = {
         { type: "paragraph", content: "La majorité des utilisateurs d'IA posent des questions vagues et imprécises, puis se plaignent que l'IA ne comprend pas. En réalité, l'IA produit toujours une réponse cohérente avec l'instruction reçue. Si l'instruction est vague, la réponse sera vague. Si l'instruction est précise et structurée, la réponse sera précise et utile." },
         { type: "callout", content: "Exemple concret : 'Écris un email' donne un résultat médiocre. 'Écris un email professionnel de relance client pour une facture impayée de 3 000 euros, ton ferme mais courtois, 150 mots maximum, avec objet accrocheur' donne un résultat directement utilisable." },
         { type: "key-point", content: "Un bon prompt = contexte + rôle + instruction précise + format de sortie souhaité. Ces 4 éléments suffisent pour transformer radicalement la qualité de vos interactions avec l'IA." },
+        { type: "diagram", label: "Les 4 Éléments d'un Bon Prompt", flow: "horizontal", nodes: [
+          { label: "Contexte", sub: "La situation et l'environnement", color: "blue" },
+          { label: "Rôle", sub: "Qui l'IA doit incarner", color: "purple" },
+          { label: "Instruction", sub: "La tâche précise à accomplir", color: "emerald" },
+          { label: "Format", sub: "Longueur, structure de la réponse", color: "amber" },
+        ]},
+        { type: "video", videoId: "qAGAa6f2beg", label: "Comment fonctionne ChatGPT ? Comprendre les LLM" },
         { type: "summary", items: [
           "Le prompt engineering est l'art de formuler des instructions précises pour l'IA",
           "C'est l'une des compétences les plus recherchées et mieux rémunérées de 2026",
@@ -46,6 +53,15 @@ const content: CourseContent = {
         { type: "subheading", content: "Impact des tokens sur le coût" },
         { type: "paragraph", content: "Quand vous utilisez une API IA, vous payez par token : tokens d'entrée (votre prompt) et tokens de sortie (la réponse du modèle). Les tokens de sortie coûtent généralement 3 à 5 fois plus cher que les tokens d'entrée. Un prompt efficace obtient la même qualité avec moins de tokens de sortie." },
         { type: "tip", content: "Pour compter vos tokens avant d'envoyer un prompt : utilisez le Tokenizer gratuit d'OpenAI sur platform.openai.com/tokenizer, ou Claude.ai affiche le nombre de tokens utilisés dans la conversation." },
+        { type: "diagram", label: "Fenêtre de Contexte : Évolution des LLM", flow: "horizontal", nodes: [
+          { label: "GPT-3 (2020)", sub: "4 096 tokens", color: "blue" },
+          { label: "GPT-4 (2023)", sub: "128 000 tokens", color: "purple" },
+          { label: "GPT-5.4 / Claude 4.6 (2026)", sub: "1 million de tokens", color: "emerald" },
+        ]},
+        { type: "diagram", label: "Coût des Tokens via API", flow: "horizontal", nodes: [
+          { label: "Tokens d'entrée", sub: "Votre prompt (lecture)", color: "blue" },
+          { label: "Tokens de sortie", sub: "La réponse (3-5x plus cher)", color: "pink" },
+        ]},
         { type: "summary", items: [
           "Les LLM découpent le texte en tokens, pas en mots",
           "En français : 1 token ≈ 0,65 mot (légèrement moins efficace qu'en anglais)",
@@ -78,6 +94,12 @@ const content: CourseContent = {
         { type: "subheading", content: "One-Shot — Le juste milieu" },
         { type: "paragraph", content: "Le one-shot prompting utilise un seul exemple. C'est un bon compromis quand vous voulez montrer le format de sortie sans alourdir le prompt. Utile pour les templates de documents, les emails avec une structure particulière, ou les réponses dans un style spécifique." },
         { type: "tip", content: "Règle pratique : commencez toujours par le zero-shot. Si le résultat ne correspond pas au format ou style souhaité, passez au one-shot (1 exemple). Si toujours insuffisant, utilisez le few-shot (2-5 exemples)." },
+        { type: "diagram", label: "Zero-Shot vs Few-Shot : Quand les Utiliser ?", flow: "horizontal", nodes: [
+          { label: "Zero-Shot", sub: "Instruction directe — tâches simples connues", color: "blue" },
+          { label: "One-Shot", sub: "1 exemple — templates et formats précis", color: "purple" },
+          { label: "Few-Shot", sub: "2-5 exemples — classification personnalisée", color: "emerald" },
+        ]},
+        { type: "video", videoId: "wjZofJX0v4M", label: "Comprendre les modèles de langage — 3Blue1Brown" },
         { type: "summary", items: [
           "Zero-shot : instruction directe sans exemple — pour les tâches simples et bien définies",
           "Few-shot : 2 à 5 exemples avant la demande — pour les formats et styles spécifiques",
@@ -110,6 +132,12 @@ const content: CourseContent = {
         { type: "subheading", content: "Auto-CoT — Générer ses propres étapes" },
         { type: "paragraph", content: "L'Auto-CoT consiste à demander à l'IA de générer d'abord les étapes de réflexion nécessaires, puis de les suivre. Exemple : 'Quelles sont les étapes pour résoudre ce problème ? Maintenant résous-le en suivant ces étapes.' Cette approche est particulièrement efficace pour les problèmes de planification." },
         { type: "key-point", content: "Le CoT n'est pas magique sur tous les problèmes. Il est très efficace pour la logique, les mathématiques, la planification et l'analyse. Pour les tâches créatives simples (écrire un poème, résumer un texte), le CoT est moins nécessaire." },
+        { type: "diagram", label: "Chain-of-Thought : Types et Efficacité", flow: "horizontal", nodes: [
+          { label: "Zero-Shot CoT", sub: "'Réfléchis étape par étape' — simple et efficace", color: "blue" },
+          { label: "Few-Shot CoT", sub: "Exemples de raisonnement fournis", color: "purple" },
+          { label: "Auto-CoT", sub: "L'IA génère ses propres étapes", color: "emerald" },
+        ]},
+        { type: "video", videoId: "aircAruvnKk", label: "Comment les réseaux de neurones raisonnent (3Blue1Brown)" },
         { type: "summary", items: [
           "Le CoT pousse l'IA à raisonner étape par étape avant de répondre",
           "S'active avec : 'Réfléchis étape par étape' ou 'Pense à voix haute'",
@@ -140,6 +168,15 @@ const content: CourseContent = {
         { type: "subheading", content: "Exemple concret : choisir une stratégie marketing" },
         { type: "paragraph", content: "Sans ToT : 'Quelle stratégie marketing pour mon application ?' → Réponse générique. Avec ToT : 'Imagine 3 stratèges marketing expérimentés. Chacun propose et défend une stratégie différente (growth hacking, content marketing, partenariats B2B), évalue les risques et le ROI de chaque approche, puis sélectionne la meilleure en justifiant le choix.' → Analyse structurée et décision éclairée." },
         { type: "callout", content: "Le ToT est plus lent et coûte plus en tokens que le CoT classique. Réservez-le aux décisions importantes qui méritent une analyse approfondie. Pour les tâches quotidiennes, le CoT standard reste plus efficace." },
+        { type: "diagram", label: "Tree of Thoughts vs Chain-of-Thought", flow: "horizontal", nodes: [
+          { label: "CoT (Linéaire)", sub: "Un seul chemin de raisonnement", color: "blue" },
+          { label: "ToT (Arbre)", sub: "Plusieurs branches explorées en parallèle", color: "purple" },
+        ]},
+        { type: "diagram", label: "Quand Utiliser le Tree of Thoughts ?", flow: "vertical", nodes: [
+          { label: "Plusieurs approches valides", sub: "Pas de solution évidente", color: "purple" },
+          { label: "Décisions stratégiques", sub: "Business, planification complexe", color: "blue" },
+          { label: "Contraintes multiples", sub: "Budget, temps, ressources à équilibrer", color: "emerald" },
+        ]},
         { type: "summary", items: [
           "Le ToT explore plusieurs chemins de réflexion en parallèle avant de choisir",
           "Idéal pour les problèmes complexes où plusieurs approches valides existent",
@@ -174,6 +211,13 @@ const content: CourseContent = {
         { type: "subheading", content: "P — Parameters et E — Expected Output" },
         { type: "paragraph", content: "Parameters fixent les contraintes : longueur (200 mots maximum), ton (professionnel mais accessible), format (liste à puces ou tableau), langue (français uniquement). Expected Output décrit le livrable final : 'Un plan d'action en 5 points, avec pour chaque point : l'action, l'outil nécessaire, la durée estimée et le KPI de succès.'" },
         { type: "key-point", content: "Vous n'avez pas à utiliser tous les éléments CRISPE pour chaque prompt. Adaptez selon la complexité de la tâche. Un email simple ne nécessite pas 6 composantes, mais une analyse stratégique en bénéficiera pleinement." },
+        { type: "diagram", label: "Le Framework CRISPE", flow: "vertical", nodes: [
+          { label: "C — Context", sub: "Votre situation spécifique", color: "blue" },
+          { label: "R — Role", sub: "Qui l'IA incarne", color: "purple" },
+          { label: "I — Instructions", sub: "La tâche précise avec verbes d'action", color: "emerald" },
+          { label: "S — Steps", sub: "Décomposition en étapes séquentielles", color: "amber" },
+          { label: "P+E — Params & Output", sub: "Contraintes et format de sortie attendu", color: "pink" },
+        ]},
         { type: "summary", items: [
           "CRISPE = Context, Role, Instructions, Steps, Parameters, Expected Output",
           "Le contexte situe l'IA dans votre situation spécifique",
@@ -204,6 +248,11 @@ const content: CourseContent = {
         { type: "subheading", content: "Combiner personas et contexte" },
         { type: "paragraph", content: "La technique la plus puissante : combiner un persona précis avec un contexte détaillé. 'Tu es un directeur marketing avec 15 ans d'expérience dans le e-commerce B2C, spécialisé dans la fidélisation client. Tu travailles avec des PME de 5 à 50 salariés avec des budgets marketing limités (moins de 50 000€/an).' Ce niveau de précision produit des conseils directement applicables." },
         { type: "tip", content: "Ajoutez des limites à votre persona pour éviter les dérives. Exemple : 'Reste toujours dans le domaine de la finance. Si je demande quelque chose hors de ton domaine, indique-le clairement et redirige vers ton expertise.' Cela améliore la fiabilité des réponses." },
+        { type: "diagram", label: "Types de Personas pour le Prompting", flow: "horizontal", nodes: [
+          { label: "Persona d'Expert", sub: "Médecin, avocat, data scientist…", color: "purple" },
+          { label: "Persona de Style", sub: "Socrate, coach brutal, mentor…", color: "blue" },
+          { label: "Persona Combiné", sub: "Expert + contexte + limites = optimal", color: "emerald" },
+        ]},
         { type: "summary", items: [
           "Assigner un persona active des connaissances et des styles de réponse spécifiques",
           "Les personas d'expert donnent accès à des connaissances spécialisées simulées",
@@ -236,6 +285,17 @@ const content: CourseContent = {
         { type: "subheading", content: "System prompts dans les Custom GPTs et Claude Projects" },
         { type: "paragraph", content: "Les Custom GPTs d'OpenAI et les Projects de Claude utilisent les system prompts pour créer des assistants permanents. Vous définissez une fois le comportement, le ton, les contraintes et le contexte — et l'assistant garde ces paramètres pour toutes les conversations futures, sans avoir à les répéter." },
         { type: "key-point", content: "Les system prompts sont la clé pour créer des produits IA cohérents. Toute application IA professionnelle (chatbot client, assistant interne, outil de génération de contenu) utilise un system prompt soigneusement rédigé." },
+        { type: "diagram", label: "Structure d'un System Prompt Efficace", flow: "vertical", nodes: [
+          { label: "Identité", sub: "Qui est l'assistant, son expertise", color: "purple" },
+          { label: "Objectifs", sub: "Ce qu'il doit accomplir", color: "blue" },
+          { label: "Style & Contraintes", sub: "Ton, format, ce qu'il ne doit pas faire", color: "emerald" },
+          { label: "Contexte Permanent", sub: "Données sur l'entreprise, les produits", color: "amber" },
+        ]},
+        { type: "diagram", label: "La Température : Contrôle de la Créativité", flow: "horizontal", nodes: [
+          { label: "Temp. 0", sub: "Déterministe — code, classification", color: "blue" },
+          { label: "Temp. 0.7", sub: "Équilibré — rédaction générale", color: "purple" },
+          { label: "Temp. 1.5+", sub: "Très créatif — poésie, brainstorming", color: "pink" },
+        ]},
         { type: "summary", items: [
           "Le system prompt définit le comportement global et persistant de l'IA",
           "Il contient : identité, objectifs, style, contraintes et contexte permanent",
@@ -268,6 +328,11 @@ const content: CourseContent = {
         { type: "subheading", content: "Automatiser la génération de prompts" },
         { type: "paragraph", content: "Pour des applications qui génèrent de nombreux prompts similaires (génération de descriptions produits, d'emails personnalisés, de rapports), créez un 'prompt de prompt' qui génère automatiquement le prompt adapté à chaque situation en remplissant des variables. C'est la base des systèmes RAG (Retrieval-Augmented Generation)." },
         { type: "tip", content: "Conservez vos meilleurs meta-prompts dans une bibliothèque dédiée. Un bon meta-prompt qui améliore vos prompts de rédaction, par exemple, peut être réutilisé des centaines de fois et économiser des heures de travail." },
+        { type: "diagram", label: "3 Techniques de Meta-Prompting", flow: "vertical", nodes: [
+          { label: "Améliorer un prompt existant", sub: "Demander l'analyse et la version améliorée", color: "blue" },
+          { label: "Générer depuis une description", sub: "Décrire le résultat → obtenir le prompt", color: "purple" },
+          { label: "Prompt Critic", sub: "Évaluer un prompt sur des critères précis", color: "emerald" },
+        ]},
         { type: "summary", items: [
           "Le meta-prompting utilise l'IA pour créer et améliorer d'autres prompts",
           "Technique 1 : demander à l'IA d'améliorer votre prompt existant",
@@ -300,6 +365,17 @@ const content: CourseContent = {
         { type: "subheading", content: "Chaînes conditionnelles" },
         { type: "paragraph", content: "Les chaînes conditionnelles choisissent le prochain prompt selon la sortie du précédent. Exemple : Prompt d'analyse de sentiment → Si positif, prompt de remerciement. Si négatif, prompt de gestion de crise. Si neutre, prompt de demande de clarification. Elles sont au cœur de la plupart des agents IA." },
         { type: "key-point", content: "Le prompt chaining est la base de tous les systèmes IA complexes : agents, workflows automatisés, génération de contenu à grande échelle, analyse de documents longs. Maîtriser cette technique vous permet de créer des produits IA véritablement puissants." },
+        { type: "diagram", label: "Prompt Chaining : Exemple Article de Blog", flow: "horizontal", nodes: [
+          { label: "Prompt 1", sub: "Générer 10 angles originaux", color: "blue" },
+          { label: "Prompt 2", sub: "Plan détaillé en 5 sections", color: "purple" },
+          { label: "Prompt 3", sub: "Rédiger chaque section", color: "emerald" },
+          { label: "Prompt 4", sub: "Relire et améliorer la cohérence", color: "amber" },
+        ]},
+        { type: "diagram", label: "Chaîne Conditionnelle (Base des Agents IA)", flow: "cycle", nodes: [
+          { label: "Analyse", sub: "Évaluer la sortie du prompt précédent", color: "blue" },
+          { label: "Décision", sub: "Positif / Négatif / Neutre", color: "purple" },
+          { label: "Action", sub: "Prompt adapté au résultat", color: "emerald" },
+        ]},
         { type: "summary", items: [
           "Le chaining décompose une tâche complexe en séquence de prompts simples",
           "Chaque sortie devient l'entrée du prompt suivant",
@@ -332,6 +408,13 @@ const content: CourseContent = {
         { type: "subheading", content: "Prompts pour les tests et la documentation" },
         { type: "paragraph", content: "Tests : 'Écris des tests unitaires exhaustifs pour cette fonction en [FRAMEWORK TEST]. Couvre : les cas normaux, les cas limites, les cas d'erreur et les entrées invalides.' Documentation : 'Génère une documentation complète en [FORMAT : JSDoc/Docstring/etc.] pour ce code. Inclus : description, paramètres, valeur de retour, exemples d'utilisation et cas d'erreur.'" },
         { type: "tip", content: "Pour les gros projets, donnez toujours à l'IA le contexte architectural. Expliquez : l'architecture globale, le framework utilisé, les conventions de nommage, et les dépendances existantes. Plus le contexte est riche, plus le code généré sera cohérent avec votre base de code existante." },
+        { type: "diagram", label: "Templates de Prompts Code par Cas d'Usage", flow: "vertical", nodes: [
+          { label: "Génération", sub: "Langage + fonction + contraintes + format", color: "blue" },
+          { label: "Débogage", sub: "Message d'erreur + code + cause + correction", color: "pink" },
+          { label: "Refactorisation", sub: "Objectifs + contrainte de comportement", color: "purple" },
+          { label: "Tests", sub: "Cas normaux + limites + erreurs + invalides", color: "emerald" },
+        ]},
+        { type: "video", videoId: "kCc8FmEb1nY", label: "Construire un GPT from scratch — Karpathy" },
         { type: "summary", items: [
           "Spécifiez toujours le langage, les contraintes et le format de sortie souhaité",
           "Pour déboguer : incluez le message d'erreur exact et le code problématique",
@@ -364,6 +447,11 @@ const content: CourseContent = {
         { type: "subheading", content: "Prompts pour le SEO" },
         { type: "paragraph", content: "Pour un article SEO optimisé : 'Rédige un article de 1500 mots sur [SUJET] optimisé pour le mot-clé [MOT-CLÉ]. Structure : H1 contenant le mot-clé, introduction avec le mot-clé dans les 100 premiers mots, 4 sous-sections H2, conclusion avec CTA. Inclus le mot-clé [X] fois naturellement. Ton : [STYLE]. Audience : [LECTEUR CIBLE].'" },
         { type: "key-point", content: "L'IA excelle à générer un premier jet, pas un texte parfait. Utilisez-la pour 80% du travail de rédaction, puis affinez avec votre jugement humain. La vraie valeur est dans la vitesse : un article qui prenait 4 heures s'écrit maintenant en 45 minutes." },
+        { type: "diagram", label: "Prompts Écriture selon le Type de Contenu", flow: "horizontal", nodes: [
+          { label: "Romans / Nouvelles", sub: "Genre + conflit + ton + POV + longueur", color: "purple" },
+          { label: "Copywriting", sub: "Persona + promesse + contraintes format", color: "blue" },
+          { label: "SEO", sub: "Mot-clé + H1/H2 + fréquence + longueur", color: "emerald" },
+        ]},
         { type: "summary", items: [
           "Fournir des exemples de votre propre écriture permet à l'IA d'adopter votre style",
           "Pour les romans : précisez genre, conflit, ton, POV, style de référence et longueur",
@@ -396,6 +484,12 @@ const content: CourseContent = {
         { type: "subheading", content: "Reproduire un style artistique précis" },
         { type: "paragraph", content: "Pour reproduire le style d'un artiste : 'in the style of [ARTISTE]' fonctionne pour les artistes décédés (Van Gogh, Monet, Rembrandt). Pour les artistes vivants, c'est éthiquement discutable et certains générateurs le refusent. Alternative : décrire les caractéristiques du style plutôt que de nommer l'artiste." },
         { type: "tip", content: "Commencez par un prompt simple et enrichissez-le progressivement. Générez 4 variations, identifiez ce qui fonctionne, ajoutez ou modifiez des éléments, régénérez. Le prompting image est un processus itératif — rarement parfait au premier essai." },
+        { type: "diagram", label: "Structure d'un Prompt Image Efficace", flow: "horizontal", nodes: [
+          { label: "Sujet + Action", sub: "Qui fait quoi dans l'image", color: "purple" },
+          { label: "Cadrage + Éclairage", sub: "Composition et ambiance lumineuse", color: "blue" },
+          { label: "Style + Qualité", sub: "Artistique, photographique, 8K…", color: "emerald" },
+          { label: "Prompts négatifs", sub: "Ce qu'il ne faut pas générer", color: "pink" },
+        ]},
         { type: "summary", items: [
           "Structure image : Sujet + Action + Cadrage + Éclairage + Style + Qualité + Atmosphère",
           "Les modificateurs de style sont compris universellement par tous les générateurs",
@@ -428,6 +522,10 @@ const content: CourseContent = {
         { type: "subheading", content: "Contrôler la structure musicale" },
         { type: "paragraph", content: "Dans Suno (mode Custom), vous pouvez structurer la chanson avec des balises : [Verse 1], [Chorus], [Verse 2], [Bridge], [Outro]. Vous écrivez les paroles pour chaque section. Dans Udio, des contrôles similaires permettent de définir l'intro, les couplets et le refrain séparément pour une structure narrative précise." },
         { type: "tip", content: "Pour la vidéo : décrivez toujours le mouvement explicitement. 'A bird flies' est moins efficace que 'A bird takes off in slow motion, wings spreading frame by frame, camera tracking upward as the bird ascends into a cloudy sky'. Le détail du mouvement est ce qui distingue un prompt vidéo médiocre d'un excellent." },
+        { type: "diagram", label: "Prompts Vidéo vs Prompts Musicaux", flow: "horizontal", nodes: [
+          { label: "Vidéo (Sora/Runway)", sub: "Plan + Sujet + Mouvement caméra + Style ciné", color: "blue" },
+          { label: "Musique (Suno/Udio)", sub: "Genre + BPM + Instruments + Voix + Thème", color: "purple" },
+        ]},
         { type: "summary", items: [
           "Prompts vidéo : Plan + Sujet + Action + Environnement + Mouvement caméra + Style",
           "Termes cinématographiques (close-up, tracking shot, slow motion) guident la composition",
@@ -460,6 +558,12 @@ const content: CourseContent = {
         { type: "subheading", content: "Technique 4 : Utiliser Perplexity pour les faits récents" },
         { type: "paragraph", content: "Pour les informations récentes (dates, chiffres, événements), n'utilisez pas ChatGPT ou Claude seuls — leur connaissance a une date de coupure. Utilisez Perplexity qui accède au web en temps réel. Pour les informations factuelles critiques, vérifiez toujours auprès d'une source primaire." },
         { type: "key-point", content: "Règle d'or anti-hallucination : plus une information est précise (une statistique, une date, un nom, un prix), plus vous devez la vérifier. Les LLM sont excellents pour analyser, synthétiser et raisonner, mais peu fiables pour citer des chiffres précis sans source." },
+        { type: "diagram", label: "4 Techniques Anti-Hallucination", flow: "vertical", nodes: [
+          { label: "Demander les sources", sub: "Citer + indiquer le niveau de certitude", color: "blue" },
+          { label: "Grounding factuel", sub: "Fournir les faits, demander l'analyse", color: "purple" },
+          { label: "Self-checking", sub: "L'IA vérifie elle-même ses affirmations", color: "emerald" },
+          { label: "Perplexity pour les faits récents", sub: "Accès web en temps réel + sources", color: "amber" },
+        ]},
         { type: "summary", items: [
           "Demander les sources et le niveau de certitude réduit les hallucinations confidentes",
           "Le grounding : fournir les faits et demander l'analyse plutôt que la génération",
@@ -492,6 +596,13 @@ const content: CourseContent = {
         { type: "subheading", content: "Gestion des erreurs et escalade" },
         { type: "paragraph", content: "Un bon prompt d'agent inclut des règles d'escalade : 'Si tu rencontres une erreur, essaie 2 fois avec une approche différente avant de signaler l'échec. Si une décision implique des données critiques (suppression, paiement), demande toujours confirmation avant d'agir. Ne jamais dépasser le budget de [X] requêtes API.'" },
         { type: "tip", content: "Pour les agents en production, ajoutez toujours une instruction de sécurité explicite : 'En cas de doute sur l'impact d'une action, choisis toujours l'option la plus conservatrice et signale le doute plutôt que d'agir.' Les agents autonomes peuvent causer des dégâts irréversibles si mal configurés." },
+        { type: "diagram", label: "Structure d'un Prompt d'Agent IA", flow: "vertical", nodes: [
+          { label: "Objectif Global", sub: "Ce que l'agent doit accomplir", color: "purple" },
+          { label: "Outils Disponibles", sub: "Recherche web, code, fichiers…", color: "blue" },
+          { label: "Format ReAct", sub: "Thought → Action → Observation", color: "emerald" },
+          { label: "Règles d'Escalade", sub: "Quand s'arrêter, quand confirmer", color: "amber" },
+          { label: "Instruction Sécurité", sub: "Option conservatrice en cas de doute", color: "pink" },
+        ]},
         { type: "summary", items: [
           "Les prompts d'agent définissent des objectifs globaux et des règles de comportement",
           "Le paradigme ReAct (Thought → Action → Observation) structure les décisions",
@@ -524,6 +635,12 @@ const content: CourseContent = {
         { type: "subheading", content: "Les prompts clés qui ont tout changé" },
         { type: "paragraph", content: "Le prompt le plus impactant de ContentPro : 'Tu es un expert en content marketing B2B avec 15 ans d'expérience. Rédige un article de blog de 1 200 mots sur [SUJET] pour [CLIENT] dont l'audience est [CIBLE]. Ton : [STYLE]. SEO : optimisé pour [MOT-CLÉ]. Structure : H1 accrocheur, 4 H2 avec exemples concrets, conclusion avec CTA. Données : utilise uniquement les données suivantes : [DONNÉES CLIENT]. Format : texte prêt à publier sans commentaires ni explications.'" },
         { type: "key-point", content: "La leçon principale : le temps investi dans la création de prompts templates de qualité est rentabilisé en quelques semaines. ContentPro a passé 40 heures sur 3 semaines à créer ses 47 templates — investissement récupéré en moins de 2 mois." },
+        { type: "diagram", label: "Résultats ContentPro après 6 Mois", flow: "vertical", nodes: [
+          { label: "Articles de blog", sub: "4-6h → 45 minutes (-85%)", color: "emerald" },
+          { label: "Emails marketing", sub: "3h → 25 minutes (-86%)", color: "blue" },
+          { label: "Publications sociales", sub: "2 jours → 3 heures (-90%)", color: "purple" },
+          { label: "ROI global", sub: "+150% de CA en 6 mois", color: "amber" },
+        ]},
         { type: "summary", items: [
           "ContentPro a réduit le temps de production de contenu de 80 à 90% en 6 mois",
           "47 prompts templates créés sur 3 semaines — investissement récupéré en 2 mois",
@@ -555,6 +672,12 @@ const content: CourseContent = {
         { type: "paragraph", content: "Vitesse de développement de nouvelles features : x7 plus rapide. Débogage : x10 plus rapide (Cursor Agent identifie et corrige les bugs en autonomie). Tests unitaires : passé de 23% à 87% de couverture (-75% de temps pour écrire les tests). Temps de code review : -60% (le code généré est plus cohérent et respecte les conventions). La mise à jour majeure a été livrée en 2,5 mois au lieu de 3." },
         { type: "subheading", content: "La leçon sur les limites" },
         { type: "paragraph", content: "DevFlow a aussi appris à l'expérience que le code généré par l'IA nécessite toujours une revue humaine. Deux bugs subtils ont failli passer en production : l'un sur la gestion des transactions de base de données, l'autre sur les conditions de course dans un environnement multi-thread. L'IA avait généré du code qui semblait correct mais était incorrect dans des cas limites spécifiques." },
+        { type: "diagram", label: "Résultats DevFlow après 3 Mois", flow: "horizontal", nodes: [
+          { label: "Vitesse features", sub: "x7 plus rapide", color: "emerald" },
+          { label: "Débogage", sub: "x10 plus rapide", color: "blue" },
+          { label: "Couverture tests", sub: "23% → 87%", color: "purple" },
+          { label: "Livraison", sub: "2,5 mois au lieu de 3", color: "amber" },
+        ]},
         { type: "summary", items: [
           "DevFlow a multiplié sa vitesse de développement par 7 à 10 selon les tâches",
           "Le fichier .cursorrules impose les conventions de l'équipe à l'IA automatiquement",
@@ -586,6 +709,16 @@ const content: CourseContent = {
         { type: "paragraph", content: "Tickets traités automatiquement : 70% (1 750/semaine). Délai de réponse moyen : 4 heures → 8 minutes (-97%). Satisfaction client (CSAT) : 3,8/5 → 4,4/5 (+16%). Tickets escaladés aux humains : 750/semaine (contre 2 500 avant). Coût par ticket résolu : -58%. L'équipe humaine se concentre désormais sur les 30% de cas complexes à haute valeur." },
         { type: "subheading", content: "Les prompts de réponse automatique" },
         { type: "paragraph", content: "Chaque catégorie a son prompt de réponse spécialisé. Exemple pour un retour : 'Tu es Alex, l'assistant ShopFast. Rédige une réponse chaleureuse et professionnelle pour ce client qui demande un retour : [TICKET]. Données client : [NOM, COMMANDE, HISTORIQUE]. La réponse doit : 1. Empathiser avec la situation. 2. Confirmer le remboursement sous 5 jours. 3. Fournir le label de retour (voir lien). 4. Proposer un bon de 10% pour le prochain achat. Maximum 120 mots.'" },
+        { type: "diagram", label: "Architecture du Support IA ShopFast", flow: "vertical", nodes: [
+          { label: "Niveau 1 — Classification", sub: "Type, urgence, sentiment en JSON", color: "blue" },
+          { label: "Niveau 2 — Réponse auto", sub: "15 types de questions fréquentes", color: "purple" },
+          { label: "Niveau 3 — Escalade humaine", sub: "Cas complexes et clients insatisfaits", color: "emerald" },
+        ]},
+        { type: "diagram", label: "Résultats ShopFast après 4 Mois", flow: "horizontal", nodes: [
+          { label: "Tickets automatisés", sub: "70% des 2 500/semaine", color: "emerald" },
+          { label: "Délai de réponse", sub: "4h → 8 minutes (-97%)", color: "blue" },
+          { label: "Satisfaction (CSAT)", sub: "3,8 → 4,4/5 (+16%)", color: "amber" },
+        ]},
         { type: "summary", items: [
           "ShopFast a automatisé 70% de ses 2 500 tickets de support par semaine",
           "Le délai de réponse est passé de 4 heures à 8 minutes (-97%)",
@@ -618,6 +751,17 @@ const content: CourseContent = {
         { type: "subheading", content: "Partage et collaboration" },
         { type: "paragraph", content: "Pour les équipes, partagez votre bibliothèque via Notion, Confluence ou un repo Git. Établissez un processus de contribution : chaque nouveau prompt est testé sur 10 cas réels avant d'être ajouté à la bibliothèque. Organisez des sessions mensuelles de 'prompt review' pour améliorer les prompts existants." },
         { type: "tip", content: "Commencez petit : créez 5 prompts parfaitement documentés plutôt que 50 prompts approximatifs. La qualité de votre bibliothèque est plus importante que sa taille. Chaque prompt doit avoir été testé et validé sur des cas réels avant d'être archivé." },
+        { type: "diagram", label: "Structure d'une Bibliothèque de Prompts", flow: "vertical", nodes: [
+          { label: "/rédaction", sub: "Articles, emails, copywriting, social", color: "blue" },
+          { label: "/analyse", sub: "Données, documents, sentiment", color: "purple" },
+          { label: "/code", sub: "Génération, débogage, tests", color: "emerald" },
+          { label: "/agents", sub: "Classification, routage, planification", color: "amber" },
+        ]},
+        { type: "diagram", label: "Cycle de Vie d'un Prompt Template", flow: "cycle", nodes: [
+          { label: "Créer", sub: "Rédiger avec documentation complète", color: "blue" },
+          { label: "Tester", sub: "Valider sur 10 cas réels minimum", color: "purple" },
+          { label: "Améliorer", sub: "Versionner et itérer (v1.0 → v2.0)", color: "emerald" },
+        ]},
         { type: "summary", items: [
           "Une bibliothèque de prompts est un actif stratégique partageable et versionnable",
           "Organisez par catégorie : rédaction, analyse, code, images, agents",

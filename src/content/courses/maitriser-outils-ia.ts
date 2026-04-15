@@ -17,6 +17,14 @@ const content: CourseContent = {
         { type: "paragraph", content: "Trois critères principaux : votre cas d'usage (texte, image, code ?), votre budget (gratuit, abonnement, paiement à l'usage), et votre niveau technique. Commencez toujours par les versions gratuites avant de passer aux offres payantes." },
         { type: "tip", content: "La règle des 3 outils : choisissez un outil généraliste (ChatGPT ou Claude), un outil spécialisé pour votre métier, et un outil d'automatisation. C'est suffisant pour transformer votre productivité." },
         { type: "key-point", content: "En 2026, les meilleurs outils IA sont accessibles sans connaissances techniques. L'interface en langage naturel a démocratisé l'accès à des capacités autrefois réservées aux ingénieurs." },
+        { type: "diagram", label: "Les 7 Catégories d'Outils IA en 2026", flow: "horizontal", nodes: [
+          { label: "Chatbots", sub: "ChatGPT, Claude, Gemini", color: "purple" },
+          { label: "Images", sub: "Midjourney, DALL-E, Firefly", color: "blue" },
+          { label: "Vidéo", sub: "Sora 2, Runway, Kling", color: "emerald" },
+          { label: "Audio", sub: "ElevenLabs, Suno, Udio", color: "amber" },
+          { label: "Code", sub: "Cursor, Copilot, Claude Code", color: "pink" },
+        ]},
+        { type: "video", videoId: "ad79nYk2keg", label: "L'Intelligence Artificielle expliquée en 5 minutes" },
         { type: "summary", items: [
           "L'écosystème IA se divise en 7 catégories principales",
           "Une dizaine d'outils dominent chaque catégorie",
@@ -47,6 +55,12 @@ const content: CourseContent = {
         { type: "subheading", content: "Computer Use — L'IA qui contrôle votre ordinateur" },
         { type: "paragraph", content: "GPT-5.4 intègre nativement le Computer Use : il peut naviguer sur le web, remplir des formulaires, extraire des données, et effectuer des tâches répétitives sur votre ordinateur. C'est la fonctionnalité la plus révolutionnaire de 2026 pour les agents IA autonomes." },
         { type: "callout", content: "Astuce : utilisez le mode Thinking pour les analyses complexes, le code difficile ou les décisions importantes. La qualité des réponses est significativement supérieure au mode Standard, mais la réponse prend plus de temps." },
+        { type: "diagram", label: "Les 3 Modes de ChatGPT GPT-5.4", flow: "horizontal", nodes: [
+          { label: "Standard", sub: "Réponses rapides, tâches quotidiennes", color: "blue" },
+          { label: "Thinking", sub: "Raisonnement étape par étape, problèmes complexes", color: "purple" },
+          { label: "Pro", sub: "Capacité maximale, usage intensif", color: "emerald" },
+        ]},
+        { type: "video", videoId: "qAGAa6f2beg", label: "Comment fonctionne ChatGPT ?" },
         { type: "summary", items: [
           "GPT-5.4 existe en 3 variantes : Standard, Thinking et Pro",
           "1,05 million de tokens de contexte — l'équivalent d'un roman entier",
@@ -79,6 +93,16 @@ const content: CourseContent = {
         { type: "subheading", content: "Claude Code — Votre développeur IA en ligne de commande" },
         { type: "paragraph", content: "Claude Code est un outil CLI qui intègre Claude directement dans votre terminal. Il peut lire, écrire et modifier des fichiers, exécuter des commandes, et gérer des projets entiers de façon autonome. Les développeurs le considèrent comme l'outil de codage IA le plus avancé de 2026." },
         { type: "tip", content: "Pour les tâches créatives et rédactionnelles, Claude surpasse souvent ChatGPT grâce à sa nuance et sa capacité à respecter des instructions complexes. Essayez Claude pour vos emails importants, vos rapports et vos analyses." },
+        { type: "diagram", label: "Les 3 Versions de Claude 4.6", flow: "horizontal", nodes: [
+          { label: "Haiku 4.5", sub: "Rapide et économique — tâches simples", color: "blue" },
+          { label: "Sonnet 4.6", sub: "Équilibre qualité/vitesse — usage quotidien", color: "purple" },
+          { label: "Opus 4.6", sub: "Puissance maximale — 14,5h d'autonomie", color: "emerald" },
+        ]},
+        { type: "diagram", label: "Fonctionnalités Clés de Claude", flow: "vertical", nodes: [
+          { label: "Projects", sub: "Contexte permanent entre sessions", color: "amber" },
+          { label: "Artifacts", sub: "Code et HTML en temps réel", color: "blue" },
+          { label: "Claude Code", sub: "Gestion de projets depuis le terminal", color: "purple" },
+        ]},
         { type: "summary", items: [
           "Claude 4.6 existe en 3 versions : Opus (puissant), Sonnet (équilibré), Haiku (rapide)",
           "1 million de tokens de contexte — l'équivalent de 750 000 mots",
@@ -109,6 +133,12 @@ const content: CourseContent = {
         { type: "subheading", content: "Les points forts de Gemini" },
         { type: "paragraph", content: "Gemini 3.1 excelle dans : l'analyse de documents très longs (jusqu'à 1M tokens), la recherche web en temps réel (Google Search intégré), le traitement multimodal natif, et l'intégration dans les flux de travail Google. Son score de 77,1% sur ARC-AGI-2 le place parmi les meilleurs modèles de raisonnement." },
         { type: "callout", content: "Si vous êtes déjà dans l'écosystème Google (Gmail, Drive, Docs), Gemini est votre meilleur choix car il accède directement à vos fichiers et emails sans copier-coller." },
+        { type: "diagram", label: "Gemini dans l'Écosystème Google", flow: "horizontal", nodes: [
+          { label: "Gmail", sub: "Résumé et rédaction d'emails", color: "blue" },
+          { label: "Google Docs", sub: "Génération et amélioration de contenu", color: "purple" },
+          { label: "Google Sheets", sub: "Analyse et formules automatiques", color: "emerald" },
+          { label: "Google Meet", sub: "Transcription et résumé de réunion", color: "amber" },
+        ]},
         { type: "summary", items: [
           "Gemini 3.1 est nativement multimodal : texte, image, audio, vidéo, code",
           "1 million de tokens de contexte dans Gemini Advanced",
@@ -141,6 +171,12 @@ const content: CourseContent = {
         { type: "subheading", content: "Les modes de Midjourney" },
         { type: "paragraph", content: "Mode Fast : génération rapide, consomme des crédits. Mode Relax : gratuit mais plus lent. Mode Turbo : génération ultra-rapide pour les abonnés Pro. Stealth Mode : vos créations restent privées (abonnement Pro requis)." },
         { type: "tip", content: "Pour des portraits professionnels : utilisez toujours --ar 4:5, ajoutez 'professional lighting, sharp focus, 85mm portrait lens' et testez --style raw pour un rendu moins artificiel." },
+        { type: "diagram", label: "Paramètres Essentiels Midjourney", flow: "horizontal", nodes: [
+          { label: "--ar", sub: "Ratio d'aspect (16:9, 9:16, 1:1)", color: "blue" },
+          { label: "--style", sub: "raw (réaliste) ou expressive (créatif)", color: "purple" },
+          { label: "--cref", sub: "Cohérence d'un personnage", color: "emerald" },
+          { label: "--sref", sub: "Copier le style d'une image", color: "amber" },
+        ]},
         { type: "summary", items: [
           "La commande de base est /imagine suivi d'une description précise",
           "Paramètres clés : --ar (ratio), --q (qualité), --style, --v (version)",
@@ -173,6 +209,12 @@ const content: CourseContent = {
         { type: "subheading", content: "Playground AI — L'outil polyvalent gratuit" },
         { type: "paragraph", content: "Playground AI offre une interface web intuitive avec accès à plusieurs modèles (SDXL, Playground v3). Il propose un plan gratuit généreux et des fonctionnalités d'édition avancées comme l'inpainting et l'outpainting directement dans le navigateur." },
         { type: "key-point", content: "Règle d'or : Midjourney pour l'esthétique artistique, DALL-E 3 pour les images avec texte, Firefly pour l'usage commercial sécurisé, Ideogram pour la typographie, Stable Diffusion pour le contrôle total." },
+        { type: "diagram", label: "Quel Générateur d'Images Choisir ?", flow: "horizontal", nodes: [
+          { label: "Midjourney V8", sub: "Esthétique artistique maximale", color: "purple" },
+          { label: "DALL-E 3", sub: "Images avec texte précis", color: "blue" },
+          { label: "Adobe Firefly", sub: "Usage commercial sécurisé", color: "emerald" },
+          { label: "Ideogram 3.0", sub: "Typographie parfaite", color: "amber" },
+        ]},
         { type: "summary", items: [
           "DALL-E 3 excelle pour les images contenant du texte précis et lisible",
           "Adobe Firefly est juridiquement sûr pour un usage commercial",
@@ -205,6 +247,12 @@ const content: CourseContent = {
         { type: "subheading", content: "img2img — Transformer des images existantes" },
         { type: "paragraph", content: "Le mode img2img permet de modifier une image existante en conservant sa composition générale. Utile pour styliser une photo, corriger des détails, ou transformer un croquis en illustration détaillée. Le paramètre 'denoising strength' contrôle l'intensité de la transformation." },
         { type: "tip", content: "Pour commencer avec Stable Diffusion sans installation locale, testez d'abord les versions en ligne comme Leonardo.ai ou NightCafe. Ils utilisent Stable Diffusion avec une interface simplifiée et des serveurs cloud." },
+        { type: "diagram", label: "L'Écosystème Stable Diffusion", flow: "vertical", nodes: [
+          { label: "Stable Diffusion", sub: "Modèle de base open source", color: "blue" },
+          { label: "ComfyUI", sub: "Interface visuelle par nodes (avancé)", color: "purple" },
+          { label: "ControlNet", sub: "Contrôle de pose et composition", color: "emerald" },
+          { label: "LoRA", sub: "Styles et personnages personnalisés", color: "amber" },
+        ]},
         { type: "summary", items: [
           "Stable Diffusion est gratuit, open source et peut s'exécuter localement",
           "ComfyUI offre un workflow visuel par nodes pour les utilisateurs avancés",
@@ -237,6 +285,16 @@ const content: CourseContent = {
         { type: "subheading", content: "Storyboard IA — Planifier votre vidéo" },
         { type: "paragraph", content: "Utilisez ChatGPT pour créer d'abord un storyboard détaillé scène par scène, puis générez chaque scène séparément avec Sora 2. Montez ensuite les clips avec un outil standard (CapCut, DaVinci Resolve). C'est le workflow adopté par les créateurs professionnels." },
         { type: "callout", content: "Sora 2 est inclus dans l'abonnement ChatGPT Pro (200$/mois). Pour les créateurs occasionnels, les alternatives comme Runway Gen-3 ou Kling offrent de bons résultats à des prix plus accessibles." },
+        { type: "diagram", label: "Workflow Vidéo Professionnel avec Sora 2", flow: "horizontal", nodes: [
+          { label: "Storyboard", sub: "Planifier scène par scène avec ChatGPT", color: "blue" },
+          { label: "Génération", sub: "Créer chaque scène avec Sora 2", color: "purple" },
+          { label: "Montage", sub: "Assembler avec CapCut ou DaVinci", color: "emerald" },
+        ]},
+        { type: "diagram", label: "Modes de Génération Sora 2", flow: "horizontal", nodes: [
+          { label: "Texte → Vidéo", sub: "Description textuelle vers clip vidéo", color: "purple" },
+          { label: "Image → Vidéo", sub: "Animer une image fixe", color: "blue" },
+          { label: "Extension", sub: "Prolonger une vidéo existante", color: "emerald" },
+        ]},
         { type: "summary", items: [
           "Sora 2 génère des vidéos jusqu'à 60 secondes avec physique cohérente",
           "Supporte : texte-vers-vidéo, image-vers-vidéo, extension et édition",
@@ -269,6 +327,11 @@ const content: CourseContent = {
         { type: "subheading", content: "Comment choisir ?" },
         { type: "paragraph", content: "Qualité cinématographique et contrôle de caméra : Runway Gen-3. Effets créatifs et réseaux sociaux : Pika 2.0. Mouvement humain réaliste et longues séquences : Kling AI. Budget limité et qualité maximale : Sora 2 (si vous avez ChatGPT Pro)." },
         { type: "tip", content: "Testez tous les plans gratuits avant de vous abonner. Runway offre 125 crédits gratuits, Pika propose des essais gratuits, et Kling AI a un plan gratuit généreux. Comparez les résultats sur votre type de contenu spécifique." },
+        { type: "diagram", label: "Comparatif des Outils Vidéo IA", flow: "horizontal", nodes: [
+          { label: "Runway Gen-3", sub: "Qualité cinéma, contrôle caméra précis", color: "purple" },
+          { label: "Pika 2.0", sub: "Effets créatifs, réseaux sociaux", color: "blue" },
+          { label: "Kling AI", sub: "Mouvement humain réaliste, 3 minutes max", color: "emerald" },
+        ]},
         { type: "summary", items: [
           "Runway Gen-3 : meilleur pour la qualité cinématographique et le contrôle de caméra",
           "Pika 2.0 : idéal pour les effets créatifs et le contenu réseaux sociaux",
@@ -301,6 +364,12 @@ const content: CourseContent = {
         { type: "subheading", content: "L'API ElevenLabs — Intégrer la voix dans vos applications" },
         { type: "paragraph", content: "L'API ElevenLabs permet d'intégrer la synthèse vocale dans n'importe quelle application : agents IA avec voix, assistants téléphoniques, applications e-learning, audiobooks automatiques. La latence est inférieure à 500ms pour les applications en temps réel." },
         { type: "key-point", content: "ElevenLabs est disponible avec un plan gratuit (10 000 caractères/mois) et des plans payants à partir de 5$/mois pour 30 000 caractères. Les créateurs professionnels optent généralement pour le plan Creator à 22$/mois." },
+        { type: "diagram", label: "Fonctionnalités ElevenLabs", flow: "horizontal", nodes: [
+          { label: "3 000+ Voix", sub: "32 langues, qualité humaine", color: "blue" },
+          { label: "Voice Cloning", sub: "Clone vocal en 1 min d'audio", color: "purple" },
+          { label: "Dubbing", sub: "Doublage vidéo multilingue auto", color: "emerald" },
+          { label: "API", sub: "Latence <500ms pour apps temps réel", color: "amber" },
+        ]},
         { type: "summary", items: [
           "Plus de 3 000 voix dans 32 langues avec qualité indiscernable des voix humaines",
           "Clonage vocal avec seulement 1 minute d'enregistrement audio",
@@ -333,6 +402,12 @@ const content: CourseContent = {
         { type: "subheading", content: "Limitations et droits" },
         { type: "paragraph", content: "La question des droits est en pleine évolution. Suno et Udio revendiquent les droits sur les créations générées sur leur plateforme. Pour un usage commercial, vérifiez les conditions de chaque outil et préférez les plans payants qui incluent généralement des droits commerciaux." },
         { type: "tip", content: "Utilisez Suno pour la vitesse et la diversité de styles. Utilisez Udio pour les genres qui nécessitent plus de sophistication musicale (jazz, classique). Combinez les deux : générez une base avec Suno et affinez avec Udio." },
+        { type: "diagram", label: "Structure d'un Bon Prompt Musical", flow: "horizontal", nodes: [
+          { label: "Genre + Sous-genre", sub: "Ex : upbeat french pop", color: "purple" },
+          { label: "Instruments + Tempo", sub: "Ex : piano, 120 BPM", color: "blue" },
+          { label: "Voix + Ambiance", sub: "Ex : female vocals, sunny", color: "emerald" },
+          { label: "Thème paroles", sub: "Ex : falling in love in Paris", color: "amber" },
+        ]},
         { type: "summary", items: [
           "Suno et Udio génèrent des chansons complètes en secondes à partir d'un texte",
           "Un bon prompt musical précise : style, ambiance, instruments, tempo",
@@ -365,6 +440,11 @@ const content: CourseContent = {
         { type: "subheading", content: "Meilleures pratiques" },
         { type: "paragraph", content: "Pour maximiser la qualité du code généré : donnez un contexte clair (décrivez l'architecture existante), soyez précis dans vos demandes, vérifiez toujours le code généré avant de le commiter, et utilisez les règles de projet (.cursorrules) pour imposer votre style de code." },
         { type: "key-point", content: "Règle d'or : l'IA génère le code, vous comprenez et validez. Ne committez jamais du code que vous ne comprenez pas. L'IA fait des erreurs subtiles — restez le pilote, l'IA est votre copilote." },
+        { type: "diagram", label: "GitHub Copilot vs Cursor", flow: "horizontal", nodes: [
+          { label: "GitHub Copilot", sub: "Extension dans VS Code, JetBrains — 10$/mois", color: "blue" },
+          { label: "Cursor", sub: "Éditeur repensé pour l'IA (fork VS Code)", color: "purple" },
+        ]},
+        { type: "video", videoId: "kCc8FmEb1nY", label: "Construire un GPT from scratch — Karpathy" },
         { type: "summary", items: [
           "L'IA augmente la productivité des développeurs de 30 à 55%",
           "GitHub Copilot : intégration dans les éditeurs existants, 10$/mois",
@@ -397,6 +477,10 @@ const content: CourseContent = {
         { type: "subheading", content: "L'API Perplexity — Recherche web dans vos applications" },
         { type: "paragraph", content: "L'API Perplexity permet d'ajouter la recherche web en temps réel à n'importe quelle application. Particulièrement utile pour les agents IA qui ont besoin d'informations actualisées, les chatbots de support client, et les outils de veille automatisée." },
         { type: "tip", content: "Utilisez Perplexity Pro (20$/mois) pour accéder aux modèles les plus puissants (Claude 4.6, GPT-5.4) et à la fonctionnalité Deep Research. Le plan gratuit est déjà très puissant pour une utilisation régulière." },
+        { type: "diagram", label: "Perplexity vs Google : Quand Utiliser Quoi ?", flow: "horizontal", nodes: [
+          { label: "Google", sub: "Trouver un site, acheter, navigation locale", color: "blue" },
+          { label: "Perplexity", sub: "Comprendre, synthétiser, recherche approfondie", color: "purple" },
+        ]},
         { type: "summary", items: [
           "Perplexity combine recherche web en temps réel et synthèse IA avec sources",
           "Idéal pour comprendre un sujet complexe et obtenir un résumé sourcé",
@@ -429,6 +513,12 @@ const content: CourseContent = {
         { type: "subheading", content: "Les Guides d'étude automatiques" },
         { type: "paragraph", content: "NotebookLM génère automatiquement des résumés, des plans, des glossaires, des questions d'examen et des fiches de révision à partir de vos documents. En un clic, transformez un cours de 200 pages en une fiche de 2 pages ou en 20 questions de quiz." },
         { type: "callout", content: "NotebookLM est totalement gratuit dans sa version actuelle. C'est l'outil le plus sous-estimé de 2026 — absolument essentiel pour les étudiants, les chercheurs, les juristes et tous ceux qui travaillent avec de nombreux documents." },
+        { type: "diagram", label: "NotebookLM : Du Document à la Connaissance", flow: "vertical", nodes: [
+          { label: "Importer vos sources", sub: "PDF, Docs, URLs, YouTube (50 sources max)", color: "blue" },
+          { label: "Questions contextuelles", sub: "Réponses avec citations précises", color: "purple" },
+          { label: "Audio Overview", sub: "Podcast automatique de 10-20 minutes", color: "emerald" },
+          { label: "Guides d'étude", sub: "Résumés, fiches, quiz automatiques", color: "amber" },
+        ]},
         { type: "summary", items: [
           "Analyse jusqu'à 50 sources simultanément sans hallucinations",
           "Accepte PDF, Docs, Slides, URLs, texte et vidéos YouTube",
@@ -461,6 +551,11 @@ const content: CourseContent = {
         { type: "subheading", content: "Intégrer les API IA dans Make/Zapier" },
         { type: "paragraph", content: "Both Make et Zapier proposent des modules natifs pour OpenAI (GPT-5.4), Anthropic (Claude), Google AI (Gemini), ElevenLabs et Midjourney. Vous pouvez appeler ces API directement dans vos workflows sans connaissances en programmation." },
         { type: "tip", content: "Commencez par automatiser une seule tâche répétitive que vous effectuez quotidiennement. Même une automatisation simple qui fait gagner 15 minutes par jour représente plus de 90 heures par an." },
+        { type: "diagram", label: "Exemple d'Automatisation IA avec Make/Zapier", flow: "horizontal", nodes: [
+          { label: "Déclencheur", sub: "Email reçu, nouveau lead CRM…", color: "blue" },
+          { label: "Traitement IA", sub: "GPT-5.4 ou Claude analyse et rédige", color: "purple" },
+          { label: "Action", sub: "Notion, Slack, email automatique…", color: "emerald" },
+        ]},
         { type: "summary", items: [
           "Make et Zapier connectent des centaines d'applications sans code",
           "Make : plus puissant pour les workflows complexes avec conditions et boucles",
@@ -493,6 +588,11 @@ const content: CourseContent = {
         { type: "subheading", content: "Structure d'un appel API basique" },
         { type: "paragraph", content: "Un appel API IA contient toujours : la clé d'authentification (Bearer token), le modèle choisi, le ou les messages (système + utilisateur), et des paramètres optionnels (température, max_tokens). La réponse est en JSON. Des SDK existent pour Python, JavaScript, et la plupart des langages." },
         { type: "key-point", content: "Sécurité absolue : ne mettez JAMAIS votre clé API dans du code public (GitHub, etc.). Utilisez des variables d'environnement (.env) et ajoutez .env à votre .gitignore. Une clé exposée peut générer des coûts énormes." },
+        { type: "diagram", label: "Structure d'un Appel API IA", flow: "horizontal", nodes: [
+          { label: "Authentification", sub: "Bearer token (clé API secrète)", color: "pink" },
+          { label: "Modèle + Messages", sub: "Système + utilisateur + paramètres", color: "blue" },
+          { label: "Réponse JSON", sub: "Texte généré + métadonnées", color: "emerald" },
+        ]},
         { type: "summary", items: [
           "Les API offrent plus de flexibilité et de contrôle que les interfaces web",
           "OpenAI API : GPT-5.4, DALL-E 3, Whisper, TTS — facturation à l'usage",
@@ -525,6 +625,12 @@ const content: CourseContent = {
         { type: "subheading", content: "Étape 4 : Créer vos prompts templates" },
         { type: "paragraph", content: "Pour chaque tâche récurrente, créez un prompt template réutilisable. Stockez-les dans Notion, Obsidian ou un simple fichier texte. Exemple : un template pour rédiger des emails clients, un pour analyser des documents, un pour générer des idées de contenu. Ces templates s'améliorent avec le temps." },
         { type: "tip", content: "Commencez par automatiser 3 tâches seulement pendant les 2 premières semaines. Maîtriser 3 outils à fond vaut mieux que de survoler 15 outils. La profondeur avant la largeur." },
+        { type: "diagram", label: "Construire Votre Stack IA Personnel", flow: "vertical", nodes: [
+          { label: "Audit (3 jours)", sub: "Identifier les tâches chronophages", color: "blue" },
+          { label: "LLM Principal", sub: "Claude, ChatGPT, Gemini ou Perplexity", color: "purple" },
+          { label: "Outils Spécialisés", sub: "Midjourney, Cursor, ElevenLabs…", color: "emerald" },
+          { label: "Templates de Prompts", sub: "Réutilisables pour chaque tâche", color: "amber" },
+        ]},
         { type: "summary", items: [
           "Un bon workflow IA = 3 à 5 outils maîtrisés en profondeur",
           "Étape 1 : auditer votre temps pour identifier les tâches automatisables",
@@ -557,6 +663,13 @@ const content: CourseContent = {
         { type: "subheading", content: "Les tendances à surveiller en 2026-2027" },
         { type: "paragraph", content: "Agents IA autonomes : les outils qui effectuent des tâches complexes de façon autonome vont exploser. Modèles locaux : des modèles de plus en plus puissants tournent sur votre ordinateur. IA multimodale native : tous les modèles vont traiter texte, image, audio et vidéo simultanément. Personnalisation : les IA apprennent votre style et s'adaptent à vous." },
         { type: "key-point", content: "L'IA n'est pas un outil statique — elle évolue chaque mois. L'investissement le plus rentable est d'apprendre à apprendre : comment tester rapidement un nouvel outil, évaluer sa valeur ajoutée, et l'intégrer à votre workflow existant." },
+        { type: "diagram", label: "Guide Rapide : Quel Outil pour Quel Besoin ?", flow: "vertical", nodes: [
+          { label: "Rédaction & Analyse", sub: "Claude 4.6 — précision et nuance", color: "purple" },
+          { label: "Recherche Web", sub: "Perplexity — sources en temps réel", color: "blue" },
+          { label: "Images Artistiques", sub: "Midjourney V8 — qualité maximale", color: "emerald" },
+          { label: "Vidéo Photoréaliste", sub: "Sora 2 — physique cohérente", color: "amber" },
+          { label: "Voix Professionnelle", sub: "ElevenLabs — 32 langues, clonage vocal", color: "pink" },
+        ]},
         { type: "summary", items: [
           "Claude 4.6 pour la rédaction, ChatGPT pour la polyvalence, Perplexity pour la recherche",
           "Midjourney V8 pour les images artistiques, DALL-E 3 pour le texte dans les images",
