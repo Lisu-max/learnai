@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { redirect } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
-import { getCourseBySlug, FREE_SLUGS } from "@/lib/courses";
+import { getCourseBySlug, FREE_SLUGS, PREMIUM_SLUGS } from "@/lib/courses";
 import { AccountDashboard } from "@/components/account/account-dashboard";
 
 export const dynamic = "force-dynamic";
@@ -19,6 +19,15 @@ export default async function ComptePage() {
   if (!user) {
     redirect("/connexion");
   }
+
+  // Check subscription status
+  const { data: profile } = await supabase
+    .from("profiles")
+    .select("subscription_status")
+    .eq("id", user.id)
+    .single();
+
+  const isPro = profile?.subscription_status === "pro";
 
   const { data: purchases } = await supabase
     .from("purchases")
@@ -40,7 +49,18 @@ export default async function ComptePage() {
     isFree: true,
   }));
 
-  const allCourses = [...freeCourseEntries, ...purchasedCourses];
+  // Pro subscribers get access to all premium courses
+  const proEntries = isPro
+    ? PREMIUM_SLUGS.filter((slug) => !purchasedSlugs.has(slug)).map((slug) => ({
+        id: `pro-${slug}`,
+        course_slug: slug,
+        created_at: user.created_at || new Date().toISOString(),
+        course: getCourseBySlug(slug),
+        isFree: false,
+      }))
+    : [];
+
+  const allCourses = [...freeCourseEntries, ...proEntries, ...purchasedCourses];
 
   const userProfile = {
     email: user.email || "",
