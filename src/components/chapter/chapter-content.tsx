@@ -11,6 +11,7 @@ import { KeyPoint } from "./section-renderers/key-point";
 import { Callout } from "./section-renderers/callout";
 import { CaseStudy } from "./section-renderers/case-study";
 import { DiagramBlock } from "./section-renderers/diagram-block";
+import { TextToSpeech } from "./text-to-speech";
 
 function renderSection(section: ChapterSection, index: number) {
   switch (section.type) {
@@ -48,6 +49,7 @@ function renderSection(section: ChapterSection, index: number) {
 export function ChapterContent({ sections }: { sections: ChapterSection[] }) {
   return (
     <div className="animate-fade-in">
+      <TextToSpeech sections={sections} />
       {sections.map((section, i) => renderSection(section, i))}
     </div>
   );
