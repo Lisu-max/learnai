@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Loader2, ShoppingCart, Globe, AlertCircle } from "lucide-react";
 import { useTranslation } from "@/lib/i18n/context";
+import { createClient } from "@/lib/supabase/client";
 
 export function BuyButton({
   courseSlug,
@@ -22,6 +23,15 @@ export function BuyButton({
   async function handleCheckout() {
     setLoading(true);
     setError(null);
+
+    // Check auth client-side first to avoid 401 console error
+    const supabase = createClient();
+    const { data: { user } } = await supabase.auth.getUser();
+    if (!user) {
+      router.push("/connexion");
+      return;
+    }
+
     try {
       const res = await fetch("/api/checkout", {
         method: "POST",
