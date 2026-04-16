@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { redirect, notFound } from "next/navigation";
 import Link from "next/link";
 import { getCourseBySlug } from "@/lib/courses";
@@ -7,6 +8,7 @@ import { ChapterContent } from "@/components/chapter/chapter-content";
 import { ChapterNav } from "@/components/chapter/chapter-nav";
 import { InlineQuiz } from "@/components/quiz/inline-quiz";
 import { getServerTranslation, getServerLocale } from "@/lib/i18n/server";
+import { siteConfig } from "@/config/site";
 import { ArrowLeft, Clock, BookOpen, Video } from "lucide-react";
 import type { ChapterSection } from "@/content/types";
 
@@ -23,6 +25,44 @@ function computeReadingTime(sections: ChapterSection[]): { textMin: number; vide
 
 // Chapter content is static — revalidate every 24h
 export const revalidate = 86400;
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug, num } = await params;
+  const chapterNum = parseInt(num, 10);
+  const course = getCourseBySlug(slug);
+  if (!course) return {};
+
+  const content = await getCourseContent(slug);
+  if (!content) return {};
+
+  const chapter = getChapter(content, chapterNum);
+  if (!chapter) return {};
+
+  // Extract description from first paragraph section, truncated to 160 chars
+  const firstParagraph = chapter.sections.find((s) => s.type === "paragraph");
+  const description = firstParagraph?.content
+    ? firstParagraph.content.slice(0, 157) + (firstParagraph.content.length > 157 ? "..." : "")
+    : `${chapter.title} — Chapitre ${chapter.number} de la formation ${course.title} sur LearnAI.`;
+
+  return {
+    title: `${chapter.title} — ${course.title}`,
+    description,
+    openGraph: {
+      title: `${chapter.title} — ${course.title} | ${siteConfig.name}`,
+      description,
+      url: `${siteConfig.url}/cours/${slug}/chapitres/${num}`,
+      type: "article",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${chapter.title} — ${course.title} | ${siteConfig.name}`,
+      description,
+    },
+    alternates: {
+      canonical: `${siteConfig.url}/cours/${slug}/chapitres/${num}`,
+    },
+  };
+}
 
 export async function generateStaticParams() {
   const { courses } = await import("@/lib/courses");
@@ -58,7 +98,61 @@ export default async function ChapterPage({ params }: Props) {
 
   const { textMin, videoCount } = computeReadingTime(chapter.sections);
 
+  const learningResourceJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "LearningResource",
+    name: chapter.title,
+    description: `Chapitre ${chapter.number} de la formation ${course.title}`,
+    learningResourceType: "Chapter",
+    isPartOf: {
+      "@type": "Course",
+      name: course.title,
+      url: `${siteConfig.url}/cours/${slug}`,
+    },
+    provider: {
+      "@type": "Organization",
+      name: siteConfig.name,
+      url: siteConfig.url,
+    },
+    timeRequired: `PT${textMin}M`,
+    position: chapter.number,
+  };
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Formations",
+        item: `${siteConfig.url}/cours`,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: course.title,
+        item: `${siteConfig.url}/cours/${slug}`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: chapter.title,
+        item: `${siteConfig.url}/cours/${slug}/chapitres/${chapter.number}`,
+      },
+    ],
+  };
+
   return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(learningResourceJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
     <div className="bg-grid">
       <div className="mx-auto max-w-3xl px-4 py-12">
         {/* Breadcrumb */}
@@ -118,5 +212,6 @@ export default async function ChapterPage({ params }: Props) {
         />
       </div>
     </div>
+    </>
   );
 }

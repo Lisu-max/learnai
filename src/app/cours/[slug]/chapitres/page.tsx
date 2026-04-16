@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { redirect, notFound } from "next/navigation";
 import Link from "next/link";
 import { getCourseBySlug, getCourseLocalized } from "@/lib/courses";
@@ -5,6 +6,7 @@ import { getCourseContent } from "@/content";
 import { hasAccessToCourse } from "@/lib/access";
 import { createClient } from "@/lib/supabase/server";
 import { getServerTranslation, getServerLocale } from "@/lib/i18n/server";
+import { siteConfig } from "@/config/site";
 import {
   ArrowLeft,
   BookOpen,
@@ -15,6 +17,33 @@ import {
 
 interface Props {
   params: Promise<{ slug: string }>;
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params;
+  const course = getCourseBySlug(slug);
+  if (!course) return {};
+
+  const title = `Chapitres — ${course.title}`;
+  const description = `Parcourez les ${course.chapters} chapitres de la formation ${course.title}. Progressez à votre rythme avec des quiz interactifs.`;
+
+  return {
+    title,
+    description,
+    openGraph: {
+      title: `${title} | ${siteConfig.name}`,
+      description,
+      url: `${siteConfig.url}/cours/${slug}/chapitres`,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${title} | ${siteConfig.name}`,
+      description,
+    },
+    alternates: {
+      canonical: `${siteConfig.url}/cours/${slug}/chapitres`,
+    },
+  };
 }
 
 export default async function ChaptersPage({ params }: Props) {

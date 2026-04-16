@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getCourseBySlug, courses } from "@/lib/courses";
 import { CourseDetail } from "@/components/courses/course-detail";
+import { siteConfig } from "@/config/site";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -42,10 +43,11 @@ export default async function CourseDetailPage({ params }: Props) {
     "@type": "Course",
     name: course.title,
     description: course.description,
+    url: `${siteConfig.url}/cours/${slug}`,
     provider: {
       "@type": "Organization",
-      name: "LearnAI",
-      url: "https://learnai-csa3.vercel.app",
+      name: siteConfig.name,
+      url: siteConfig.url,
     },
     ...(course.tier === "premium"
       ? {
@@ -59,11 +61,34 @@ export default async function CourseDetailPage({ params }: Props) {
       : { isAccessibleForFree: true }),
   };
 
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Formations",
+        item: `${siteConfig.url}/cours`,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: course.title,
+        item: `${siteConfig.url}/cours/${slug}`,
+      },
+    ],
+  };
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
       <CourseDetail slug={slug} />
     </>
