@@ -385,10 +385,73 @@ export const courses: Course[] = [
     image: "/images/courses/ia-education.jpg",
     color: "from-lime-500 to-green-500",
   },
+  {
+    slug: "cybersecurite-ia",
+    title: "Cybersécurité et IA",
+    description:
+      "Menaces IA, phishing, deepfakes, défense — protégez-vous et votre organisation face aux cybermenaces augmentées par l'IA.",
+    longDescription:
+      "Maîtrisez la cybersécurité à l'ère de l'IA : menaces générées par l'IA, phishing et ingénierie sociale augmentés, deepfakes et usurpation d'identité, défense et détection IA, sécurité des modèles, protection des données, audit de sécurité assisté, réponse aux incidents, et stratégie de cybersécurité IA complète.",
+    level: "Avancé",
+    tier: "premium",
+    duration: "2h",
+    chapters: 10,
+    features: [
+      "10 chapitres techniques",
+      "Menaces et défense IA",
+      "Phishing et deepfakes",
+      "Audit de sécurité",
+      "Stratégie cybersécurité",
+    ],
+    image: "/images/courses/cybersecurite-ia.jpg",
+    color: "from-red-500 to-orange-500",
+  },
+  {
+    slug: "ia-generative-avancee",
+    title: "L'IA Générative Avancée",
+    description:
+      "Fine-tuning, RAG, agents, APIs, production — maîtrisez les techniques avancées de l'IA générative pour créer des produits IA.",
+    longDescription:
+      "Plongez dans les techniques avancées de l'IA générative : architectures Transformer, fine-tuning (LoRA, QLoRA), RAG, agents IA et Tool Use, prompt engineering système, APIs OpenAI/Anthropic/Google, frameworks d'orchestration, embeddings et bases vectorielles, génération d'images avancée, multimodal, évaluation, mise en production, optimisation des coûts, et construction d'un produit IA.",
+    level: "Avancé",
+    tier: "premium",
+    duration: "3h30",
+    chapters: 15,
+    features: [
+      "15 chapitres avancés",
+      "Fine-tuning et RAG",
+      "Agents IA et Tool Use",
+      "APIs OpenAI, Anthropic, Google",
+      "Mise en production",
+    ],
+    image: "/images/courses/ia-generative-avancee.jpg",
+    color: "from-violet-500 to-indigo-500",
+  },
+  {
+    slug: "leadership-ia",
+    title: "Leadership IA en Entreprise",
+    description:
+      "Stratégie, conduite du changement, ROI, gouvernance — guidez votre organisation dans sa transformation IA.",
+    longDescription:
+      "Pilotez la transformation IA de votre organisation : vision stratégique, construction d'une culture IA, conduite du changement, recrutement et formation des talents, budget et ROI, choix des outils et partenaires, gouvernance et éthique, gestion des risques, communication, études de cas de leaders, et feuille de route IA à 12 mois.",
+    level: "Avancé",
+    tier: "premium",
+    duration: "2h30",
+    chapters: 12,
+    features: [
+      "12 chapitres stratégiques",
+      "Vision et culture IA",
+      "Budget et ROI",
+      "Gouvernance et éthique",
+      "Feuille de route 12 mois",
+    ],
+    image: "/images/courses/leadership-ia.jpg",
+    color: "from-yellow-500 to-amber-500",
+  },
 ];
 
 export const FREE_SLUGS = ["ia-de-a-a-z", "ia-au-quotidien", "ethique-ia"];
-export const PREMIUM_SLUGS = ["maitriser-outils-ia", "prompt-engineering-pro", "ia-pour-votre-business", "creer-avec-ia", "coder-avec-ia", "ia-freelances", "automatiser-avec-ia", "ia-marketing-digital", "data-science-ia", "ia-ressources-humaines", "ia-education"];
+export const PREMIUM_SLUGS = ["maitriser-outils-ia", "prompt-engineering-pro", "ia-pour-votre-business", "creer-avec-ia", "coder-avec-ia", "ia-freelances", "automatiser-avec-ia", "ia-marketing-digital", "data-science-ia", "ia-ressources-humaines", "ia-education", "cybersecurite-ia", "ia-generative-avancee", "leadership-ia"];
 
 export function getCourseBySlug(slug: string): Course | undefined {
   return courses.find((course) => course.slug === slug);

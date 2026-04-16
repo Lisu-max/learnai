@@ -15,6 +15,9 @@ const courseModules: Record<string, () => Promise<{ default: CourseContent }>> =
   "data-science-ia": () => import("./courses/data-science-ia"),
   "ia-ressources-humaines": () => import("./courses/ia-ressources-humaines"),
   "ia-education": () => import("./courses/ia-education"),
+  "cybersecurite-ia": () => import("./courses/cybersecurite-ia"),
+  "ia-generative-avancee": () => import("./courses/ia-generative-avancee"),
+  "leadership-ia": () => import("./courses/leadership-ia"),
 };
 
 const courseModulesEn: Record<string, () => Promise<{ default: CourseContent }>> = {
