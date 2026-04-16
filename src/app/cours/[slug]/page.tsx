@@ -53,7 +53,7 @@ export default async function CourseDetailPage({ params }: Props) {
       ? {
           offers: {
             "@type": "Offer",
-            price: "9.99",
+            price: "9.90",
             priceCurrency: "EUR",
             availability: "https://schema.org/InStock",
           },
