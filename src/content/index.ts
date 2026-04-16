@@ -6,6 +6,8 @@ const courseModules: Record<string, () => Promise<{ default: CourseContent }>> =
   "prompt-engineering-pro": () => import("./courses/prompt-engineering-pro"),
   "ia-pour-votre-business": () => import("./courses/ia-pour-votre-business"),
   "creer-avec-ia": () => import("./courses/creer-avec-ia"),
+  "ia-au-quotidien": () => import("./courses/ia-au-quotidien"),
+  "ethique-ia": () => import("./courses/ethique-ia"),
 };
 
 const courseModulesEn: Record<string, () => Promise<{ default: CourseContent }>> = {

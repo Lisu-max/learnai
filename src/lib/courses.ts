@@ -162,6 +162,48 @@ export const courses: Course[] = [
     },
   },
   {
+    slug: "ia-au-quotidien",
+    title: "L'IA au Quotidien",
+    description:
+      "Guide pratique pour utiliser l'IA dans votre vie de tous les jours. Productivité, emails, recherche, organisation — devenez efficace avec l'IA.",
+    longDescription:
+      "Apprenez à utiliser l'IA concrètement au quotidien : rédiger des emails, rechercher efficacement, résumer des documents, traduire, organiser votre journée, automatiser les tâches répétitives, booster votre créativité et construire votre workflow IA personnalisé.",
+    level: "Débutant",
+    tier: "free",
+    duration: "1h30",
+    chapters: 10,
+    features: [
+      "10 chapitres pratiques",
+      "Emails, recherche, organisation",
+      "Automatisation des tâches",
+      "Workflow IA personnalisé",
+      "Quiz interactifs",
+    ],
+    image: "/images/courses/ia-au-quotidien.jpg",
+    color: "from-amber-500 to-yellow-500",
+  },
+  {
+    slug: "ethique-ia",
+    title: "Éthique et Impact de l'IA",
+    description:
+      "Comprendre les enjeux éthiques de l'IA : biais, emploi, vie privée, régulation. Un cours essentiel pour utiliser l'IA de manière responsable.",
+    longDescription:
+      "Explorez les enjeux éthiques fondamentaux de l'intelligence artificielle : biais algorithmiques, impact sur l'emploi, vie privée et surveillance, deepfakes et désinformation, AI Act et RGPD, responsabilité et transparence, et le futur de l'IA responsable.",
+    level: "Débutant",
+    tier: "free",
+    duration: "1h15",
+    chapters: 8,
+    features: [
+      "8 chapitres de réflexion",
+      "Biais, emploi, vie privée",
+      "AI Act et RGPD expliqués",
+      "Deepfakes et désinformation",
+      "Quiz de compréhension",
+    ],
+    image: "/images/courses/ethique-ia.jpg",
+    color: "from-rose-500 to-red-500",
+  },
+  {
     slug: "creer-avec-ia",
     title: "Créer avec l'IA",
     description:
@@ -198,7 +240,7 @@ export const courses: Course[] = [
   },
 ];
 
-export const FREE_SLUGS = ["ia-de-a-a-z"];
+export const FREE_SLUGS = ["ia-de-a-a-z", "ia-au-quotidien", "ethique-ia"];
 export const PREMIUM_SLUGS = ["maitriser-outils-ia", "prompt-engineering-pro", "ia-pour-votre-business", "creer-avec-ia"];
 
 export function getCourseBySlug(slug: string): Course | undefined {
