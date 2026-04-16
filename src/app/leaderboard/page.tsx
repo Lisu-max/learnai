@@ -4,7 +4,7 @@ import { getServiceSupabase } from "@/lib/stripe-helpers";
 import { getLevelInfo } from "@/lib/xp";
 import { Crown, Trophy, Medal, TrendingUp } from "lucide-react";
 
-export const revalidate = 300;
+export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
   title: "Classement",
