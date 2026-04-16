@@ -238,10 +238,157 @@ export const courses: Course[] = [
       ],
     },
   },
+  {
+    slug: "coder-avec-ia",
+    title: "Coder avec l'IA",
+    description:
+      "Cursor, Copilot, Claude Code, Bolt, v0 — maîtrisez tous les outils de développement assisté par l'IA. Du débutant au workflow pro.",
+    longDescription:
+      "Maîtrisez le développement assisté par l'IA de A à Z : GitHub Copilot, Cursor, Claude Code, Bolt, v0, debugging, code review, tests automatisés, refactoring, frontend React/Next.js, backend et APIs, bases de données, DevOps CI/CD, sécurité, documentation, projets full-stack, travail en équipe, et construction de votre workflow personnalisé.",
+    level: "Intermédiaire",
+    tier: "premium",
+    duration: "3h30",
+    chapters: 18,
+    features: [
+      "18 chapitres techniques",
+      "Cursor, Copilot, Claude Code",
+      "Debugging et testing IA",
+      "Full-stack avec l'IA",
+      "CI/CD et DevOps IA",
+    ],
+    image: "/images/courses/coder-avec-ia.jpg",
+    color: "from-green-500 to-emerald-500",
+  },
+  {
+    slug: "ia-freelances",
+    title: "L'IA pour les Freelances",
+    description:
+      "Boostez votre activité freelance avec l'IA. Prospection, livrables, facturation, personal branding — gagnez en productivité et en revenus.",
+    longDescription:
+      "Transformez votre activité freelance avec l'IA : prospection automatisée, propositions commerciales générées, gestion de projet, livrables accélérés, facturation automatisée, personal branding, stratégie tarifaire, communication client, et construction d'un business scalable.",
+    level: "Intermédiaire",
+    tier: "premium",
+    duration: "2h",
+    chapters: 10,
+    features: [
+      "10 chapitres actionnables",
+      "Prospection et proposals IA",
+      "Livrables accélérés",
+      "Facturation automatisée",
+      "Personal branding",
+    ],
+    image: "/images/courses/ia-freelances.jpg",
+    color: "from-indigo-500 to-violet-500",
+  },
+  {
+    slug: "automatiser-avec-ia",
+    title: "Automatiser avec l'IA",
+    description:
+      "Maîtrisez Make, Zapier, n8n et les agents IA pour automatiser vos tâches. Du no-code aux workflows complexes, gagnez des heures chaque semaine.",
+    longDescription:
+      "Apprenez à automatiser vos tâches avec Make, Zapier et n8n. Connectez les APIs, créez des agents IA autonomes, automatisez vos emails, votre marketing de contenu, votre veille et votre comptabilité. Construisez des workflows multi-étapes complexes avec monitoring et sécurité.",
+    level: "Intermédiaire",
+    tier: "premium",
+    duration: "3h",
+    chapters: 15,
+    features: [
+      "15 chapitres pratiques",
+      "Make, Zapier, n8n maîtrisés",
+      "Agents IA autonomes",
+      "APIs et webhooks",
+      "Workflows multi-étapes",
+    ],
+    image: "/images/courses/automatiser-avec-ia.jpg",
+    color: "from-cyan-500 to-blue-500",
+  },
+  {
+    slug: "ia-marketing-digital",
+    title: "L'IA pour le Marketing Digital",
+    description:
+      "SEO, content marketing, réseaux sociaux, publicité — boostez votre marketing avec l'IA. Stratégies concrètes et outils actionnables.",
+    longDescription:
+      "Maîtrisez le SEO IA, le content marketing augmenté, les réseaux sociaux, l'email marketing intelligent, la publicité Google et Meta, les landing pages, l'analytics, le personal branding, le video marketing et la stratégie marketing complète avec l'IA.",
+    level: "Intermédiaire",
+    tier: "premium",
+    duration: "2h30",
+    chapters: 12,
+    features: [
+      "12 chapitres actionnables",
+      "SEO et content marketing IA",
+      "Publicité Google et Meta",
+      "Email marketing intelligent",
+      "Analytics et optimisation",
+    ],
+    image: "/images/courses/ia-marketing-digital.jpg",
+    color: "from-pink-500 to-rose-500",
+  },
+  {
+    slug: "data-science-ia",
+    title: "Data Science avec l'IA",
+    description:
+      "Python, pandas, machine learning, visualisation — apprenez la data science assistée par l'IA. Du no-code au déploiement.",
+    longDescription:
+      "Maîtrisez la data science de A à Z avec l'IA comme assistant : Python et NumPy, Pandas et analyse de données, visualisation avec Matplotlib et Seaborn, machine learning (régression, classification, clustering), NLP, vision par ordinateur, AutoML, feature engineering, déploiement de modèles, MLOps, éthique des données, et projet complet de data science.",
+    level: "Avancé",
+    tier: "premium",
+    duration: "3h",
+    chapters: 15,
+    features: [
+      "15 chapitres techniques",
+      "Python et pandas",
+      "Machine Learning pratique",
+      "AutoML et no-code",
+      "Projet complet",
+    ],
+    image: "/images/courses/data-science-ia.jpg",
+    color: "from-sky-500 to-blue-500",
+  },
+  {
+    slug: "ia-ressources-humaines",
+    title: "L'IA pour les RH",
+    description:
+      "Recrutement, onboarding, formation, people analytics — transformez vos processus RH avec l'IA.",
+    longDescription:
+      "Transformez vos ressources humaines avec l'IA : recrutement augmenté, screening et évaluation des candidats, onboarding automatisé, formation personnalisée, engagement et rétention des talents, administration automatisée, people analytics, droit du travail et IA, et stratégie RH augmentée.",
+    level: "Intermédiaire",
+    tier: "premium",
+    duration: "2h",
+    chapters: 10,
+    features: [
+      "10 chapitres pratiques",
+      "Recrutement augmenté",
+      "Onboarding automatisé",
+      "People analytics",
+      "Droit du travail et IA",
+    ],
+    image: "/images/courses/ia-ressources-humaines.jpg",
+    color: "from-fuchsia-500 to-pink-500",
+  },
+  {
+    slug: "ia-education",
+    title: "L'IA pour l'Éducation",
+    description:
+      "Enseignants, étudiants, formateurs — exploitez l'IA pour enseigner, apprendre et évaluer plus efficacement.",
+    longDescription:
+      "Exploitez l'IA dans l'éducation : outils IA pour enseignants, création de cours assistée, évaluation et correction automatisées, personnalisation de l'apprentissage, IA pour les étudiants, recherche académique, contenu pédagogique, gamification, accessibilité et inclusion, détection d'usage IA, et l'école du futur.",
+    level: "Intermédiaire",
+    tier: "premium",
+    duration: "2h30",
+    chapters: 12,
+    features: [
+      "12 chapitres pédagogiques",
+      "Outils IA pour enseignants",
+      "Évaluation automatisée",
+      "Personnalisation de l'apprentissage",
+      "Détection d'usage IA",
+    ],
+    image: "/images/courses/ia-education.jpg",
+    color: "from-lime-500 to-green-500",
+  },
 ];
 
 export const FREE_SLUGS = ["ia-de-a-a-z", "ia-au-quotidien", "ethique-ia"];
-export const PREMIUM_SLUGS = ["maitriser-outils-ia", "prompt-engineering-pro", "ia-pour-votre-business", "creer-avec-ia"];
+export const PREMIUM_SLUGS = ["maitriser-outils-ia", "prompt-engineering-pro", "ia-pour-votre-business", "creer-avec-ia", "coder-avec-ia", "ia-freelances", "automatiser-avec-ia", "ia-marketing-digital", "data-science-ia", "ia-ressources-humaines", "ia-education"];
 
 export function getCourseBySlug(slug: string): Course | undefined {
   return courses.find((course) => course.slug === slug);

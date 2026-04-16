@@ -8,6 +8,13 @@ const courseModules: Record<string, () => Promise<{ default: CourseContent }>> =
   "creer-avec-ia": () => import("./courses/creer-avec-ia"),
   "ia-au-quotidien": () => import("./courses/ia-au-quotidien"),
   "ethique-ia": () => import("./courses/ethique-ia"),
+  "coder-avec-ia": () => import("./courses/coder-avec-ia"),
+  "ia-freelances": () => import("./courses/ia-freelances"),
+  "automatiser-avec-ia": () => import("./courses/automatiser-avec-ia"),
+  "ia-marketing-digital": () => import("./courses/ia-marketing-digital"),
+  "data-science-ia": () => import("./courses/data-science-ia"),
+  "ia-ressources-humaines": () => import("./courses/ia-ressources-humaines"),
+  "ia-education": () => import("./courses/ia-education"),
 };
 
 const courseModulesEn: Record<string, () => Promise<{ default: CourseContent }>> = {
