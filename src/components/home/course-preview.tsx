@@ -9,7 +9,8 @@ import { useTranslation } from "@/lib/i18n/context";
 
 export function CoursePreview() {
   const { t } = useTranslation();
-  const featured = courses.slice(0, 3);
+  const freeCourses = courses.filter((c) => c.tier === "free").slice(0, 3);
+  const premiumCourses = courses.filter((c) => c.tier === "premium").slice(0, 3);
 
   return (
     <section id="formations" className="bg-secondary/30 py-20">
@@ -30,7 +31,13 @@ export function CoursePreview() {
         </Reveal>
 
         <Reveal className="reveal-stagger grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {featured.map((course) => (
+          {freeCourses.map((course) => (
+            <CourseCard key={course.slug} course={course} />
+          ))}
+        </Reveal>
+
+        <Reveal className="reveal-stagger mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {premiumCourses.map((course) => (
             <CourseCard key={course.slug} course={course} />
           ))}
         </Reveal>
