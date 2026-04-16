@@ -12,7 +12,7 @@ export function getStripe(): Stripe {
 }
 
 /**
- * All paid courses share the same price (9,90€).
+ * All paid courses share the same price (9,99€).
  * Single env var: STRIPE_PRICE_COURSE
  */
 export function getStripePriceId(_courseSlug: string): string | null {

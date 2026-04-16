@@ -88,7 +88,7 @@ export default function CoursPage() {
               {t.coursesPage.premiumSectionTitle}
             </h2>
             <p className="text-muted-foreground">
-              <span className="font-semibold text-purple-400">9,90€ </span>{t.coursesPage.premiumSectionSubtitle}
+              <span className="font-semibold text-purple-400">9,99€ </span>{t.coursesPage.premiumSectionSubtitle}
             </p>
           </div>
         </Reveal>
@@ -113,7 +113,7 @@ export default function CoursPage() {
                 <div>
                   <h2 className="mb-2 text-2xl font-bold">
                     {t.coursesPage.ctaTitle}{" "}
-                    <span className="gradient-text-animated">9,90€</span>
+                    <span className="gradient-text-animated">9,99€</span>
                   </h2>
                   <p className="mx-auto max-w-xl text-muted-foreground">
                     {t.coursesPage.ctaBody} ({premiumCourses.reduce((s, c) => s + c.chapters, 0)} {t.coursesPage.chaptersTotal}).

@@ -73,7 +73,7 @@ export default function Image() {
           {[
             { num: "5", label: "Formations" },
             { num: "97", label: "Chapitres" },
-            { num: "9,90€", label: "Par cours" },
+            { num: "9,99€", label: "Par cours" },
           ].map((stat) => (
             <div
               key={stat.label}
