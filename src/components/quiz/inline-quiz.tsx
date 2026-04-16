@@ -64,6 +64,19 @@ export function InlineQuiz({ questions, courseSlug, chapterNumber, totalChapters
               { onConflict: "user_id,course_slug,chapter_number" }
             );
           }
+
+          // Award XP (non-blocking)
+          fetch("/api/progress/award", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              type: "quiz",
+              courseSlug,
+              chapterNumber,
+              score: finalScore,
+              totalQuestions: questions.length,
+            }),
+          }).catch(() => {});
         }
       } catch { /* silent */ }
     }
