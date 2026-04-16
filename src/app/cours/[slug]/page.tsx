@@ -13,18 +13,31 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const course = getCourseBySlug(slug);
   if (!course) return {};
 
+  const pageUrl = `https://www.learn-ai.fr/cours/${slug}`;
+  const fullTitle = `${course.title} — Formation IA Interactive | LearnAI`;
+  // Build a richer description capped at ~160 chars
+  const baseDesc = course.description;
+  const enrichedDesc = baseDesc.length < 130
+    ? `${baseDesc} Accédez à des chapitres interactifs, quiz et vidéos pour maîtriser ce sujet en profondeur.`
+    : baseDesc;
+  const metaDescription = enrichedDesc.slice(0, 160);
+
   return {
-    title: course.title,
-    description: course.description,
+    title: fullTitle,
+    description: metaDescription,
+    alternates: {
+      canonical: pageUrl,
+    },
     openGraph: {
-      title: `${course.title} | LearnAI`,
-      description: course.description,
+      title: fullTitle,
+      description: metaDescription,
+      url: pageUrl,
       type: "website",
     },
     twitter: {
       card: "summary_large_image",
-      title: `${course.title} | LearnAI`,
-      description: course.description,
+      title: fullTitle,
+      description: metaDescription,
     },
   };
 }

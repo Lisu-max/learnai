@@ -134,22 +134,58 @@ export default function CGVPage() {
             <section>
               <h2 className="mb-3 text-lg font-semibold text-foreground">10. Droit applicable et juridiction</h2>
               <p>
-                Les présentes CGV sont régies par les lois de l&apos;État du Delaware, États-Unis.
-                Tout litige sera soumis à la compétence exclusive des tribunaux du Delaware, États-Unis.
+                <strong>Pour les consommateurs résidant en France ou dans l&apos;Union européenne :</strong> les présentes
+                CGV sont soumises au droit français. Les dispositions impératives du Code de la consommation français
+                s&apos;appliquent. Tout litige sera soumis aux tribunaux compétents du lieu de résidence du consommateur.
               </p>
               <p className="mt-2">
-                <strong>Utilisateurs de l&apos;Union européenne :</strong> conformément au Règlement Général sur la
-                Protection des Données (RGPD) et aux directives européennes de protection du consommateur,
-                vos droits en matière de protection des données et de consommation restent pleinement applicables.
-                Vous pouvez exercer vos droits en contactant{" "}
-                <a href={`mailto:${siteConfig.emails.legal}`} className="text-purple-400 hover:text-purple-300">
-                  {siteConfig.emails.legal}
-                </a>.
+                <strong>Pour les utilisateurs résidant hors de l&apos;Union européenne :</strong> les présentes CGV sont
+                régies par les lois de l&apos;État du Delaware, États-Unis.
               </p>
             </section>
 
             <section>
-              <h2 className="mb-3 text-lg font-semibold text-foreground">11. Contact</h2>
+              <h2 className="mb-3 text-lg font-semibold text-foreground">11. Médiation des litiges</h2>
+              <p>
+                En cas de litige non résolu à l&apos;amiable, vous pouvez recourir gratuitement à un médiateur de la
+                consommation conformément aux articles L.611-1 et suivants du Code de la consommation.
+              </p>
+              <p className="mt-2">
+                Plateforme européenne de résolution des litiges en ligne (ODR) :{" "}
+                <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:text-purple-300">
+                  https://ec.europa.eu/consumers/odr/
+                </a>
+              </p>
+              <p className="mt-2">
+                Médiateur compétent : Médiateur du e-commerce de la FEVAD (Fédération du e-commerce et de la vente à
+                distance) —{" "}
+                <a href="https://www.mediateurfevad.fr" target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:text-purple-300">
+                  www.mediateurfevad.fr
+                </a>
+              </p>
+            </section>
+
+            <section>
+              <h2 className="mb-3 text-lg font-semibold text-foreground">12. Garantie légale de conformité</h2>
+              <p>
+                Conformément aux articles L.217-3 et suivants du Code de la consommation, les formations numériques
+                bénéficient de la garantie légale de conformité pendant deux (2) ans à compter de la fourniture du
+                contenu numérique.
+              </p>
+              <p className="mt-2">
+                En cas de défaut de conformité, vous avez droit à la mise en conformité du contenu numérique ou, si
+                cela est impossible, à une réduction du prix ou à la résolution du contrat.
+              </p>
+              <p className="mt-2">
+                Pour signaler un défaut :{" "}
+                <a href="mailto:contact@learn-ai.fr" className="text-purple-400 hover:text-purple-300">
+                  contact@learn-ai.fr
+                </a>
+              </p>
+            </section>
+
+            <section>
+              <h2 className="mb-3 text-lg font-semibold text-foreground">13. Contact</h2>
               <p>
                 Pour toute question :{" "}
                 <a href={`mailto:${siteConfig.emails.contact}`} className="text-purple-400 hover:text-purple-300">
@@ -162,6 +198,29 @@ export default function CGVPage() {
                   {siteConfig.emails.support}
                 </a>
               </p>
+            </section>
+
+            <section className="mt-10 border-t border-border/40 pt-8">
+              <h2 className="mb-4 text-lg font-semibold text-foreground">
+                ANNEXE — FORMULAIRE TYPE DE RÉTRACTATION
+              </h2>
+              <p className="mb-4 text-sm italic">
+                (À remplir et renvoyer uniquement si vous souhaitez vous rétracter)
+              </p>
+              <div className="rounded-md border border-border/50 bg-muted/20 p-4 text-sm space-y-2">
+                <p>À l&apos;attention de : Eterna Inc. — contact@learn-ai.fr</p>
+                <p className="mt-3">
+                  Je soussigné(e) notifie par la présente ma rétractation du contrat portant sur la fourniture de
+                  la formation numérique ci-dessous :
+                </p>
+                <p className="mt-3">— Formation concernée : ___________</p>
+                <p>— Numéro de commande : ___________</p>
+                <p>— Date de la commande : ___________</p>
+                <p>— Nom du consommateur : ___________</p>
+                <p>— Adresse du consommateur : ___________</p>
+                <p>— Date : ___________</p>
+                <p>— Signature (en cas de formulaire papier) : ___________</p>
+              </div>
             </section>
           </div>
         ) : (
@@ -262,22 +321,58 @@ export default function CGVPage() {
             <section>
               <h2 className="mb-3 text-lg font-semibold text-foreground">10. Governing Law and Jurisdiction</h2>
               <p>
-                These Terms of Sale are governed by the laws of the State of Delaware, USA.
-                Any dispute shall be subject to the exclusive jurisdiction of the courts of Delaware, USA.
+                <strong>For consumers residing in France or the European Union:</strong> these Terms of Sale are
+                governed by French law. The mandatory provisions of the French Consumer Code apply. Any dispute
+                shall be submitted to the competent courts of the consumer&apos;s place of residence.
               </p>
               <p className="mt-2">
-                <strong>European Union users:</strong> in accordance with the General Data Protection
-                Regulation (GDPR) and EU consumer protection directives,
-                your data protection and consumer rights remain fully applicable.
-                You may exercise your rights by contacting{" "}
-                <a href={`mailto:${siteConfig.emails.legal}`} className="text-purple-400 hover:text-purple-300">
-                  {siteConfig.emails.legal}
-                </a>.
+                <strong>For users residing outside the European Union:</strong> these Terms of Sale are governed by
+                the laws of the State of Delaware, USA.
               </p>
             </section>
 
             <section>
-              <h2 className="mb-3 text-lg font-semibold text-foreground">11. Contact</h2>
+              <h2 className="mb-3 text-lg font-semibold text-foreground">11. Dispute Mediation</h2>
+              <p>
+                In the event of an unresolved dispute, you may use a consumer mediator free of charge in
+                accordance with Articles L.611-1 et seq. of the French Consumer Code.
+              </p>
+              <p className="mt-2">
+                European Online Dispute Resolution (ODR) platform:{" "}
+                <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:text-purple-300">
+                  https://ec.europa.eu/consumers/odr/
+                </a>
+              </p>
+              <p className="mt-2">
+                Competent mediator: FEVAD e-commerce Mediator (Fédération du e-commerce et de la vente à
+                distance) —{" "}
+                <a href="https://www.mediateurfevad.fr" target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:text-purple-300">
+                  www.mediateurfevad.fr
+                </a>
+              </p>
+            </section>
+
+            <section>
+              <h2 className="mb-3 text-lg font-semibold text-foreground">12. Legal Conformity Warranty</h2>
+              <p>
+                In accordance with Articles L.217-3 et seq. of the French Consumer Code, digital courses benefit
+                from the legal conformity warranty for two (2) years from the date of delivery of the digital
+                content.
+              </p>
+              <p className="mt-2">
+                In the event of a conformity defect, you are entitled to have the digital content brought into
+                conformity or, if this is impossible, to a price reduction or termination of the contract.
+              </p>
+              <p className="mt-2">
+                To report a defect:{" "}
+                <a href="mailto:contact@learn-ai.fr" className="text-purple-400 hover:text-purple-300">
+                  contact@learn-ai.fr
+                </a>
+              </p>
+            </section>
+
+            <section>
+              <h2 className="mb-3 text-lg font-semibold text-foreground">13. Contact</h2>
               <p>
                 For any questions:{" "}
                 <a href={`mailto:${siteConfig.emails.contact}`} className="text-purple-400 hover:text-purple-300">
@@ -290,6 +385,29 @@ export default function CGVPage() {
                   {siteConfig.emails.support}
                 </a>
               </p>
+            </section>
+
+            <section className="mt-10 border-t border-border/40 pt-8">
+              <h2 className="mb-4 text-lg font-semibold text-foreground">
+                ANNEX — STANDARD WITHDRAWAL FORM
+              </h2>
+              <p className="mb-4 text-sm italic">
+                (Complete and return this form only if you wish to withdraw from the contract)
+              </p>
+              <div className="rounded-md border border-border/50 bg-muted/20 p-4 text-sm space-y-2">
+                <p>To: Eterna Inc. — contact@learn-ai.fr</p>
+                <p className="mt-3">
+                  I hereby notify my withdrawal from the contract for the supply of the following digital
+                  course:
+                </p>
+                <p className="mt-3">— Course concerned: ___________</p>
+                <p>— Order number: ___________</p>
+                <p>— Date of order: ___________</p>
+                <p>— Consumer name: ___________</p>
+                <p>— Consumer address: ___________</p>
+                <p>— Date: ___________</p>
+                <p>— Signature (for paper form only): ___________</p>
+              </div>
             </section>
           </div>
         )}

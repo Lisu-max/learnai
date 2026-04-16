@@ -114,6 +114,42 @@ export default function PolitiqueConfidentialitePage() {
                 n&apos;est déposé. Aucun consentement n&apos;est requis pour ces cookies techniques
                 (exemption CNIL).
               </p>
+              <div className="mt-4 overflow-x-auto">
+                <table className="w-full border-collapse text-sm">
+                  <thead>
+                    <tr className="border-b border-border/50">
+                      <th className="py-2 pr-4 text-left font-semibold text-foreground">Nom</th>
+                      <th className="py-2 pr-4 text-left font-semibold text-foreground">Domaine</th>
+                      <th className="py-2 pr-4 text-left font-semibold text-foreground">Finalité</th>
+                      <th className="py-2 pr-4 text-left font-semibold text-foreground">Type</th>
+                      <th className="py-2 text-left font-semibold text-foreground">Durée</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-border/30">
+                    <tr>
+                      <td className="py-2 pr-4 font-mono text-xs">sb-*</td>
+                      <td className="py-2 pr-4">Supabase</td>
+                      <td className="py-2 pr-4">Authentification JWT (session utilisateur)</td>
+                      <td className="py-2 pr-4">Essentiel</td>
+                      <td className="py-2">1 an</td>
+                    </tr>
+                    <tr>
+                      <td className="py-2 pr-4 font-mono text-xs">cookie-consent</td>
+                      <td className="py-2 pr-4">learn-ai.fr</td>
+                      <td className="py-2 pr-4">Mémorisation des préférences cookies</td>
+                      <td className="py-2 pr-4">Essentiel</td>
+                      <td className="py-2">1 an</td>
+                    </tr>
+                    <tr>
+                      <td className="py-2 pr-4 font-mono text-xs">_lang</td>
+                      <td className="py-2 pr-4">learn-ai.fr</td>
+                      <td className="py-2 pr-4">Préférence de langue (FR/EN)</td>
+                      <td className="py-2 pr-4">Essentiel</td>
+                      <td className="py-2">1 an</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </section>
 
             <section>
@@ -255,6 +291,42 @@ export default function PolitiqueConfidentialitePage() {
                 (authentication, session, language preference). No advertising, analytics, or tracking cookies
                 are used. No consent is required for these technical cookies.
               </p>
+              <div className="mt-4 overflow-x-auto">
+                <table className="w-full border-collapse text-sm">
+                  <thead>
+                    <tr className="border-b border-border/50">
+                      <th className="py-2 pr-4 text-left font-semibold text-foreground">Name</th>
+                      <th className="py-2 pr-4 text-left font-semibold text-foreground">Domain</th>
+                      <th className="py-2 pr-4 text-left font-semibold text-foreground">Purpose</th>
+                      <th className="py-2 pr-4 text-left font-semibold text-foreground">Type</th>
+                      <th className="py-2 text-left font-semibold text-foreground">Duration</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-border/30">
+                    <tr>
+                      <td className="py-2 pr-4 font-mono text-xs">sb-*</td>
+                      <td className="py-2 pr-4">Supabase</td>
+                      <td className="py-2 pr-4">Auth JWT (user session)</td>
+                      <td className="py-2 pr-4">Essential</td>
+                      <td className="py-2">1 year</td>
+                    </tr>
+                    <tr>
+                      <td className="py-2 pr-4 font-mono text-xs">cookie-consent</td>
+                      <td className="py-2 pr-4">learn-ai.fr</td>
+                      <td className="py-2 pr-4">Cookie consent preferences</td>
+                      <td className="py-2 pr-4">Essential</td>
+                      <td className="py-2">1 year</td>
+                    </tr>
+                    <tr>
+                      <td className="py-2 pr-4 font-mono text-xs">_lang</td>
+                      <td className="py-2 pr-4">learn-ai.fr</td>
+                      <td className="py-2 pr-4">Language preference (FR/EN)</td>
+                      <td className="py-2 pr-4">Essential</td>
+                      <td className="py-2">1 year</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </section>
 
             <section>

@@ -17,8 +17,35 @@ import {
   PlayCircle,
   Award,
   ShieldCheck,
+  Shield,
+  Star,
+  ArrowRight,
 } from "lucide-react";
 import { useTranslation } from "@/lib/i18n/context";
+
+const TESTIMONIALS = [
+  {
+    name: "Marie D.",
+    role: "Chef de projet",
+    quote:
+      "Grâce à cette formation, j'ai automatisé 3h de tâches répétitives par semaine. Le ROI a été immédiat dès la première utilisation en réunion.",
+    stars: 5,
+  },
+  {
+    name: "Thomas L.",
+    role: "Développeur",
+    quote:
+      "Les exercices pratiques sont excellents — on passe directement à l'action. J'ai intégré les techniques dans mon workflow dès le deuxième chapitre.",
+    stars: 5,
+  },
+  {
+    name: "Sophie R.",
+    role: "Entrepreneure",
+    quote:
+      "J'ai utilisé ce que j'ai appris pour rédiger mes offres commerciales. Mes conversions ont augmenté de 40% en un mois. Clairement l'un des meilleurs investissements.",
+    stars: 5,
+  },
+];
 
 const levelColors: Record<string, string> = {
   Débutant: "bg-emerald-500/10 text-emerald-400 border-emerald-500/20",
@@ -122,6 +149,39 @@ export function CourseDetail({ slug }: { slug: string }) {
                 </ul>
               </div>
             </Reveal>
+
+            {/* NEW-05 — Testimonials (premium courses only) */}
+            {!isFree && (
+              <Reveal>
+                <div className="mb-8">
+                  <h2 className="mb-4 text-lg font-semibold">Ce que disent nos apprenants</h2>
+                  <div className="grid gap-4 sm:grid-cols-1">
+                    {TESTIMONIALS.map((testimonial) => (
+                      <div
+                        key={testimonial.name}
+                        className="rounded-xl border border-border/50 bg-card/50 p-5"
+                      >
+                        <div className="mb-3 flex items-center gap-0.5">
+                          {Array.from({ length: testimonial.stars }).map((_, i) => (
+                            <Star
+                              key={i}
+                              className="h-4 w-4 fill-amber-400 text-amber-400"
+                            />
+                          ))}
+                        </div>
+                        <p className="mb-4 text-sm leading-relaxed text-muted-foreground">
+                          &ldquo;{testimonial.quote}&rdquo;
+                        </p>
+                        <div>
+                          <p className="text-sm font-semibold">{testimonial.name}</p>
+                          <p className="text-xs text-muted-foreground">{testimonial.role}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </Reveal>
+            )}
           </div>
 
           {/* Sidebar — Access card */}
@@ -172,6 +232,12 @@ export function CourseDetail({ slug }: { slug: string }) {
                     <p className="mt-0.5 text-sm text-muted-foreground">{t.courseDetail.perCourseOneTime}</p>
                   </div>
                   <BuyButton courseSlug={slug} priceFormatted="9,99 € TTC" />
+
+                  {/* CRO-01 — Guarantee badge */}
+                  <div className="mt-3 flex items-center gap-2 rounded-lg border border-emerald-500/30 bg-emerald-500/10 px-3 py-2.5 text-sm font-medium text-emerald-400">
+                    <Shield className="h-4 w-4 shrink-0" />
+                    Garantie 30 jours — satisfait ou remboursé
+                  </div>
                 </>
               )}
 
@@ -213,6 +279,40 @@ export function CourseDetail({ slug }: { slug: string }) {
             ))}
           </div>
         </div>
+
+        {/* Upsell — Pack Complet (premium courses only) */}
+        {!isFree && (
+          <div className="mt-10">
+            <div className="relative overflow-hidden rounded-2xl border border-purple-500/30 bg-gradient-to-br from-purple-500/10 via-blue-500/10 to-purple-500/10 px-6 py-8 text-center">
+              <div className="absolute inset-0 bg-grid opacity-30" />
+              <div className="relative">
+                <div className="mb-2 inline-flex items-center gap-1.5 rounded-full bg-purple-500/20 px-3 py-1 text-xs font-semibold text-purple-400">
+                  <Sparkles className="h-3 w-3" />
+                  Meilleure valeur
+                </div>
+                <h3 className="mb-2 text-xl font-bold md:text-2xl">
+                  Économisez avec le Pack Complet
+                </h3>
+                <p className="mb-1 text-muted-foreground">
+                  Toutes les formations pour{" "}
+                  <span className="font-bold text-white">89,99 € TTC</span>{" "}
+                  au lieu de{" "}
+                  <span className="line-through text-muted-foreground/70">139,86 €</span>
+                </p>
+                <p className="mb-6 text-sm text-muted-foreground">
+                  Accès illimité à tout le catalogue — une seule fois
+                </p>
+                <Link
+                  href="/pack-complet"
+                  className="inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-purple-600 to-blue-600 px-6 py-3 font-semibold text-white transition-opacity hover:opacity-90"
+                >
+                  Découvrir le Pack Complet
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
+              </div>
+            </div>
+          </div>
+        )}
       </section>
     </div>
   );

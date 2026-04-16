@@ -1,0 +1,16 @@
+{
+  "name": "LearnAI - Formations IA",
+  "short_name": "LearnAI",
+  "description": "Formations IA premium pour maîtriser les outils d'intelligence artificielle",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#05050f",
+  "theme_color": "#7c3aed",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "any",
+      "type": "image/x-icon"
+    }
+  ]
+}

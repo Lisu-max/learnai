@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
@@ -19,8 +19,13 @@ const geistMono = Geist_Mono({
   display: "swap",
 });
 
+export const viewport: Viewport = {
+  themeColor: "#7c3aed",
+};
+
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
+  manifest: "/manifest.json",
   title: {
     default: `${siteConfig.name} — Formations IA Premium`,
     template: `%s | ${siteConfig.name}`,

@@ -7,7 +7,6 @@ import { createClient } from "@/lib/supabase/client";
 import { Brain, Loader2, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { PasswordInput } from "@/components/ui/password-input";
-import { BirthDateInput } from "@/components/ui/birth-date-input";
 import { useTranslation } from "@/lib/i18n/context";
 
 export default function InscriptionPage() {
@@ -27,46 +26,11 @@ export default function InscriptionPage() {
 
     const formData = new FormData(e.currentTarget);
     const firstName = (formData.get("firstName") as string).trim();
-    const lastName = (formData.get("lastName") as string).trim();
-    const birthDate = formData.get("birthDate") as string;
     const email = formData.get("email") as string;
     const password = formData.get("password") as string;
-    const confirmPassword = formData.get("confirmPassword") as string;
 
     if (!firstName) {
       setError(t.auth.firstNameRequired);
-      setLoading(false);
-      return;
-    }
-
-    if (!lastName) {
-      setError(t.auth.lastNameRequired);
-      setLoading(false);
-      return;
-    }
-
-    if (!birthDate) {
-      setError(t.auth.birthDateRequired);
-      setLoading(false);
-      return;
-    }
-
-    const birth = new Date(birthDate);
-    const today = new Date();
-    let computedAge = today.getFullYear() - birth.getFullYear();
-    const monthDiff = today.getMonth() - birth.getMonth();
-    if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birth.getDate())) {
-      computedAge--;
-    }
-
-    if (computedAge < 13) {
-      setError(t.auth.birthDateTooYoung);
-      setLoading(false);
-      return;
-    }
-
-    if (password !== confirmPassword) {
-      setError(t.auth.passwordMismatch);
       setLoading(false);
       return;
     }
@@ -86,8 +50,6 @@ export default function InscriptionPage() {
         emailRedirectTo: `${window.location.origin}/auth/callback`,
         data: {
           first_name: firstName,
-          last_name: lastName,
-          birth_date: birthDate,
         },
       },
     });
@@ -169,43 +131,21 @@ export default function InscriptionPage() {
               <div className="h-px flex-1 bg-border/50" />
             </div>
 
-            <form onSubmit={handleSubmit} className="space-y-4">
-              {/* First name & Last name */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                <div>
-                  <label htmlFor="firstName" className="mb-1.5 block text-sm font-medium">
-                    {t.auth.firstName}
-                  </label>
-                  <input
-                    id="firstName"
-                    name="firstName"
-                    type="text"
-                    required
-                    placeholder={t.auth.firstNamePlaceholder}
-                    className={inputClass}
-                  />
-                </div>
-                <div>
-                  <label htmlFor="lastName" className="mb-1.5 block text-sm font-medium">
-                    {t.auth.lastName}
-                  </label>
-                  <input
-                    id="lastName"
-                    name="lastName"
-                    type="text"
-                    required
-                    placeholder={t.auth.lastNamePlaceholder}
-                    className={inputClass}
-                  />
-                </div>
-              </div>
-
-              {/* Birth date */}
+            <form onSubmit={handleSubmit} className="space-y-4" autoComplete="on">
+              {/* First name */}
               <div>
-                <label className="mb-1.5 block text-sm font-medium">
-                  {t.auth.birthDate}
+                <label htmlFor="firstName" className="mb-1.5 block text-sm font-medium">
+                  {t.auth.firstName}
                 </label>
-                <BirthDateInput name="birthDate" />
+                <input
+                  id="firstName"
+                  name="firstName"
+                  type="text"
+                  required
+                  autoComplete="given-name"
+                  placeholder={t.auth.firstNamePlaceholder}
+                  className={inputClass}
+                />
               </div>
 
               {/* Email */}
@@ -218,6 +158,8 @@ export default function InscriptionPage() {
                   name="email"
                   type="email"
                   required
+                  autoComplete="email"
+                  inputMode="email"
                   placeholder={t.auth.emailPlaceholder}
                   className={inputClass}
                 />
@@ -231,19 +173,8 @@ export default function InscriptionPage() {
                 <PasswordInput
                   id="password"
                   name="password"
+                  autoComplete="new-password"
                   placeholder={t.auth.passwordPlaceholder}
-                />
-              </div>
-
-              {/* Confirm password */}
-              <div>
-                <label htmlFor="confirmPassword" className="mb-1.5 block text-sm font-medium">
-                  {t.auth.confirmPassword}
-                </label>
-                <PasswordInput
-                  id="confirmPassword"
-                  name="confirmPassword"
-                  placeholder={t.auth.confirmPasswordPlaceholder}
                 />
               </div>
 

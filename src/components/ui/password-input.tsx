@@ -8,9 +8,10 @@ interface PasswordInputProps {
   name: string;
   placeholder: string;
   required?: boolean;
+  autoComplete?: string;
 }
 
-export function PasswordInput({ id, name, placeholder, required = true }: PasswordInputProps) {
+export function PasswordInput({ id, name, placeholder, required = true, autoComplete }: PasswordInputProps) {
   const [visible, setVisible] = useState(false);
 
   return (
@@ -21,6 +22,7 @@ export function PasswordInput({ id, name, placeholder, required = true }: Passwo
         type={visible ? "text" : "password"}
         required={required}
         placeholder={placeholder}
+        autoComplete={autoComplete}
         className="w-full rounded-lg border border-border/50 bg-background px-4 py-3 pr-11 text-sm outline-none transition-colors placeholder:text-muted-foreground focus:border-purple-500 focus:ring-1 focus:ring-purple-500"
       />
       <button

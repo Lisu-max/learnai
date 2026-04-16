@@ -107,16 +107,17 @@ function ConnexionForm() {
           <div className="h-px flex-1 bg-border/50" />
         </div>
 
-        <form onSubmit={handleSubmit} className="space-y-4">
+        <form onSubmit={handleSubmit} className="space-y-4" autoComplete="on">
           <div>
             <label htmlFor="email" className="mb-1.5 block text-sm font-medium">{t.auth.email}</label>
-            <input id="email" name="email" type="email" required placeholder={t.auth.emailPlaceholder} className="w-full rounded-lg border border-border/50 bg-background px-4 py-3 text-sm outline-none transition-colors placeholder:text-muted-foreground focus:border-purple-500 focus:ring-1 focus:ring-purple-500" />
+            <input id="email" name="email" type="email" required autoComplete="email" inputMode="email" placeholder={t.auth.emailPlaceholder} className="w-full rounded-lg border border-border/50 bg-background px-4 py-3 text-sm outline-none transition-colors placeholder:text-muted-foreground focus:border-purple-500 focus:ring-1 focus:ring-purple-500" />
           </div>
           <div>
             <label htmlFor="password" className="mb-1.5 block text-sm font-medium">{t.auth.password}</label>
             <PasswordInput
               id="password"
               name="password"
+              autoComplete="current-password"
               placeholder={t.auth.passwordLoginPlaceholder}
             />
           </div>
