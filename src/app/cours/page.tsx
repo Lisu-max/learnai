@@ -41,7 +41,7 @@ export default function CoursPage() {
 
           <div className="animate-fade-in-delay-3 mx-auto grid max-w-lg grid-cols-3 gap-6">
             <div className="card-glass px-4 py-3 text-center">
-              <p className="text-xl font-bold text-emerald-400">1</p>
+              <p className="text-xl font-bold text-emerald-400">{freeCourses.length}</p>
               <p className="text-xs text-muted-foreground">{t.coursesPage.freeStat}</p>
             </div>
             <div className="card-glass px-4 py-3 text-center">
@@ -49,7 +49,7 @@ export default function CoursPage() {
               <p className="text-xs text-muted-foreground">{t.coursesPage.chapters}</p>
             </div>
             <div className="card-glass px-4 py-3 text-center">
-              <p className="text-xl font-bold gradient-text-animated">5</p>
+              <p className="text-xl font-bold gradient-text-animated">{courses.length}</p>
               <p className="text-xs text-muted-foreground">{t.coursesPage.formationsStat}</p>
             </div>
           </div>

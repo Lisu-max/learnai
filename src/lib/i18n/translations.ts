@@ -19,7 +19,7 @@ export const translations = {
       statCourses: "Formations",
       statPages: "Pages de contenu",
       statChapters: "Chapitres",
-      statFreeCourse: "Cours gratuit",
+      statFreeCourse: "Cours gratuits",
       statInteractiveChapters: "Chapitres interactifs",
     },
     // Value Proposition
@@ -119,7 +119,7 @@ export const translations = {
         {
           question: "Qu'est-ce que le Pack Complet ?",
           answer:
-            "Le Pack Complet IA 2026 regroupe nos 5 formations dans un seul package à prix réduit. Vous économisez plus de 50€ par rapport à l'achat séparé, avec en plus un accès prioritaire aux futures formations.",
+            "Le Pack Complet IA 2026 regroupe nos 17 formations dans un seul package à prix réduit. Économisez par rapport à l'achat séparé, avec en plus un accès prioritaire aux futures formations.",
         },
       ],
     },
@@ -243,7 +243,7 @@ export const translations = {
     },
     // Courses page
     coursesPage: {
-      badge: "5 formations disponibles",
+      badge: "17 formations disponibles",
       title: "Nos",
       titleHighlight: "Formations",
       subtitle:
@@ -264,11 +264,11 @@ export const translations = {
       singlePayment: "Paiement unique",
       heroTitle: "Maîtrisez l'IA",
       heroTitleHighlight: "à votre rythme",
-      heroSubtitle: "1 formation gratuite pour débuter, 4 formations premium pour aller plus loin. Vidéos explicatives, textes et quiz interactifs.",
+      heroSubtitle: "3 formations gratuites pour débuter, 14 formations premium pour aller plus loin. Vidéos explicatives, textes et quiz interactifs.",
       freeStat: "Cours gratuit",
       formationsStat: "Formations",
-      freeSectionTitle: "Formation d'introduction gratuite",
-      freeSectionSubtitle: "Commencez immédiatement, sans inscription ni paiement.",
+      freeSectionTitle: "Formations gratuites",
+      freeSectionSubtitle: "Commencez immédiatement, sans inscription ni paiement. 3 cours pour débuter.",
       premiumSectionTitle: "Formations Premium",
       premiumSectionSubtitle: "par formation — paiement unique, accès à vie.",
       ctaTitle: "Chaque formation à",
@@ -424,7 +424,7 @@ export const translations = {
       statCourses: "Courses",
       statPages: "Pages of content",
       statChapters: "Chapters",
-      statFreeCourse: "Free course",
+      statFreeCourse: "Free courses",
       statInteractiveChapters: "Interactive chapters",
     },
     values: {
@@ -519,7 +519,7 @@ export const translations = {
         {
           question: "What is the Complete Pack?",
           answer:
-            "The Complete AI Pack 2026 bundles all 5 courses into one package at a reduced price. You save over 50€ compared to buying separately, plus you get priority access to future courses.",
+            "The Complete AI Pack 2026 bundles all 17 courses into one package at a reduced price. Save compared to buying separately, plus you get priority access to future courses.",
         },
       ],
     },
@@ -638,7 +638,7 @@ export const translations = {
       freeCourse: "Free course",
     },
     coursesPage: {
-      badge: "5 courses available",
+      badge: "17 courses available",
       title: "Our",
       titleHighlight: "Courses",
       subtitle:
@@ -659,11 +659,11 @@ export const translations = {
       singlePayment: "One-time payment",
       heroTitle: "Master AI",
       heroTitleHighlight: "at your own pace",
-      heroSubtitle: "1 free course to get started, 4 premium courses to go further. Explanatory videos, texts and interactive quizzes.",
+      heroSubtitle: "3 free courses to get started, 14 premium courses to go further. Explanatory videos, texts and interactive quizzes.",
       freeStat: "Free course",
       formationsStat: "Courses",
-      freeSectionTitle: "Free introduction course",
-      freeSectionSubtitle: "Start immediately, no registration or payment needed.",
+      freeSectionTitle: "Free courses",
+      freeSectionSubtitle: "Start immediately, no registration or payment needed. 3 courses to get started.",
       premiumSectionTitle: "Premium Courses",
       premiumSectionSubtitle: "per course — one-time payment, lifetime access.",
       ctaTitle: "Each course for",
