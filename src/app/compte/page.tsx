@@ -8,6 +8,7 @@ export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
   title: "Mon compte",
+  robots: { index: false, follow: false },
 };
 
 export default async function ComptePage() {

@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { getStripe } from "@/lib/stripe";
 import { createClient } from "@/lib/supabase/server";
+import { siteConfig } from "@/config/site";
 
 export async function POST() {
   try {
@@ -30,7 +31,7 @@ export async function POST() {
       );
     }
 
-    const appUrl = (process.env.NEXT_PUBLIC_APP_URL || process.env.NEXT_PUBLIC_BASE_URL || "https://learnai-csa3.vercel.app").trim();
+    const appUrl = siteConfig.url;
 
     const portalSession = await getStripe().billingPortal.sessions.create({
       customer: profile.stripe_customer_id,

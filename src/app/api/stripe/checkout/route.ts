@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { getStripe } from "@/lib/stripe";
 import { getOrCreateStripeCustomer } from "@/lib/stripe-helpers";
 import { createClient } from "@/lib/supabase/server";
+import { siteConfig } from "@/config/site";
 
 export async function POST() {
   try {
@@ -18,7 +19,7 @@ export async function POST() {
     }
 
     const customerId = await getOrCreateStripeCustomer(user.id, user.email);
-    const appUrl = (process.env.NEXT_PUBLIC_BASE_URL || process.env.NEXT_PUBLIC_APP_URL || "https://learnai-csa3.vercel.app").trim();
+    const appUrl = siteConfig.url;
 
     const priceId = process.env.STRIPE_PRICE_PRO_MONTHLY;
     if (!priceId) {
@@ -38,6 +39,7 @@ export async function POST() {
           quantity: 1,
         },
       ],
+      allow_promotion_codes: true,
       success_url: `${appUrl}/compte?success=true`,
       cancel_url: `${appUrl}/cours?canceled=true`,
       subscription_data: {

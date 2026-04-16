@@ -7,7 +7,9 @@ import type { QuizQuestion } from "@/content/types";
 import { QuizQuestionCard } from "./quiz-question";
 import { createClient } from "@/lib/supabase/client";
 import { useTranslation } from "@/lib/i18n/context";
-import { Confetti } from "@/components/ui/confetti";
+import dynamic from "next/dynamic";
+
+const Confetti = dynamic(() => import("@/components/ui/confetti").then(m => ({ default: m.Confetti })), { ssr: false });
 
 interface QuizContainerProps {
   questions: QuizQuestion[];

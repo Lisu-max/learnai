@@ -4,7 +4,9 @@ import Link from "next/link";
 import { ArrowRight, Sparkles } from "lucide-react";
 import { Reveal } from "@/components/ui/reveal";
 import { useTranslation } from "@/lib/i18n/context";
-import { NeuralGlobe } from "./neural-globe";
+import dynamic from "next/dynamic";
+
+const NeuralGlobe = dynamic(() => import("./neural-globe").then(m => ({ default: m.NeuralGlobe })), { ssr: false });
 
 export function Hero() {
   const { t } = useTranslation();

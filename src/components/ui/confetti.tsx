@@ -46,7 +46,7 @@ export function Confetti({ active }: { active: boolean }) {
             width: p.size,
             height: p.size,
             backgroundColor: p.color,
-            borderRadius: Math.random() > 0.5 ? "50%" : "2px",
+            borderRadius: p.id % 2 === 0 ? "50%" : "2px",
             animationDelay: `${p.delay}s`,
             animationDuration: `${p.duration}s`,
             transform: `rotate(${p.rotation}deg)`,

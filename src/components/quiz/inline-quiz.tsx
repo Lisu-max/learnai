@@ -6,7 +6,9 @@ import { Brain, Trophy, RotateCcw, ArrowRight, PartyPopper, CheckCircle2, XCircl
 import type { QuizQuestion } from "@/content/types";
 import { createClient } from "@/lib/supabase/client";
 import { useTranslation } from "@/lib/i18n/context";
-import { Confetti } from "@/components/ui/confetti";
+import dynamic from "next/dynamic";
+
+const Confetti = dynamic(() => import("@/components/ui/confetti").then(m => ({ default: m.Confetti })), { ssr: false });
 
 interface InlineQuizProps {
   questions: QuizQuestion[];

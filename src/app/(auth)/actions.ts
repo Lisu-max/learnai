@@ -2,6 +2,7 @@
 
 import { createClient } from "@/lib/supabase/server";
 import { headers } from "next/headers";
+import { siteConfig } from "@/config/site";
 
 export async function signup(formData: FormData) {
   const supabase = await createClient();
@@ -10,7 +11,7 @@ export async function signup(formData: FormData) {
   const password = formData.get("password") as string;
 
   const headersList = await headers();
-  const origin = headersList.get("origin") || process.env.NEXT_PUBLIC_BASE_URL || "https://learnai-csa3.vercel.app";
+  const origin = headersList.get("origin") || siteConfig.url;
 
   const { error } = await supabase.auth.signUp({
     email,
@@ -49,7 +50,7 @@ export async function loginWithGoogle() {
   const supabase = await createClient();
 
   const headersList = await headers();
-  const origin = headersList.get("origin") || process.env.NEXT_PUBLIC_BASE_URL || "https://learnai-csa3.vercel.app";
+  const origin = headersList.get("origin") || siteConfig.url;
 
   const { data, error } = await supabase.auth.signInWithOAuth({
     provider: "google",

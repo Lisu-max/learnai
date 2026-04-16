@@ -3,6 +3,7 @@ import { z } from "zod";
 import { getStripe, getStripePriceId } from "@/lib/stripe";
 import { getOrCreateStripeCustomer } from "@/lib/stripe-helpers";
 import { getCourseBySlug, isFreeCourse } from "@/lib/courses";
+import { siteConfig } from "@/config/site";
 import { createClient } from "@/lib/supabase/server";
 import { logRequest, logError } from "@/lib/logger";
 
@@ -72,12 +73,13 @@ export async function POST(req: NextRequest) {
 
   try {
     const customerId = await getOrCreateStripeCustomer(user.id, user.email);
-    const baseUrl = (process.env.NEXT_PUBLIC_BASE_URL || process.env.NEXT_PUBLIC_APP_URL || "https://learnai-gules.vercel.app").trim();
+    const baseUrl = siteConfig.url;
 
     const session = await getStripe().checkout.sessions.create({
       customer: customerId,
       line_items: [{ price: priceId, quantity: 1 }],
       mode: "payment",
+      allow_promotion_codes: true,
       success_url: `${baseUrl}/succes?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${baseUrl}/cours/${course.slug}`,
       metadata: {

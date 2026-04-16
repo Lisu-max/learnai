@@ -1,7 +1,8 @@
 import type { MetadataRoute } from "next";
 import { courses } from "@/lib/courses";
+import { siteConfig } from "@/config/site";
 
-const BASE_URL = "https://learnai-csa3.vercel.app";
+const BASE_URL = siteConfig.url;
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const coursePages = courses.map((course) => ({
