@@ -42,8 +42,11 @@ export default function MentionsLegalesPage() {
               <h2 className="mb-3 text-lg font-semibold text-foreground">1. Éditeur du site</h2>
               <p>
                 Le site <strong>{siteConfig.name}</strong> est édité par :<br />
-                <strong>{siteConfig.company.name}</strong>, société constituée dans l&apos;État du Delaware, États-Unis.<br />
+                <strong>{siteConfig.company.name}</strong> — Société de droit américain — Eterna Inc., Delaware, USA<br />
                 Siège social : {siteConfig.company.address}<br />
+                <em className="text-xs">
+                  Société de droit américain, non immatriculée au RCS français (pas de numéro SIRET).
+                </em><br />
                 Directeur de la publication : {siteConfig.company.name}<br />
                 Contact :{" "}
                 <a href={`mailto:${siteConfig.emails.contact}`} className="text-purple-400 hover:text-purple-300">
@@ -131,8 +134,11 @@ export default function MentionsLegalesPage() {
               <h2 className="mb-3 text-lg font-semibold text-foreground">1. Site Publisher</h2>
               <p>
                 The website <strong>{siteConfig.name}</strong> is published by:<br />
-                <strong>{siteConfig.company.name}</strong>, a corporation incorporated in the State of Delaware, USA.<br />
+                <strong>{siteConfig.company.name}</strong> — US corporation — Eterna Inc., Delaware, USA<br />
                 Registered address: {siteConfig.company.address}<br />
+                <em className="text-xs">
+                  US corporation, not registered in France (no SIRET number).
+                </em><br />
                 Director of publication: {siteConfig.company.name}<br />
                 Contact:{" "}
                 <a href={`mailto:${siteConfig.emails.contact}`} className="text-purple-400 hover:text-purple-300">

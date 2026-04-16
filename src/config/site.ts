@@ -2,7 +2,7 @@ export const siteConfig = {
   name: "LearnAI",
   description:
     "Maîtrisez l'intelligence artificielle avec nos formations premium en ligne. De débutant à expert, accélérez votre carrière avec l'IA.",
-  url: process.env.NEXT_PUBLIC_BASE_URL || "https://learn-ai.fr",
+  url: "https://www.learn-ai.fr",
   company: {
     name: "Eterna Inc.",
     address: "251 Little Falls Drive, Wilmington, DE 19808, USA",

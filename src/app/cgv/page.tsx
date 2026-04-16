@@ -106,6 +106,23 @@ export default function CGVPage() {
             </section>
 
             <section>
+              <h2 className="mb-3 text-lg font-semibold text-foreground">8. Droit de rétractation</h2>
+              <p>
+                Conformément à l&apos;article L. 221-18 du Code de la consommation, vous disposez d&apos;un délai de
+                quatorze (14) jours calendaires à compter de la date d&apos;achat pour exercer votre droit de rétractation,
+                sans avoir à justifier de motifs. Pour l&apos;exercer : envoyez votre demande à{" "}
+                <a href="mailto:contact@learn-ai.fr" className="text-purple-400 hover:text-purple-300">
+                  contact@learn-ai.fr
+                </a>{" "}
+                en indiquant votre numéro de commande.
+              </p>
+              <p className="mt-2">
+                <strong>Exception :</strong> Le droit de rétractation ne peut être exercé une fois que vous avez commencé
+                à accéder au contenu de la formation (conformément à l&apos;article L. 221-28, 13°).
+              </p>
+            </section>
+
+            <section>
               <h2 className="mb-3 text-lg font-semibold text-foreground">9. Mises à jour gratuites</h2>
               <p>
                 Les formations achetées bénéficient de mises à jour gratuites. Lorsque le contenu est mis à jour
@@ -213,6 +230,23 @@ export default function CGVPage() {
               <p>
                 Purchasing a course grants a personal, non-transferable right of use.
                 Any reproduction, distribution, or resale is strictly prohibited.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="mb-3 text-lg font-semibold text-foreground">8. Right of Withdrawal</h2>
+              <p>
+                In accordance with Article L. 221-18 of the French Consumer Code, you have a period of
+                fourteen (14) calendar days from the date of purchase to exercise your right of withdrawal,
+                without having to justify your reasons. To exercise it: send your request to{" "}
+                <a href="mailto:contact@learn-ai.fr" className="text-purple-400 hover:text-purple-300">
+                  contact@learn-ai.fr
+                </a>{" "}
+                with your order number.
+              </p>
+              <p className="mt-2">
+                <strong>Exception:</strong> The right of withdrawal cannot be exercised once you have started
+                accessing the course content (in accordance with Article L. 221-28, 13°).
               </p>
             </section>
 
