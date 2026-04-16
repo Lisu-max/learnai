@@ -140,7 +140,7 @@ export default function CGVPage() {
                 </a>
               </p>
               <p className="mt-2">
-                Pour les demandes de remboursement :{" "}
+                Pour le support :{" "}
                 <a href={`mailto:${siteConfig.emails.support}`} className="text-purple-400 hover:text-purple-300">
                   {siteConfig.emails.support}
                 </a>
@@ -251,7 +251,7 @@ export default function CGVPage() {
                 </a>
               </p>
               <p className="mt-2">
-                For refund requests:{" "}
+                For support:{" "}
                 <a href={`mailto:${siteConfig.emails.support}`} className="text-purple-400 hover:text-purple-300">
                   {siteConfig.emails.support}
                 </a>
