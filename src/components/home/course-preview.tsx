@@ -13,7 +13,7 @@ export function CoursePreview() {
   const premiumCourses = courses.filter((c) => c.tier === "premium").slice(0, 3);
 
   return (
-    <section id="formations" className="bg-secondary/30 py-20">
+    <section id="formations" className="bg-secondary/30 py-20" aria-label="Nos formations">
       <div className="section-divider mb-20" />
 
       <div className="mx-auto max-w-6xl px-4">

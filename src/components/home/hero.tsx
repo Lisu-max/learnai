@@ -12,7 +12,7 @@ export function Hero() {
   const { t } = useTranslation();
 
   return (
-    <section className="relative min-h-[85vh] overflow-hidden bg-[#05050f]">
+    <section className="relative min-h-[85vh] overflow-hidden bg-[#05050f]" aria-label="Accueil — introduction">
       {/* Neural Globe — full background */}
       <NeuralGlobe />
 

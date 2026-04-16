@@ -31,7 +31,7 @@ export function ValueProposition() {
   ];
 
   return (
-    <section className="mx-auto max-w-6xl px-4 py-20">
+    <section className="mx-auto max-w-6xl px-4 py-20" aria-label="Pourquoi choisir LearnAI">
       <div className="section-divider mb-20" />
 
       <Reveal>

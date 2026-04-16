@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 import { siteConfig } from "@/config/site";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { LanguageSwitcher } from "./language-switcher";
@@ -17,6 +18,7 @@ interface MobileNavProps {
 export function MobileNav({ user, loading }: MobileNavProps) {
   const [open, setOpen] = useState(false);
   const { t } = useTranslation();
+  const pathname = usePathname();
 
   const initials = user
     ? `${(user.user_metadata?.first_name as string || "").charAt(0)}${(user.user_metadata?.last_name as string || "").charAt(0)}`.toUpperCase()
@@ -40,14 +42,16 @@ export function MobileNav({ user, loading }: MobileNavProps) {
           <Link
             href="/"
             onClick={() => setOpen(false)}
-            className="text-lg text-muted-foreground transition-colors hover:text-foreground"
+            aria-current={pathname === "/" ? "page" : undefined}
+            className={`text-lg transition-colors hover:text-foreground ${pathname === "/" ? "font-medium text-foreground border-l-2 border-purple-400 pl-3" : "text-muted-foreground"}`}
           >
             {t.nav.home}
           </Link>
           <Link
             href="/cours"
             onClick={() => setOpen(false)}
-            className="text-lg text-muted-foreground transition-colors hover:text-foreground"
+            aria-current={pathname === "/cours" || pathname.startsWith("/cours/") ? "page" : undefined}
+            className={`text-lg transition-colors hover:text-foreground ${pathname === "/cours" || pathname.startsWith("/cours/") ? "font-medium text-foreground border-l-2 border-purple-400 pl-3" : "text-muted-foreground"}`}
           >
             {t.nav.courses}
           </Link>

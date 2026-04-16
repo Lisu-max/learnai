@@ -8,6 +8,7 @@ export const metadata: Metadata = {
     title: `S'inscrire | ${siteConfig.name}`,
     description: `Créez votre compte ${siteConfig.name} et commencez à apprendre l'intelligence artificielle gratuitement.`,
     url: `${siteConfig.url}/inscription`,
+    images: ["/opengraph-image"],
   },
   alternates: {
     canonical: `${siteConfig.url}/inscription`,

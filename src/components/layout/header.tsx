@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import { siteConfig } from "@/config/site";
 import { MobileNav } from "./mobile-nav";
 import { LanguageSwitcher } from "./language-switcher";
@@ -12,6 +13,7 @@ import type { User as SupabaseUser } from "@supabase/supabase-js";
 
 export function Header() {
   const { t } = useTranslation();
+  const pathname = usePathname();
   const [user, setUser] = useState<SupabaseUser | null>(null);
   const [loading, setLoading] = useState(true);
 
@@ -47,13 +49,15 @@ export function Header() {
         <nav className="hidden items-center gap-6 md:flex">
           <Link
             href="/"
-            className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+            aria-current={pathname === "/" ? "page" : undefined}
+            className={`text-sm transition-colors hover:text-foreground ${pathname === "/" ? "font-medium text-foreground underline underline-offset-4 decoration-purple-400" : "text-muted-foreground"}`}
           >
             {t.nav.home}
           </Link>
           <Link
             href="/cours"
-            className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+            aria-current={pathname === "/cours" || pathname.startsWith("/cours/") ? "page" : undefined}
+            className={`text-sm transition-colors hover:text-foreground ${pathname === "/cours" || pathname.startsWith("/cours/") ? "font-medium text-foreground underline underline-offset-4 decoration-purple-400" : "text-muted-foreground"}`}
           >
             {t.nav.courses}
           </Link>

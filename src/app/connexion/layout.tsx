@@ -8,6 +8,7 @@ export const metadata: Metadata = {
     title: `Se connecter | ${siteConfig.name}`,
     description: `Connectez-vous à votre compte ${siteConfig.name} pour accéder à vos formations en intelligence artificielle.`,
     url: `${siteConfig.url}/connexion`,
+    images: ["/opengraph-image"],
   },
   alternates: {
     canonical: `${siteConfig.url}/connexion`,

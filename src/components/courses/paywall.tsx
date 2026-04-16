@@ -38,12 +38,12 @@ export function Paywall({ courseSlug }: { courseSlug: string }) {
       </div>
 
       <div className="mb-6">
-        <p className="mb-1 text-3xl font-bold gradient-text-animated">9,99€</p>
+        <p className="mb-1 text-3xl font-bold gradient-text-animated">9,99 € TTC</p>
         <p className="text-sm text-muted-foreground">{t.paywall.priceSubtitle}</p>
       </div>
 
       <div className="mx-auto max-w-xs">
-        <BuyButton courseSlug={courseSlug} priceFormatted="9,99€" />
+        <BuyButton courseSlug={courseSlug} priceFormatted="9,99 € TTC" />
       </div>
 
       <p className="mt-6 text-sm text-muted-foreground">

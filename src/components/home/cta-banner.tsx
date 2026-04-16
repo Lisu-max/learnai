@@ -9,7 +9,7 @@ export function CTABanner() {
   const { t } = useTranslation();
 
   return (
-    <section className="relative overflow-hidden py-20">
+    <section className="relative overflow-hidden py-20" aria-label="Commencer maintenant">
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-purple-600/10 via-blue-600/5 to-purple-600/10" />
       <div className="pointer-events-none absolute left-1/2 top-1/2 h-[300px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-purple-600/15 blur-[100px]" />
 

@@ -11,10 +11,12 @@ import {
   BookOpen,
   Clock,
   CheckCircle2,
-  ArrowLeft,
+  ChevronRight,
   Lock,
   Sparkles,
   PlayCircle,
+  Award,
+  ShieldCheck,
 } from "lucide-react";
 import { useTranslation } from "@/lib/i18n/context";
 
@@ -39,13 +41,29 @@ export function CourseDetail({ slug }: { slug: string }) {
   return (
     <div className="bg-grid">
       <section className="mx-auto max-w-5xl px-4 py-12">
-        <Link
-          href="/cours"
-          className="group mb-8 inline-flex items-center gap-1.5 text-sm text-muted-foreground transition-colors hover:text-foreground"
-        >
-          <ArrowLeft className="h-4 w-4 transition-transform group-hover:-translate-x-1" />
-          {t.courseDetail.backToCourses}
-        </Link>
+        <nav aria-label="Fil d'Ariane" className="mb-8">
+          <ol className="flex flex-wrap items-center gap-1 text-sm text-muted-foreground">
+            <li>
+              <Link href="/" className="transition-colors hover:text-foreground">
+                {t.nav.home}
+              </Link>
+            </li>
+            <li aria-hidden="true">
+              <ChevronRight className="h-3.5 w-3.5" />
+            </li>
+            <li>
+              <Link href="/cours" className="transition-colors hover:text-foreground">
+                {t.nav.courses}
+              </Link>
+            </li>
+            <li aria-hidden="true">
+              <ChevronRight className="h-3.5 w-3.5" />
+            </li>
+            <li aria-current="page" className="font-medium text-foreground truncate max-w-[200px] sm:max-w-none">
+              {lc.title}
+            </li>
+          </ol>
+        </nav>
 
         <div className="grid gap-10 lg:grid-cols-3">
           {/* Main content */}
@@ -82,6 +100,11 @@ export function CourseDetail({ slug }: { slug: string }) {
                   <Clock className="h-4 w-4 text-purple-400" />
                   {course.duration}
                 </span>
+                {course.updatedAt && (
+                  <span className="inline-flex items-center rounded-full border border-border/60 bg-muted/50 px-2.5 py-0.5 text-xs font-medium text-muted-foreground">
+                    Mis à jour : {course.updatedAt}
+                  </span>
+                )}
               </div>
             </Reveal>
 
@@ -145,10 +168,10 @@ export function CourseDetail({ slug }: { slug: string }) {
                       <Lock className="h-3 w-3" />
                       {t.courseDetail.premiumCourse}
                     </div>
-                    <p className="mt-2 text-3xl font-bold gradient-text-animated">9,99€</p>
+                    <p className="mt-2 text-3xl font-bold gradient-text-animated">9,99 € TTC</p>
                     <p className="mt-0.5 text-sm text-muted-foreground">{t.courseDetail.perCourseOneTime}</p>
                   </div>
-                  <BuyButton courseSlug={slug} priceFormatted="9,99€" />
+                  <BuyButton courseSlug={slug} priceFormatted="9,99 € TTC" />
                 </>
               )}
 
@@ -165,6 +188,16 @@ export function CourseDetail({ slug }: { slug: string }) {
                 <div className="flex items-center gap-2 text-xs text-muted-foreground">
                   <CheckCircle2 className="h-3.5 w-3.5 text-emerald-400" />
                   {t.courseDetail.lifetimeAccess}
+                </div>
+                {/* CONTENT-08 — Completion certificate */}
+                <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                  <Award className="h-3.5 w-3.5 text-amber-400" />
+                  {locale === "en" ? "Completion certificate included" : "Certificat de complétion inclus"}
+                </div>
+                {/* CONTENT-09 — Stripe / SSL badge */}
+                <div className="mt-3 flex items-center gap-2 rounded-lg border border-border/40 bg-muted/30 px-3 py-2 text-xs text-muted-foreground">
+                  <ShieldCheck className="h-4 w-4 shrink-0 text-emerald-400" />
+                  {locale === "en" ? "Secure payment via Stripe — SSL encrypted" : "Paiement sécurisé Stripe — chiffrement SSL"}
                 </div>
               </div>
             </div>

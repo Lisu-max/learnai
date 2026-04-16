@@ -8,7 +8,7 @@ export function Testimonials() {
   const { t } = useTranslation();
 
   return (
-    <section className="mx-auto max-w-6xl px-4 py-20">
+    <section className="mx-auto max-w-6xl px-4 py-20" aria-label="Témoignages">
       <div className="section-divider mb-20" />
 
       <Reveal>

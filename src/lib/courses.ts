@@ -17,6 +17,7 @@ export interface Course {
   features: string[];
   image: string;
   color: string;
+  updatedAt?: string;
   en?: CourseTranslation;
 }
 
@@ -41,6 +42,7 @@ export const courses: Course[] = [
     ],
     image: "/images/courses/ia-de-a-a-z.jpg",
     color: "from-blue-500 to-cyan-500",
+    updatedAt: "Avril 2026",
     en: {
       title: "AI from A to Z",
       description:
@@ -76,6 +78,7 @@ export const courses: Course[] = [
     ],
     image: "/images/courses/maitriser-outils-ia.jpg",
     color: "from-purple-500 to-pink-500",
+    updatedAt: "Avril 2026",
     en: {
       title: "Mastering AI Tools",
       description:
@@ -111,6 +114,7 @@ export const courses: Course[] = [
     ],
     image: "/images/courses/prompt-engineering-pro.jpg",
     color: "from-violet-500 to-purple-500",
+    updatedAt: "Avril 2026",
     en: {
       title: "Prompt Engineering Pro",
       description:
@@ -146,6 +150,7 @@ export const courses: Course[] = [
     ],
     image: "/images/courses/ia-pour-votre-business.jpg",
     color: "from-amber-500 to-orange-500",
+    updatedAt: "Avril 2026",
     en: {
       title: "AI for your Business",
       description:
@@ -181,6 +186,7 @@ export const courses: Course[] = [
     ],
     image: "/images/courses/ia-au-quotidien.jpg",
     color: "from-amber-500 to-yellow-500",
+    updatedAt: "Avril 2026",
   },
   {
     slug: "ethique-ia",
@@ -202,6 +208,7 @@ export const courses: Course[] = [
     ],
     image: "/images/courses/ethique-ia.jpg",
     color: "from-rose-500 to-red-500",
+    updatedAt: "Avril 2026",
   },
   {
     slug: "creer-avec-ia",
@@ -223,6 +230,7 @@ export const courses: Course[] = [
     ],
     image: "/images/courses/creer-avec-ia.jpg",
     color: "from-emerald-500 to-teal-500",
+    updatedAt: "Avril 2026",
     en: {
       title: "Create with AI",
       description:
@@ -258,6 +266,7 @@ export const courses: Course[] = [
     ],
     image: "/images/courses/coder-avec-ia.jpg",
     color: "from-green-500 to-emerald-500",
+    updatedAt: "Avril 2026",
   },
   {
     slug: "ia-freelances",
@@ -279,6 +288,7 @@ export const courses: Course[] = [
     ],
     image: "/images/courses/ia-freelances.jpg",
     color: "from-indigo-500 to-violet-500",
+    updatedAt: "Avril 2026",
   },
   {
     slug: "automatiser-avec-ia",
@@ -300,6 +310,7 @@ export const courses: Course[] = [
     ],
     image: "/images/courses/automatiser-avec-ia.jpg",
     color: "from-cyan-500 to-blue-500",
+    updatedAt: "Avril 2026",
   },
   {
     slug: "ia-marketing-digital",
@@ -321,6 +332,7 @@ export const courses: Course[] = [
     ],
     image: "/images/courses/ia-marketing-digital.jpg",
     color: "from-pink-500 to-rose-500",
+    updatedAt: "Avril 2026",
   },
   {
     slug: "data-science-ia",
@@ -342,6 +354,7 @@ export const courses: Course[] = [
     ],
     image: "/images/courses/data-science-ia.jpg",
     color: "from-sky-500 to-blue-500",
+    updatedAt: "Avril 2026",
   },
   {
     slug: "ia-ressources-humaines",
@@ -363,6 +376,7 @@ export const courses: Course[] = [
     ],
     image: "/images/courses/ia-ressources-humaines.jpg",
     color: "from-fuchsia-500 to-pink-500",
+    updatedAt: "Avril 2026",
   },
   {
     slug: "ia-education",
@@ -384,6 +398,7 @@ export const courses: Course[] = [
     ],
     image: "/images/courses/ia-education.jpg",
     color: "from-lime-500 to-green-500",
+    updatedAt: "Avril 2026",
   },
   {
     slug: "cybersecurite-ia",
@@ -405,6 +420,7 @@ export const courses: Course[] = [
     ],
     image: "/images/courses/cybersecurite-ia.jpg",
     color: "from-red-500 to-orange-500",
+    updatedAt: "Avril 2026",
   },
   {
     slug: "ia-generative-avancee",
@@ -426,6 +442,7 @@ export const courses: Course[] = [
     ],
     image: "/images/courses/ia-generative-avancee.jpg",
     color: "from-violet-500 to-indigo-500",
+    updatedAt: "Avril 2026",
   },
   {
     slug: "leadership-ia",
@@ -447,6 +464,7 @@ export const courses: Course[] = [
     ],
     image: "/images/courses/leadership-ia.jpg",
     color: "from-yellow-500 to-amber-500",
+    updatedAt: "Avril 2026",
   },
 ];
 
