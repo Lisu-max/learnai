@@ -98,20 +98,7 @@ export default function CGVPage() {
             </section>
 
             <section>
-              <h2 className="mb-3 text-lg font-semibold text-foreground">7. Garantie satisfait ou remboursé</h2>
-              <p>
-                Vous bénéficiez d&apos;une garantie <strong>satisfait ou remboursé de 30 jours</strong> à
-                compter de la date d&apos;achat. Si la formation ne correspond pas à vos attentes,
-                envoyez un simple email à{" "}
-                <a href={`mailto:${siteConfig.emails.support}`} className="text-purple-400 hover:text-purple-300">
-                  {siteConfig.emails.support}
-                </a>{" "}
-                avec votre motif et vous serez remboursé intégralement, sans conditions.
-              </p>
-            </section>
-
-            <section>
-              <h2 className="mb-3 text-lg font-semibold text-foreground">8. Propriété intellectuelle</h2>
+              <h2 className="mb-3 text-lg font-semibold text-foreground">7. Propriété intellectuelle</h2>
               <p>
                 L&apos;achat d&apos;une formation confère un droit d&apos;utilisation personnel et non transférable.
                 Toute reproduction, diffusion ou revente est strictement interdite.
@@ -222,20 +209,7 @@ export default function CGVPage() {
             </section>
 
             <section>
-              <h2 className="mb-3 text-lg font-semibold text-foreground">7. Money-Back Guarantee</h2>
-              <p>
-                You benefit from a <strong>30-day money-back guarantee</strong> from
-                the date of purchase. If the course does not meet your expectations,
-                simply send an email to{" "}
-                <a href={`mailto:${siteConfig.emails.support}`} className="text-purple-400 hover:text-purple-300">
-                  {siteConfig.emails.support}
-                </a>{" "}
-                with your reason and you will receive a full refund, no questions asked.
-              </p>
-            </section>
-
-            <section>
-              <h2 className="mb-3 text-lg font-semibold text-foreground">8. Intellectual Property</h2>
+              <h2 className="mb-3 text-lg font-semibold text-foreground">7. Intellectual Property</h2>
               <p>
                 Purchasing a course grants a personal, non-transferable right of use.
                 Any reproduction, distribution, or resale is strictly prohibited.

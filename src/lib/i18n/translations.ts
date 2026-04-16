@@ -112,9 +112,9 @@ export const translations = {
             "Le paiement est sécurisé via Stripe. Vous payez une seule fois et accédez à votre formation immédiatement. Nous acceptons les cartes bancaires (Visa, Mastercard, etc.).",
         },
         {
-          question: "Puis-je obtenir un remboursement ?",
+          question: "Comment accéder à ma formation après l'achat ?",
           answer:
-            "Oui, nous offrons une garantie satisfait ou remboursé de 30 jours. Si la formation ne vous convient pas, contactez-nous pour un remboursement intégral.",
+            "Après votre paiement, vous accédez immédiatement à votre formation depuis votre espace personnel. Connectez-vous et retrouvez tous vos cours dans la section « Mon compte ».",
         },
         {
           question: "Qu'est-ce que le Pack Complet ?",
@@ -134,8 +134,8 @@ export const translations = {
       legalNotice: "Mentions légales",
       copyright: "Tous droits réservés.",
       contact: "Contact",
-      responseTime: "Réponse sous 24h — Remboursement sous 30 jours",
-      securePayment: "Paiement sécurisé par Stripe — Satisfait ou remboursé 30 jours",
+      responseTime: "Réponse sous 24h",
+      securePayment: "Paiement sécurisé par Stripe — Accès immédiat à vie",
     },
     notFound: {
       title: "Page introuvable",
@@ -287,7 +287,7 @@ export const translations = {
       instantDownload: "Accès immédiat en ligne",
       freeUpdatesLifetime: "Mises à jour gratuites à vie",
       secureStripe: "Paiement sécurisé via Stripe",
-      guarantee: "Garantie 30 jours satisfait ou remboursé",
+      guarantee: "Paiement unique — Accès à vie",
       whatYouLearn: "Ce que vous allez",
       whatYouLearnHighlight: "apprendre",
       whatYouLearnSubtitle: "Tout le contenu inclus dans cette formation.",
@@ -512,9 +512,9 @@ export const translations = {
             "Payment is secured via Stripe. You pay once and access your course immediately. We accept credit cards (Visa, Mastercard, etc.).",
         },
         {
-          question: "Can I get a refund?",
+          question: "How do I access my course after purchase?",
           answer:
-            "Yes, we offer a 30-day money-back guarantee. If the course doesn't suit you, contact us for a full refund.",
+            "After your payment, you get immediate access to your course from your personal dashboard. Just log in and find all your courses in the 'My Account' section.",
         },
         {
           question: "What is the Complete Pack?",
@@ -533,8 +533,8 @@ export const translations = {
       legalNotice: "Legal Notice",
       copyright: "All rights reserved.",
       contact: "Contact",
-      responseTime: "Response within 24h — 30-day refund policy",
-      securePayment: "Secure payment by Stripe — 30-day money-back guarantee",
+      responseTime: "Response within 24h",
+      securePayment: "Secure payment by Stripe — Lifetime access",
     },
     notFound: {
       title: "Page not found",
@@ -681,7 +681,7 @@ export const translations = {
       instantDownload: "Instant online access",
       freeUpdatesLifetime: "Free lifetime updates",
       secureStripe: "Secure payment via Stripe",
-      guarantee: "30-day money-back guarantee",
+      guarantee: "One-time payment — Lifetime access",
       whatYouLearn: "What you will",
       whatYouLearnHighlight: "learn",
       whatYouLearnSubtitle: "All content included in this course.",
