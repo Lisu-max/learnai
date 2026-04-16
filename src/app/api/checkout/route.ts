@@ -64,10 +64,9 @@ export async function POST(req: NextRequest) {
   // Get Stripe price ID
   const priceId = getStripePriceId(courseSlug);
   if (!priceId) {
-    console.error(`No Stripe price ID configured for slug: ${courseSlug}`);
     return NextResponse.json(
-      { error: "Prix non configuré pour cette formation." },
-      { status: 500 }
+      { error: "Cette formation sera bientôt disponible à l'achat." },
+      { status: 400 }
     );
   }
 
