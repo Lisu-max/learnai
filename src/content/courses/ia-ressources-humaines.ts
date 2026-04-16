@@ -13,7 +13,7 @@ const content: CourseContent = {
         { type: "paragraph", content: "Les ressources humaines vivent une transformation profonde grace a l'IA. Du recrutement a la formation, de l'administration a l'analyse des talents, chaque processus RH peut etre augmente par l'intelligence artificielle. En 2026, les entreprises qui n'utilisent pas l'IA dans leurs RH sont en retard." },
         { type: "paragraph", content: "L'IA ne remplace pas les professionnels RH — elle les libere des taches repetitives pour se concentrer sur ce qui compte : la relation humaine, la strategie, et le developpement des talents. Un DRH augmente par l'IA peut gerer 3x plus de collaborateurs avec une meilleure qualite." },
         { type: "callout", content: "Selon Gartner, 76% des leaders RH estiment que leur organisation sera en retard si elle n'adopte pas l'IA dans les 12 prochains mois. Le temps d'agir, c'est maintenant." },
-        { type: "video", videoId: "dQw4w9WgXcQ", label: "L'IA dans les RH — vue d'ensemble" },
+        { type: "video", videoId: "sgg3NmGzRXY", label: "L'IA dans les RH — vue d'ensemble" },
         { type: "heading", content: "Les Domaines Impactes" },
         { type: "paragraph", content: "L'IA transforme tous les domaines RH : recrutement (tri de CV, matching), onboarding (parcours personnalises), formation (apprentissage adaptatif), engagement (analyse de sentiment), administration (automatisation des taches), et people analytics (predictions et insights)." },
         { type: "key-point", content: "L'IA en RH n'est pas un luxe technologique — c'est un avantage competitif. Les entreprises qui l'adoptent recrutent plus vite, retiennent mieux, et developpent leurs talents plus efficacement." },
@@ -75,7 +75,7 @@ const content: CourseContent = {
         { type: "subheading", content: "Chatbots de Recrutement" },
         { type: "paragraph", content: "Les chatbots RH repondent 24/7 aux questions des candidats, planifient les entretiens, et collectent les informations preliminaires. Ils ameliorent l'experience candidat tout en reduisant la charge des recruteurs de 30 a 50%." },
         { type: "prompt-example", prompt: "Redige une offre d'emploi pour un Data Analyst junior dans une startup fintech a Paris. Ton decontracte, inclusif, sans biais de genre. Inclus les competences techniques, les soft skills, et les avantages.", result: "Data Analyst Junior — Rejoins notre aventure fintech !\n\nTu es passionne(e) par les donnees et tu veux avoir un impact reel ? Rejoins notre equipe de 15 personnes qui revolutionne le paiement en France.\n\nCe que tu feras :\n- Analyser les donnees de transactions pour identifier les tendances\n- Creer des dashboards avec Metabase/Looker\n- Collaborer avec l'equipe produit pour piloter les decisions\n\nCompetences : SQL, Python (pandas), outils de dataviz\nSoft skills : curiosite, rigueur, communication\n\nAvantages : RTT, teletravail 3j/sem, MacBook Pro, budget formation" },
-        { type: "video", videoId: "dQw4w9WgXcQ", label: "Le recrutement augmente par l'IA" },
+        { type: "video", videoId: "bCs4MN4MNIU", label: "Le recrutement augmente par l'IA" },
         { type: "diagram", label: "Le Funnel de Recrutement Augmente", flow: "vertical", nodes: [
           { label: "Offre d'emploi IA", sub: "Redaction inclusive et optimisee", color: "blue" },
           { label: "Sourcing IA", sub: "Matching candidats-poste automatique", color: "purple" },
@@ -133,7 +133,7 @@ const content: CourseContent = {
         { type: "subheading", content: "Analyse Video des Entretiens" },
         { type: "paragraph", content: "Attention : l'analyse video des entretiens par l'IA (expressions faciales, ton de voix) est controversee et regulee. L'AI Act europeen classe les systemes de reconnaissance d'emotions comme a haut risque. Privilegiez les outils qui analysent le contenu des reponses, pas le non-verbal." },
         { type: "callout", content: "Alerte ethique : l'IA de screening doit etre auditee regulierement pour les biais. Un systeme entraine sur des donnees historiques peut discriminer involontairement certains profils (age, genre, origine). L'audit est une obligation legale sous l'AI Act." },
-        { type: "video", videoId: "dQw4w9WgXcQ", label: "Screening et evaluation IA des candidats" },
+        { type: "video", videoId: "S9bAm75MJGg", label: "Screening et evaluation IA des candidats" },
         { type: "key-point", content: "L'IA de screening est un outil d'aide a la decision, jamais un decideur. Le recruteur doit toujours valider les recommandations de l'IA et garder un oeil critique sur les resultats." },
         { type: "diagram", label: "Le Pipeline de Screening IA", flow: "horizontal", nodes: [
           { label: "Parsing CV", sub: "Extraction auto des competences", color: "blue" },
@@ -191,7 +191,7 @@ const content: CourseContent = {
         { type: "subheading", content: "Automatisation Administrative" },
         { type: "paragraph", content: "Contrats, documents a signer, acces informatiques, inscriptions aux formations obligatoires — l'IA automatise toute la paperasse de l'onboarding. Les workflows automatises envoient les bons documents au bon moment sans intervention humaine." },
         { type: "tip", content: "Le meilleur onboarding combine l'efficacite de l'IA et la chaleur humaine. Automatisez l'administratif et la logistique, mais gardez les moments cles en personne : accueil par le manager, dejeuner d'equipe, premier feedback." },
-        { type: "video", videoId: "dQw4w9WgXcQ", label: "Onboarding automatise avec l'IA" },
+        { type: "video", videoId: "sgg3NmGzRXY", label: "Onboarding automatise avec l'IA" },
         { type: "diagram", label: "L'Onboarding IA en 4 Etapes", flow: "vertical", nodes: [
           { label: "Pre-boarding", sub: "Documents, acces, materiel automatises", color: "blue" },
           { label: "Jour 1", sub: "Accueil humain + guide IA personnalise", color: "purple" },
@@ -248,7 +248,7 @@ const content: CourseContent = {
         { type: "subheading", content: "Identification des Gaps de Competences" },
         { type: "paragraph", content: "L'IA analyse les competences actuelles des equipes, les compare aux besoins futurs, et identifie les gaps. Elle recommande ensuite des formations ciblees pour chaque collaborateur, optimisant le budget formation." },
         { type: "prompt-example", prompt: "Cree un plan de formation personnalise de 3 mois pour un chef de projet qui doit monter en competences sur l'IA et l'automatisation, avec du micro-learning integre dans son quotidien.", result: "Plan de Formation IA — Chef de Projet (3 mois)\n\nMois 1 — Fondamentaux IA :\n- 15 min/jour : modules LearnAI (IA de A a Z)\n- Semaine 2 : atelier ChatGPT pour la gestion de projet\n- Semaine 4 : quiz validation + certification\n\nMois 2 — Outils pratiques :\n- 15 min/jour : tutoriels Make/Zapier\n- Semaine 6 : projet pratique (automatiser un reporting)\n- Semaine 8 : presentation au manager\n\nMois 3 — Integration strategique :\n- 15 min/jour : cas d'usage IA par secteur\n- Semaine 10 : plan d'action IA pour son equipe\n- Semaine 12 : soutenance + feedback 360" },
-        { type: "video", videoId: "dQw4w9WgXcQ", label: "Formation et developpement avec l'IA" },
+        { type: "video", videoId: "bCs4MN4MNIU", label: "Formation et developpement avec l'IA" },
         { type: "diagram", label: "La Formation Augmentee par l'IA", flow: "horizontal", nodes: [
           { label: "Diagnostic", sub: "Evaluation des competences actuelles", color: "blue" },
           { label: "Personnalisation", sub: "Parcours adapte au profil", color: "purple" },
@@ -305,7 +305,7 @@ const content: CourseContent = {
         { type: "subheading", content: "Actions de Retention Personnalisees" },
         { type: "paragraph", content: "L'IA ne se contente pas de predire — elle recommande des actions : entretien avec le manager, revue salariale, changement de projet, formation, flexibilite horaire. Chaque recommandation est adaptee au profil et aux motivations de l'individu." },
         { type: "callout", content: "Attention a l'ethique : la prediction du turnover ne doit jamais etre utilisee contre les collaborateurs (refuser une promotion parce qu'ils \"risquent de partir\"). L'objectif est d'ameliorer leur experience, pas de les surveiller." },
-        { type: "video", videoId: "dQw4w9WgXcQ", label: "Engagement et retention avec l'IA" },
+        { type: "video", videoId: "S9bAm75MJGg", label: "Engagement et retention avec l'IA" },
         { type: "diagram", label: "Le Cycle de Retention IA", flow: "cycle", nodes: [
           { label: "Mesurer", sub: "Pulse surveys + analyse de sentiment", color: "blue" },
           { label: "Predire", sub: "Score de risque de depart", color: "purple" },
@@ -361,7 +361,7 @@ const content: CourseContent = {
         { type: "subheading", content: "Reponses aux Questions Frequentes" },
         { type: "paragraph", content: "Un chatbot RH interne repond a 80% des questions des employes : politique de teletravail, mutuelle, tickets restaurant, procedure de note de frais. Il reduit drastiquement les sollicitations repetitives vers l'equipe RH." },
         { type: "tip", content: "Commencez par automatiser les 3 demandes les plus frequentes. En general : solde de conges, bulletin de paie, et attestation employeur. Ces automatisations ont un ROI immediat et visible." },
-        { type: "video", videoId: "dQw4w9WgXcQ", label: "Automatisation administrative RH" },
+        { type: "video", videoId: "sgg3NmGzRXY", label: "Automatisation administrative RH" },
         { type: "diagram", label: "Les Taches RH Automatisables", flow: "horizontal", nodes: [
           { label: "Conges", sub: "Demande → validation → planning auto", color: "blue" },
           { label: "Documents", sub: "Generation automatique de contrats", color: "purple" },
@@ -419,7 +419,7 @@ const content: CourseContent = {
         { type: "subheading", content: "Construire un Dashboard RH" },
         { type: "paragraph", content: "Les outils modernes comme Looker, Power BI et Metabase permettent de creer des dashboards RH interactifs. L'IA peut generer automatiquement des insights et des recommandations a partir des donnees affichees." },
         { type: "prompt-example", prompt: "Analyse ces KPIs RH et identifie les 3 problemes prioritaires :\n- Turnover : 22% (industrie : 15%)\n- Time-to-hire : 45 jours (cible : 30)\n- eNPS : 12 (bon : >30)\n- Absenteisme : 8% (norme : 5%)\n- Diversite genre management : 28% femmes", result: "3 Problemes Prioritaires :\n\n1. TURNOVER CRITIQUE (22% vs 15%) — Perte de talents et couts eleves. Action : pulse surveys immediate + entretiens de retention avec les profils a risque.\n\n2. ENGAGEMENT BAS (eNPS 12) — Correle au turnover. Action : diagnostic par equipe pour identifier les managers/equipes en difficulte.\n\n3. ABSENTEISME ELEVE (8% vs 5%) — Signal de mal-etre. Action : analyse par departement + entretiens de retour d'absence systematiques.\n\nNote : le time-to-hire et la diversite sont importants mais le turnover et l'engagement sont les urgences." },
-        { type: "video", videoId: "dQw4w9WgXcQ", label: "People analytics et dashboards RH" },
+        { type: "video", videoId: "bCs4MN4MNIU", label: "People analytics et dashboards RH" },
         { type: "diagram", label: "Les 4 Niveaux du People Analytics", flow: "vertical", nodes: [
           { label: "Descriptif", sub: "Que s'est-il passe ? (dashboards)", color: "blue" },
           { label: "Diagnostic", sub: "Pourquoi ? (analyse de correlations)", color: "purple" },
@@ -478,7 +478,7 @@ const content: CourseContent = {
         { type: "heading", content: "Bonnes Pratiques Juridiques" },
         { type: "paragraph", content: "Informer les candidats et employes de l'utilisation de l'IA. Documenter les decisions. Maintenir une supervision humaine pour toute decision significative. Auditer regulierement les algorithmes. Designez un referent IA au sein de l'equipe juridique." },
         { type: "callout", content: "Sanctions RGPD : jusqu'a 20 millions d'euros ou 4% du CA mondial. Sanctions AI Act : jusqu'a 35 millions d'euros ou 7% du CA mondial. Le cout de la conformite est infiniment inferieur au cout de la non-conformite." },
-        { type: "video", videoId: "dQw4w9WgXcQ", label: "Droit du travail et IA en RH" },
+        { type: "video", videoId: "S9bAm75MJGg", label: "Droit du travail et IA en RH" },
         { type: "diagram", label: "Le Cadre Juridique de l'IA en RH", flow: "horizontal", nodes: [
           { label: "RGPD", sub: "Protection des donnees personnelles", color: "blue" },
           { label: "AI Act", sub: "Obligations pour systemes haut risque", color: "purple" },
@@ -537,7 +537,7 @@ const content: CourseContent = {
         { type: "subheading", content: "Phase 4 : Excellence (Annee 2+)" },
         { type: "paragraph", content: "Optimisez et innovez : IA prescriptive, workforce planning predictif, experience collaborateur ultra-personnalisee. Partagez les resultats avec la direction pour ancrer l'IA comme pilier strategique des RH." },
         { type: "prompt-example", prompt: "Tu es un consultant en transformation RH. Cree une feuille de route sur 12 mois pour une PME de 200 employes qui veut integrer l'IA dans ses RH, avec un budget limite.", result: "Feuille de Route IA RH — PME 200 employes\n\nMois 1-3 — Quick Wins (budget : 500 EUR/mois) :\n- Chatbot FAQ RH avec ChatGPT Teams\n- Generation de fiches de poste avec Claude\n- Templates de contrats IA\nROI attendu : 15h/semaine economisees\n\nMois 3-6 — Fondations (budget : 1500 EUR/mois) :\n- SIRH cloud (Lucca ou PayFit)\n- Centralisation des donnees RH\n- Formation equipe RH (2 jours)\nROI attendu : donnees propres + equipe formee\n\nMois 6-12 — Impact (budget : 2500 EUR/mois) :\n- ATS avec tri IA (Recruitee ou Workable)\n- Dashboard people analytics (Metabase)\n- Pulse surveys automatisees\nROI attendu : -30% time-to-hire, +15 eNPS" },
-        { type: "video", videoId: "dQw4w9WgXcQ", label: "Construire sa strategie RH augmentee" },
+        { type: "video", videoId: "sgg3NmGzRXY", label: "Construire sa strategie RH augmentee" },
         { type: "key-point", content: "La cle du succes n'est pas la technologie — c'est la conduite du changement. Impliquez les equipes RH des le depart, formez-les, et celebrez les quick wins pour creer l'adhesion." },
         { type: "diagram", label: "La Feuille de Route IA RH", flow: "vertical", nodes: [
           { label: "Phase 1 : Quick Wins", sub: "Mois 1-3 — Chatbot, documents, tri CV", color: "blue" },

@@ -213,7 +213,7 @@ const content: CourseContent = {
           { label: "Processus", sub: "Workflows documentés", color: "amber" },
           { label: "Culture", sub: "Ouverture à l'innovation", color: "pink" },
         ]},
-        { type: "video", videoId: "dQw4w9WgXcQ", label: "Comment réaliser un audit de maturité IA en entreprise" },
+        { type: "video", videoId: "2IK3DFHRFfw", label: "Comment réaliser un audit de maturité IA en entreprise" },
         { type: "summary", items: [
           "L'audit IA évalue 5 dimensions : infrastructure, données, compétences, processus, culture",
           "80% des échecs IA viennent des données ou du changement, pas de la technologie",
@@ -291,7 +291,7 @@ const content: CourseContent = {
           { label: "Agent IA Autonome", sub: "Actions transactionnelles — 10% des cas", color: "emerald" },
           { label: "Escalade Humaine", sub: "Cas complexes et VIP — 20% des cas", color: "amber" },
         ]},
-        { type: "video", videoId: "dQw4w9WgXcQ", label: "Déployer un chatbot IA performant pour votre entreprise" },
+        { type: "video", videoId: "lG7Uxts9SXs", label: "Déployer un chatbot IA performant pour votre entreprise" },
         { type: "summary", items: [
           "73% des clients attendent une réponse en moins de 5 minutes",
           "Un chatbot bien configuré résout 70% des demandes en autonomie",
@@ -329,7 +329,7 @@ const content: CourseContent = {
           { label: "Social Media", sub: "Canva AI, Buffer, analyse IA", color: "emerald" },
           { label: "Analytics", sub: "Prédictif, attribution, insights", color: "amber" },
         ]},
-        { type: "video", videoId: "dQw4w9WgXcQ", label: "Le marketing digital augmenté par l'intelligence artificielle" },
+        { type: "video", videoId: "5p248yoa3oE", label: "Le marketing digital augmenté par l'intelligence artificielle" },
         { type: "summary", items: [
           "L'IA multiplie par 5 le volume de production de contenu SEO",
           "CPA réduit de 25% en moyenne grâce aux techniques IA publicitaires",
@@ -704,7 +704,7 @@ const content: CourseContent = {
           { label: "Risques", sub: "Détection et mitigation IA", color: "emerald" },
           { label: "Reporting", sub: "Rapports adaptés par audience", color: "amber" },
         ]},
-        { type: "video", videoId: "dQw4w9WgXcQ", label: "La gestion de projet augmentée par l'intelligence artificielle" },
+        { type: "video", videoId: "a_2IGQX3mLU", label: "La gestion de projet augmentée par l'intelligence artificielle" },
         { type: "summary", items: [
           "Estimations de durée +30% plus précises avec l'IA",
           "Gestion des risques proactive : alertes avant que les problèmes ne surviennent",
@@ -896,7 +896,7 @@ const content: CourseContent = {
           { label: "Mois 3 — Sem. 1-2", sub: "Gouvernance et SLA", color: "emerald" },
           { label: "Mois 3 — Sem. 3-4", sub: "Formation continue et optimisation", color: "amber" },
         ]},
-        { type: "video", videoId: "dQw4w9WgXcQ", label: "Intégrer l'IA durablement dans vos processus métier" },
+        { type: "video", videoId: "2IK3DFHRFfw", label: "Intégrer l'IA durablement dans vos processus métier" },
         { type: "summary", items: [
           "Phase 2 : passer d'outils isolés à un écosystème IA cohérent",
           "Workflows bout en bout avec Make/Zapier connectés au CRM",
