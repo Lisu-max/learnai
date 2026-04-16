@@ -68,11 +68,11 @@ export function Footer() {
           <div>
             <h3 className="mb-3 text-sm font-semibold">{t.footer.contact}</h3>
             <a
-              href="mailto:milanechoux@gmail.com"
+              href={`mailto:${siteConfig.emails.contact}`}
               className="inline-flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-purple-400"
             >
               <Mail className="h-4 w-4" />
-              milanechoux@gmail.com
+              {siteConfig.emails.contact}
             </a>
             <p className="mt-3 text-xs text-muted-foreground/70">
               {t.footer.responseTime}
@@ -84,6 +84,9 @@ export function Footer() {
 
         <div className="flex flex-col items-center gap-2 text-center text-sm text-muted-foreground">
           <p>&copy; {new Date().getFullYear()} {siteConfig.name}. {t.footer.copyright}</p>
+          <p className="text-xs text-muted-foreground/50">
+            {siteConfig.company.name} — {siteConfig.company.jurisdiction}
+          </p>
           <p className="text-xs text-muted-foreground/50">
             {t.footer.securePayment}
           </p>

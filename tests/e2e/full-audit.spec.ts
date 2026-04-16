@@ -338,8 +338,8 @@ test('CGV page has required legal content', async ({ page }) => {
   const body = await page.textContent('body') || '';
 
   expect(body).toContain('Stripe');
-  expect(body).toContain('milanechoux@gmail.com');
-  expect(body).toContain('Conditions Générales de Vente');
+  expect(body).toContain('contact@learn-ai.fr');
+  expect(body).toContain('Eterna Inc.');
 });
 
 test('Privacy policy has GDPR content', async ({ page }) => {
@@ -348,7 +348,7 @@ test('Privacy policy has GDPR content', async ({ page }) => {
 
   expect(body).toContain('RGPD');
   expect(body).toContain('Supabase');
-  expect(body).toContain('milanechoux@gmail.com');
+  expect(body).toContain('legal@learn-ai.fr');
 });
 
 test('Mentions légales has required info', async ({ page }) => {
@@ -356,7 +356,7 @@ test('Mentions légales has required info', async ({ page }) => {
   const body = await page.textContent('body') || '';
 
   expect(body).toContain('Vercel');
-  expect(body).toContain('milanechoux@gmail.com');
+  expect(body).toContain('contact@learn-ai.fr');
 });
 
 // ============================================================
