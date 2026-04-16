@@ -55,7 +55,7 @@ export function CourseProgressCard({ course }: CourseProgressCardProps) {
             </p>
           </div>
           <Link
-            href="/tarifs"
+            href="/tarification"
             className="rounded-lg bg-gradient-to-r from-amber-500/20 to-orange-500/20 px-4 py-2 text-xs font-semibold text-amber-400 transition-colors hover:from-amber-500/30 hover:to-orange-500/30"
           >
             Passer Pro

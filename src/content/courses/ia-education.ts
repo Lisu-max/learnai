@@ -75,7 +75,7 @@ const content: CourseContent = {
         { type: "subheading", content: "Outils de Correction et Feedback" },
         { type: "paragraph", content: "Grammarly et LanguageTool pour la correction linguistique, Turnitin pour le plagiat, et les LLM pour le feedback personnalise sur les copies. L'IA peut generer un feedback constructif et detaille en quelques secondes." },
         { type: "prompt-example", prompt: "Cree 5 exercices differencies (3 niveaux) sur les fractions pour une classe de CM2. Niveau 1 : decouverte, Niveau 2 : application, Niveau 3 : approfondissement. Inclus les corrections.", result: "Exercices Fractions CM2 — 3 Niveaux\n\nNiveau 1 (Decouverte) :\n1. Colorie 1/4 du rectangle\n2. Ecris la fraction representee par le dessin\n\nNiveau 2 (Application) :\n3. Compare 2/3 et 3/4 (utilise les fractions equivalentes)\n4. Additionne 1/4 + 2/4\n\nNiveau 3 (Approfondissement) :\n5. Paul mange 2/5 de sa pizza. Marie mange 1/3 de la meme pizza. Qui a mange le plus ?\n\nCorrections detaillees jointes pour chaque exercice." },
-        { type: "video", videoId: "Rt_RUrdMEiY", label: "Les meilleurs outils IA pour enseignants" },
+        { type: "video", videoId: "EEbGYRW7feM", label: "Les meilleurs outils IA pour enseignants" },
         { type: "diagram", label: "La Boite a Outils IA de l'Enseignant", flow: "horizontal", nodes: [
           { label: "Preparation", sub: "ChatGPT, Claude, Perplexity", color: "purple" },
           { label: "Creation", sub: "Canva, Gamma, Midjourney", color: "blue" },
@@ -133,7 +133,7 @@ const content: CourseContent = {
         { type: "subheading", content: "Differentiation Automatique" },
         { type: "paragraph", content: "L'IA excelle dans la differenciation pedagogique. A partir d'un exercice standard, elle genere 3 niveaux de difficulte, des aides methodologiques, et des extensions pour les eleves avances — en quelques secondes." },
         { type: "prompt-example", prompt: "Cree une sequence pedagogique complete de 3 seances (1h chacune) sur la Revolution francaise pour une classe de 4eme. Inclus les objectifs Bloom, les activites, la differenciation (3 niveaux), et l'evaluation formative.", result: "Sequence : La Revolution Francaise (3 seances)\n\nSeance 1 — Les Causes (1h)\nObjectifs Bloom : memoriser les causes, comprendre le contexte\nAccroche : image du Serment du Jeu de Paume (5 min)\nActivite : carte mentale collaborative (25 min)\nDifferenciation :\n- N1 : carte mentale pre-remplie a completer\n- N2 : carte mentale a construire avec mots-cles\n- N3 : carte mentale libre + sources primaires\nEvaluation formative : quiz Kahoot 5 questions (10 min)\n\nSeance 2 — Les Evenements Cles (1h)\n[...suite detaillee]\n\nSeance 3 — Les Consequences (1h)\n[...suite detaillee + evaluation sommative]" },
-        { type: "video", videoId: "NqSP-1taN_M", label: "Creer des cours avec l'IA" },
+        { type: "video", videoId: "oeli5xkFZJo", label: "Creer des cours avec l'IA" },
         { type: "callout", content: "L'IA genere un excellent point de depart, mais l'enseignant doit toujours adapter au contexte : niveau reel des eleves, materiel disponible, programme officiel, et sa propre vision pedagogique." },
         { type: "diagram", label: "Le Processus de Creation de Cours IA", flow: "horizontal", nodes: [
           { label: "Objectifs Bloom", sub: "6 niveaux de competences", color: "purple" },
@@ -249,7 +249,7 @@ const content: CourseContent = {
         { type: "subheading", content: "Tuteurs IA Personnels" },
         { type: "paragraph", content: "Les chatbots educatifs comme Khanmigo (Khan Academy) ou les LLM configures en mode tuteur offrent un accompagnement 1-a-1 permanent. L'eleve peut poser des questions a tout moment, sans craindre le jugement, et recevoir des explications adaptees a son niveau." },
         { type: "callout", content: "Etude Stanford 2025 : les eleves utilisant un tuteur IA personnalise progressent 2x plus vite que le groupe temoin, avec une amelioration de 30% de la retention des connaissances a long terme." },
-        { type: "video", videoId: "Rt_RUrdMEiY", label: "Personnalisation de l'apprentissage avec l'IA" },
+        { type: "video", videoId: "EEbGYRW7feM", label: "Personnalisation de l'apprentissage avec l'IA" },
         { type: "diagram", label: "L'Apprentissage Adaptatif en Action", flow: "cycle", nodes: [
           { label: "Diagnostic", sub: "Evaluer le niveau et les lacunes", color: "blue" },
           { label: "Adaptation", sub: "Contenu ajuste en temps reel", color: "purple" },
@@ -306,7 +306,7 @@ const content: CourseContent = {
         { type: "subheading", content: "La Methode Feynman + IA" },
         { type: "paragraph", content: "Expliquez un concept a l'IA comme si elle etait un enfant de 10 ans. Si l'IA detecte des erreurs ou des lacunes dans votre explication, c'est que vous ne maitrisez pas encore le sujet. C'est la methode Feynman augmentee — et c'est extremement efficace." },
         { type: "tip", content: "Regle d'or : si vous ne pouvez pas expliquer un concept sans l'IA, c'est que vous ne l'avez pas compris. L'IA est un outil pour approfondir votre comprehension, pas pour la remplacer." },
-        { type: "video", videoId: "NqSP-1taN_M", label: "L'IA pour les etudiants — guide pratique" },
+        { type: "video", videoId: "oeli5xkFZJo", label: "L'IA pour les etudiants — guide pratique" },
         { type: "diagram", label: "Usages Productifs vs Contre-Productifs", flow: "horizontal", nodes: [
           { label: "Productif", sub: "Expliquer, quizzer, structurer", color: "emerald" },
           { label: "Limite OK", sub: "Reformuler, corriger, resumer", color: "blue" },
@@ -420,7 +420,7 @@ const content: CourseContent = {
         { type: "subheading", content: "Quiz et Contenus Interactifs" },
         { type: "paragraph", content: "Les LLM generent des quiz Kahoot, des flashcards Anki, des mots croises, des jeux de role, et des scenarios interactifs en quelques secondes. H5P permet de creer du contenu interactif (drag & drop, timeline, hotspot) integrable dans n'importe quel LMS." },
         { type: "tip", content: "Pensez multimedia : un meme concept explique en texte, en image, en video et en quiz interactif touche 4 styles d'apprentissage differents. L'IA vous permet de creer ces 4 formats en une fraction du temps." },
-        { type: "video", videoId: "Rt_RUrdMEiY", label: "Creer du contenu pedagogique avec l'IA" },
+        { type: "video", videoId: "EEbGYRW7feM", label: "Creer du contenu pedagogique avec l'IA" },
         { type: "diagram", label: "Les Formats de Contenu Pedagogique IA", flow: "horizontal", nodes: [
           { label: "Presentations", sub: "Gamma, Canva, Beautiful.ai", color: "purple" },
           { label: "Videos", sub: "Synthesia, Loom, HeyGen", color: "blue" },
@@ -477,7 +477,7 @@ const content: CourseContent = {
         { type: "subheading", content: "Outils de Gamification" },
         { type: "paragraph", content: "Kahoot et Quizizz pour les quiz gamifies en classe. Classcraft pour transformer la classe en RPG. Duolingo comme modele de gamification reussie. Les LLM pour generer des scenarios et des quetes personnalisees." },
         { type: "callout", content: "Attention : la gamification mal implementee peut etre contre-productive. Si les eleves se concentrent sur les points plutot que sur l'apprentissage, l'effet est negatif. Le jeu doit etre au service de la pedagogie, pas l'inverse." },
-        { type: "video", videoId: "NqSP-1taN_M", label: "Gamification et IA en education" },
+        { type: "video", videoId: "oeli5xkFZJo", label: "Gamification et IA en education" },
         { type: "diagram", label: "Les Mecaniques de Gamification", flow: "horizontal", nodes: [
           { label: "XP et Points", sub: "Recompense pour chaque activite", color: "purple" },
           { label: "Badges", sub: "Accomplissements specifiques", color: "blue" },
@@ -593,7 +593,7 @@ const content: CourseContent = {
         { type: "heading", content: "Au-Dela de la Detection : Repenser l'Evaluation" },
         { type: "paragraph", content: "Plutot que de jouer au chat et a la souris, de nombreux pedagogues recommandent de repenser l'evaluation : examens oraux, portfolios reflexifs, travaux en classe, presentations, processus documente (brouillons), et evaluations qui integrent l'IA de maniere encadree." },
         { type: "tip", content: "La meilleure defense contre la triche IA n'est pas un detecteur — c'est une evaluation qui valorise la reflexion personnelle, le processus, et l'oral. Un etudiant qui ne peut pas expliquer son propre travail sera toujours detecte." },
-        { type: "video", videoId: "Rt_RUrdMEiY", label: "Detecter et gerer l'usage de l'IA" },
+        { type: "video", videoId: "EEbGYRW7feM", label: "Detecter et gerer l'usage de l'IA" },
         { type: "callout", content: "Accuser faussement un etudiant de triche a l'IA est un risque reel. Aucun detecteur n'est fiable a 100%. Utilisez les detecteurs comme un signal, jamais comme une preuve." },
         { type: "diagram", label: "Strategies Face a l'IA Etudiante", flow: "horizontal", nodes: [
           { label: "Detecter", sub: "Turnitin, GPTZero (70-85%)", color: "blue" },
@@ -652,7 +652,7 @@ const content: CourseContent = {
         { type: "paragraph", content: "Pensee critique, creativite, collaboration, communication, litteratie numerique, et intelligence emotionnelle remplaceront la memorisation. Savoir utiliser l'IA sera aussi fondamental que savoir lire et ecrire." },
         { type: "subheading", content: "Tendance 4 : L'Apprentissage Continu" },
         { type: "paragraph", content: "La formation ne s'arretera plus au diplome. L'apprentissage continu, les micro-certifications, et les parcours modulaires deviendront la norme. L'IA accompagnera chaque individu tout au long de sa vie, adaptant les recommandations a l'evolution de sa carriere." },
-        { type: "video", videoId: "NqSP-1taN_M", label: "L'ecole du futur avec l'IA" },
+        { type: "video", videoId: "oeli5xkFZJo", label: "L'ecole du futur avec l'IA" },
         { type: "key-point", content: "La technologie evoluera, mais le coeur de l'education restera humain. L'ecole du futur ne sera pas une salle pleine d'ecrans — ce sera un lieu ou la technologie libere du temps pour la relation, la creativite, et l'epanouissement." },
         { type: "diagram", label: "L'Ecole du Futur : 4 Piliers", flow: "horizontal", nodes: [
           { label: "Personnalisation", sub: "Parcours unique par eleve", color: "purple" },

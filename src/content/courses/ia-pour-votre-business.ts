@@ -175,7 +175,7 @@ const content: CourseContent = {
           { label: "KPIs Financiers", sub: "Coût/lead, coût/ticket, heures économisées", color: "purple" },
           { label: "KPIs Qualité", sub: "CSAT, NPS, taux d'erreur, conversion", color: "emerald" },
         ]},
-        { type: "video", videoId: "qAGAa6f2beg", label: "Comment les outils IA transforment les workflows professionnels" },
+        { type: "video", videoId: "oeli5xkFZJo", label: "Comment les outils IA transforment les workflows professionnels" },
         { type: "summary", items: [
           "Mesurer le ROI est essentiel pour justifier et optimiser les investissements IA",
           "KPIs productivité : temps/tâche, volume traité, délais avant/après",
@@ -704,7 +704,7 @@ const content: CourseContent = {
           { label: "Risques", sub: "Détection et mitigation IA", color: "emerald" },
           { label: "Reporting", sub: "Rapports adaptés par audience", color: "amber" },
         ]},
-        { type: "video", videoId: "a_2IGQX3mLU", label: "La gestion de projet augmentée par l'intelligence artificielle" },
+        { type: "video", videoId: "CWEWBgVwFc8", label: "La gestion de projet augmentée par l'intelligence artificielle" },
         { type: "summary", items: [
           "Estimations de durée +30% plus précises avec l'IA",
           "Gestion des risques proactive : alertes avant que les problèmes ne surviennent",
