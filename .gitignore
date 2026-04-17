@@ -43,3 +43,14 @@ next-env.d.ts
 
 .vercel
 graphify-out/
+
+# tooling / agents
+.agents/
+.claude/skills/
+skills-lock.json
+supabase/.temp/
+
+# playwright
+test-results/
+playwright-report/
+tests/.auth/

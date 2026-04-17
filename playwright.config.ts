@@ -15,7 +15,7 @@ export default defineConfig({
     {
       name: 'chromium-public',
       use: { browserName: 'chromium' },
-      testMatch: ['**/full-audit.spec.ts', '**/security.spec.ts'],
+      testMatch: ['**/full-audit.spec.ts', '**/security.spec.ts', '**/contact.spec.ts'],
     },
     // Authenticated — reuses session saved by global-setup
     {
