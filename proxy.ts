@@ -22,7 +22,7 @@ function isRateLimited(ip: string): boolean {
   return entry.count > RATE_LIMIT_MAX;
 }
 
-const RATE_LIMITED_PATHS = ["/api/checkout", "/api/stripe/checkout", "/api/stripe/portal"];
+const RATE_LIMITED_PATHS = ["/api/checkout", "/api/stripe/checkout", "/api/stripe/portal", "/api/contact"];
 
 export async function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
