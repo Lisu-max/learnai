@@ -28,7 +28,7 @@ export async function hasAccessToCourse(courseSlug: string): Promise<{
     .from("profiles")
     .select("subscription_status")
     .eq("id", user.id)
-    .single();
+    .maybeSingle();
 
   const isPro = profile?.subscription_status === "pro";
   if (isPro) return { hasAccess: true, userId: user.id, isPro: true };

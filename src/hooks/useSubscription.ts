@@ -21,44 +21,49 @@ export function useSubscription(): UseSubscriptionReturn {
     let channel: RealtimeChannel | null = null;
 
     async function fetchSubscription() {
-      const {
-        data: { user },
-      } = await supabase.auth.getUser();
+      try {
+        const {
+          data: { user },
+        } = await supabase.auth.getUser();
 
-      if (!user) {
+        if (!user) {
+          setStatus("free");
+          setLoading(false);
+          return;
+        }
+
+        const { data: profile } = await supabase
+          .from("profiles")
+          .select("subscription_status")
+          .eq("id", user.id)
+          .maybeSingle();
+
+        setStatus(profile?.subscription_status || "free");
+        setLoading(false);
+
+        // Subscribe to realtime changes
+        channel = supabase
+          .channel("subscription-status")
+          .on(
+            "postgres_changes",
+            {
+              event: "UPDATE",
+              schema: "public",
+              table: "profiles",
+              filter: `id=eq.${user.id}`,
+            },
+            (payload) => {
+              const newStatus = payload.new.subscription_status;
+              if (newStatus) {
+                setStatus(newStatus);
+              }
+            }
+          )
+          .subscribe();
+      } catch {
         setStatus("free");
         setLoading(false);
-        return;
       }
-
-      const { data: profile } = await supabase
-        .from("profiles")
-        .select("subscription_status")
-        .eq("id", user.id)
-        .single();
-
-      setStatus(profile?.subscription_status || "free");
-      setLoading(false);
-
-      // Subscribe to realtime changes
-      channel = supabase
-        .channel("subscription-status")
-        .on(
-          "postgres_changes",
-          {
-            event: "UPDATE",
-            schema: "public",
-            table: "profiles",
-            filter: `id=eq.${user.id}`,
-          },
-          (payload) => {
-            const newStatus = payload.new.subscription_status;
-            if (newStatus) {
-              setStatus(newStatus);
-            }
-          }
-        )
-        .subscribe();
     }
 
     fetchSubscription();

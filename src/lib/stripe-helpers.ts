@@ -22,7 +22,7 @@ export async function getOrCreateStripeCustomer(
     .from("profiles")
     .select("stripe_customer_id")
     .eq("id", userId)
-    .single();
+    .maybeSingle();
 
   if (profile?.stripe_customer_id) {
     return profile.stripe_customer_id;

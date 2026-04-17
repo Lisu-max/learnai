@@ -44,7 +44,7 @@ export default async function LeaderboardPage() {
         .from("leaderboard_view")
         .select("user_id, display_name, total_xp, level, rank")
         .eq("user_id", user.id)
-        .single();
+        .maybeSingle();
 
       userRank = userEntry ?? null;
     }
@@ -53,7 +53,7 @@ export default async function LeaderboardPage() {
   }
 
   const isUserInTop50 = userRank
-    ? entries.some((e) => e.user_id === userRank!.user_id)
+    ? entries.some((e) => e.user_id === userRank?.user_id)
     : false;
 
   function getRankIcon(rank: number) {

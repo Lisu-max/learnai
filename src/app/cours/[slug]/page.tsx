@@ -4,6 +4,8 @@ import { getCourseBySlug, courses } from "@/lib/courses";
 import { CourseDetail } from "@/components/courses/course-detail";
 import { siteConfig } from "@/config/site";
 
+export const revalidate = 3600;
+
 interface Props {
   params: Promise<{ slug: string }>;
 }

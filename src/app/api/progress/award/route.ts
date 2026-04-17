@@ -1,18 +1,18 @@
 import { NextRequest, NextResponse } from "next/server";
 import { createClient } from "@/lib/supabase/server";
-import { createClient as createServiceClient } from "@supabase/supabase-js";
+import { getServiceSupabase } from "@/lib/stripe-helpers";
 import { XP_REWARDS, computeLevel, computeQuizXp } from "@/lib/xp";
 import { checkAndAwardBadges } from "@/lib/badges";
 import { courses } from "@/lib/courses";
+import { z } from "zod";
 
-function getServiceSupabase() {
-  const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
-  const key = process.env.SUPABASE_SERVICE_ROLE_KEY;
-  if (!url || !key) {
-    throw new Error("NEXT_PUBLIC_SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY must be set");
-  }
-  return createServiceClient(url, key);
-}
+const awardSchema = z.object({
+  type: z.enum(["chapter", "quiz"]),
+  courseSlug: z.string().min(1),
+  chapterNumber: z.number().int().positive(),
+  score: z.number().min(0).optional(),
+  totalQuestions: z.number().int().positive().optional(),
+});
 
 export async function POST(request: NextRequest) {
   try {
@@ -24,17 +24,11 @@ export async function POST(request: NextRequest) {
     }
 
     const body = await request.json();
-    const { type, courseSlug, chapterNumber, score, totalQuestions } = body as {
-      type: "chapter" | "quiz";
-      courseSlug: string;
-      chapterNumber: number;
-      score?: number;
-      totalQuestions?: number;
-    };
-
-    if (!type || !courseSlug || !chapterNumber) {
-      return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
+    const parsed = awardSchema.safeParse(body);
+    if (!parsed.success) {
+      return NextResponse.json({ error: "Invalid request body" }, { status: 400 });
     }
+    const { type, courseSlug, chapterNumber, score, totalQuestions } = parsed.data;
 
     const serviceDb = getServiceSupabase();
     const userId = user.id;
@@ -57,7 +51,7 @@ export async function POST(request: NextRequest) {
       .from("user_stats")
       .select("total_xp, current_streak, longest_streak, last_activity")
       .eq("user_id", userId)
-      .single();
+      .maybeSingle();
 
     if (!stats) {
       return NextResponse.json({ error: "Failed to fetch user stats" }, { status: 500 });
@@ -96,7 +90,7 @@ export async function POST(request: NextRequest) {
         .eq("user_id", userId)
         .eq("course_slug", courseSlug)
         .eq("chapter_number", chapterNumber)
-        .single();
+        .maybeSingle();
 
       if (!existing?.completed) {
         xpGained += XP_REWARDS.CHAPTER_COMPLETE;
@@ -111,7 +105,7 @@ export async function POST(request: NextRequest) {
         .eq("user_id", userId)
         .eq("course_slug", courseSlug)
         .eq("chapter_number", chapterNumber)
-        .single();
+        .maybeSingle();
 
       if (prevResult) {
         const prevXp = computeQuizXp(prevResult.score, prevResult.total_questions);

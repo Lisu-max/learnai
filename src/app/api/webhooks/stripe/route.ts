@@ -25,12 +25,14 @@ export async function POST(req: NextRequest) {
 
   let event: Stripe.Event;
 
+  const webhookSecret = process.env.STRIPE_WEBHOOK_SECRET;
+  if (!webhookSecret) {
+    console.error("STRIPE_WEBHOOK_SECRET is not set");
+    return NextResponse.json({ error: "Server misconfigured" }, { status: 500 });
+  }
+
   try {
-    event = getStripe().webhooks.constructEvent(
-      body,
-      signature,
-      process.env.STRIPE_WEBHOOK_SECRET ?? ""
-    );
+    event = getStripe().webhooks.constructEvent(body, signature, webhookSecret);
   } catch (err) {
     const message = err instanceof Error ? err.message : "Unknown error";
     console.error("Webhook signature verification failed:", message);
@@ -103,7 +105,7 @@ export async function POST(req: NextRequest) {
             .from("profiles")
             .select("id")
             .eq("stripe_customer_id", customerId)
-            .single();
+            .maybeSingle();
           userId = profile?.id;
         }
 
@@ -148,7 +150,7 @@ export async function POST(req: NextRequest) {
             .from("profiles")
             .select("id")
             .eq("stripe_customer_id", customerId)
-            .single();
+            .maybeSingle();
           userId = profile?.id;
         }
 
@@ -174,7 +176,7 @@ export async function POST(req: NextRequest) {
           .from("profiles")
           .select("id")
           .eq("stripe_customer_id", customerId)
-          .single();
+          .maybeSingle();
 
         if (profile) {
           await supabase
