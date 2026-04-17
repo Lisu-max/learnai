@@ -7,6 +7,7 @@ import { hasAccessToCourse } from "@/lib/access";
 import { createClient } from "@/lib/supabase/server";
 import { getServerTranslation, getServerLocale } from "@/lib/i18n/server";
 import { siteConfig } from "@/config/site";
+import type { ChapterSection } from "@/content/types";
 import {
   ArrowLeft,
   BookOpen,
@@ -44,6 +45,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       canonical: `${siteConfig.url}/cours/${slug}/chapitres`,
     },
   };
+}
+
+function chapterTotalMin(sections: ChapterSection[]): number {
+  let wordCount = 0;
+  let videoMinutes = 0;
+  for (const s of sections) {
+    if (s.type === "video") { videoMinutes += s.videoDurationMinutes ?? 20; continue; }
+    const texts = [s.content, s.label, s.prompt, s.result, ...(s.items || [])].filter(Boolean);
+    wordCount += texts.join(" ").split(/\s+/).length;
+  }
+  return Math.max(1, Math.round(wordCount / 200)) + videoMinutes;
 }
 
 export default async function ChaptersPage({ params }: Props) {
@@ -166,7 +178,12 @@ export default async function ChaptersPage({ params }: Props) {
 
                 <div className="flex items-center gap-2 text-xs text-muted-foreground">
                   <Clock className="h-3.5 w-3.5" />
-                  {chapter.estimatedMinutes} min
+                  {(() => {
+                    const m = chapterTotalMin(chapter.sections);
+                    return m >= 60
+                      ? `${Math.floor(m / 60)}h${m % 60 > 0 ? ` ${m % 60}min` : ""}`
+                      : `${m} min`;
+                  })()}
                 </div>
               </Link>
             );

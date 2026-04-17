@@ -12,15 +12,21 @@ import { siteConfig } from "@/config/site";
 import { ArrowLeft, Clock, BookOpen, Video } from "lucide-react";
 import type { ChapterSection } from "@/content/types";
 
-function computeReadingTime(sections: ChapterSection[]): { textMin: number; videoCount: number } {
+function computeReadingTime(sections: ChapterSection[]): { totalMin: number; videoCount: number } {
   let wordCount = 0;
   let videoCount = 0;
+  let videoMinutes = 0;
   for (const s of sections) {
-    if (s.type === "video") { videoCount++; continue; }
+    if (s.type === "video") {
+      videoCount++;
+      videoMinutes += s.videoDurationMinutes ?? 20;
+      continue;
+    }
     const texts = [s.content, s.label, s.prompt, s.result, ...(s.items || [])].filter(Boolean);
     wordCount += texts.join(" ").split(/\s+/).length;
   }
-  return { textMin: Math.max(1, Math.round(wordCount / 200)), videoCount };
+  const textMin = Math.max(1, Math.round(wordCount / 200));
+  return { totalMin: textMin + videoMinutes, videoCount };
 }
 
 // Chapter content is static — revalidate every 24h
@@ -96,7 +102,7 @@ export default async function ChapterPage({ params }: Props) {
   const chapter = getChapter(content, chapterNum);
   if (!chapter) notFound();
 
-  const { textMin, videoCount } = computeReadingTime(chapter.sections);
+  const { totalMin, videoCount } = computeReadingTime(chapter.sections);
 
   const learningResourceJsonLd = {
     "@context": "https://schema.org",
@@ -114,7 +120,7 @@ export default async function ChapterPage({ params }: Props) {
       name: siteConfig.name,
       url: siteConfig.url,
     },
-    timeRequired: `PT${textMin}M`,
+    timeRequired: `PT${totalMin}M`,
     position: chapter.number,
   };
 
@@ -173,7 +179,9 @@ export default async function ChapterPage({ params }: Props) {
             <div className="flex items-center gap-3 text-sm text-muted-foreground">
               <span className="flex items-center gap-1">
                 <Clock className="h-3.5 w-3.5" />
-                {textMin} min lecture
+                {totalMin >= 60
+                  ? `${Math.floor(totalMin / 60)}h${totalMin % 60 > 0 ? ` ${totalMin % 60}min` : ""}`
+                  : `${totalMin} min`}
               </span>
               {videoCount > 0 && (
                 <span className="flex items-center gap-1">

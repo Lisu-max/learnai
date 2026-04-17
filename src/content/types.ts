@@ -21,6 +21,7 @@ export interface ChapterSection {
   items?: string[];
   label?: string;
   videoId?: string;
+  videoDurationMinutes?: number;
   prompt?: string;
   result?: string;
   nodes?: DiagramNode[];
