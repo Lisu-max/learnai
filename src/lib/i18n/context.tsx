@@ -19,8 +19,10 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
   const [locale, setLocaleState] = useState<Locale>("fr");
 
   useEffect(() => {
+    // localStorage is unavailable during SSR, so initial "fr" must sync from client
     const saved = localStorage.getItem("learnai-locale") as Locale | null;
     if (saved && translations[saved]) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setLocaleState(saved);
       document.cookie = `learnai-locale=${saved};path=/;max-age=31536000;SameSite=Lax`;
     }

@@ -9,8 +9,10 @@ export function CookieBanner() {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
+    // localStorage is client-only; visible must be derived after hydration
     const stored = localStorage.getItem(STORAGE_KEY);
     if (!stored) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setVisible(true);
     }
   }, []);

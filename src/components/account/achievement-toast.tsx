@@ -53,6 +53,7 @@ export function AchievementToast({ award }: AchievementToastProps) {
 
     if (newToasts.length === 0) return;
 
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setToasts((prev) => [...prev, ...newToasts]);
 
     // Auto-dismiss after 4 seconds

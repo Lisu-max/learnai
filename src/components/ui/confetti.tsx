@@ -28,7 +28,9 @@ export function Confetti({ active }: { active: boolean }) {
       size: 6 + Math.random() * 8,
       rotation: Math.random() * 360,
     }));
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setParticles(items);
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     const t = setTimeout(() => setParticles([]), 4000);
     return () => clearTimeout(t);
   }, [active]);

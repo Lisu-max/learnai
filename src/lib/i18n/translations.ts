@@ -181,6 +181,12 @@ export const translations = {
       signingUp: "Création du compte...",
       loginButton: "Se connecter",
       loggingIn: "Connexion...",
+      googleRedirecting: "Redirection vers Google...",
+      magicLinkButton: "Recevoir un lien par email",
+      magicLinkSending: "Envoi du lien...",
+      magicLinkSent: "Lien envoyé ! Vérifiez votre boîte mail.",
+      magicLinkEmailRequired: "Entrez votre email d'abord.",
+      magicLinkHint: "Connexion sans mot de passe — on vous envoie un lien.",
       alreadyHaveAccount: "Déjà un compte ?",
       noAccount: "Pas encore de compte ?",
       accountCreated: "Compte créé ! Vérifiez votre email puis connectez-vous.",
@@ -579,6 +585,12 @@ export const translations = {
       signingUp: "Creating account...",
       loginButton: "Log in",
       loggingIn: "Logging in...",
+      googleRedirecting: "Redirecting to Google...",
+      magicLinkButton: "Email me a sign-in link",
+      magicLinkSending: "Sending link...",
+      magicLinkSent: "Link sent! Check your inbox.",
+      magicLinkEmailRequired: "Enter your email first.",
+      magicLinkHint: "No password — we'll email you a secure link.",
       alreadyHaveAccount: "Already have an account?",
       noAccount: "Don't have an account?",
       accountCreated: "Account created! Check your email then log in.",
@@ -855,6 +867,9 @@ export interface Translations {
     confirmPassword: string; confirmPasswordPlaceholder: string;
     signupButton: string; signingUp: string;
     loginButton: string; loggingIn: string;
+    googleRedirecting: string;
+    magicLinkButton: string; magicLinkSending: string; magicLinkSent: string;
+    magicLinkEmailRequired: string; magicLinkHint: string;
     alreadyHaveAccount: string; noAccount: string;
     accountCreated: string; authError: string; serviceUnavailable: string;
     passwordMismatch: string; passwordTooShort: string; passwordTooShort8: string;

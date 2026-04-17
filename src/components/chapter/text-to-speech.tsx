@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef, useCallback } from "react";
+import { useState, useEffect, useRef, useCallback, useLayoutEffect } from "react";
 import { Play, Pause, Square, Volume2 } from "lucide-react";
 import type { ChapterSection } from "@/content/types";
 
@@ -39,12 +39,15 @@ export function TextToSpeech({ sections }: { sections: ChapterSection[] }) {
   const indexRef = useRef(0);
 
   useEffect(() => {
+    // speechSynthesis is a browser API — support must be detected after hydration
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setSupported(typeof window !== "undefined" && "speechSynthesis" in window);
     return () => {
       window.speechSynthesis?.cancel();
     };
   }, []);
 
+  const speakNextRef = useRef<() => void>(() => {});
   const speakNext = useCallback(() => {
     if (indexRef.current >= chunksRef.current.length) {
       setIsPlaying(false);
@@ -56,7 +59,6 @@ export function TextToSpeech({ sections }: { sections: ChapterSection[] }) {
     utterance.rate = 0.9;
     utterance.pitch = 1.05;
 
-    // Prefer high-quality French voices (neural/enhanced voices first)
     const voices = window.speechSynthesis.getVoices();
     const frVoices = voices.filter((v) => v.lang.startsWith("fr"));
     const preferred = frVoices.find((v) =>
@@ -66,7 +68,7 @@ export function TextToSpeech({ sections }: { sections: ChapterSection[] }) {
 
     utterance.onend = () => {
       indexRef.current += 1;
-      speakNext();
+      speakNextRef.current();
     };
     utterance.onerror = () => {
       setIsPlaying(false);
@@ -75,6 +77,10 @@ export function TextToSpeech({ sections }: { sections: ChapterSection[] }) {
     utteranceRef.current = utterance;
     window.speechSynthesis.speak(utterance);
   }, []);
+
+  useLayoutEffect(() => {
+    speakNextRef.current = speakNext;
+  }, [speakNext]);
 
   function handlePlay() {
     if (!supported) return;

@@ -173,7 +173,7 @@ test('Signup: validates empty fields', async ({ page }) => {
 });
 
 // Helper: fill the BirthDateInput (3 selects: day, month, year)
-async function fillBirthDate(page: any, day: string, month: string, year: string) {
+async function fillBirthDate(page: import("@playwright/test").Page, day: string, month: string, year: string) {
   const selects = page.locator('select');
   await selects.nth(0).selectOption(day);   // Day
   await selects.nth(1).selectOption(month); // Month (1-indexed)

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useTranslation } from "@/lib/i18n/context";
 
 interface BirthDateInputProps {
@@ -32,11 +32,15 @@ export function BirthDateInput({ name }: BirthDateInputProps) {
     : 31;
   const days = Array.from({ length: daysInMonth }, (_, i) => i + 1);
 
-  useEffect(() => {
-    if (day && parseInt(day) > daysInMonth) {
-      setDay(String(daysInMonth));
+  function clampDayTo(newMonth: string, newYear: string) {
+    if (!day) return;
+    const newDaysInMonth = newMonth && newYear
+      ? new Date(parseInt(newYear), parseInt(newMonth), 0).getDate()
+      : 31;
+    if (parseInt(day) > newDaysInMonth) {
+      setDay(String(newDaysInMonth));
     }
-  }, [month, year, day, daysInMonth]);
+  }
 
   const value = day && month && year
     ? `${year}-${month.padStart(2, "0")}-${day.padStart(2, "0")}`
@@ -71,7 +75,7 @@ export function BirthDateInput({ name }: BirthDateInputProps) {
         {/* Month */}
         <select
           value={month}
-          onChange={(e) => setMonth(e.target.value)}
+          onChange={(e) => { setMonth(e.target.value); clampDayTo(e.target.value, year); }}
           className={selectClass}
           required
         >
@@ -88,7 +92,7 @@ export function BirthDateInput({ name }: BirthDateInputProps) {
         {/* Year */}
         <select
           value={year}
-          onChange={(e) => setYear(e.target.value)}
+          onChange={(e) => { setYear(e.target.value); clampDayTo(month, e.target.value); }}
           className={selectClass}
           required
         >
