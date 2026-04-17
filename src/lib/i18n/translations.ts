@@ -187,6 +187,8 @@ export const translations = {
       magicLinkSent: "Lien envoyé ! Vérifiez votre boîte mail.",
       magicLinkEmailRequired: "Entrez votre email d'abord.",
       magicLinkHint: "Connexion sans mot de passe — on vous envoie un lien.",
+      usePasswordInstead: "J'ai un mot de passe",
+      hidePassword: "Masquer le mot de passe",
       alreadyHaveAccount: "Déjà un compte ?",
       noAccount: "Pas encore de compte ?",
       accountCreated: "Compte créé ! Vérifiez votre email puis connectez-vous.",
@@ -591,6 +593,8 @@ export const translations = {
       magicLinkSent: "Link sent! Check your inbox.",
       magicLinkEmailRequired: "Enter your email first.",
       magicLinkHint: "No password — we'll email you a secure link.",
+      usePasswordInstead: "I have a password",
+      hidePassword: "Hide password",
       alreadyHaveAccount: "Already have an account?",
       noAccount: "Don't have an account?",
       accountCreated: "Account created! Check your email then log in.",
@@ -870,6 +874,7 @@ export interface Translations {
     googleRedirecting: string;
     magicLinkButton: string; magicLinkSending: string; magicLinkSent: string;
     magicLinkEmailRequired: string; magicLinkHint: string;
+    usePasswordInstead: string; hidePassword: string;
     alreadyHaveAccount: string; noAccount: string;
     accountCreated: string; authError: string; serviceUnavailable: string;
     passwordMismatch: string; passwordTooShort: string; passwordTooShort8: string;
