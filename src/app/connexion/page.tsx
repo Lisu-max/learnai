@@ -134,6 +134,12 @@ function ConnexionForm() {
         </div>
       )}
 
+      {next !== "/" && !justRegistered && (
+        <div className="mb-6 rounded-lg bg-purple-500/10 px-4 py-3 text-center text-sm text-purple-300">
+          Connectez-vous pour continuer votre achat.
+        </div>
+      )}
+
       <div className="rounded-xl border border-border/50 bg-card/50 p-6 backdrop-blur-sm">
         <form onSubmit={handleSubmit} className="space-y-4" autoComplete="on">
           <div>

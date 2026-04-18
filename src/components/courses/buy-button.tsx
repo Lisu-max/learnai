@@ -27,8 +27,9 @@ export function BuyButton({
     // Check auth client-side first to avoid 401 console error
     const supabase = createClient();
     const { data: { user } } = await supabase.auth.getUser();
+    const backToCourse = `/cours/${courseSlug}`;
     if (!user) {
-      router.push("/connexion");
+      router.push(`/connexion?next=${encodeURIComponent(backToCourse)}`);
       return;
     }
 
@@ -42,7 +43,7 @@ export function BuyButton({
       const data = await res.json();
 
       if (res.status === 401) {
-        router.push("/connexion");
+        router.push(`/connexion?next=${encodeURIComponent(backToCourse)}`);
         return;
       }
 
