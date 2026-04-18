@@ -16,6 +16,9 @@ function ConnexionForm() {
   const { t } = useTranslation();
   const justRegistered = searchParams.get("verified") === "check";
   const authError = searchParams.get("error") === "auth";
+  const rawNext = searchParams.get("next");
+  // Only accept relative paths to prevent open redirects
+  const next = rawNext && rawNext.startsWith("/") && !rawNext.startsWith("//") ? rawNext : "/";
 
   const [email, setEmail] = useState("");
   const [error, setError] = useState<string | null>(
@@ -58,7 +61,7 @@ function ConnexionForm() {
       return;
     }
 
-    router.push("/");
+    router.push(next);
   }
 
   async function handleGoogle() {
@@ -69,7 +72,7 @@ function ConnexionForm() {
     const { data, error: oauthError } = await supabase.auth.signInWithOAuth({
       provider: "google",
       options: {
-        redirectTo: `${window.location.origin}/auth/callback`,
+        redirectTo: `${window.location.origin}/auth/callback?next=${encodeURIComponent(next)}`,
       },
     });
 
@@ -99,7 +102,7 @@ function ConnexionForm() {
     const { error: otpError } = await supabase.auth.signInWithOtp({
       email,
       options: {
-        emailRedirectTo: `${window.location.origin}/auth/callback`,
+        emailRedirectTo: `${window.location.origin}/auth/callback?next=${encodeURIComponent(next)}`,
       },
     });
 

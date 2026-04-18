@@ -77,7 +77,7 @@ export default async function SuccessPage({
             {t.success.paymentConfirmed} <strong>{courseName}</strong> {t.success.paymentConfirmedSuffix}
           </p>
           <Link
-            href={`/cours/${courseSlug}/chapitres`}
+            href={courseSlug ? `/cours/${courseSlug}/chapitres/1` : "/cours"}
             className="btn-gradient inline-flex items-center gap-2 rounded-lg px-8 py-4 text-base font-semibold text-white"
           >
             <PlayCircle className="h-5 w-5" />

@@ -172,11 +172,11 @@ export default function TarificationPage() {
 
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
             <Link
-              href="/cours"
+              href="/pack-complet"
               className="btn-gradient-glow inline-flex items-center justify-center gap-2 rounded-lg px-8 py-4 font-semibold text-white"
             >
               <Zap className="h-5 w-5" />
-              Accéder aux formations
+              Obtenir le Pack Complet
             </Link>
             <div className="flex items-center gap-2 text-xs text-muted-foreground">
               <ShieldCheck className="h-4 w-4 text-emerald-400" />

@@ -80,7 +80,7 @@ export default function PackCompletPage() {
               </p>
 
               <Link
-                href="/connexion?redirect=/pack-complet"
+                href="/connexion?next=/pack-complet"
                 className="btn-gradient-glow mt-6 flex w-full items-center justify-center gap-2 rounded-xl py-4 text-base font-bold text-white"
               >
                 <ShoppingCart className="h-5 w-5" />
@@ -287,7 +287,7 @@ export default function PackCompletPage() {
             </p>
 
             <Link
-              href="/connexion?redirect=/pack-complet"
+              href="/connexion?next=/pack-complet"
               className="btn-gradient-glow inline-flex items-center gap-2 rounded-xl px-10 py-4 text-lg font-bold text-white"
             >
               <ShoppingCart className="h-5 w-5" />
