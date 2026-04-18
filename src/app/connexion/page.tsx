@@ -184,8 +184,9 @@ function ConnexionForm() {
             <button
               type="button"
               onClick={() => setShowPassword(true)}
-              className="mx-auto block text-xs text-muted-foreground underline underline-offset-2 transition-colors hover:text-purple-400"
+              className="flex w-full items-center justify-center gap-2 rounded-lg border border-border/50 bg-background px-4 py-3 text-sm font-medium transition-colors hover:bg-accent"
             >
+              <LogIn className="h-4 w-4" />
               {t.auth.usePasswordInstead}
             </button>
           )}

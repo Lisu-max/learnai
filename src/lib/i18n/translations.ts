@@ -273,7 +273,7 @@ export const translations = {
       heroTitle: "Maîtrisez l'IA",
       heroTitleHighlight: "à votre rythme",
       heroSubtitle: "3 formations gratuites pour débuter, 14 formations premium pour aller plus loin. Vidéos explicatives, textes et quiz interactifs.",
-      freeStat: "Cours gratuit",
+      freeStat: "Cours gratuits",
       formationsStat: "Formations",
       freeSectionTitle: "Formations gratuites",
       freeSectionSubtitle: "Commencez immédiatement, sans inscription ni paiement. 3 cours pour débuter.",

@@ -255,16 +255,18 @@ export function CourseDetail({ slug }: { slug: string }) {
                   <CheckCircle2 className="h-3.5 w-3.5 text-emerald-400" />
                   {t.courseDetail.lifetimeAccess}
                 </div>
-                {/* CONTENT-08 — Completion certificate */}
-                <div className="flex items-center gap-2 text-xs text-muted-foreground">
-                  <Award className="h-3.5 w-3.5 text-amber-400" />
-                  {locale === "en" ? "Completion certificate included" : "Certificat de complétion inclus"}
-                </div>
-                {/* CONTENT-09 — Stripe / SSL badge */}
-                <div className="mt-3 flex items-center gap-2 rounded-lg border border-border/40 bg-muted/30 px-3 py-2 text-xs text-muted-foreground">
-                  <ShieldCheck className="h-4 w-4 shrink-0 text-emerald-400" />
-                  {locale === "en" ? "Secure payment via Stripe — SSL encrypted" : "Paiement sécurisé Stripe — chiffrement SSL"}
-                </div>
+                {!isFree && (
+                  <>
+                    <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                      <Award className="h-3.5 w-3.5 text-amber-400" />
+                      {locale === "en" ? "Completion certificate included" : "Certificat de complétion inclus"}
+                    </div>
+                    <div className="mt-3 flex items-center gap-2 rounded-lg border border-border/40 bg-muted/30 px-3 py-2 text-xs text-muted-foreground">
+                      <ShieldCheck className="h-4 w-4 shrink-0 text-emerald-400" />
+                      {locale === "en" ? "Secure payment via Stripe — SSL encrypted" : "Paiement sécurisé Stripe — chiffrement SSL"}
+                    </div>
+                  </>
+                )}
               </div>
             </div>
           </div>

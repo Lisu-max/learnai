@@ -57,9 +57,13 @@ export default function PolitiqueConfidentialitePage() {
               <ul className="mt-2 list-disc space-y-1 pl-6">
                 <li>Nom et prénom (lors de l&apos;inscription)</li>
                 <li>Adresse email</li>
-                <li>Date de naissance</li>
                 <li>Historique des achats</li>
                 <li>Données de progression (chapitres complétés, résultats des quiz)</li>
+                <li>
+                  Données de mesure d&apos;audience agrégées et anonymes (pages vues, pays, type
+                  d&apos;appareil, métriques de performance Web Vitals) collectées <strong>sans cookie</strong> par
+                  Vercel Analytics et Vercel Speed Insights
+                </li>
               </ul>
               <p className="mt-2">
                 Les données de paiement sont traitées directement par <strong>Stripe</strong> et ne transitent
@@ -99,6 +103,11 @@ export default function PolitiqueConfidentialitePage() {
                 <li><strong>Supabase</strong> (UE) — Base de données et authentification</li>
                 <li><strong>Stripe</strong> (certifié PCI DSS) — Traitement sécurisé des paiements</li>
                 <li><strong>Vercel</strong> (États-Unis) — Hébergement du site web</li>
+                <li>
+                  <strong>Vercel Analytics et Speed Insights</strong> (États-Unis) — Mesure d&apos;audience et
+                  de performance, sans cookie, avec données agrégées et anonymisées (aucun identifiant
+                  persistant, aucun croisement avec d&apos;autres sources)
+                </li>
               </ul>
               <p className="mt-2">
                 Les transferts de données vers les États-Unis sont encadrés par les clauses contractuelles types
@@ -110,9 +119,15 @@ export default function PolitiqueConfidentialitePage() {
               <h2 className="mb-3 text-lg font-semibold text-foreground">6. Cookies</h2>
               <p>
                 Le site utilise <strong>uniquement des cookies techniques</strong> essentiels
-                (authentification, session, préférence de langue). Aucun cookie publicitaire, analytique ou de suivi
-                n&apos;est déposé. Aucun consentement n&apos;est requis pour ces cookies techniques
-                (exemption CNIL).
+                (authentification, session, préférence de langue). Aucun cookie publicitaire ni
+                traceur tiers n&apos;est déposé. Aucun consentement n&apos;est requis pour ces
+                cookies techniques (exemption CNIL).
+              </p>
+              <p className="mt-2">
+                La mesure d&apos;audience et les métriques de performance (Vercel Analytics et Speed Insights)
+                sont réalisées <strong>sans cookie</strong> et de manière agrégée / anonyme, ce qui relève
+                également de l&apos;exemption CNIL pour les mesures d&apos;audience strictement limitées à
+                l&apos;usage statistique interne.
               </p>
               <div className="mt-4 overflow-x-auto">
                 <table className="w-full border-collapse text-sm">
@@ -235,9 +250,13 @@ export default function PolitiqueConfidentialitePage() {
               <ul className="mt-2 list-disc space-y-1 pl-6">
                 <li>First and last name (upon registration)</li>
                 <li>Email address</li>
-                <li>Date of birth</li>
                 <li>Purchase history</li>
                 <li>Progress data (completed chapters, quiz results)</li>
+                <li>
+                  Aggregated and anonymous audience metrics (page views, country, device type, Web Vitals
+                  performance metrics) collected <strong>without cookies</strong> by Vercel Analytics and
+                  Vercel Speed Insights
+                </li>
               </ul>
               <p className="mt-2">
                 Payment data is processed directly by <strong>Stripe</strong> and never
@@ -277,6 +296,11 @@ export default function PolitiqueConfidentialitePage() {
                 <li><strong>Supabase</strong> (EU) — Database and authentication</li>
                 <li><strong>Stripe</strong> (PCI DSS certified) — Secure payment processing</li>
                 <li><strong>Vercel</strong> (USA) — Website hosting</li>
+                <li>
+                  <strong>Vercel Analytics and Speed Insights</strong> (USA) — Audience and performance
+                  measurement, cookieless, with aggregated and anonymized data (no persistent identifier,
+                  no cross-referencing with other sources)
+                </li>
               </ul>
               <p className="mt-2">
                 Data transfers to the United States are governed by standard contractual clauses
@@ -288,8 +312,13 @@ export default function PolitiqueConfidentialitePage() {
               <h2 className="mb-3 text-lg font-semibold text-foreground">6. Cookies</h2>
               <p>
                 The site uses <strong>only essential technical cookies</strong>{" "}
-                (authentication, session, language preference). No advertising, analytics, or tracking cookies
-                are used. No consent is required for these technical cookies.
+                (authentication, session, language preference). No advertising or third-party tracking
+                cookies are used. No consent is required for these technical cookies.
+              </p>
+              <p className="mt-2">
+                Audience and performance measurement (Vercel Analytics and Speed Insights) are performed
+                <strong> without cookies</strong> and in an aggregated / anonymous manner, strictly limited
+                to internal statistical use.
               </p>
               <div className="mt-4 overflow-x-auto">
                 <table className="w-full border-collapse text-sm">
