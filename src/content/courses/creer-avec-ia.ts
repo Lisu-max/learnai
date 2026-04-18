@@ -10,7 +10,7 @@ const content: CourseContent = {
       estimatedMinutes: 7,
       sections: [
         { type: "heading", content: "Bienvenue dans l'Ère de la Création IA" },
-        { type: "paragraph", content: "L'intelligence artificielle générative a transformé radicalement le paysage créatif. En 2026, n'importé qui peut générer des images photorelistes, composer de la musique, créer des vidéos cinematographiques et écrire du contenu professionnel — le tout en quelques secondes. Cette révolution démocratise la création et ouvre des possibilités inédites pour les entrepreneurs, les artistes et les créateurs de contenu." },
+        { type: "paragraph", content: "L'intelligence artificielle générative a transformé radicalement le paysage créatif. En 2026, n'importe qui peut générer des images photorelistes, composer de la musique, créer des vidéos cinematographiques et écrire du contenu professionnel — le tout en quelques secondes. Cette révolution démocratise la création et ouvre des possibilités inédites pour les entrepreneurs, les artistes et les créateurs de contenu." },
         { type: "paragraph", content: "Ce cours vous guidera à travers tous les outils de création IA disponibles aujourd'hui : de la génération d'images (Midjourney, DALL-E, Stable Diffusion) a la video (Sora, Runway), en passant par la musique (Suno, Udio), la voix (ElevenLabs), le design (Galileo AI, v0) et bien plus encore." },
         { type: "callout", content: "En 2026, le marche de l'IA générative depasse 100 milliards de dollars. Les outils de création IA ne sont plus un gadget : ils sont devenus un avantage concurrentiel indispensable pour tout créateur et entrepreneur." },
         { type: "video", videoId: "nYqeHIRKboM",
@@ -593,7 +593,7 @@ const content: CourseContent = {
         },
         {
           question: "Que fait Opus Clip ?",
-          options: ["Il génère des vidéos à partir de texte", "Il identifie les meilleurs moments d'une video longue pour créer des clips courts", "Il ajouté de la musique IA aux vidéos", "Il améliore la résolution des vidéos"],
+          options: ["Il génère des vidéos à partir de texte", "Il identifie les meilleurs moments d'une video longue pour créer des clips courts", "Il ajoute de la musique IA aux vidéos", "Il améliore la résolution des vidéos"],
           correctIndex: 1,
           explanation: "Opus Clip analyse les vidéos longues et identifié automatiquement les meilleurs passages pour créer des clips courts optimises pour les réseaux sociaux.",
         },
@@ -612,7 +612,7 @@ const content: CourseContent = {
       estimatedMinutes: 8,
       sections: [
         { type: "heading", content: "La Musique Générative en 2026" },
-        { type: "paragraph", content: "Suno et Udio ont démocratise la création musicale. N'importé qui peut désormais composer un morceau complet — voix, instruments, paroles — en quelques secondes à partir d'une description textuelle. La qualité a atteint un niveau ou il est souvent difficile de distinguer ces compositions de morceaux créés par des musiciens humains." },
+        { type: "paragraph", content: "Suno et Udio ont démocratise la création musicale. N'importe qui peut désormais composer un morceau complet — voix, instruments, paroles — en quelques secondes à partir d'une description textuelle. La qualité a atteint un niveau ou il est souvent difficile de distinguer ces compositions de morceaux créés par des musiciens humains." },
         { type: "paragraph", content: "Suno se distingue par sa facilité d'utilisation et sa qualité vocale. Udio excelle dans la précision musicale et la fidélité aux genres. Les deux plateformes permettent de générer des morceaux de 3-4 minutes avec structures complètes (intro, couplet, refrain, pont, outro)." },
         { type: "callout", content: "Suno V4 génère des morceaux complets avec voix en plus de 50 langues, y compris le français. La qualité vocale est suffisamment bonne pour des usages commerciaux comme les jingles publicitaires et les musiques de fond." },
         { type: "video", videoId: "C2bICETkJfM",
@@ -673,12 +673,12 @@ const content: CourseContent = {
         { type: "heading", content: "ElevenLabs : Le Standard de la Voix IA" },
         { type: "paragraph", content: "ElevenLabs est devenu le leader inconteste de la synthèse vocale par IA. Sa technologie produit des voix d'un naturel saisissant, avec des intonations, des pauses et des émotions qui rivalisent avec les doubleurs professionnels. L'outil propose des centaines de voix predefinies et la possibilité de cloner votre propre voix." },
         { type: "paragraph", content: "Les cas d'usage sont vastes : narration de vidéos, livres audio, doublage multilingue, assistants vocaux, podcasts automatises, annonces telephoniques, e-learning, et accessibilité. ElevenLabs supporte plus de 30 langues avec un naturel remarquable." },
-        { type: "callout", content: "Le clonage vocal d'ElevenLabs ne nécessite que 30 secondes d'echantillon audio. La voix clonee peut ensuite parler dans n'importé quelle langue tout en conservant les caractéristiques uniques de l'original." },
+        { type: "callout", content: "Le clonage vocal d'ElevenLabs ne nécessite que 30 secondes d'echantillon audio. La voix clonee peut ensuite parler dans n'importe quelle langue tout en conservant les caractéristiques uniques de l'original." },
         { type: "video", videoId: "-vwHldNaGPI",
       videoDurationMinutes: 16, label: "ElevenLabs : guide complet de la voix IA" },
         { type: "heading", content: "Les Fonctionnalites Clés" },
         { type: "subheading", content: "Text-to-Speech et Voice Cloning" },
-        { type: "paragraph", content: "Le Text-to-Speech (TTS) convertit du texte en parole naturelle. Choisissez une voix, ajustez la stabilité (consistance) et la clarte, et generez l'audio. Le Voice Cloning créé une copie numérique de votre voix à partir d'un court echantillon, utilisable ensuite pour générer n'importé quel texte." },
+        { type: "paragraph", content: "Le Text-to-Speech (TTS) convertit du texte en parole naturelle. Choisissez une voix, ajustez la stabilité (consistance) et la clarte, et generez l'audio. Le Voice Cloning créé une copie numérique de votre voix à partir d'un court echantillon, utilisable ensuite pour générer n'importe quel texte." },
         { type: "subheading", content: "Doublage et Traduction Vocale" },
         { type: "paragraph", content: "La fonctionnalité Dubbing d'ElevenLabs traduit et double automatiquement vos vidéos dans d'autres langues, en preservant votre voix et votre intonation. Votre video YouTube en français peut être automatiquement doublee en anglais, espagnol, allemand — avec votre propre voix." },
         { type: "prompt-example", prompt: "Texte : 'Bonjour et bienvenue dans ce podcast sur l'intelligence artificielle. Aujourd'hui, nous explorons comment l'IA transforme la création de contenu.' | Voix : Rachel (narrative), Stabilite : 0.75, Clarte : 0.85", result: "Audio de narration professionnelle d'une voix feminine chaleureuse et articulee, avec des pauses naturelles et une intonation engageante, qualité studio." },
@@ -707,7 +707,7 @@ const content: CourseContent = {
         },
         {
           question: "Que fait la fonctionnalité Dubbing d'ElevenLabs ?",
-          options: ["Elle ajouté des sous-titres", "Elle traduit et double automatiquement une video en preservant la voix", "Elle supprime le bruit de fond", "Elle accélère le debit de parole"],
+          options: ["Elle ajoute des sous-titres", "Elle traduit et double automatiquement une video en preservant la voix", "Elle supprime le bruit de fond", "Elle accélère le debit de parole"],
           correctIndex: 1,
           explanation: "Le Dubbing traduit et double automatiquement les vidéos dans d'autres langues tout en preservant les caractéristiques de votre voix et votre intonation.",
         },
@@ -733,7 +733,7 @@ const content: CourseContent = {
       sections: [
         { type: "heading", content: "L'IA comme Partenaire d'Écriture" },
         { type: "paragraph", content: "Les grands modèles de langage (Claude, ChatGPT, Gemini) excellent en écriture créative. Ils peuvent aider a développer des personnages, construire des intrigues, surmonter le syndrome de la page blanche, et produire des textes dans tous les genres litteraires. L'IA ne remplace pas l'auteur — elle amplifie sa créativité." },
-        { type: "paragraph", content: "En 2026, les LLM comprennent les subtilites narratives : arcs de personnages, tension dramatique, foreshadowing, metaphores. Ils peuvent adapter leur style a n'importé quel genre (thriller, romance, SF, poésie) et maintenir une cohérence sur des textes longs grâce à leur fenetre de contexte étendue." },
+        { type: "paragraph", content: "En 2026, les LLM comprennent les subtilites narratives : arcs de personnages, tension dramatique, foreshadowing, metaphores. Ils peuvent adapter leur style a n'importe quel genre (thriller, romance, SF, poésie) et maintenir une cohérence sur des textes longs grâce à leur fenetre de contexte étendue." },
         { type: "callout", content: "Claude excelle particulièrement en écriture créative grâce à sa compréhension nuancee du langage et sa capacité a maintenir un ton cohérent sur de longs textes. Son contexte d'un million de tokens permet de travailler sur des romans entiers." },
         { type: "video", videoId: "nYqeHIRKboM",
       videoDurationMinutes: 3, label: "Écrire un roman avec l'IA : méthode complète" },
@@ -857,7 +857,7 @@ const content: CourseContent = {
         { type: "heading", content: "Le Podcast IA : De l'Idée a la Diffusion" },
         { type: "paragraph", content: "L'IA transforme la production de podcasts. De la recherche de sujets a la distribution, chaque étape peut être assistée ou automatisée. Google NotebookLM a même popularise les podcasts entièrement générés par IA avec son feature 'Audio Overview' qui transformé vos notes en conversations naturelles entre deux animateurs virtuels." },
         { type: "paragraph", content: "Pour les podcasters humains, l'IA est un assistant de production imbattable : recherche de sujets, préparation d'interviews, transcription, montage, génération de show notes, création de clips promotionnels, et même analyse des performances." },
-        { type: "callout", content: "Google NotebookLM peut transformer n'importé quel document (article, PDF, notes) en un podcast conversationnel de 10-15 minutes entre deux animateurs IA. La qualité est surprenante et c'est entièrement gratuit." },
+        { type: "callout", content: "Google NotebookLM peut transformer n'importe quel document (article, PDF, notes) en un podcast conversationnel de 10-15 minutes entre deux animateurs IA. La qualité est surprenante et c'est entièrement gratuit." },
         { type: "video", videoId: "C2bICETkJfM",
       videoDurationMinutes: 12, label: "Lancer un podcast avec l'IA : guide 2026" },
         { type: "heading", content: "Les Outils IA pour le Podcasting" },
@@ -887,7 +887,7 @@ const content: CourseContent = {
           question: "Quelle fonctionnalité de Google NotebookLM est liée au podcasting ?",
           options: ["La génération d'images", "Audio Overview — transformation de documents en podcast conversationnel", "La traduction automatique", "La correction grammaticale"],
           correctIndex: 1,
-          explanation: "Audio Overview de Google NotebookLM transformé n'importé quel document en un podcast conversationnel naturel entre deux animateurs IA, gratuitement.",
+          explanation: "Audio Overview de Google NotebookLM transformé n'importe quel document en un podcast conversationnel naturel entre deux animateurs IA, gratuitement.",
         },
         {
           question: "Quel outil est recommandé pour le montage de podcast par texte ?",
@@ -1059,7 +1059,7 @@ const content: CourseContent = {
         { type: "tip", content: "Pour le home staging IA, photographiez chaque piece sous le même angle et generez les rendus dans un style cohérent. Presentez les avant/après côté a côté pour un impact maximal." },
         { type: "summary", items: [
           "L'IA permet de visualiser des designs d'intérieur en quelques secondes",
-          "Transformation de photos réelles dans n'importé quel style decoratif",
+          "Transformation de photos réelles dans n'importe quel style decoratif",
           "Rendus architecturaux de qualité professionnelle avec Midjourney",
           "Le mode image-to-image est le plus efficace pour les espaces existants",
           "Applications : home staging, propositions clients, planification de renovations",
@@ -1120,7 +1120,7 @@ const content: CourseContent = {
         { type: "tip", content: "Pour les réseaux sociaux, les micro-animations de 2-3 secondes en loop attirent beaucoup plus l'attention qu'une image statique. Utilisez Pika ou Runway pour animer vos visuels avec des mouvements subtils." },
         { type: "summary", items: [
           "L'IA permet de créer des animations sans compétences techniques avancées",
-          "Image-to-Animation : animez n'importé quelle image statique",
+          "Image-to-Animation : animez n'importe quelle image statique",
           "Motion graphics IA pour présentations, vidéos et réseaux sociaux",
           "Luma Dream Machine excelle en animation 3D à partir d'images",
           "Les micro-animations en loop sont très efficaces sur les réseaux sociaux",
@@ -1161,7 +1161,7 @@ const content: CourseContent = {
       sections: [
         { type: "heading", content: "L'Art de Combiner les IA" },
         { type: "paragraph", content: "La véritable puissance de la création IA émerge quand vous combinez plusieurs outils dans un workflow structure. Un projet créatif complet — video publicitaire, campagne marketing, lancement de produit — peut être réalise en quelques heures en orchestrant les bons outils au bon moment." },
-        { type: "paragraph", content: "Le workflow multi-IA suit une logique simple : chaque outil excelle dans un domaine spécifique. En les chainant intelligemment, vous obtenez un résultat supérieur a ce que n'importé quel outil seul pourrait produire. C'est l'approche 'best-of-breed' appliquée a la création." },
+        { type: "paragraph", content: "Le workflow multi-IA suit une logique simple : chaque outil excelle dans un domaine spécifique. En les chainant intelligemment, vous obtenez un résultat supérieur a ce que n'importe quel outil seul pourrait produire. C'est l'approche 'best-of-breed' appliquée a la création." },
         { type: "callout", content: "Un workflow créatif multi-IA typique pour une video publicitaire : Claude (script) → ElevenLabs (voix) → Midjourney (visuels) → Sora (animation des visuels) → Suno (musique) → CapCut (montage) = video pro en 2 heures au lieu de 2 semaines." },
         { type: "video", videoId: "-vwHldNaGPI",
       videoDurationMinutes: 16, label: "Workflow multi-IA : créer une pub en 2h" },
@@ -1234,7 +1234,7 @@ const content: CourseContent = {
         { type: "paragraph", content: "Vendez des produits numériques : packs de prompts, presets, templates, motifs textiles, assets pour jeux video, banques d'images. Des plateformes comme Gumroad, Etsy, Créative Market et Envato Market permettent de vendre a une audience mondiale avec des revenus recurrents." },
         { type: "subheading", content: "Formation et Contenu" },
         { type: "paragraph", content: "Creez des cours en ligne, des tutoriels YouTube, des ebooks et des newsletters sur la création IA. Le marche de la formation IA est en croissance explosive. Un cours bien positionne sur Udemy ou votre propre plateforme peut générer des revenus passifs significatifs." },
-        { type: "key-point", content: "Le secret de la monetisation n'est pas l'outil mais l'expertise. N'importé qui peut appuyer sur 'générer'. Votre valeur ajoutée est votre expertise en prompting, votre direction artistique, et votre capacité à produire des résultats professionnels et cohérents." },
+        { type: "key-point", content: "Le secret de la monetisation n'est pas l'outil mais l'expertise. N'importe qui peut appuyer sur 'générer'. Votre valeur ajoutée est votre expertise en prompting, votre direction artistique, et votre capacité à produire des résultats professionnels et cohérents." },
         { type: "diagram", label: "Modèles de Monetisation IA", flow: "horizontal", nodes: [
           { label: "Freelance", sub: "Services sur-mesure, 50-2000€/projet", color: "purple" },
           { label: "Produits digitaux", sub: "Prompts, templates, assets", color: "blue" },

@@ -273,7 +273,7 @@ const content: CourseContent = {
         { type: "tip", content: "Testez toujours au moins 3 variantes d'objet d'email. L'IA peut prédire la performance, mais seul le test réel avec votre audience donne des résultats fiables." },
         { type: "summary", items: [
           "L'email marketing reste le canal au meilleur ROI : 36x en 2026",
-          "L'IA identifié des micro-segments comportementaux avances",
+          "L'IA identifie des micro-segments comportementaux avances",
           "Personnalisation hyper-contextuelle a grande échelle",
           "L'objet détermine 80% du taux d'ouverture — testez avec l'IA",
           "Les séquences automatisees sont les plus rentables",
@@ -437,7 +437,7 @@ const content: CourseContent = {
       sections: [
         { type: "heading", content: "Le Data Marketing Propulse par l'IA" },
         { type: "paragraph", content: "Les données sont le carburant du marketing digital. Mais avoir des données ne suffit pas — il faut les analyser, les interpréter et en tirer des actions concrètes. L'IA transforme des montagnes de données en insights actionnables en quelques secondes." },
-        { type: "paragraph", content: "En 2026, Google Analytics 4 intégré l'IA pour l'analyse prédictive. Les outils comme Looker Studio AI, Mixpanel et Amplitude offrent des insights automatiques. Et Claude/GPT peuvent analyser vos exports CSV pour répondre a n'importé quelle question marketing." },
+        { type: "paragraph", content: "En 2026, Google Analytics 4 intégré l'IA pour l'analyse prédictive. Les outils comme Looker Studio AI, Mixpanel et Amplitude offrent des insights automatiques. Et Claude/GPT peuvent analyser vos exports CSV pour répondre a n'importe quelle question marketing." },
         { type: "heading", content: "Les KPIs Essentiels" },
         { type: "paragraph", content: "Les métriques qui comptent vraiment : le coût d'acquisition client (CAC), la valeur vie client (LTV), le taux de conversion par étape du funnel, le ROI par canal, et le taux de churn. L'IA peut calculer et prédire chacune de ces métriques." },
         { type: "subheading", content: "Analyse Predictive" },
@@ -453,7 +453,7 @@ const content: CourseContent = {
           { label: "Prédiction", sub: "Comportements futurs", color: "emerald" },
           { label: "Action", sub: "Decisions basées sur les données", color: "amber" },
         ]},
-        { type: "prompt-example", prompt: "Voici un export CSV de mes campagnes marketing des 6 derniers mois (canal, dépense, leads, clients, CA). Analyse les performances, identifié le canal le plus rentable et recommandé une reallocation budgetaire.", result: "Analyse complète avec ROI par canal, identification du canal le plus rentable (ex: email 12x ROI vs paid social 3x), et recommandation de reallouer 30% du budget paid social vers email et SEO." },
+        { type: "prompt-example", prompt: "Voici un export CSV de mes campagnes marketing des 6 derniers mois (canal, dépense, leads, clients, CA). Analyse les performances, identifié le canal le plus rentable et recommande une reallocation budgetaire.", result: "Analyse complète avec ROI par canal, identification du canal le plus rentable (ex: email 12x ROI vs paid social 3x), et recommandation de reallouer 30% du budget paid social vers email et SEO." },
         { type: "key-point", content: "Le ratio LTV/CAC est le KPI ultime. Si la valeur vie client est 3x ou plus supérieure au coût d'acquisition, votre business est sain. L'IA peut calculer ce ratio en temps réel pour chaque canal." },
         { type: "summary", items: [
           "L'IA transforme les données marketing en insights actionnables",
@@ -564,7 +564,7 @@ const content: CourseContent = {
         { type: "video", videoId: "nkuPUJVzB_E",
       videoDurationMinutes: 12, label: "Vidéo marketing IA : du script a la publication" },
         { type: "heading", content: "Optimisation et Distribution" },
-        { type: "paragraph", content: "OpusClip et Descript decoupent automatiquement vos vidéos longues en shorts viraux. L'IA identifié les moments forts, ajouté les sous-titres, et optimisé le format pour chaque plateforme. Un webinar de 1 heure peut devenir 20 shorts en quelques minutes." },
+        { type: "paragraph", content: "OpusClip et Descript decoupent automatiquement vos vidéos longues en shorts viraux. L'IA identifie les moments forts, ajouté les sous-titres, et optimise le format pour chaque plateforme. Un webinar de 1 heure peut devenir 20 shorts en quelques minutes." },
         { type: "key-point", content: "Les sous-titres augmentent le taux de visionnage de 80%. La majorité des vidéos sur mobile sont regardees sans le son. L'IA génère des sous-titres précis automatiquement." },
         { type: "diagram", label: "Pipeline Vidéo Marketing IA", flow: "horizontal", nodes: [
           { label: "Script IA", sub: "Hook, contenu, CTA", color: "purple" },
@@ -696,7 +696,7 @@ const content: CourseContent = {
           { label: "Analyser", sub: "IA identifié patterns et opportunités", color: "purple" },
           { label: "Implementer", sub: "Appliquer les optimisations", color: "emerald" },
         ]},
-        { type: "prompt-example", prompt: "Voici mes métriques marketing du mois : SEO (5000 visites, 50 leads), LinkedIn (2000 impressions, 15 leads), Email (3000 envoyés, 30% ouverture, 20 leads), Ads (1000 euros dépenses, 25 leads). Analyse et recommandé les optimisations.", result: "Analyse : SEO meilleur CPA (0 euro/lead), email meilleur taux de conversion (0,67%). Recommandations : doubler la production SEO, optimiser les objets d'emails (30% ouverture = ameliorable), réduire le budget ads et reallouer vers le contenu organic." },
+        { type: "prompt-example", prompt: "Voici mes métriques marketing du mois : SEO (5000 visites, 50 leads), LinkedIn (2000 impressions, 15 leads), Email (3000 envoyés, 30% ouverture, 20 leads), Ads (1000 euros dépenses, 25 leads). Analyse et recommande les optimisations.", result: "Analyse : SEO meilleur CPA (0 euro/lead), email meilleur taux de conversion (0,67%). Recommandations : doubler la production SEO, optimiser les objets d'emails (30% ouverture = ameliorable), réduire le budget ads et reallouer vers le contenu organic." },
         { type: "tip", content: "Faites un bilan mensuel de 30 minutes avec l'IA : exportez vos données, demandez une analyse complète, et implementez les 3 recommandations les plus impactantes. C'est le minimum pour une optimisation continue efficace." },
         { type: "summary", items: [
           "Le marketing est un processus d'amélioration continue, pas un projet fini",

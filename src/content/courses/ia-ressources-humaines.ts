@@ -145,7 +145,7 @@ const content: CourseContent = {
           { label: "Shortlist", sub: "Top 10-20 pour entretien humain", color: "amber" },
         ]},
         { type: "summary", items: [
-          "L'IA trie 500 CV en secondes et identifié les meilleurs profils",
+          "L'IA trie 500 CV en secondes et identifie les meilleurs profils",
           "Les tests adaptatifs ajustent la difficulté en temps réel",
           "L'analyse video des émotions est controversee et regulee",
           "L'audit des biais est obligatoire sous l'AI Act",
@@ -248,9 +248,9 @@ const content: CourseContent = {
         { type: "subheading", content: "Apprentissage Adaptatif" },
         { type: "paragraph", content: "Les plateformes LMS augmentées par l'IA evaluent le niveau de chaque apprenant et adaptent le parcours en temps réel. Si un collaborateur maîtrise un sujet, l'IA accélère. S'il bloque, elle propose des exercices supplémentaires et des explications alternatives." },
         { type: "subheading", content: "LLM comme Tuteurs Personnels" },
-        { type: "paragraph", content: "Les entreprises déploient des chatbots IA internes formes sur leurs process, outils et documentation. Un collaborateur peut poser n'importé quelle question sur les procédures internes et obtenir une réponse instantanée — sans deranger un collègue." },
+        { type: "paragraph", content: "Les entreprises déploient des chatbots IA internes formes sur leurs process, outils et documentation. Un collaborateur peut poser n'importe quelle question sur les procédures internes et obtenir une réponse instantanée — sans deranger un collègue." },
         { type: "subheading", content: "Identification des Gaps de Compétences" },
-        { type: "paragraph", content: "L'IA analyse les compétences actuelles des équipes, les compare aux besoins futurs, et identifié les gaps. Elle recommandé ensuite des formations ciblées pour chaque collaborateur, optimisant le budget formation." },
+        { type: "paragraph", content: "L'IA analyse les compétences actuelles des équipes, les compare aux besoins futurs, et identifie les gaps. Elle recommande ensuite des formations ciblées pour chaque collaborateur, optimisant le budget formation." },
         { type: "prompt-example", prompt: "Cree un plan de formation personnalisé de 3 mois pour un chef de projet qui doit monter en compétences sur l'IA et l'automatisation, avec du micro-learning intégré dans son quotidien.", result: "Plan de Formation IA — Chef de Projet (3 mois)\n\nMois 1 — Fondamentaux IA :\n- 15 min/jour : modules LearnAI (IA de A à Z)\n- Semaine 2 : atelier ChatGPT pour la gestion de projet\n- Semaine 4 : quiz validation + certification\n\nMois 2 — Outils pratiques :\n- 15 min/jour : tutoriels Make/Zapier\n- Semaine 6 : projet pratique (automatiser un reporting)\n- Semaine 8 : présentation au manager\n\nMois 3 — Intégration stratégique :\n- 15 min/jour : cas d'usage IA par secteur\n- Semaine 10 : plan d'action IA pour son équipe\n- Semaine 12 : soutenance + feedback 360" },
         { type: "video", videoId: "EEbGYRW7feM",
       videoDurationMinutes: 9, label: "Formation et développement avec l'IA" },
@@ -263,7 +263,7 @@ const content: CourseContent = {
         { type: "summary", items: [
           "L'apprentissage adaptatif personnalisé le parcours de chaque collaborateur",
           "Les LLM deviennent des tuteurs personnels disponibles 24/7",
-          "L'IA identifié les gaps de compétences et recommandé des formations",
+          "L'IA identifie les gaps de compétences et recommande des formations",
           "Le micro-learning (15 min/jour) s'intégré dans le quotidien",
           "Le budget formation est optimisé grâce au ciblage IA"
         ]},
@@ -285,7 +285,7 @@ const content: CourseContent = {
           question: "Comment l'IA aide-t-elle à identifier les gaps de compétences ?",
           options: ["Elle demande aux employés", "Elle analyse les compétences actuelles et les compare aux besoins futurs", "Elle consulte les CV", "Elle fait passer des examens"],
           correctIndex: 1,
-          explanation: "L'IA analyse les compétences actuelles des équipes, les compare aux besoins stratégiques futurs, et identifié les gaps a combler avec des formations ciblées."
+          explanation: "L'IA analyse les compétences actuelles des équipes, les compare aux besoins stratégiques futurs, et identifie les gaps a combler avec des formations ciblées."
         },
         {
           question: "Quel est l'avantage d'un chatbot IA forme sur les process internes ?",
@@ -321,7 +321,7 @@ const content: CourseContent = {
           "Perdre un collaborateur coûte 50% a 200% de son salaire annuel",
           "Les pulse surveys analysées par l'IA detectent les tendances",
           "Les modèles ML predisent le risque de depart individuel",
-          "L'IA recommandé des actions de retention personnalisées",
+          "L'IA recommande des actions de retention personnalisées",
           "Éthique : l'objectif est d'améliorer l'expérience, pas de surveiller"
         ]},
       ],
@@ -422,10 +422,10 @@ const content: CourseContent = {
         { type: "subheading", content: "Les KPIs RH Essentiels" },
         { type: "paragraph", content: "Turnover rate, time-to-hire, cost-per-hire, employée NPS (eNPS), taux d'absenteisme, ratio de diversité, equity salariale, taux de promotion interne, score d'engagement, et ROI de la formation. Ces KPIs forment le tableau de bord du DRH data-driven." },
         { type: "subheading", content: "L'IA dans le People Analytics" },
-        { type: "paragraph", content: "L'IA va au-dela des dashboards descriptifs. Elle prédit le turnover, identifié les hauts potentiels, détecte les inequites salariales, optimisé la planification des effectifs, et recommandé des actions personnalisées pour chaque manager et collaborateur." },
+        { type: "paragraph", content: "L'IA va au-dela des dashboards descriptifs. Elle prédit le turnover, identifie les hauts potentiels, détecte les inequites salariales, optimise la planification des effectifs, et recommande des actions personnalisées pour chaque manager et collaborateur." },
         { type: "subheading", content: "Construire un Dashboard RH" },
         { type: "paragraph", content: "Les outils modernes comme Looker, Power BI et Metabase permettent de créer des dashboards RH interactifs. L'IA peut générer automatiquement des insights et des recommandations à partir des données affichees." },
-        { type: "prompt-example", prompt: "Analyse ces KPIs RH et identifié les 3 problèmes prioritaires :\n- Turnover : 22% (industrie : 15%)\n- Time-to-hire : 45 jours (ciblé : 30)\n- eNPS : 12 (bon : >30)\n- Absenteisme : 8% (norme : 5%)\n- Diversité genre management : 28% femmes", result: "3 Problèmes Prioritaires :\n\n1. TURNOVER CRITIQUE (22% vs 15%) — Perte de talents et coûts élèves. Action : pulse surveys immédiate + entretiens de retention avec les profils a risque.\n\n2. ENGAGEMENT BAS (eNPS 12) — Correle au turnover. Action : diagnostic par équipe pour identifier les managers/équipes en difficulté.\n\n3. ABSENTEISME ELEVE (8% vs 5%) — Signal de mal-être. Action : analyse par departement + entretiens de retour d'absence systematiques.\n\nNote : le time-to-hire et la diversité sont importants mais le turnover et l'engagement sont les urgences." },
+        { type: "prompt-example", prompt: "Analyse ces KPIs RH et identifie les 3 problèmes prioritaires :\n- Turnover : 22% (industrie : 15%)\n- Time-to-hire : 45 jours (ciblé : 30)\n- eNPS : 12 (bon : >30)\n- Absenteisme : 8% (norme : 5%)\n- Diversité genre management : 28% femmes", result: "3 Problèmes Prioritaires :\n\n1. TURNOVER CRITIQUE (22% vs 15%) — Perte de talents et coûts élèves. Action : pulse surveys immédiate + entretiens de retention avec les profils a risque.\n\n2. ENGAGEMENT BAS (eNPS 12) — Correle au turnover. Action : diagnostic par équipe pour identifier les managers/équipes en difficulté.\n\n3. ABSENTEISME ELEVE (8% vs 5%) — Signal de mal-être. Action : analyse par departement + entretiens de retour d'absence systematiques.\n\nNote : le time-to-hire et la diversité sont importants mais le turnover et l'engagement sont les urgences." },
         { type: "video", videoId: "EEbGYRW7feM",
       videoDurationMinutes: 9, label: "People analytics et dashboards RH" },
         { type: "diagram", label: "Les 4 Niveaux du People Analytics", flow: "vertical", nodes: [
@@ -437,7 +437,7 @@ const content: CourseContent = {
         { type: "summary", items: [
           "Le people analytics remplace l'intuition par les données",
           "KPIs essentiels : turnover, eNPS, time-to-hire, diversité, absenteisme",
-          "L'IA prédit, identifié les hauts potentiels et recommandé des actions",
+          "L'IA prédit, identifie les hauts potentiels et recommande des actions",
           "4 niveaux : descriptif, diagnostic, prédictif, prescriptif",
           "Les dashboards RH rendent les données actionnables"
         ]},

@@ -128,7 +128,7 @@ const content: CourseContent = {
         { type: "paragraph", content: "Des outils comme Perplexity AI, ChatGPT avec navigation web et Claude combinent la puissance des LLM avec l'accès en temps réel a Internet. Ils analysent des dizaines de sources et vous fournissent une synthèse structuree." },
         { type: "heading", content: "Les Outils de Recherche IA" },
         { type: "subheading", content: "Perplexity AI" },
-        { type: "paragraph", content: "Perplexity est le moteur de recherche IA par excellence. Il cité ses sources, fournit des réponses détaillées et permet de poser des questions de suivi. Idéal pour la recherche factuelle, la veille et l'exploration de sujets complexes." },
+        { type: "paragraph", content: "Perplexity est le moteur de recherche IA par excellence. Il cite ses sources, fournit des réponses détaillées et permet de poser des questions de suivi. Idéal pour la recherche factuelle, la veille et l'exploration de sujets complexes." },
         { type: "subheading", content: "ChatGPT et Claude avec Navigation Web" },
         { type: "paragraph", content: "ChatGPT et Claude peuvent naviguer sur le web en temps réel. Ils sont particulièrement utiles quand vous avez besoin d'une analyse plus approfondie ou d'une synthèse de plusieurs sources contradictoires." },
         { type: "prompt-example", content: "Je cherche les meilleures pratiques pour le teletravail en 2026. Compare les recommandations de 3 sources différentes (études, articles d'experts, retours d'entreprises). Presente les points communs et les divergences dans un tableau." },
@@ -356,7 +356,7 @@ const content: CourseContent = {
         { type: "subheading", content: "N8N (Self-Hosted)" },
         { type: "paragraph", content: "N8N est une alternative open source que vous pouvez héberger vous-même. Elle offre plus de contrôle et de personnalisation, et intégré nativement des noeuds IA pour le traitement de texte, la classification et l'extraction de données." },
         { type: "subheading", content: "Les GPTs Personnalises et Claude Projects" },
-        { type: "paragraph", content: "Vous pouvez créer des assistants IA sur mesure pour des tâches spécifiques. Un GPT personnalisé pour répondre aux questions clients, un Claude Project pour analyser vos rapports mensuels — ces assistants deviennent vos employés virtuels spécialisés." },
+        { type: "paragraph", content: "Vous pouvez créer des assistants IA sur mesure pour des tâches spécifiques. Un GPT personnalise pour répondre aux questions clients, un Claude Project pour analyser vos rapports mensuels — ces assistants deviennent vos employés virtuels spécialisés." },
         { type: "prompt-example", content: "Je recois 50 candidatures par email chaque semaine. Cree-moi un workflow d'automatisation : 1) extraire les infos clés du CV (nom, expérience, compétences), 2) classifier en 3 catégories (prioritaire, a revoir, non qualifie), 3) envoyer un email de confirmation personnalisé, 4) mettre à jour un Google Sheet." },
         { type: "video", videoId: "JtdUgJGI_Oo",
       videoDurationMinutes: 20, label: "Automatiser avec l'IA : tutoriel pratique" },
@@ -388,10 +388,10 @@ const content: CourseContent = {
           explanation: "N8N est une plateforme d'automatisation open source que vous pouvez héberger vous-même, offrant plus de contrôle et de personnalisation."
         },
         {
-          question: "Qu'est-ce qu'un GPT personnalisé ?",
+          question: "Qu'est-ce qu'un GPT personnalise ?",
           options: ["Un processeur spécialisé", "Un assistant IA sur mesure pour des tâches spécifiques", "Un langage de programmation", "Un type de base de données"],
           correctIndex: 1,
-          explanation: "Un GPT personnalisé est un assistant IA configurable pour des tâches spécifiques — comme répondre aux questions clients ou analyser des rapports."
+          explanation: "Un GPT personnalise est un assistant IA configurable pour des tâches spécifiques — comme répondre aux questions clients ou analyser des rapports."
         },
         {
           question: "Quelle est la meilleure approche pour commencer l'automatisation ?",

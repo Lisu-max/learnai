@@ -247,7 +247,7 @@ const content: CourseContent = {
       sections: [
         { type: "heading", content: "L'Ère des Deepfakes" },
         { type: "paragraph", content: "Un deepfake est un contenu médiatique (video, audio, image) génère ou manipule par l'IA pour être faux mais convaincant. En 2026, la technologie a atteint un niveau ou il est souvent impossible à l'oeil nu de distinguer un deepfake d'un contenu authentique." },
-        { type: "paragraph", content: "Les deepfakes peuvent reproduire le visage et la voix de n'importé qui. Des logiciels accessibles permettent de créer un deepfake video convaincant en quelques minutes avec juste une photo et quelques secondes d'audio." },
+        { type: "paragraph", content: "Les deepfakes peuvent reproduire le visage et la voix de n'importe qui. Des logiciels accessibles permettent de créer un deepfake video convaincant en quelques minutes avec juste une photo et quelques secondes d'audio." },
         { type: "heading", content: "Les Risques des Deepfakes" },
         { type: "subheading", content: "Manipulation Politique" },
         { type: "paragraph", content: "Des vidéos deepfake de dirigeants politiques peuvent être diffusees pour influencer des elections, créer des crises diplomatiques ou manipuler l'opinion publique. En période electorale, un deepfake viral peut atteindre des millions de personnes avant d'être dementi." },
@@ -429,7 +429,7 @@ const content: CourseContent = {
         { type: "paragraph", content: "L'IA évolue a une vitesse sans précédent. En 2026, les agents autonomes, les modèles multimodaux et l'IA embarquee transforment déjà notre quotidien. Mais les plus grands changements sont encore a venir. L'horizon 2030 promet des avancées majeures — et souleve des questions ethiques d'une ampleur inédite." },
         { type: "paragraph", content: "Ce chapitre final explore les grands enjeux du futur : l'AGI (Intelligence Artificielle Générale), l'IA en santé et climat, la gouvernance mondiale et la place de l'humain dans un monde de plus en plus automatisé." },
         { type: "heading", content: "L'AGI : Le Saint Graal Controverse" },
-        { type: "paragraph", content: "L'AGI — une IA capable d'accomplir n'importé quelle tâche intellectuelle humaine — est le but ultime de nombreux laboratoires. Si elle est atteinte, elle pourrait résoudre des problèmes que l'humanité ne peut pas résoudre seule : maladies incurables, changement climatique, énergies propres. Mais elle pourrait aussi concentrer un pouvoir immense entre quelques mains." },
+        { type: "paragraph", content: "L'AGI — une IA capable d'accomplir n'importe quelle tâche intellectuelle humaine — est le but ultime de nombreux laboratoires. Si elle est atteinte, elle pourrait résoudre des problèmes que l'humanité ne peut pas résoudre seule : maladies incurables, changement climatique, énergies propres. Mais elle pourrait aussi concentrer un pouvoir immense entre quelques mains." },
         { type: "callout", content: "Geoffrey Hinton, prix Nobel de physique et \"parrain du Deep Learning\", a quitte Google en 2023 pour alerter sur les risques existentiels de l'IA avancée. Il reste neanmoins optimiste sur le potentiel benefique de l'IA encadree." },
         { type: "heading", content: "L'IA au Service de l'Humanité" },
         { type: "subheading", content: "Santé" },
@@ -462,9 +462,9 @@ const content: CourseContent = {
       quiz: [
         {
           question: "Que signifie AGI ?",
-          options: ["Automated Général Interface", "Artificial Général Intelligence", "Advanced GPU Infrastructure", "Applied Gradient Iteration"],
+          options: ["Automated Général Interface", "Artificial General Intelligence", "Advanced GPU Infrastructure", "Applied Gradient Iteration"],
           correctIndex: 1,
-          explanation: "AGI (Artificial Général Intelligence) désigné une IA hypothetique capable d'accomplir n'importé quelle tâche intellectuelle humaine."
+          explanation: "AGI (Artificial General Intelligence) désigné une IA hypothetique capable d'accomplir n'importe quelle tâche intellectuelle humaine."
         },
         {
           question: "Comment l'IA peut-elle aider a combattre le changement climatique ?",

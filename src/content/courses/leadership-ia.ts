@@ -606,7 +606,7 @@ const content: CourseContent = {
         { type: "subheading", content: "Cas 2 : PME Industrielle — Maintenance Predictive" },
         { type: "paragraph", content: "Une PME de 200 employés dans l'industrie manufacturiere a déployé l'IA pour la maintenance prédictive de ses machines. Les capteurs IoT alimentent un modèle ML qui prédit les pannes 48h à l'avance. Résultat : -45% d'arrets non planifies, -30% de coûts de maintenance, ROI de 400% en 12 mois." },
         { type: "subheading", content: "Cas 3 : Cabinet d'Avocats — Analyse Documentaire" },
-        { type: "paragraph", content: "Un cabinet de 50 avocats a intégré le RAG pour l'analyse de contrats et la recherche jurisprudentielle. Les avocats passent de 4 heures a 30 minutes pour analyser un contrat de 100 pages. Le système cité les articles de loi pertinents et identifié les clauses a risque. Adoption : 90% des avocats en 3 mois." },
+        { type: "paragraph", content: "Un cabinet de 50 avocats a intégré le RAG pour l'analyse de contrats et la recherche jurisprudentielle. Les avocats passent de 4 heures a 30 minutes pour analyser un contrat de 100 pages. Le système cite les articles de loi pertinents et identifie les clauses a risque. Adoption : 90% des avocats en 3 mois." },
         { type: "callout", content: "Point commun des succès : aucune de ces organisations n'a déployé l'IA en mode 'big bang'. Toutes ont commence par un pilote ciblé, mesure les résultats, puis étendu progressivement. L'iteration bat la planification parfaite." },
         { type: "video", videoId: "7ell8KEbhJo",
       videoDurationMinutes: 27, label: "Études de cas de leaders IA" },

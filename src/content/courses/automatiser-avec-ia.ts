@@ -132,7 +132,7 @@ const content: CourseContent = {
       sections: [
         { type: "heading", content: "Make : L'Automatisation Visuelle Puissante" },
         { type: "paragraph", content: "Make (anciennement Integromat) est une plateforme d'automatisation no-code qui se distingue par son approche visuelle. Vous construisez des \"scénarios\" en connectant des modules sur un canvas, comme un diagramme de flux. C'est la plateforme préférée des automatiseurs avances." },
-        { type: "paragraph", content: "En 2026, Make intégré nativement l'IA avec des modules dédiées pour OpenAI, Anthropic (Claude), Google (Gemini), et des modèles open source. Vous pouvez inserer de l'intelligence artificielle a n'importé quel point de votre workflow." },
+        { type: "paragraph", content: "En 2026, Make intégré nativement l'IA avec des modules dédiées pour OpenAI, Anthropic (Claude), Google (Gemini), et des modèles open source. Vous pouvez inserer de l'intelligence artificielle a n'importe quel point de votre workflow." },
         { type: "heading", content: "Les Concepts Clés de Make" },
         { type: "subheading", content: "Scenarios et Modules" },
         { type: "paragraph", content: "Un scénario est un workflow automatisé. Il se compose de modules connectés entre eux. Chaque module effectue une action : lire un email, appeler une API, transformer des données, envoyer un message. Les modules sont relies par des fleches qui definissent le flux de données." },
@@ -143,7 +143,7 @@ const content: CourseContent = {
         { type: "heading", content: "Integrer l'IA dans Make" },
         { type: "paragraph", content: "Le module OpenAI/Claude dans Make permet d'ajouter de l'intelligence à vos workflows : classifier des emails, résumer des documents, générer des réponses, analyser des sentiments, extraire des données structurees de texte libre." },
         { type: "prompt-example", prompt: "Dans Make, créé un scénario qui : 1) Surveille un dossier Google Drive, 2) Quand un PDF arrive, extrait le texte, 3) Envoie le texte a Claude pour un résumé, 4) Enregistre le résumé dans Notion.", result: "Un scénario Make en 4 modules : Google Drive Watch → PDF Extract Text → Claude API (résumé) → Notion Create Page, avec les paramètres détaillés pour chaque module." },
-        { type: "tip", content: "Utilisez le module 'HTTP - Make a request' pour connecter Make a n'importé quelle API, même celles qui n'ont pas de module natif. C'est votre couteau suisse." },
+        { type: "tip", content: "Utilisez le module 'HTTP - Make a request' pour connecter Make a n'importe quelle API, même celles qui n'ont pas de module natif. C'est votre couteau suisse." },
         { type: "diagram", label: "Anatomie d'un Scénario Make avec IA", flow: "horizontal", nodes: [
           { label: "Trigger", sub: "Email, webhook, planning", color: "blue" },
           { label: "Traitement", sub: "Filtres, routeurs, transformations", color: "purple" },
@@ -154,7 +154,7 @@ const content: CourseContent = {
           "Make utilise des scénarios visuels avec des modules connectés",
           "Filtres et routeurs permettent des logiques complexes",
           "Modules IA natifs pour OpenAI, Claude et Gemini",
-          "Le module HTTP permet de connecter n'importé quelle API",
+          "Le module HTTP permet de connecter n'importe quelle API",
           "Idéal pour les automatisations multi-étapes visuelles",
         ]},
       ],
@@ -172,10 +172,10 @@ const content: CourseContent = {
           explanation: "Les routeurs permettent de diviser un flux en plusieurs branches parallèles, chacune avec ses propres conditions et actions.",
         },
         {
-          question: "Quel module Make permet de connecter n'importé quelle API ?",
+          question: "Quel module Make permet de connecter n'importe quelle API ?",
           options: ["Le module Router", "Le module Filter", "Le module HTTP", "Le module AI"],
           correctIndex: 2,
-          explanation: "Le module 'HTTP - Make a request' permet de connecter Make a n'importé quelle API, même celles qui n'ont pas de module natif.",
+          explanation: "Le module 'HTTP - Make a request' permet de connecter Make a n'importe quelle API, même celles qui n'ont pas de module natif.",
         },
         {
           question: "Quel était l'ancien nom de Make ?",
@@ -625,7 +625,7 @@ const content: CourseContent = {
         { type: "subheading", content: "Traitement Automatique des Factures" },
         { type: "paragraph", content: "Un email avec une facture en piece jointe arrive. L'IA extrait le PDF, lit les montants, la date, le fournisseur, le numero de facture. Elle enregistre tout dans votre logiciel comptable et classe le document." },
         { type: "subheading", content: "Notes de Frais" },
-        { type: "paragraph", content: "Photographiez un ticket de caisse. L'IA lit le montant, la date, le commerce, identifié la catégorie de dépense, et créé automatiquement la note de frais dans votre système." },
+        { type: "paragraph", content: "Photographiez un ticket de caisse. L'IA lit le montant, la date, le commerce, identifie la catégorie de dépense, et créé automatiquement la note de frais dans votre système." },
         { type: "video", videoId: "oeli5xkFZJo",
       videoDurationMinutes: 14, label: "Automatiser sa comptabilite avec l'IA" },
         { type: "key-point", content: "L'automatisation comptable doit toujours être supervisee par un comptable. L'IA réduit le travail de saisie de 80%, mais la validation humaine reste obligatoire pour la conformite légale." },

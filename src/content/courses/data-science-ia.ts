@@ -189,7 +189,7 @@ const content: CourseContent = {
         { type: "heading", content: "L'Art de la Visualisation de Données" },
         { type: "paragraph", content: "Une bonne visualisation transformé des données brutes en insights comprehensibles instantanément. Elle raconte une histoire, révèle des tendances cachées, et guide la prise de décision. En data science, la visualisation est aussi importante que l'analyse elle-même." },
         { type: "subheading", content: "Matplotlib : La Fondation" },
-        { type: "paragraph", content: "Matplotlib est la bibliotheque de base pour la visualisation en Python. Flexible mais verbose, elle permet de créer pratiquement n'importé quel type de graphique. Sa syntaxe orientée objet offre un contrôle total sur chaque élément du graphique." },
+        { type: "paragraph", content: "Matplotlib est la bibliotheque de base pour la visualisation en Python. Flexible mais verbose, elle permet de créer pratiquement n'importe quel type de graphique. Sa syntaxe orientée objet offre un contrôle total sur chaque élément du graphique." },
         { type: "subheading", content: "Seaborn : La Beaute Statistique" },
         { type: "paragraph", content: "Seaborn est construit sur Matplotlib et offre des graphiques statistiques élégants en une seule ligne de code. Histogrammes, heatmaps, violin plots, pair plots — Seaborn excelle dans l'exploration visuelle des données." },
         { type: "subheading", content: "Plotly : L'Interactivite" },
@@ -414,7 +414,7 @@ const content: CourseContent = {
         },
         {
           question: "Comment déterminer le nombre optimal de clusters en K-Means ?",
-          options: ["On choisit toujours 3", "La méthode du coude (elbow method)", "On prend le nombre de variables", "On testé aleatoirement"],
+          options: ["On choisit toujours 3", "La méthode du coude (elbow method)", "On prend le nombre de variables", "On testé aléatoirement"],
           correctIndex: 1,
           explanation: "La méthode du coude trace l'inertie en fonction du nombre de clusters et identifié le point d'inflexion optimal."
         },
@@ -721,7 +721,7 @@ const content: CourseContent = {
         { type: "heading", content: "MLOps : Le DevOps du Machine Learning" },
         { type: "paragraph", content: "Le MLOps est l'ensemble des pratiques qui gèrent le cycle de vie complet des modèles ML en production : versioning, entraînement automatisé, déploiement, monitoring, et retraining. C'est ce qui transforme un modèle one-shot en un système fiable et evolutif." },
         { type: "subheading", content: "Versioning des Données et Modèles" },
-        { type: "paragraph", content: "Git pour le code, DVC (Data Version Control) pour les données, MLflow pour les modèles et les expériences. Le versioning permet de reproduire n'importé quelle expérience et de revenir a une version antérieure en cas de régression." },
+        { type: "paragraph", content: "Git pour le code, DVC (Data Version Control) pour les données, MLflow pour les modèles et les expériences. Le versioning permet de reproduire n'importe quelle expérience et de revenir a une version antérieure en cas de régression." },
         { type: "subheading", content: "Monitoring en Production" },
         { type: "paragraph", content: "Un modèle en production peut se dégrader : data drift (les données changent), concept drift (la relation données-ciblé changé), ou bugs dans le pipeline. Le monitoring détecte ces problèmes avant qu'ils n'impactent les utilisateurs." },
         { type: "subheading", content: "CI/CD pour le ML" },

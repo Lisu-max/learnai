@@ -78,7 +78,7 @@ const content: CourseContent = {
       videoDurationMinutes: 68, label: "Les cybermenaces IA expliquees" },
         { type: "subheading", content: "Reconnaissance Automatisee" },
         { type: "paragraph", content: "L'IA permet aux attaquants de scanner automatiquement des milliers de ciblés, d'analyser les réseaux sociaux pour profiler les victimes, et d'identifier les vulnérabilités des systèmes en quelques minutes au lieu de jours. Les outils OSINT (Open Source Intelligence) boostes à l'IA rendent la phase de reconnaissance devastatrice." },
-        { type: "key-point", content: "Les attaques IA ne sont pas réservées aux hackers sophistiques. Des outils comme WormGPT et FraudGPT, vendus sur le dark web, permettent à n'importé qui de lancer des attaques IA sans compétences techniques." },
+        { type: "key-point", content: "Les attaques IA ne sont pas réservées aux hackers sophistiques. Des outils comme WormGPT et FraudGPT, vendus sur le dark web, permettent à n'importe qui de lancer des attaques IA sans compétences techniques." },
         { type: "diagram", label: "Taxonomie des Menaces IA", flow: "vertical", nodes: [
           { label: "Phishing IA", sub: "Emails et messages générés par LLM", color: "pink" },
           { label: "Deepfakes", sub: "Vidéo, audio, images falsifiees", color: "purple" },
@@ -112,7 +112,7 @@ const content: CourseContent = {
           question: "Que sont WormGPT et FraudGPT ?",
           options: ["Des outils de sécurité officiels", "Des LLM malveillants vendus sur le dark web", "Des antivirus nouvelle génération", "Des modèles open source de recherche"],
           correctIndex: 1,
-          explanation: "WormGPT et FraudGPT sont des LLM malveillants vendus sur le dark web, permettant a n'importé qui de générer des attaques de phishing ou des malwares sans compétences techniques.",
+          explanation: "WormGPT et FraudGPT sont des LLM malveillants vendus sur le dark web, permettant a n'importe qui de générer des attaques de phishing ou des malwares sans compétences techniques.",
         },
         {
           question: "Comment l'IA améliore-t-elle la phase de reconnaissance des attaquants ?",
@@ -144,7 +144,7 @@ const content: CourseContent = {
           { label: "Spear-phishing IA", sub: "Personnalisé, sans fautes, contextuel", color: "purple" },
           { label: "Vishing deepfake", sub: "Voix clonee, visio truquee", color: "pink" },
         ]},
-        { type: "prompt-example", prompt: "Tu es un expert en cybersécurité. Analyse cet email et identifié tous les indices de phishing, même subtils : [coller l'email suspect]", result: "L'IA identifié les anomalies : expediteur usurpe, urgence artificielle, liens suspects, demandes inhabituelles, incoherences temporelles." },
+        { type: "prompt-example", prompt: "Tu es un expert en cybersécurité. Analyse cet email et identifié tous les indices de phishing, même subtils : [coller l'email suspect]", result: "L'IA identifie les anomalies : expediteur usurpe, urgence artificielle, liens suspects, demandes inhabituelles, incoherences temporelles." },
         { type: "summary", items: [
           "Le phishing IA est sans fautes, personnalisé et contextuellement cohérent",
           "Le spear-phishing automatisé utilise OSINT pour cibler précisément les victimes",
@@ -190,7 +190,7 @@ const content: CourseContent = {
         { type: "paragraph", content: "Les deepfakes sont des contenus médiatiques (video, audio, images) générés ou manipules par l'IA pour paraître authentiques. En 2026, la qualité des deepfakes est telle qu'ils sont pratiquement impossibles à distinguer de contenus réels à l'oeil nu." },
         { type: "paragraph", content: "Les deepfakes sont utilisés pour l'usurpation d'identité en visioconference, la fraude financiere, la désinformation politique, le chantage, et l'atteinte a la reputation. Le volume de deepfakes détectés en ligne a augmente de 900% entre 2024 et 2026." },
         { type: "subheading", content: "Deepfakes Vidéo en Temps Réel" },
-        { type: "paragraph", content: "Les technologies de face-swapping en temps réel permettent à un attaquant de prendre l'apparence de n'importé qui lors d'un appel Zoom ou Teams. En 2025, une multinationale a perdu 25 millions de dollars après qu'un employé ait suivi les instructions d'un 'collègue' en visioconference — un deepfake en temps réel." },
+        { type: "paragraph", content: "Les technologies de face-swapping en temps réel permettent à un attaquant de prendre l'apparence de n'importe qui lors d'un appel Zoom ou Teams. En 2025, une multinationale a perdu 25 millions de dollars après qu'un employé ait suivi les instructions d'un 'collègue' en visioconference — un deepfake en temps réel." },
         { type: "subheading", content: "Deepfakes Audio" },
         { type: "paragraph", content: "Le clonage vocal est devenu trivial. ElevenLabs, Resemble.ai et d'autres outils permettent de cloner une voix avec quelques secondes d'audio. Les attaquants utilisent ces voix clonees pour des arnaques telephoniques, du chantage, et de la manipulation d'autorisations vocales." },
         { type: "callout", content: "Les deepfakes ne menacent pas seulement les personnalités publiques. En 2026, des particuliers sont ciblés : fausses vidéos compromettantes pour du chantage, usurpation d'identité pour des prêts bancaires, faux temoignages." },
@@ -444,7 +444,7 @@ const content: CourseContent = {
         { type: "heading", content: "Tests de Penetration Automatises" },
         { type: "paragraph", content: "Les pentests assistés par IA combinent la créativité des LLM avec la rigueur des scanners. PentestGPT et BurpGPT utilisent des LLM pour générer des payloads de test personnalisés, enchainer les étapes d'exploitation, et générer des rapports détaillés." },
         { type: "key-point", content: "L'audit IA continu est plus efficace que l'audit ponctuel. Integrez les outils d'audit IA dans votre pipeline CI/CD pour scanner chaque commit et chaque déploiement automatiquement." },
-        { type: "prompt-example", prompt: "Analyse ce fichier de configuration nginx et identifié toutes les vulnérabilités de sécurité, les headers manquants, et les bonnes pratiques non respectees. [coller la config]", result: "L'IA identifié : headers de sécurité manquants (CSP, HSTS, X-Frame-Options), TLS 1.0/1.1 encore actif, server_tokens on, absence de rate limiting." },
+        { type: "prompt-example", prompt: "Analyse ce fichier de configuration nginx et identifié toutes les vulnérabilités de sécurité, les headers manquants, et les bonnes pratiques non respectees. [coller la config]", result: "L'IA identifie : headers de sécurité manquants (CSP, HSTS, X-Frame-Options), TLS 1.0/1.1 encore actif, server_tokens on, absence de rate limiting." },
         { type: "diagram", label: "Pipeline d'Audit Sécurité IA", flow: "horizontal", nodes: [
           { label: "Code Source", sub: "Snyk AI, Copilot, Claude Code", color: "blue" },
           { label: "Infrastructure", sub: "Prisma Cloud, Wiz, ScoutSuite", color: "purple" },
@@ -498,7 +498,7 @@ const content: CourseContent = {
         { type: "subheading", content: "Triage Intelligent des Alertes" },
         { type: "paragraph", content: "Les équipes SOC (Security Operations Center) reçoivent des milliers d'alertes par jour. L'IA trie ces alertes par priorité, corrige les alertes, élimine les faux positifs (jusqu'à 80%), et regroupe les alertes correlees en incidents uniques. Les analystes se concentrent sur les vrais problèmes." },
         { type: "subheading", content: "Investigation Forensique Assistee" },
-        { type: "paragraph", content: "L'IA accélère l'investigation forensique en analysant automatiquement les logs, les captures réseau, la mémoire et les disques. Elle reconstruit la chronologie de l'attaque (kill chain), identifié les indicateurs de compromission (IoC), et détermine l'étendue de la breche." },
+        { type: "paragraph", content: "L'IA accélère l'investigation forensique en analysant automatiquement les logs, les captures réseau, la mémoire et les disques. Elle reconstruit la chronologie de l'attaque (kill chain), identifie les indicateurs de compromission (IoC), et détermine l'étendue de la breche." },
         { type: "callout", content: "Microsoft Security Copilot utilise GPT-4 pour permettre aux analystes de poser des questions en langage naturel : 'Quels fichiers ont été accedes par cet utilisateur compromis dans les dernières 48h ?' — et obtenir une réponse en secondes." },
         { type: "video", videoId: "JEBDfGqrAUA",
       videoDurationMinutes: 72, label: "Réponse aux incidents avec l'IA" },

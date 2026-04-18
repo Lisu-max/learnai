@@ -129,7 +129,7 @@ const content: CourseContent = {
         { type: "heading", content: "L'IA comme Co-Concepteur Pédagogique" },
         { type: "paragraph", content: "Créer une séquence pédagogique est un travail complexe : objectifs d'apprentissage, progression, activités, supports, évaluation. L'IA peut assister chaque étape tout en laissant l'enseignant maître de la vision pédagogique et de l'adaptation au contexte local." },
         { type: "subheading", content: "Définir les Objectifs avec Bloom" },
-        { type: "paragraph", content: "La taxonomie de Bloom structure les objectifs d'apprentissage en 6 niveaux : mémoriser, comprendre, appliquer, analyser, évaluer, créer. L'IA peut générer des objectifs formules selon Bloom pour n'importé quel sujet et niveau." },
+        { type: "paragraph", content: "La taxonomie de Bloom structure les objectifs d'apprentissage en 6 niveaux : mémoriser, comprendre, appliquer, analyser, évaluer, créer. L'IA peut générer des objectifs formules selon Bloom pour n'importe quel sujet et niveau." },
         { type: "subheading", content: "Générer une Séquence Complète" },
         { type: "paragraph", content: "Donnez a Claude ou ChatGPT : le sujet, le niveau des élèves, la duree, et les objectifs. L'IA génère une séquence complète : accroche, activités, supports, différenciation, évaluation formative et sommative." },
         { type: "subheading", content: "Differentiation Automatique" },
@@ -425,7 +425,7 @@ const content: CourseContent = {
         { type: "subheading", content: "Vidéos Éducatives" },
         { type: "paragraph", content: "Synthesia créé des vidéos avec un avatar IA qui presente votre cours. Loom ajouté l'IA pour editer et sous-titrer vos enregistrements. Descript permet de modifier une video en editant son texte. HeyGen traduit vos vidéos dans 30 langues avec lip sync." },
         { type: "subheading", content: "Quiz et Contenus Interactifs" },
-        { type: "paragraph", content: "Les LLM generent des quiz Kahoot, des flashcards Anki, des mots croises, des jeux de rôle, et des scénarios interactifs en quelques secondes. H5P permet de créer du contenu interactif (drag & drop, timeline, hotspot) integrable dans n'importé quel LMS." },
+        { type: "paragraph", content: "Les LLM generent des quiz Kahoot, des flashcards Anki, des mots croises, des jeux de rôle, et des scénarios interactifs en quelques secondes. H5P permet de créer du contenu interactif (drag & drop, timeline, hotspot) integrable dans n'importe quel LMS." },
         { type: "tip", content: "Pensez multimedia : un même concept expliqué en texte, en image, en video et en quiz interactif touche 4 styles d'apprentissage différents. L'IA vous permet de créer ces 4 formats en une fraction du temps." },
         { type: "video", videoId: "EEbGYRW7feM",
       videoDurationMinutes: 9, label: "Créer du contenu pédagogique avec l'IA" },
@@ -466,7 +466,7 @@ const content: CourseContent = {
           question: "Quel outil permet de créer du contenu interactif pour un LMS ?",
           options: ["Word", "Excel", "H5P", "Zoom"],
           correctIndex: 2,
-          explanation: "H5P permet de créer du contenu interactif (drag & drop, timeline, hotspot, quiz) integrable dans n'importé quel LMS."
+          explanation: "H5P permet de créer du contenu interactif (drag & drop, timeline, hotspot, quiz) integrable dans n'importe quel LMS."
         },
       ],
     },
