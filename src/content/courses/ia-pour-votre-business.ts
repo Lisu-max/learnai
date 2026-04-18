@@ -22,7 +22,8 @@ const content: CourseContent = {
           { label: "Opérations", sub: "Factures, rapports, analyses auto", color: "emerald" },
           { label: "Décisions", sub: "Data analysis et recommandations IA", color: "amber" },
         ]},
-        { type: "video", videoId: "ad79nYk2keg", label: "L'Intelligence Artificielle expliquée en 5 minutes" },
+        { type: "video", videoId: "ad79nYk2keg",
+      videoDurationMinutes: 5, label: "L'Intelligence Artificielle expliquée en 5 minutes" },
         { type: "summary", items: [
           "L'IA est passée de tendance à nécessité opérationnelle en 2026",
           "Les PME IA-first génèrent 1,5x plus de revenus par employé",
@@ -99,7 +100,8 @@ const content: CourseContent = {
           { label: "Niveau 2 — Email IA", sub: "Classification + réponse auto (<5 min)", color: "purple" },
           { label: "Niveau 3 — Escalade humaine", sub: "Réclamations complexes, clients VIP", color: "emerald" },
         ]},
-        { type: "video", videoId: "R9OHn5ZF4Uo", label: "Machine Learning et automatisation expliqués simplement" },
+        { type: "video", videoId: "R9OHn5ZF4Uo",
+      videoDurationMinutes: 9, label: "Machine Learning et automatisation expliqués simplement" },
         { type: "summary", items: [
           "L'IA automatise 60 à 80% des interactions support sans sacrifier la qualité",
           "Chatbot IA déployable en quelques heures avec Intercom, Tidio ou Crisp",
@@ -175,7 +177,8 @@ const content: CourseContent = {
           { label: "KPIs Financiers", sub: "Coût/lead, coût/ticket, heures économisées", color: "purple" },
           { label: "KPIs Qualité", sub: "CSAT, NPS, taux d'erreur, conversion", color: "emerald" },
         ]},
-        { type: "video", videoId: "oeli5xkFZJo", label: "Comment les outils IA transforment les workflows professionnels" },
+        { type: "video", videoId: "oeli5xkFZJo",
+      videoDurationMinutes: 14, label: "Comment les outils IA transforment les workflows professionnels" },
         { type: "summary", items: [
           "Mesurer le ROI est essentiel pour justifier et optimiser les investissements IA",
           "KPIs productivité : temps/tâche, volume traité, délais avant/après",
@@ -213,7 +216,8 @@ const content: CourseContent = {
           { label: "Processus", sub: "Workflows documentés", color: "amber" },
           { label: "Culture", sub: "Ouverture à l'innovation", color: "pink" },
         ]},
-        { type: "video", videoId: "2IK3DFHRFfw", label: "Comment réaliser un audit de maturité IA en entreprise" },
+        { type: "video", videoId: "2IK3DFHRFfw",
+      videoDurationMinutes: 18, label: "Comment réaliser un audit de maturité IA en entreprise" },
         { type: "summary", items: [
           "L'audit IA évalue 5 dimensions : infrastructure, données, compétences, processus, culture",
           "80% des échecs IA viennent des données ou du changement, pas de la technologie",
@@ -291,7 +295,8 @@ const content: CourseContent = {
           { label: "Agent IA Autonome", sub: "Actions transactionnelles — 10% des cas", color: "emerald" },
           { label: "Escalade Humaine", sub: "Cas complexes et VIP — 20% des cas", color: "amber" },
         ]},
-        { type: "video", videoId: "lG7Uxts9SXs", label: "Déployer un chatbot IA performant pour votre entreprise" },
+        { type: "video", videoId: "lG7Uxts9SXs",
+      videoDurationMinutes: 66, label: "Déployer un chatbot IA performant pour votre entreprise" },
         { type: "summary", items: [
           "73% des clients attendent une réponse en moins de 5 minutes",
           "Un chatbot bien configuré résout 70% des demandes en autonomie",
@@ -329,7 +334,8 @@ const content: CourseContent = {
           { label: "Social Media", sub: "Canva AI, Buffer, analyse IA", color: "emerald" },
           { label: "Analytics", sub: "Prédictif, attribution, insights", color: "amber" },
         ]},
-        { type: "video", videoId: "5p248yoa3oE", label: "Le marketing digital augmenté par l'intelligence artificielle" },
+        { type: "video", videoId: "5p248yoa3oE",
+      videoDurationMinutes: 37, label: "Le marketing digital augmenté par l'intelligence artificielle" },
         { type: "summary", items: [
           "L'IA multiplie par 5 le volume de production de contenu SEO",
           "CPA réduit de 25% en moyenne grâce aux techniques IA publicitaires",
@@ -704,7 +710,8 @@ const content: CourseContent = {
           { label: "Risques", sub: "Détection et mitigation IA", color: "emerald" },
           { label: "Reporting", sub: "Rapports adaptés par audience", color: "amber" },
         ]},
-        { type: "video", videoId: "CWEWBgVwFc8", label: "La gestion de projet augmentée par l'intelligence artificielle" },
+        { type: "video", videoId: "CWEWBgVwFc8",
+      videoDurationMinutes: 18, label: "La gestion de projet augmentée par l'intelligence artificielle" },
         { type: "summary", items: [
           "Estimations de durée +30% plus précises avec l'IA",
           "Gestion des risques proactive : alertes avant que les problèmes ne surviennent",
@@ -896,7 +903,8 @@ const content: CourseContent = {
           { label: "Mois 3 — Sem. 1-2", sub: "Gouvernance et SLA", color: "emerald" },
           { label: "Mois 3 — Sem. 3-4", sub: "Formation continue et optimisation", color: "amber" },
         ]},
-        { type: "video", videoId: "2IK3DFHRFfw", label: "Intégrer l'IA durablement dans vos processus métier" },
+        { type: "video", videoId: "2IK3DFHRFfw",
+      videoDurationMinutes: 18, label: "Intégrer l'IA durablement dans vos processus métier" },
         { type: "summary", items: [
           "Phase 2 : passer d'outils isolés à un écosystème IA cohérent",
           "Workflows bout en bout avec Make/Zapier connectés au CRM",

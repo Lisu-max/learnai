@@ -22,7 +22,8 @@ const content: CourseContent = {
           { label: "Instruction", sub: "La tâche précise à accomplir", color: "emerald" },
           { label: "Format", sub: "Longueur, structure de la réponse", color: "amber" },
         ]},
-        { type: "video", videoId: "7ell8KEbhJo", label: "Comment fonctionne ChatGPT ? Comprendre les LLM" },
+        { type: "video", videoId: "7ell8KEbhJo",
+      videoDurationMinutes: 27, label: "Comment fonctionne ChatGPT ? Comprendre les LLM" },
         { type: "summary", items: [
           "Le prompt engineering est l'art de formuler des instructions précises pour l'IA",
           "C'est l'une des compétences les plus recherchées et mieux rémunérées de 2026",
@@ -99,7 +100,8 @@ const content: CourseContent = {
           { label: "One-Shot", sub: "1 exemple — templates et formats précis", color: "purple" },
           { label: "Few-Shot", sub: "2-5 exemples — classification personnalisée", color: "emerald" },
         ]},
-        { type: "video", videoId: "wjZofJX0v4M", label: "Comprendre les modèles de langage — 3Blue1Brown" },
+        { type: "video", videoId: "wjZofJX0v4M",
+      videoDurationMinutes: 27, label: "Comprendre les modèles de langage — 3Blue1Brown" },
         { type: "summary", items: [
           "Zero-shot : instruction directe sans exemple — pour les tâches simples et bien définies",
           "Few-shot : 2 à 5 exemples avant la demande — pour les formats et styles spécifiques",
@@ -137,7 +139,8 @@ const content: CourseContent = {
           { label: "Few-Shot CoT", sub: "Exemples de raisonnement fournis", color: "purple" },
           { label: "Auto-CoT", sub: "L'IA génère ses propres étapes", color: "emerald" },
         ]},
-        { type: "video", videoId: "aircAruvnKk", label: "Comment les réseaux de neurones raisonnent (3Blue1Brown)" },
+        { type: "video", videoId: "aircAruvnKk",
+      videoDurationMinutes: 19, label: "Comment les réseaux de neurones raisonnent (3Blue1Brown)" },
         { type: "summary", items: [
           "Le CoT pousse l'IA à raisonner étape par étape avant de répondre",
           "S'active avec : 'Réfléchis étape par étape' ou 'Pense à voix haute'",
@@ -414,7 +417,8 @@ const content: CourseContent = {
           { label: "Refactorisation", sub: "Objectifs + contrainte de comportement", color: "purple" },
           { label: "Tests", sub: "Cas normaux + limites + erreurs + invalides", color: "emerald" },
         ]},
-        { type: "video", videoId: "kCc8FmEb1nY", label: "Construire un GPT from scratch — Karpathy" },
+        { type: "video", videoId: "kCc8FmEb1nY",
+      videoDurationMinutes: 116, label: "Construire un GPT from scratch — Karpathy" },
         { type: "summary", items: [
           "Spécifiez toujours le langage, les contraintes et le format de sortie souhaité",
           "Pour déboguer : incluez le message d'erreur exact et le code problématique",
