@@ -31,7 +31,55 @@ function extractText(sections: ChapterSection[]): string[] {
   });
 }
 
-export function TextToSpeech({ sections }: { sections: ChapterSection[] }) {
+interface Props {
+  sections: ChapterSection[];
+  audioSrc?: string;
+}
+
+export function TextToSpeech({ sections, audioSrc }: Props) {
+  const [mp3Available, setMp3Available] = useState<boolean | null>(null);
+
+  // Probe the pre-generated MP3. If it exists, render a <audio> element;
+  // otherwise fall back to the Web Speech API below.
+  useEffect(() => {
+    if (!audioSrc) {
+      setMp3Available(false);
+      return;
+    }
+    let cancelled = false;
+    fetch(audioSrc, { method: "HEAD" })
+      .then((res) => {
+        if (!cancelled) setMp3Available(res.ok);
+      })
+      .catch(() => {
+        if (!cancelled) setMp3Available(false);
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, [audioSrc]);
+
+  if (mp3Available === true && audioSrc) {
+    return (
+      <div className="mb-8 flex flex-wrap items-center gap-3 rounded-xl border border-border/40 bg-card/30 px-4 py-3 backdrop-blur-sm">
+        <Volume2 className="h-4 w-4 shrink-0 text-purple-400" />
+        <span className="text-sm text-muted-foreground">Écouter ce chapitre</span>
+        <audio
+          controls
+          preload="none"
+          src={audioSrc}
+          className="ml-auto h-8 min-w-[260px] flex-1 sm:min-w-[320px]"
+        />
+      </div>
+    );
+  }
+
+  // Fallback: Web Speech API. mp3Available === null means we haven't probed
+  // yet; still show the native player so the user can start immediately.
+  return <WebSpeechFallback sections={sections} />;
+}
+
+function WebSpeechFallback({ sections }: { sections: ChapterSection[] }) {
   const [isPlaying, setIsPlaying] = useState(false);
   const [supported, setSupported] = useState(false);
   const utteranceRef = useRef<SpeechSynthesisUtterance | null>(null);
@@ -39,7 +87,6 @@ export function TextToSpeech({ sections }: { sections: ChapterSection[] }) {
   const indexRef = useRef(0);
 
   useEffect(() => {
-    // speechSynthesis is a browser API — support must be detected after hydration
     // eslint-disable-next-line react-hooks/set-state-in-effect
     setSupported(typeof window !== "undefined" && "speechSynthesis" in window);
     return () => {
@@ -62,7 +109,6 @@ export function TextToSpeech({ sections }: { sections: ChapterSection[] }) {
 
     const voices = window.speechSynthesis.getVoices();
     const frVoices = voices.filter((v) => v.lang.startsWith("fr"));
-    // Priority: Siri/Apple premium > Google cloud > neural/enhanced > named humans > any
     const preferred =
       frVoices.find((v) => /siri|premium/i.test(v.name)) ||
       frVoices.find((v) => /google/i.test(v.name)) ||
@@ -94,7 +140,6 @@ export function TextToSpeech({ sections }: { sections: ChapterSection[] }) {
     indexRef.current = 0;
     window.speechSynthesis.cancel();
     setIsPlaying(true);
-    // Small delay to let voices load
     setTimeout(speakNext, 100);
   }
 

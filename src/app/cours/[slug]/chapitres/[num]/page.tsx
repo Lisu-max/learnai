@@ -199,7 +199,10 @@ export default async function ChapterPage({ params }: Props) {
         </div>
 
         {/* Chapter content */}
-        <ChapterContent sections={chapter.sections} />
+        <ChapterContent
+          sections={chapter.sections}
+          audioSrc={`/audio/${slug}/${chapter.number}.mp3`}
+        />
 
         {/* Quiz inline */}
         {chapter.quiz.length > 0 && (

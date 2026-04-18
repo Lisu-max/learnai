@@ -46,10 +46,16 @@ function renderSection(section: ChapterSection, index: number) {
   }
 }
 
-export function ChapterContent({ sections }: { sections: ChapterSection[] }) {
+export function ChapterContent({
+  sections,
+  audioSrc,
+}: {
+  sections: ChapterSection[];
+  audioSrc?: string;
+}) {
   return (
     <div className="animate-fade-in">
-      <TextToSpeech sections={sections} />
+      <TextToSpeech sections={sections} audioSrc={audioSrc} />
       {sections.map((section, i) => renderSection(section, i))}
     </div>
   );
