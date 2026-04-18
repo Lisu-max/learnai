@@ -108,7 +108,18 @@ export default async function ComptePage() {
   const freeSlugsSet = new Set(FREE_SLUGS);
   const premiumSlugsSet = new Set(PREMIUM_SLUGS);
 
-  const courseProgress = courses.map((course) => {
+  // Order: free first, then premium accessible (Pro/purchased), then premium locked
+  const sortedCourses = [...courses].sort((a, b) => {
+    const aFree = freeSlugsSet.has(a.slug);
+    const bFree = freeSlugsSet.has(b.slug);
+    if (aFree !== bFree) return aFree ? -1 : 1;
+    const aOwned = isPro || purchasedSlugs.has(a.slug);
+    const bOwned = isPro || purchasedSlugs.has(b.slug);
+    if (aOwned !== bOwned) return aOwned ? -1 : 1;
+    return 0;
+  });
+
+  const courseProgress = sortedCourses.map((course) => {
     const chaptersForCourse = completedChapters.filter(
       (c: { course_slug: string; chapter_number: number }) =>
         c.course_slug === course.slug

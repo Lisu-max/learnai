@@ -25,24 +25,37 @@ export async function getOrCreateStripeCustomer(
     .maybeSingle();
 
   if (profile?.stripe_customer_id) {
-    return profile.stripe_customer_id;
+    // Verify the customer still exists in Stripe (not deleted, not from a
+    // different Stripe account after a key rotation). If stale, we fall
+    // through and create a fresh one.
+    try {
+      const existing = await getStripe().customers.retrieve(profile.stripe_customer_id);
+      if (!existing.deleted) {
+        return profile.stripe_customer_id;
+      }
+    } catch (err: unknown) {
+      const isMissing =
+        typeof err === "object" &&
+        err !== null &&
+        "code" in err &&
+        (err as { code?: string }).code === "resource_missing";
+      if (!isMissing) throw err;
+      // else: stale customer_id, recreate below
+    }
   }
 
   // Create Stripe customer then upsert — handles race condition where two
   // concurrent requests both find no customer_id and create duplicates.
-  // The upsert ensures only the last writer wins, and Stripe customers are
-  // idempotent (duplicates are harmless but wasteful).
   const customer = await getStripe().customers.create({
     email,
     metadata: { supabase_user_id: userId },
   });
 
-  // Use upsert to handle concurrent inserts gracefully
+  // Force-update (overwrites stale/invalid customer_id from rotated keys)
   await supabase
     .from("profiles")
     .update({ stripe_customer_id: customer.id })
-    .eq("id", userId)
-    .is("stripe_customer_id", null); // only update if still null (lost race = no-op)
+    .eq("id", userId);
 
   // Re-fetch to get the winner's customer_id (in case we lost the race)
   const { data: updated } = await supabase

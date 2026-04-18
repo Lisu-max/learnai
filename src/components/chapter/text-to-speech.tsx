@@ -56,18 +56,19 @@ export function TextToSpeech({ sections }: { sections: ChapterSection[] }) {
 
     const utterance = new SpeechSynthesisUtterance(chunksRef.current[indexRef.current]);
     utterance.lang = "fr-FR";
-    utterance.rate = 0.88;
-    utterance.pitch = 0.95;
+    utterance.rate = 1.1;
+    utterance.pitch = 1.0;
     utterance.volume = 1.0;
 
     const voices = window.speechSynthesis.getVoices();
     const frVoices = voices.filter((v) => v.lang.startsWith("fr"));
-    // Priority: Google cloud voices > enhanced/neural > online (non-local) > named > any
+    // Priority: Siri/Apple premium > Google cloud > neural/enhanced > named humans > any
     const preferred =
+      frVoices.find((v) => /siri|premium/i.test(v.name)) ||
       frVoices.find((v) => /google/i.test(v.name)) ||
-      frVoices.find((v) => /enhanced|neural|premium|natural|siri/i.test(v.name)) ||
+      frVoices.find((v) => /enhanced|neural|natural/i.test(v.name)) ||
+      frVoices.find((v) => /amélie|amelie|thomas|marie|nicolas|audrey|aurélie/i.test(v.name)) ||
       frVoices.find((v) => !v.localService) ||
-      frVoices.find((v) => /thomas|amelie|marie|nicolas/i.test(v.name)) ||
       frVoices[0];
     if (preferred) utterance.voice = preferred;
 

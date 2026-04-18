@@ -11,7 +11,7 @@ export function VideoEmbed({ videoId, label }: { videoId: string; label?: string
       )}
       <div className="aspect-video w-full overflow-hidden rounded-xl border border-border/50 bg-black/50">
         <iframe
-          src={`https://www.youtube-nocookie.com/embed/${videoId}`}
+          src={`https://www.youtube.com/embed/${videoId}?rel=0&modestbranding=1`}
           title={label || "Vidéo"}
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
