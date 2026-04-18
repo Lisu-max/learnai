@@ -121,9 +121,9 @@ export function ProfileLevel({
           )}
           <button
             onClick={handleLogout}
-            className="flex items-center gap-2 rounded-lg border border-border/50 px-4 py-2 text-sm text-muted-foreground transition-colors hover:border-red-500/30 hover:text-red-400"
+            className="flex items-center gap-2 rounded-lg border border-red-500/40 bg-gradient-to-r from-red-500/15 to-rose-500/15 px-5 py-2.5 text-sm font-semibold text-red-300 shadow-sm transition-all hover:border-red-500/60 hover:from-red-500/25 hover:to-rose-500/25 hover:text-red-200 hover:shadow-md hover:shadow-red-500/20"
           >
-            <LogOut className="h-4 w-4" />
+            <LogOut className="h-5 w-5" />
             Déconnexion
           </button>
         </div>
