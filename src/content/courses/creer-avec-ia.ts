@@ -5,7 +5,7 @@ const content: CourseContent = {
   chapters: [
     {
       number: 1,
-      title: "Introduction a la Création avec l'IA",
+      title: "Introduction à la Création avec l'IA",
       description: "Découvrir comment l'IA révolutionné la création de contenu visuel, audio et textuel.",
       estimatedMinutes: 7,
       sections: [
@@ -320,7 +320,7 @@ const content: CourseContent = {
         { type: "paragraph", content: "Remove.bg et ClipDrop offrent un detourage instantané d'une précision remarquable. Photoshop et Canva integrent également cette fonctionnalité. Pour les cas complexes (cheveux, transparence, fumee), les résultats IA surpassent désormais le detourage manuel dans la majorité des cas." },
         { type: "subheading", content: "Upscaling et Restauration" },
         { type: "paragraph", content: "Topaz Photo AI et Magnific AI permettent d'agrandir les images jusqu'à 16x sans perte de qualité visible. Ces outils sont indispensables pour les photographes qui doivent imprimer en grand format ou restaurer des photos anciennes en basse résolution." },
-        { type: "key-point", content: "La retouche IA ne remplace pas le regard artistique du photographe. Elle automatisé les tâches répétitives et techniques, liberant du temps pour la direction artistique et la créativité." },
+        { type: "key-point", content: "La retouche IA ne remplace pas le regard artistique du photographe. Elle automatise les tâches répétitives et techniques, liberant du temps pour la direction artistique et la créativité." },
         { type: "diagram", label: "Pipeline de Retouche Photo IA", flow: "horizontal", nodes: [
           { label: "Suppression fond", sub: "Remove.bg, ClipDrop", color: "purple" },
           { label: "Retouche générative", sub: "Photoshop Générative Fill", color: "blue" },
@@ -329,7 +329,7 @@ const content: CourseContent = {
         ]},
         { type: "tip", content: "Pour un workflow optimal, commencez par le detourage, puis la retouche générative, l'upscaling, et terminez par la correction des couleurs. Cet ordre minimise les artefacts." },
         { type: "summary", items: [
-          "L'IA automatisé les tâches de retouche photo qui prenaient des heures",
+          "L'IA automatise les tâches de retouche photo qui prenaient des heures",
           "Générative Fill dans Photoshop : ajout/suppression d'éléments en langage naturel",
           "Detourage instantané avec Remove.bg, ClipDrop ou les outils intègres",
           "Upscaling jusqu'à 16x avec Topaz Photo AI et Magnific AI",
@@ -357,9 +357,9 @@ const content: CourseContent = {
         },
         {
           question: "Que fait l'IA dans la retouche photo selon ce chapitre ?",
-          options: ["Elle remplace complètement le photographe", "Elle automatisé les tâches techniques pour liberer du temps créatif", "Elle génère des photos de zéro", "Elle corrige uniquement les couleurs"],
+          options: ["Elle remplace complètement le photographe", "Elle automatise les tâches techniques pour liberer du temps créatif", "Elle génère des photos de zéro", "Elle corrige uniquement les couleurs"],
           correctIndex: 1,
-          explanation: "L'IA automatisé les tâches répétitives et techniques de la retouche photo, liberant du temps pour la direction artistique et la créativité du photographe.",
+          explanation: "L'IA automatise les tâches répétitives et techniques de la retouche photo, liberant du temps pour la direction artistique et la créativité du photographe.",
         },
       ],
     },
@@ -380,7 +380,7 @@ const content: CourseContent = {
         { type: "prompt-example", prompt: "Minimalist logo design for a tech startup called 'NexaFlow', abstract flowing water droplet shape, clean lines, modern sans-serif typography, blue and teal gradient, white background, vector style, professional branding", result: "Concept de logo minimaliste avec une goutte d'eau abstraite fluide, typographie moderne, dégradé bleu-turquoise, prêt à être vectorise pour un usage professionnel." },
         { type: "subheading", content: "Vectorisation et Finalisation" },
         { type: "paragraph", content: "Vectorizer.ai et le trace automatique d'Illustrator convertissent vos concepts IA en fichiers SVG editables. Nettoyez les chemins, ajustez les couleurs exactes, et créez toutes les declinaisons nécessaires : couleur, monochrome, inversee, favicon, et icone d'application." },
-        { type: "key-point", content: "Un concept de logo génère par IA n'est que le point de depart. Le travail de vectorisation, nettoyage et declinaison est essentiel pour obtenir un logo véritablement professionnel." },
+        { type: "key-point", content: "Un concept de logo généré par IA n'est que le point de depart. Le travail de vectorisation, nettoyage et declinaison est essentiel pour obtenir un logo véritablement professionnel." },
         { type: "diagram", label: "Workflow Logo IA", flow: "horizontal", nodes: [
           { label: "Brief créatif", sub: "Industrie, valeurs, style", color: "purple" },
           { label: "Génération IA", sub: "Midjourney, Ideogram, DALL-E", color: "blue" },
@@ -399,7 +399,7 @@ const content: CourseContent = {
       ],
       quiz: [
         {
-          question: "Pourquoi un logo génère par IA doit-il être vectorise ?",
+          question: "Pourquoi un logo généré par IA doit-il être vectorise ?",
           options: ["Pour le rendre plus joli", "Pour pouvoir le redimensionner sans perte de qualité", "Pour le protéger juridiquement", "Pour le rendre compatible avec les réseaux sociaux"],
           correctIndex: 1,
           explanation: "Un logo professionnel doit être en format vectoriel (SVG) pour être redimensionnable à l'infini sans perte de qualité, contrairement aux images raster (PNG/JPG) générées par l'IA.",
@@ -461,7 +461,7 @@ const content: CourseContent = {
       quiz: [
         {
           question: "Quelle est la particularite de v0 par Vercel ?",
-          options: ["Il génère des maquettes Figma", "Il génère du code React/Next.js fonctionnel", "Il crée des animations CSS", "Il optimisé les images pour le web"],
+          options: ["Il génère des maquettes Figma", "Il génère du code React/Next.js fonctionnel", "Il crée des animations CSS", "Il optimise les images pour le web"],
           correctIndex: 1,
           explanation: "v0 de Vercel se distingue en generant du vrai code React/Next.js fonctionnel avec Tailwind CSS et shadcn/ui, pas juste des maquettes visuelles.",
         },
@@ -552,7 +552,7 @@ const content: CourseContent = {
       estimatedMinutes: 7,
       sections: [
         { type: "heading", content: "Le Montage Vidéo à l'Ère de l'IA" },
-        { type: "paragraph", content: "Le montage video est historiquement l'une des tâches les plus chronophages de la création de contenu. L'IA changé radicalement la donne avec des outils qui automatisent les sous-titres, detectent les meilleurs moments, ajoutent du B-roll pertinent, et assemblent des vidéos complètes à partir de scripts." },
+        { type: "paragraph", content: "Le montage video est historiquement l'une des tâches les plus chronophages de la création de contenu. L'IA change radicalement la donne avec des outils qui automatisent les sous-titres, detectent les meilleurs moments, ajoutent du B-roll pertinent, et assemblent des vidéos complètes à partir de scripts." },
         { type: "paragraph", content: "Des plateformes comme Descript, Opus Clip, Kapwing, et CapCut integrent de l'IA pour transformer le montage video. Descript permet même de monter la video en editant le texte de la transcription — supprimez un mot et la video est coupee automatiquement." },
         { type: "callout", content: "Descript a popularise le montage video par texte. Vous editez la transcription comme un document Word, et les coupes video suivent automatiquement. C'est une révolution pour les créateurs de contenu qui ne sont pas des monteurs professionnels." },
         { type: "video", videoId: "U1cF9QCu1rQ",
@@ -671,7 +671,7 @@ const content: CourseContent = {
       estimatedMinutes: 8,
       sections: [
         { type: "heading", content: "ElevenLabs : Le Standard de la Voix IA" },
-        { type: "paragraph", content: "ElevenLabs est devenu le leader inconteste de la synthese vocale par IA. Sa technologie produit des voix d'un naturel saisissant, avec des intonations, des pauses et des émotions qui rivalisent avec les doubleurs professionnels. L'outil propose des centaines de voix predefinies et la possibilité de cloner votre propre voix." },
+        { type: "paragraph", content: "ElevenLabs est devenu le leader inconteste de la synthèse vocale par IA. Sa technologie produit des voix d'un naturel saisissant, avec des intonations, des pauses et des émotions qui rivalisent avec les doubleurs professionnels. L'outil propose des centaines de voix predefinies et la possibilité de cloner votre propre voix." },
         { type: "paragraph", content: "Les cas d'usage sont vastes : narration de vidéos, livres audio, doublage multilingue, assistants vocaux, podcasts automatises, annonces telephoniques, e-learning, et accessibilité. ElevenLabs supporte plus de 30 langues avec un naturel remarquable." },
         { type: "callout", content: "Le clonage vocal d'ElevenLabs ne nécessite que 30 secondes d'echantillon audio. La voix clonee peut ensuite parler dans n'importé quelle langue tout en conservant les caractéristiques uniques de l'original." },
         { type: "video", videoId: "-vwHldNaGPI",
@@ -681,7 +681,7 @@ const content: CourseContent = {
         { type: "paragraph", content: "Le Text-to-Speech (TTS) convertit du texte en parole naturelle. Choisissez une voix, ajustez la stabilité (consistance) et la clarte, et generez l'audio. Le Voice Cloning créé une copie numérique de votre voix à partir d'un court echantillon, utilisable ensuite pour générer n'importé quel texte." },
         { type: "subheading", content: "Doublage et Traduction Vocale" },
         { type: "paragraph", content: "La fonctionnalité Dubbing d'ElevenLabs traduit et double automatiquement vos vidéos dans d'autres langues, en preservant votre voix et votre intonation. Votre video YouTube en français peut être automatiquement doublee en anglais, espagnol, allemand — avec votre propre voix." },
-        { type: "prompt-example", prompt: "Texte : 'Bonjour et bienvenue dans ce podcast sur l'intelligence artificielle. Aujourd'hui, nous explorons comment l'IA transformé la création de contenu.' | Voix : Rachel (narrative), Stabilite : 0.75, Clarte : 0.85", result: "Audio de narration professionnelle d'une voix feminine chaleureuse et articulee, avec des pauses naturelles et une intonation engageante, qualité studio." },
+        { type: "prompt-example", prompt: "Texte : 'Bonjour et bienvenue dans ce podcast sur l'intelligence artificielle. Aujourd'hui, nous explorons comment l'IA transforme la création de contenu.' | Voix : Rachel (narrative), Stabilite : 0.75, Clarte : 0.85", result: "Audio de narration professionnelle d'une voix feminine chaleureuse et articulee, avec des pauses naturelles et une intonation engageante, qualité studio." },
         { type: "key-point", content: "Le clonage vocal souleve des questions ethiques importantes. N'utilisez jamais le clonage vocal pour imiter quelqu'un sans son consentement explicite. ElevenLabs a mis en place des protections contre les usages abusifs." },
         { type: "diagram", label: "Fonctionnalites ElevenLabs", flow: "horizontal", nodes: [
           { label: "Text-to-Speech", sub: "Texte → voix naturelle", color: "purple" },
@@ -691,7 +691,7 @@ const content: CourseContent = {
         ]},
         { type: "tip", content: "Pour la narration de vidéos YouTube, testez plusieurs voix predefinies avant de cloner la votre. Les voix predefinies 'Adam' et 'Rachel' sont très populaires pour leur naturel et leur clarte." },
         { type: "summary", items: [
-          "ElevenLabs est le leader de la synthese vocale IA avec un naturel saisissant",
+          "ElevenLabs est le leader de la synthèse vocale IA avec un naturel saisissant",
           "Clonage vocal à partir de seulement 30 secondes d'echantillon",
           "Doublage automatique multilingue qui préserve votre voix",
           "Plus de 30 langues supportees avec qualité professionnelle",
@@ -838,7 +838,7 @@ const content: CourseContent = {
           question: "Qu'est-ce qui différencié un post générique d'un post viral ?",
           options: ["La longueur du texte", "L'utilisation de hashtags", "Les anecdotes personnelles et l'authenticite", "Le nombre d'images"],
           correctIndex: 2,
-          explanation: "La personnalisation, les anecdotes réelles et l'authenticite font la différence entre un post générique génère par IA et un post qui resonne véritablement avec l'audience.",
+          explanation: "La personnalisation, les anecdotes réelles et l'authenticite font la différence entre un post générique généré par IA et un post qui resonne véritablement avec l'audience.",
         },
         {
           question: "Quel workflow IA est typique pour créer un contenu video pour les réseaux sociaux ?",
@@ -855,7 +855,7 @@ const content: CourseContent = {
       estimatedMinutes: 7,
       sections: [
         { type: "heading", content: "Le Podcast IA : De l'Idée a la Diffusion" },
-        { type: "paragraph", content: "L'IA transformé la production de podcasts. De la recherche de sujets a la distribution, chaque étape peut être assistée ou automatisée. Google NotebookLM a même popularise les podcasts entièrement générés par IA avec son feature 'Audio Overview' qui transformé vos notes en conversations naturelles entre deux animateurs virtuels." },
+        { type: "paragraph", content: "L'IA transforme la production de podcasts. De la recherche de sujets a la distribution, chaque étape peut être assistée ou automatisée. Google NotebookLM a même popularise les podcasts entièrement générés par IA avec son feature 'Audio Overview' qui transformé vos notes en conversations naturelles entre deux animateurs virtuels." },
         { type: "paragraph", content: "Pour les podcasters humains, l'IA est un assistant de production imbattable : recherche de sujets, préparation d'interviews, transcription, montage, génération de show notes, création de clips promotionnels, et même analyse des performances." },
         { type: "callout", content: "Google NotebookLM peut transformer n'importé quel document (article, PDF, notes) en un podcast conversationnel de 10-15 minutes entre deux animateurs IA. La qualité est surprenante et c'est entièrement gratuit." },
         { type: "video", videoId: "C2bICETkJfM",
@@ -897,7 +897,7 @@ const content: CourseContent = {
         },
         {
           question: "Quel est le modèle le plus efficace pour un podcast IA ?",
-          options: ["Un podcast 100% génère par IA", "Un modèle hybride : expertise humaine + production IA", "Un podcast sans aucune aide IA", "Un podcast avec uniquement des voix synthetiques"],
+          options: ["Un podcast 100% généré par IA", "Un modèle hybride : expertise humaine + production IA", "Un podcast sans aucune aide IA", "Un podcast avec uniquement des voix synthétiques"],
           correctIndex: 1,
           explanation: "Le modèle hybride est le plus efficace : votre expertise et personnalité pour le contenu, et l'IA pour la production, la promotion et la distribution.",
         },
@@ -912,11 +912,11 @@ const content: CourseContent = {
     {
       number: 16,
       title: "Jeux Vidéo et IA",
-      description: "Comment l'IA transformé la création de jeux video, des assets au game design.",
+      description: "Comment l'IA transforme la création de jeux video, des assets au game design.",
       estimatedMinutes: 8,
       sections: [
         { type: "heading", content: "L'IA Révolutionne le Développement de Jeux" },
-        { type: "paragraph", content: "L'IA transformé profondément la création de jeux video. Des développeurs independants aux grands studios, les outils IA accelerent chaque aspect de la production : génération d'assets 2D et 3D, création de niveaux proceduraux, dialogue dynamique, musique adaptative, et même programmation assistée." },
+        { type: "paragraph", content: "L'IA transforme profondément la création de jeux video. Des développeurs independants aux grands studios, les outils IA accelerent chaque aspect de la production : génération d'assets 2D et 3D, création de niveaux proceduraux, dialogue dynamique, musique adaptative, et même programmation assistée." },
         { type: "paragraph", content: "En 2026, un développeur solo peut créer un jeu complet d'une qualité visuelle qui aurait nécessite une équipe de 20 personnes il y a 5 ans. Les outils comme Meshy (3D), Midjourney (concept art), Suno (musique), et Claude Code (programmation) forment un pipeline de création complet." },
         { type: "callout", content: "Meshy transformé vos prompts textuels ou images en modèles 3D textures, prêts pour Unity ou Unreal Engine. Ce qui prenait des semaines de modélisation 3D se fait en quelques minutes." },
         { type: "video", videoId: "-vwHldNaGPI",
@@ -973,7 +973,7 @@ const content: CourseContent = {
     {
       number: 17,
       title: "Mode et Design Textile avec l'IA",
-      description: "Explorer comment l'IA transformé le design de mode, les patterns textiles et le prototypage.",
+      description: "Explorer comment l'IA transforme le design de mode, les patterns textiles et le prototypage.",
       estimatedMinutes: 7,
       sections: [
         { type: "heading", content: "L'IA dans l'Industrie de la Mode" },
@@ -997,7 +997,7 @@ const content: CourseContent = {
         ]},
         { type: "tip", content: "Pour le print-on-demand, generez des motifs en --tile puis testez-les sur des mockups de t-shirts avant de les mettre en vente. Les motifs géométriques et abstraits se vendent le mieux." },
         { type: "summary", items: [
-          "L'IA transformé le design de mode : croquis, patterns, prototypage virtuel",
+          "L'IA transforme le design de mode : croquis, patterns, prototypage virtuel",
           "Le paramètre --tile de Midjourney créé des motifs repetables parfaits",
           "Le print-on-demand avec l'IA est un business model accessible",
           "Le prototypage virtuel réduit le gaspillage et la surproduction",
@@ -1099,7 +1099,7 @@ const content: CourseContent = {
       estimatedMinutes: 8,
       sections: [
         { type: "heading", content: "L'Animation à l'Ère de l'IA" },
-        { type: "paragraph", content: "L'animation et le motion design sont historiquement des disciplines extrêmement chronophages et techniques. L'IA changé la donne en permettant de créer des animations fluides à partir d'images fixes, de générer des transitions créatives, et d'automatiser les aspects les plus répétitifs du processus." },
+        { type: "paragraph", content: "L'animation et le motion design sont historiquement des disciplines extrêmement chronophages et techniques. L'IA change la donne en permettant de créer des animations fluides à partir d'images fixes, de générer des transitions créatives, et d'automatiser les aspects les plus répétitifs du processus." },
         { type: "paragraph", content: "Des outils comme Runway Gen-3, Kling AI, Luma Dream Machine et Pika Labs permettent d'animer des images statiques, de créer des loops video, et de générer des séquences de motion design. Pour les animateurs professionnels, ces outils s'integrent dans les workflows existants After Effects et Blender." },
         { type: "callout", content: "Luma Dream Machine excelle dans la transformation d'images en animations 3D fluides. Uploadez une illustration et l'outil génère un mouvement de camera cinematographique autour de la scène, créant un effet de profondeur saisissant." },
         { type: "video", videoId: "C2bICETkJfM",
@@ -1167,7 +1167,7 @@ const content: CourseContent = {
       videoDurationMinutes: 16, label: "Workflow multi-IA : créer une pub en 2h" },
         { type: "heading", content: "Architecturer vos Workflows" },
         { type: "subheading", content: "Le Principe du Pipeline" },
-        { type: "paragraph", content: "Pensez en pipeline : la sortie d'un outil est l'entrée du suivant. Un texte génère par Claude devient un prompt pour Midjourney. L'image Midjourney est animée par Runway. L'audio ElevenLabs est synchronisé au montage dans CapCut. Chaque étape enrichit le résultat précédent." },
+        { type: "paragraph", content: "Pensez en pipeline : la sortie d'un outil est l'entrée du suivant. Un texte généré par Claude devient un prompt pour Midjourney. L'image Midjourney est animée par Runway. L'audio ElevenLabs est synchronisé au montage dans CapCut. Chaque étape enrichit le résultat précédent." },
         { type: "subheading", content: "Automatisation avec N8N, Make et Zapier" },
         { type: "paragraph", content: "Pour les workflows répétitifs, automatisez avec des outils no-code. N8N, Make (ex-Integromat) et Zapier connectent les API de ces outils IA. Exemple : un nouveau brief client dans Google Sheets déclenche automatiquement la génération de visuels, de copy et de vidéos." },
         { type: "prompt-example", prompt: "Claude prompt : Tu es directeur de création. Cree un brief complet pour une campagne publicitaire pour une marque de cafe artisanal : concept créatif, script video 30s, 3 visuels a générer (avec prompts Midjourney), textes pour 5 posts sociaux, et une musique de fond (avec prompt Suno).", result: "Brief complet avec concept 'L'art du slow coffee', script video détaillé, 3 prompts Midjourney spécifiques, 5 posts sociaux adaptes par plateforme, et prompt Suno pour musique jazz acoustique." },
@@ -1285,7 +1285,7 @@ const content: CourseContent = {
       sections: [
         { type: "heading", content: "Le Cadre Juridique des Créations IA en 2026" },
         { type: "paragraph", content: "La question juridique des créations IA est l'un des sujets les plus debattus de notre époque. Qui possède les droits d'une image générée par Midjourney ? Peut-on utiliser du contenu IA a des fins commerciales ? Le cadre juridique évolue rapidement, avec des décisions de justice et des reglementations qui clarifient progressivement les règles du jeu." },
-        { type: "paragraph", content: "En Europe, l'AI Act est entre en vigueur et impose des obligations de transparence pour le contenu génère par IA. Aux États-Unis, le Copyright Office a établi que les oeuvres purement générées par IA sans intervention humaine significative ne sont pas protégées par le droit d'auteur." },
+        { type: "paragraph", content: "En Europe, l'AI Act est entre en vigueur et impose des obligations de transparence pour le contenu généré par IA. Aux États-Unis, le Copyright Office a établi que les oeuvres purement générées par IA sans intervention humaine significative ne sont pas protégées par le droit d'auteur." },
         { type: "callout", content: "En 2026, la règle générale est : plus votre intervention créative dans le processus de génération est importante (prompting détaillé, retouches, composition), plus vos droits sur l'oeuvre finale sont solides. L'IA comme outil, pas comme auteur." },
         { type: "video", videoId: "U1cF9QCu1rQ",
       videoDurationMinutes: 16, label: "Droits d'auteur et IA : ce que dit la loi" },
@@ -1293,7 +1293,7 @@ const content: CourseContent = {
         { type: "subheading", content: "Droits Commerciaux" },
         { type: "paragraph", content: "Midjourney : les abonnes payants ont les droits commerciaux sur leurs créations. DALL-E 3 : OpenAI accorde les droits pleins à l'utilisateur. Stable Diffusion : licence open source, usage commercial libre. Suno : les abonnes Pro ont les droits commerciaux sur la musique. ElevenLabs : droits commerciaux avec abonnement payant. Verifiez toujours les conditions d'utilisation actuelles." },
         { type: "subheading", content: "L'AI Act Européen" },
-        { type: "paragraph", content: "L'AI Act impose de marquer le contenu génère par IA (watermarking), de documenter les données d'entraînement, et de respecter le droit des créateurs originaux. Les violations peuvent entraîner des amendes significatives. Pour les entreprises, la conformite est essentielle." },
+        { type: "paragraph", content: "L'AI Act impose de marquer le contenu généré par IA (watermarking), de documenter les données d'entraînement, et de respecter le droit des créateurs originaux. Les violations peuvent entraîner des amendes significatives. Pour les entreprises, la conformite est essentielle." },
         { type: "key-point", content: "Règle d'or : ne publiez jamais de contenu IA en pretendant qu'il a été créé sans IA quand la transparence est requise. L'honnêteté sur l'utilisation de l'IA renforce la confiance et évite les problèmes juridiques." },
         { type: "paragraph", content: "Les questions ethiques vont au-dela du juridique. Le respect des artistes dont les oeuvres ont entraîné les modèles, la transparence envers les clients, et la responsabilité dans l'usage de deepfakes et de clonage vocal sont des considérations essentielles pour tout créateur IA responsable." },
         { type: "diagram", label: "Droits Commerciaux par Outil", flow: "vertical", nodes: [
@@ -1319,10 +1319,10 @@ const content: CourseContent = {
           explanation: "Le Copyright Office américain a établi que les oeuvres purement générées par IA sans intervention humaine significative ne sont pas protégées par le droit d'auteur.",
         },
         {
-          question: "Qu'impose l'AI Act européen pour le contenu génère par IA ?",
+          question: "Qu'impose l'AI Act européen pour le contenu généré par IA ?",
           options: ["Rien de particulier", "Le marquage (watermarking) et la transparence", "L'interdiction totale de l'IA générative", "L'achat d'une licence speciale"],
           correctIndex: 1,
-          explanation: "L'AI Act impose de marquer le contenu génère par IA (watermarking), de documenter les données d'entraînement, et de respecter les droits des créateurs originaux.",
+          explanation: "L'AI Act impose de marquer le contenu généré par IA (watermarking), de documenter les données d'entraînement, et de respecter les droits des créateurs originaux.",
         },
         {
           question: "Quel outil offre une licence open source avec usage commercial libre ?",

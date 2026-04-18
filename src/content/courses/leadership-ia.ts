@@ -70,7 +70,7 @@ const content: CourseContent = {
       sections: [
         { type: "heading", content: "Définir Votre Vision IA" },
         { type: "paragraph", content: "Une vision IA claire répond a trois questions : pourquoi l'IA (quel problème business resolvent-elle ?), ou l'IA (quels processus transformer en priorité ?), et comment l'IA (quelle approche d'implementation ?). Sans vision, les initiatives IA restent des experimentations sans impact." },
-        { type: "paragraph", content: "La vision IA doit être alignee avec la stratégie globale de l'entreprise. Si votre stratégie est la differentiation par le service client, votre vision IA se concentre sur l'amélioration de l'expérience client. Si c'est la réduction des coûts, l'IA automatisé les processus les plus couteux." },
+        { type: "paragraph", content: "La vision IA doit être alignee avec la stratégie globale de l'entreprise. Si votre stratégie est la differentiation par le service client, votre vision IA se concentre sur l'amélioration de l'expérience client. Si c'est la réduction des coûts, l'IA automatise les processus les plus couteux." },
         { type: "subheading", content: "Cartographier les Opportunites IA" },
         { type: "paragraph", content: "Commencez par un audit des processus existants. Identifiez les tâches répétitives, chronophages, a fort volume, ou sujettes aux erreurs. Classez-les par impact potentiel (gain de temps/argent) et faisabilite (données disponibles, complexité technique). Les quick wins sont les tâches a fort impact et haute faisabilite." },
         { type: "callout", content: "Amazon a identifié 400 cas d'usage IA en interne avant de prioriser. Vous n'avez pas besoin d'autant — mais un inventaire de 20-30 opportunités est un bon depart. Priorisez les 3-5 a plus fort ROI." },
@@ -425,7 +425,7 @@ const content: CourseContent = {
         { type: "paragraph", content: "En 2026, l'AI Act européen est pleinement en vigueur. Il impose des obligations proportionnelles au niveau de risque des systèmes IA : transparence, documentation, évaluation des risques, et surveillance humaine. La non-conformite peut coûter jusqu'à 35 millions d'euros ou 7% du CA mondial." },
         { type: "subheading", content: "Comite d'Éthique IA" },
         { type: "paragraph", content: "Un comite d'ethique IA reunit des représentants de la direction, du juridique, de l'IT, des RH, et des équipes métier. Il validé les nouveaux cas d'usage IA, évalue les risques ethiques, definit les principes directeurs, et traité les incidents. Reunion mensuelle minimum." },
-        { type: "callout", content: "Microsoft, Google et Anthropic ont tous des comites d'ethique IA internes. Ce n'est pas reserve aux geants tech — même une PME de 50 employés bénéficie d'un groupe de 3-5 personnes qui supervisé les usages IA." },
+        { type: "callout", content: "Microsoft, Google et Anthropic ont tous des comites d'ethique IA internes. Ce n'est pas réservé aux geants tech — même une PME de 50 employés bénéficie d'un groupe de 3-5 personnes qui supervisé les usages IA." },
         { type: "video", videoId: "7ell8KEbhJo",
       videoDurationMinutes: 27, label: "Gouvernance et ethique IA" },
         { type: "heading", content: "Principes de Gouvernance" },

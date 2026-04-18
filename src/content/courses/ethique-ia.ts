@@ -11,7 +11,7 @@ const content: CourseContent = {
       sections: [
         { type: "heading", content: "Pourquoi l'Éthique de l'IA Nous Concerne Tous" },
         { type: "paragraph", content: "L'intelligence artificielle prend des décisions qui affectent nos vies chaque jour : les contenus que nous voyons sur les réseaux sociaux, les candidatures retenues pour un emploi, les diagnostics médicaux, les taux d'intérêt proposes par nos banques. Quand une technologie a autant d'impact, la question n'est plus seulement \"que peut-elle faire ?\" mais \"que devrait-elle faire ?\"." },
-        { type: "paragraph", content: "L'ethique de l'IA est le domaine qui étudie les consequences morales, sociales et juridiques de ces systèmes. Ce n'est pas un sujet reserve aux philosophes — c'est une préoccupation pratique pour chaque utilisateur, développeur et decideur." },
+        { type: "paragraph", content: "L'ethique de l'IA est le domaine qui étudie les consequences morales, sociales et juridiques de ces systèmes. Ce n'est pas un sujet réservé aux philosophes — c'est une préoccupation pratique pour chaque utilisateur, développeur et decideur." },
         { type: "callout", content: "En 2026, plus de 80% des entreprises du Fortune 500 utilisent l'IA dans leurs processus decisionnels. La question de l'ethique n'est plus théorique — elle est opérationnelle." },
         { type: "video", videoId: "t9gmyvf7JYo",
       videoDurationMinutes: 10, label: "Introduction à l'ethique de l'IA" },
@@ -48,7 +48,7 @@ const content: CourseContent = {
           explanation: "La non-malfaisance est le principe selon lequel les systèmes d'IA ne doivent pas causer de tort aux individus ou aux groupes."
         },
         {
-          question: "L'ethique de l'IA est-elle reservee aux experts ?",
+          question: "L'ethique de l'IA est-elle réservée aux experts ?",
           options: ["Oui, seuls les développeurs sont concernes", "Oui, c'est un sujet de philosophes", "Non, elle concerne tous les utilisateurs et decideurs", "Oui, seuls les gouvernements s'en occupent"],
           correctIndex: 2,
           explanation: "L'ethique de l'IA concerne chaque utilisateur, développeur et decideur. Nous sommes tous affectes par les décisions prises par les systèmes d'IA."
@@ -129,7 +129,7 @@ const content: CourseContent = {
       estimatedMinutes: 8,
       sections: [
         { type: "heading", content: "L'IA Va-t-elle Remplacer Nos Emplois ?" },
-        { type: "paragraph", content: "C'est la question qui inquiete le plus. La réponse est nuancee : l'IA ne remplace pas des métiers entiers, elle automatisé des tâches spécifiques au sein de chaque métier. Selon le Forum Économique Mondial (2025), l'IA supprimera 85 millions d'emplois d'ici 2030 mais en creera 97 millions de nouveaux — un gain net de 12 millions." },
+        { type: "paragraph", content: "C'est la question qui inquiete le plus. La réponse est nuancee : l'IA ne remplace pas des métiers entiers, elle automatise des tâches spécifiques au sein de chaque métier. Selon le Forum Économique Mondial (2025), l'IA supprimera 85 millions d'emplois d'ici 2030 mais en creera 97 millions de nouveaux — un gain net de 12 millions." },
         { type: "paragraph", content: "Le véritable enjeu n'est pas la disparition des emplois mais leur transformation. Un comptable ne sera pas remplace par l'IA, mais un comptable qui utilise l'IA sera plus productif qu'un comptable qui ne l'utilise pas." },
         { type: "heading", content: "Les Métiers les Plus Impactes" },
         { type: "paragraph", content: "Les tâches les plus exposees sont celles qui sont répétitives, prévisibles et basées sur des règles : saisie de données, traduction basique, service client de niveau 1, analyse de documents standardises. À l'inverse, les tâches nécessitant créativité, empathie, negociation complexe et jugement moral sont les moins automatisables." },
@@ -139,12 +139,12 @@ const content: CourseContent = {
           { label: "Faible risque", sub: "Créativité, empathie, stratégie", color: "emerald" },
         ]},
         { type: "heading", content: "Les Nouvelles Opportunites" },
-        { type: "paragraph", content: "L'IA créé de nouveaux métiers : prompt engineer, AI traîner, ethicien IA, ingénieur MLOps, consultant en transformation IA. Mais au-dela de ces rôles spécialisés, chaque métier existant est enrichi par de nouvelles compétences IA. Un marketeur qui maîtrise l'IA générative, un avocat qui utilise l'IA pour la recherche juridique, un médecin assisté par l'IA diagnostique." },
+        { type: "paragraph", content: "L'IA crée de nouveaux métiers : prompt engineer, AI traîner, ethicien IA, ingénieur MLOps, consultant en transformation IA. Mais au-dela de ces rôles spécialisés, chaque métier existant est enrichi par de nouvelles compétences IA. Un marketeur qui maîtrise l'IA générative, un avocat qui utilise l'IA pour la recherche juridique, un médecin assisté par l'IA diagnostique." },
         { type: "callout", content: "Étude Goldman Sachs (2025) : l'IA générative pourrait augmenter la productivité mondiale de 7% par an, ce qui représente 7 000 milliards de dollars de valeur ajoutée." },
         { type: "key-point", content: "La stratégie gagnante n'est pas de rivaliser avec l'IA mais de combiner votre expertise humaine avec ses capacités. Les professionnels les plus valorises seront ceux qui savent quand et comment utiliser l'IA." },
         { type: "tip", content: "Investissez dans les compétences que l'IA ne peut pas remplacer : pensee critique, intelligence émotionnelle, créativité, leadership et capacité d'adaptation." },
         { type: "summary", items: [
-          "L'IA transformé les métiers plus qu'elle ne les supprime",
+          "L'IA transforme les métiers plus qu'elle ne les supprime",
           "85M d'emplois supprimes mais 97M créés d'ici 2030 (gain net de 12M)",
           "Les tâches répétitives et prévisibles sont les plus exposees",
           "De nouveaux métiers émergent : prompt engineer, ethicien IA, MLOps",
@@ -277,7 +277,7 @@ const content: CourseContent = {
       quiz: [
         {
           question: "Qu'est-ce qu'un deepfake ?",
-          options: ["Un contenu créé manuellement par un artiste", "Un contenu médiatique faux génère par l'IA", "Un type de virus informatique", "Un format de fichier video"],
+          options: ["Un contenu créé manuellement par un artiste", "Un contenu médiatique faux généré par l'IA", "Un type de virus informatique", "Un format de fichier video"],
           correctIndex: 1,
           explanation: "Un deepfake est un contenu médiatique (video, audio, image) génère ou manipule par l'IA pour être faux mais convaincant."
         },
@@ -435,7 +435,7 @@ const content: CourseContent = {
         { type: "subheading", content: "Santé" },
         { type: "paragraph", content: "L'IA accélère la découverte de médicaments (AlphaFold a prédit la structure de 200 millions de proteines), améliore le diagnostic précoce (détection de cancers invisible à l'oeil nu) et personnalisé les traitements. D'ici 2030, l'IA pourrait contribuer à sauver des millions de vies." },
         { type: "subheading", content: "Climat et Environnement" },
-        { type: "paragraph", content: "L'IA optimisé les réseaux électriques, améliore les prévisions météo (modèle GraphCast de DeepMind), accélère la recherche sur les matériaux pour les batteries et le solaire, et aide à surveiller la deforestation par satellite." },
+        { type: "paragraph", content: "L'IA optimise les réseaux électriques, améliore les prévisions météo (modèle GraphCast de DeepMind), accélère la recherche sur les matériaux pour les batteries et le solaire, et aide à surveiller la deforestation par satellite." },
         { type: "heading", content: "Les Défis a Relever" },
         { type: "paragraph", content: "La concentration du pouvoir IA entre quelques entreprises américaines et chinoises pose un problème de souverainete. L'impact environnemental des datacenters est croissant. L'inégalité d'accès à l'IA entre pays riches et pauvres risque de creuser le fosse numérique." },
         { type: "diagram", label: "Les Enjeux du Futur de l'IA", flow: "horizontal", nodes: [
@@ -470,7 +470,7 @@ const content: CourseContent = {
           question: "Comment l'IA peut-elle aider a combattre le changement climatique ?",
           options: ["En remplacant les humains", "En optimisant les réseaux électriques et la recherche sur les matériaux", "En supprimant Internet", "En arretant toute production industrielle"],
           correctIndex: 1,
-          explanation: "L'IA optimisé les réseaux électriques, améliore les prévisions météo, accélère la recherche sur les batteries et aide à surveiller la deforestation."
+          explanation: "L'IA optimise les réseaux électriques, améliore les prévisions météo, accélère la recherche sur les batteries et aide à surveiller la deforestation."
         },
         {
           question: "Quel est un défi majeur de la concentration du pouvoir IA ?",

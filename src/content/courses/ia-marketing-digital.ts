@@ -12,7 +12,7 @@ const content: CourseContent = {
         { type: "heading", content: "Le Marketing Digital à l'Ère de l'IA" },
         { type: "paragraph", content: "Le marketing digital a connu plus de changements en 2 ans qu'en 20 ans. L'IA ne se contente pas d'optimiser les campagnes existantes — elle reinvente complètement la manière dont les marques attirent, engagent et convertissent leurs audiences." },
         { type: "paragraph", content: "En 2026, les marketeurs qui n'utilisent pas l'IA sont déjà en retard. Les outils IA permettent de produire du contenu 10x plus vite, de cibler les audiences avec une précision chirurgicale, et d'optimiser les campagnes en temps réel grâce à l'analyse prédictive." },
-        { type: "callout", content: "Selon HubSpot, 87% des marketeurs utilisent l'IA dans au moins une partie de leur workflow en 2026. Les équipes augmentees par l'IA generent en moyenne 40% de leads en plus." },
+        { type: "callout", content: "Selon HubSpot, 87% des marketeurs utilisent l'IA dans au moins une partie de leur workflow en 2026. Les équipes augmentées par l'IA generent en moyenne 40% de leads en plus." },
         { type: "video", videoId: "nkuPUJVzB_E",
       videoDurationMinutes: 12, label: "L'IA dans le marketing digital en 2026" },
         { type: "heading", content: "Les Piliers du Marketing Digital IA" },
@@ -53,11 +53,11 @@ const content: CourseContent = {
           question: "Comment l'IA changé-t-elle la repartition du temps des marketeurs ?",
           options: ["Plus de temps sur l'exécution", "Plus de temps sur la stratégie et la créativité", "Aucun changement", "Plus de temps sur la formation"],
           correctIndex: 1,
-          explanation: "L'IA automatisé l'exécution, liberant 80% du temps pour la stratégie, la créativité et la relation client — les tâches a haute valeur ajoutée.",
+          explanation: "L'IA automatise l'exécution, liberant 80% du temps pour la stratégie, la créativité et la relation client — les tâches a haute valeur ajoutée.",
         },
         {
           question: "Quelle affirmation est FAUSSE concernant l'IA en marketing ?",
-          options: ["L'IA accélère la création de contenu", "L'IA remplace complètement la créativité humaine", "L'IA optimisé le ciblage publicitaire", "L'IA analyse les données en temps réel"],
+          options: ["L'IA accélère la création de contenu", "L'IA remplace complètement la créativité humaine", "L'IA optimise le ciblage publicitaire", "L'IA analyse les données en temps réel"],
           correctIndex: 1,
           explanation: "L'IA ne remplace pas la créativité humaine — elle amplifie les capacités du marketeur mais la stratégie et la vision restent irremplacables.",
         },
@@ -71,7 +71,7 @@ const content: CourseContent = {
       sections: [
         { type: "heading", content: "Le SEO à l'Ère de l'IA" },
         { type: "paragraph", content: "Le SEO en 2026 n'est plus celui de 2020. Google utilise massivement l'IA (Gemini) dans son algorithme de recherche. Les AI Overviews répondent directement aux questions des utilisateurs. Pour rester visible, votre stratégie SEO doit intégrer l'IA à chaque étape." },
-        { type: "paragraph", content: "L'IA transformé le SEO des deux côtés : les moteurs de recherche l'utilisent pour mieux comprendre le contenu, et les marketeurs l'utilisent pour créer du contenu mieux optimisé. C'est une course à l'armement ou l'IA est votre meilleure arme." },
+        { type: "paragraph", content: "L'IA transforme le SEO des deux côtés : les moteurs de recherche l'utilisent pour mieux comprendre le contenu, et les marketeurs l'utilisent pour créer du contenu mieux optimisé. C'est une course à l'armement ou l'IA est votre meilleure arme." },
         { type: "heading", content: "Recherche de Mots-Clés avec l'IA" },
         { type: "paragraph", content: "Les outils IA analysent les intentions de recherche, pas seulement les volumes. Ils identifient les questions que posent vraiment vos ciblés, les sujets connexes, et les opportunités de long-tail keywords sous-exploites par vos concurrents." },
         { type: "subheading", content: "Outils de Recherche IA" },
@@ -80,7 +80,7 @@ const content: CourseContent = {
       videoDurationMinutes: 14, label: "SEO et IA : stratégies avancées 2026" },
         { type: "heading", content: "Rédaction SEO Augmentee par l'IA" },
         { type: "paragraph", content: "L'IA rédigé des articles optimises pour le SEO : structure H1-H6, densite de mots-clés naturelle, maillage interne, meta-descriptions, et rich snippets. Mais attention : Google détecte le contenu 100% IA sans valeur ajoutée. La touche humaine reste essentielle." },
-        { type: "callout", content: "Google a confirme en 2025 que le contenu génère par l'IA n'est pas penalise en soi. C'est la qualité et l'utilité du contenu qui comptent, pas la méthode de création. Ajoutez toujours de l'expertise et de l'expérience personnelle." },
+        { type: "callout", content: "Google a confirme en 2025 que le contenu généré par l'IA n'est pas penalise en soi. C'est la qualité et l'utilité du contenu qui comptent, pas la méthode de création. Ajoutez toujours de l'expertise et de l'expérience personnelle." },
         { type: "prompt-example", prompt: "Analyse la SERP Google pour le mot-clé 'automatisation marketing IA'. Identifie les top 5 articles, leurs points forts et faiblesses, et propose un plan d'article qui les surpasse en profondeur et en valeur.", result: "Analyse des 5 premiers résultats avec scores de contenu, gaps identifiés, et un plan d'article en 8 sections couvrant les angles manquants avec des données fraîches et des exemples concrets." },
         { type: "key-point", content: "Le framework E-E-A-T (Expérience, Expertise, Authoritativeness, Trustworthiness) de Google est plus important que jamais. L'IA vous aide à produire, mais c'est votre expertise qui fait la différence dans le ranking." },
         { type: "diagram", label: "Pipeline SEO Augmente par l'IA", flow: "horizontal", nodes: [
@@ -105,7 +105,7 @@ const content: CourseContent = {
           explanation: "Les AI Overviews sont des réponses générées par l'IA de Google (Gemini) qui apparaissent directement en haut des résultats de recherche.",
         },
         {
-          question: "Google penalise-t-il le contenu génère par l'IA ?",
+          question: "Google penalise-t-il le contenu généré par l'IA ?",
           options: ["Oui, tout contenu IA est penalise", "Non, c'est la qualité et l'utilité qui comptent", "Seulement si c'est du texte long", "Seulement pour les sites de moins de 1000 pages"],
           correctIndex: 1,
           explanation: "Google a confirme que le contenu IA n'est pas penalise en soi. C'est la qualité, l'utilité et l'expertise du contenu qui determinent le ranking.",
@@ -120,7 +120,7 @@ const content: CourseContent = {
           question: "Quel outil est recommandé pour la recherche de mots-clés IA ?",
           options: ["Canva", "Semrush AI", "Slack", "Zoom"],
           correctIndex: 1,
-          explanation: "Semrush AI est un outil de référence pour la recherche de mots-clés augmentee par l'IA, avec analyse des intentions et des opportunités.",
+          explanation: "Semrush AI est un outil de référence pour la recherche de mots-clés augmentée par l'IA, avec analyse des intentions et des opportunités.",
         },
       ],
     },
@@ -137,7 +137,7 @@ const content: CourseContent = {
         { type: "subheading", content: "Le Content Repurposing" },
         { type: "paragraph", content: "La technique la plus puissante : créer un contenu pilier (article long, video, podcast) et laisser l'IA le décliner en dizaines de formats. Un article de 2000 mots devient 10 posts LinkedIn, 20 tweets, 5 réels scripts, et une newsletter — automatiquement." },
         { type: "subheading", content: "La Rédaction Assistee" },
-        { type: "paragraph", content: "L'IA ne remplace pas le rédacteur — elle l'amplifie. Le workflow optimal : vous definissez l'angle et les points clés, l'IA rédigé le premier jet, vous ajoutez votre expertise et votre voix, l'IA optimisé pour le SEO et la lisibilite." },
+        { type: "paragraph", content: "L'IA ne remplace pas le rédacteur — elle l'amplifie. Le workflow optimal : vous definissez l'angle et les points clés, l'IA rédigé le premier jet, vous ajoutez votre expertise et votre voix, l'IA optimise pour le SEO et la lisibilite." },
         { type: "video", videoId: "_ZvnD73m40o",
       videoDurationMinutes: 42, label: "Content marketing IA : workflow complet" },
         { type: "callout", content: "Le contenu le plus performant en 2026 combiné l'expertise humaine et l'efficacité de l'IA. Les articles qui rankent le mieux sont ceux qui apportent une expérience et une perspective uniques, impossibles a générer par l'IA seule." },
@@ -211,7 +211,7 @@ const content: CourseContent = {
         ]},
         { type: "prompt-example", prompt: "Analyse mes 10 derniers posts LinkedIn. Identifie les patterns de ceux qui ont le plus d'engagement (likes, commentaires, partages). Genere 5 nouveaux posts qui reprennent ces patterns gagnants.", result: "Analyse avec scores d'engagement, identification des hooks efficaces (questions, chiffres, controverses), et 5 nouveaux posts reprenant les formats gagnants avec des sujets frais." },
         { type: "summary", items: [
-          "L'IA optimisé chaque étape du marketing social : création, timing, analyse",
+          "L'IA optimise chaque étape du marketing social : création, timing, analyse",
           "Generez texte, visuels et vidéos avec les outils IA",
           "Les outils de scheduling IA optimisent le moment de publication",
           "Analysez les patterns d'engagement pour reproduire le succès",
@@ -220,10 +220,10 @@ const content: CourseContent = {
       ],
       quiz: [
         {
-          question: "Quel est le secret pour que l'IA créé du contenu social efficace ?",
+          question: "Quel est le secret pour que l'IA crée du contenu social efficace ?",
           options: ["Utiliser le prompt le plus long possible", "Lui donner votre voix de marque et des exemples de posts performants", "Publier le plus possible", "Copier les concurrents"],
           correctIndex: 1,
-          explanation: "L'IA créé du contenu social plus efficace quand vous lui fournissez votre voix de marque et des exemples de posts qui ont bien fonctionne dans le passe.",
+          explanation: "L'IA crée du contenu social plus efficace quand vous lui fournissez votre voix de marque et des exemples de posts qui ont bien fonctionne dans le passe.",
         },
         {
           question: "Qu'optimisent les outils comme Buffer AI et Hootsuite AI ?",
@@ -262,7 +262,7 @@ const content: CourseContent = {
       videoDurationMinutes: 14, label: "Email marketing IA : segmentation et personnalisation" },
         { type: "key-point", content: "L'objet de l'email détermine 80% du taux d'ouverture. L'IA peut générer et A/B tester des dizaines de variantes d'objets pour trouver celui qui performe le mieux pour chaque segment." },
         { type: "heading", content: "Sequences Automatisees" },
-        { type: "paragraph", content: "Les séquences d'emails automatisees (onboarding, nurturing, reactivation, abandon de panier) sont les plus rentables. L'IA optimisé chaque email de la séquence : contenu, timing, et décision de continuer ou d'arrêter la séquence selon le comportement du destinataire." },
+        { type: "paragraph", content: "Les séquences d'emails automatisees (onboarding, nurturing, reactivation, abandon de panier) sont les plus rentables. L'IA optimise chaque email de la séquence : contenu, timing, et décision de continuer ou d'arrêter la séquence selon le comportement du destinataire." },
         { type: "diagram", label: "Pipeline Email Marketing IA", flow: "horizontal", nodes: [
           { label: "Segmentation IA", sub: "Micro-segments comportementaux", color: "purple" },
           { label: "Personnalisation", sub: "Contenu unique par destinataire", color: "blue" },
@@ -317,7 +317,7 @@ const content: CourseContent = {
         { type: "paragraph", content: "En 2026, les campagnes Performance Max de Google et Advantage+ de Meta sont pilotees par l'IA. Le rôle du marketeur évolue : moins de micro-gestion des encheres, plus de stratégie créative et de qualité des signaux." },
         { type: "heading", content: "Google Ads et l'IA" },
         { type: "subheading", content: "Performance Max" },
-        { type: "paragraph", content: "Performance Max utilise l'IA de Google pour diffuser vos annonces sur tous les canaux Google (Search, Display, YouTube, Maps, Gmail). Vous fournissez les assets (textes, images, vidéos) et l'IA optimisé la diffusion en temps réel." },
+        { type: "paragraph", content: "Performance Max utilise l'IA de Google pour diffuser vos annonces sur tous les canaux Google (Search, Display, YouTube, Maps, Gmail). Vous fournissez les assets (textes, images, vidéos) et l'IA optimise la diffusion en temps réel." },
         { type: "paragraph", content: "L'IA génère même des variantes de vos annonces : combinaisons de titres et descriptions, adaptations visuelles, et ciblage d'audiences similaires à vos clients existants." },
         { type: "heading", content: "Meta Ads (Advantage+)" },
         { type: "subheading", content: "Advantage+ Shopping et Créative" },
@@ -352,7 +352,7 @@ const content: CourseContent = {
           question: "Quel est le levier #1 de performance publicitaire en 2026 ?",
           options: ["Le budget", "La qualité des créatives", "Le nombre de campagnes", "L'heure de diffusion"],
           correctIndex: 1,
-          explanation: "La qualité des créatives (visuels et textes) est le principal levier de performance. L'IA optimisé la diffusion, mais ce sont les créatives qui determinent les clics.",
+          explanation: "La qualité des créatives (visuels et textes) est le principal levier de performance. L'IA optimise la diffusion, mais ce sont les créatives qui determinent les clics.",
         },
         {
           question: "Quel est l'avantage moyen de ROI des campagnes Advantage+ de Meta ?",
@@ -375,8 +375,8 @@ const content: CourseContent = {
       estimatedMinutes: 8,
       sections: [
         { type: "heading", content: "Landing Pages : L'Art de la Conversion" },
-        { type: "paragraph", content: "Une landing page est la page ou atterrissent vos visiteurs après avoir clique sur une publicité ou un lien. Son unique objectif : convertir le visiteur en lead ou en client. L'IA transformé la création de landing pages en permettant de générer, tester et optimiser des dizaines de variantes rapidement." },
-        { type: "paragraph", content: "En 2026, les outils comme Unbounce Smart Builder, Instapage AI et même v0/Bolt generent des landing pages complètes à partir d'une simple description. L'IA optimisé ensuite chaque élément pour maximiser les conversions." },
+        { type: "paragraph", content: "Une landing page est la page ou atterrissent vos visiteurs après avoir clique sur une publicité ou un lien. Son unique objectif : convertir le visiteur en lead ou en client. L'IA transforme la création de landing pages en permettant de générer, tester et optimiser des dizaines de variantes rapidement." },
+        { type: "paragraph", content: "En 2026, les outils comme Unbounce Smart Builder, Instapage AI et même v0/Bolt generent des landing pages complètes à partir d'une simple description. L'IA optimise ensuite chaque élément pour maximiser les conversions." },
         { type: "heading", content: "Les Éléments d'une Landing Page qui Convertit" },
         { type: "paragraph", content: "Les éléments clés : un headline percutant (bénéfice principal), un sous-titre clarifiant, une preuve sociale (temoignages, chiffres), un CTA visible et convaincant, et un formulaire simple. L'IA peut générer et tester chacun de ces éléments." },
         { type: "subheading", content: "Copywriting IA pour la Conversion" },
@@ -436,7 +436,7 @@ const content: CourseContent = {
       estimatedMinutes: 9,
       sections: [
         { type: "heading", content: "Le Data Marketing Propulse par l'IA" },
-        { type: "paragraph", content: "Les données sont le carburant du marketing digital. Mais avoir des données ne suffit pas — il faut les analyser, les interpréter et en tirer des actions concrètes. L'IA transformé des montagnes de données en insights actionnables en quelques secondes." },
+        { type: "paragraph", content: "Les données sont le carburant du marketing digital. Mais avoir des données ne suffit pas — il faut les analyser, les interpréter et en tirer des actions concrètes. L'IA transforme des montagnes de données en insights actionnables en quelques secondes." },
         { type: "paragraph", content: "En 2026, Google Analytics 4 intégré l'IA pour l'analyse prédictive. Les outils comme Looker Studio AI, Mixpanel et Amplitude offrent des insights automatiques. Et Claude/GPT peuvent analyser vos exports CSV pour répondre a n'importé quelle question marketing." },
         { type: "heading", content: "Les KPIs Essentiels" },
         { type: "paragraph", content: "Les métriques qui comptent vraiment : le coût d'acquisition client (CAC), la valeur vie client (LTV), le taux de conversion par étape du funnel, le ROI par canal, et le taux de churn. L'IA peut calculer et prédire chacune de ces métriques." },
@@ -456,7 +456,7 @@ const content: CourseContent = {
         { type: "prompt-example", prompt: "Voici un export CSV de mes campagnes marketing des 6 derniers mois (canal, dépense, leads, clients, CA). Analyse les performances, identifié le canal le plus rentable et recommandé une reallocation budgetaire.", result: "Analyse complète avec ROI par canal, identification du canal le plus rentable (ex: email 12x ROI vs paid social 3x), et recommandation de reallouer 30% du budget paid social vers email et SEO." },
         { type: "key-point", content: "Le ratio LTV/CAC est le KPI ultime. Si la valeur vie client est 3x ou plus supérieure au coût d'acquisition, votre business est sain. L'IA peut calculer ce ratio en temps réel pour chaque canal." },
         { type: "summary", items: [
-          "L'IA transformé les données marketing en insights actionnables",
+          "L'IA transforme les données marketing en insights actionnables",
           "KPIs essentiels : CAC, LTV, taux de conversion, ROI par canal, churn",
           "L'analyse prédictive anticipe les comportements clients",
           "L'attribution multi-touch IA est plus précise que les règles manuelles",
@@ -532,7 +532,7 @@ const content: CourseContent = {
           question: "Quel est le piege du personal branding IA ?",
           options: ["Publier trop souvent", "Publier du contenu générique qui ressemble à tout le monde", "Ne pas utiliser assez d'IA", "Publier uniquement des images"],
           correctIndex: 1,
-          explanation: "Le piege est de publier du contenu générique génère par l'IA sans y apporter votre expérience, vos opinions et votre perspective unique.",
+          explanation: "Le piege est de publier du contenu générique généré par l'IA sans y apporter votre expérience, vos opinions et votre perspective unique.",
         },
         {
           question: "Comment l'IA apprend-elle votre style de communication ?",
@@ -709,7 +709,7 @@ const content: CourseContent = {
       quiz: [
         {
           question: "Qu'est-ce qu'une métrique North Star ?",
-          options: ["La métrique la plus facile a mesurer", "La métrique qui reflette le mieux la valeur créée par votre business", "Le nombre total de visiteurs", "Le nombre de followers"],
+          options: ["La métrique la plus facile à mesurer", "La métrique qui reflette le mieux la valeur créée par votre business", "Le nombre total de visiteurs", "Le nombre de followers"],
           correctIndex: 1,
           explanation: "La métrique North Star est celle qui reflette le mieux la valeur créée : MRR pour un SaaS, CA/visiteur pour un e-commerce, leads qualifies pour un consultant.",
         },

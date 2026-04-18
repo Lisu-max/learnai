@@ -16,7 +16,7 @@ const content: CourseContent = {
         { type: "video", videoId: "-F2NZhT4Tuc",
       videoDurationMinutes: 10, label: "L'IA dans les RH — vue d'ensemble" },
         { type: "heading", content: "Les Domaines Impactes" },
-        { type: "paragraph", content: "L'IA transformé tous les domaines RH : recrutement (tri de CV, matching), onboarding (parcours personnalisés), formation (apprentissage adaptatif), engagement (analyse de sentiment), administration (automatisation des tâches), et people analytics (prédictions et insights)." },
+        { type: "paragraph", content: "L'IA transforme tous les domaines RH : recrutement (tri de CV, matching), onboarding (parcours personnalisés), formation (apprentissage adaptatif), engagement (analyse de sentiment), administration (automatisation des tâches), et people analytics (prédictions et insights)." },
         { type: "key-point", content: "L'IA en RH n'est pas un luxe technologique — c'est un avantage competitif. Les entreprises qui l'adoptent recrutent plus vite, retiennent mieux, et developpent leurs talents plus efficacement." },
         { type: "diagram", label: "L'IA dans le Cycle de Vie du Collaborateur", flow: "horizontal", nodes: [
           { label: "Recrutement", sub: "Tri CV, matching, entretiens", color: "purple" },
@@ -27,7 +27,7 @@ const content: CourseContent = {
         ]},
         { type: "tip", content: "Commencez par les quick wins : automatiser le tri de CV, générer des descriptions de poste avec l'IA, et utiliser des chatbots RH pour les questions fréquentes des employés." },
         { type: "summary", items: [
-          "L'IA transformé tous les processus RH sans remplacer l'humain",
+          "L'IA transforme tous les processus RH sans remplacer l'humain",
           "76% des leaders RH considerent l'adoption de l'IA comme urgente",
           "Quick wins : tri de CV, descriptions de poste, chatbots RH",
           "L'IA permet de se concentrer sur la relation humaine et la stratégie",
@@ -51,7 +51,7 @@ const content: CourseContent = {
           question: "Quel est un quick win pour commencer avec l'IA en RH ?",
           options: ["Remplacer tous les recruteurs par des IA", "Automatiser le tri de CV", "Supprimer les entretiens d'embauche", "Utiliser uniquement des chatbots"],
           correctIndex: 1,
-          explanation: "L'automatisation du tri de CV est un quick win facile a implementer qui fait gagner des heures aux recruteurs tout en ameliorant la qualité du screening."
+          explanation: "L'automatisation du tri de CV est un quick win facile à implementer qui fait gagner des heures aux recruteurs tout en ameliorant la qualité du screening."
         },
         {
           question: "L'IA remplace-t-elle les professionnels RH ?",
@@ -186,13 +186,13 @@ const content: CourseContent = {
       estimatedMinutes: 7,
       sections: [
         { type: "heading", content: "L'Onboarding Augmente par l'IA" },
-        { type: "paragraph", content: "Un bon onboarding réduit le turnover de 82% et améliore la productivité de 70% (Glassdoor). L'IA personnalisé chaque parcours d'intégration en fonction du poste, du niveau d'expérience, et du style d'apprentissage du nouveau collaborateur." },
+        { type: "paragraph", content: "Un bon onboarding réduit le turnover de 82% et améliore la productivité de 70% (Glassdoor). L'IA personnalise chaque parcours d'intégration en fonction du poste, du niveau d'expérience, et du style d'apprentissage du nouveau collaborateur." },
         { type: "subheading", content: "Parcours Personnalises" },
         { type: "paragraph", content: "L'IA génère un plan d'onboarding adapte : contenu de formation priorise, rencontres planifiees avec les bonnes personnes, tâches progressives, et checkpoints de validation. Chaque nouveau collaborateur reçoit un parcours unique qui accélère sa montee en compétences." },
         { type: "subheading", content: "Chatbot Compagnon" },
         { type: "paragraph", content: "Un chatbot IA dédié aux nouveaux arrivants répond à toutes leurs questions : ou est la cafeteria, comment poser des conges, qui contacter pour le matériel informatique. Disponible 24/7, il réduit le stress des premiers jours et decharge l'équipe RH." },
         { type: "subheading", content: "Automatisation Administrative" },
-        { type: "paragraph", content: "Contrats, documents a signer, accès informatiques, inscriptions aux formations obligatoires — l'IA automatisé toute la paperasse de l'onboarding. Les workflows automatises envoient les bons documents au bon moment sans intervention humaine." },
+        { type: "paragraph", content: "Contrats, documents a signer, accès informatiques, inscriptions aux formations obligatoires — l'IA automatise toute la paperasse de l'onboarding. Les workflows automatises envoient les bons documents au bon moment sans intervention humaine." },
         { type: "tip", content: "Le meilleur onboarding combiné l'efficacité de l'IA et la chaleur humaine. Automatisez l'administratif et la logistique, mais gardez les moments clés en personne : accueil par le manager, dejeuner d'équipe, premier feedback." },
         { type: "video", videoId: "-F2NZhT4Tuc",
       videoDurationMinutes: 10, label: "Onboarding automatisé avec l'IA" },
@@ -204,7 +204,7 @@ const content: CourseContent = {
         ]},
         { type: "summary", items: [
           "Un bon onboarding réduit le turnover de 82%",
-          "L'IA personnalisé chaque parcours d'intégration",
+          "L'IA personnalise chaque parcours d'intégration",
           "Le chatbot compagnon répond 24/7 aux questions des nouveaux",
           "L'automatisation administrative élimine la paperasse",
           "Combiner efficacité IA et chaleur humaine pour les moments clés"
@@ -246,7 +246,7 @@ const content: CourseContent = {
         { type: "heading", content: "La Formation Continue Augmentee" },
         { type: "paragraph", content: "La formation est le domaine RH ou l'IA apporte le plus de valeur. L'apprentissage adaptatif personnalisé le contenu pour chaque collaborateur, le micro-learning s'intégré dans le quotidien, et les LLM deviennent des tuteurs personnels disponibles 24/7." },
         { type: "subheading", content: "Apprentissage Adaptatif" },
-        { type: "paragraph", content: "Les plateformes LMS augmentees par l'IA evaluent le niveau de chaque apprenant et adaptent le parcours en temps réel. Si un collaborateur maîtrise un sujet, l'IA accélère. S'il bloque, elle propose des exercices supplémentaires et des explications alternatives." },
+        { type: "paragraph", content: "Les plateformes LMS augmentées par l'IA evaluent le niveau de chaque apprenant et adaptent le parcours en temps réel. Si un collaborateur maîtrise un sujet, l'IA accélère. S'il bloque, elle propose des exercices supplémentaires et des explications alternatives." },
         { type: "subheading", content: "LLM comme Tuteurs Personnels" },
         { type: "paragraph", content: "Les entreprises déploient des chatbots IA internes formes sur leurs process, outils et documentation. Un collaborateur peut poser n'importé quelle question sur les procédures internes et obtenir une réponse instantanée — sans deranger un collègue." },
         { type: "subheading", content: "Identification des Gaps de Compétences" },
@@ -277,7 +277,7 @@ const content: CourseContent = {
         },
         {
           question: "Qu'est-ce que le micro-learning ?",
-          options: ["Des cours de 3 heures", "Des sessions courtes (10-15 min) intégrées dans le quotidien", "Apprendre uniquement sur mobile", "Un format reserve aux débutants"],
+          options: ["Des cours de 3 heures", "Des sessions courtes (10-15 min) intégrées dans le quotidien", "Apprendre uniquement sur mobile", "Un format réservé aux débutants"],
           correctIndex: 1,
           explanation: "Le micro-learning consiste en des sessions courtes (10-15 minutes) intégrées dans le quotidien, plus efficaces que les formations longues ponctuelles."
         },
@@ -547,7 +547,7 @@ const content: CourseContent = {
         { type: "paragraph", content: "Optimisez et innovez : IA prescriptive, workforce planning prédictif, expérience collaborateur ultra-personnalisée. Partagez les résultats avec la direction pour ancrer l'IA comme pilier stratégique des RH." },
         { type: "prompt-example", prompt: "Tu es un consultant en transformation RH. Cree une feuille de route sur 12 mois pour une PME de 200 employés qui veut intégrer l'IA dans ses RH, avec un budget limite.", result: "Feuille de Route IA RH — PME 200 employés\n\nMois 1-3 — Quick Wins (budget : 500 EUR/mois) :\n- Chatbot FAQ RH avec ChatGPT Teams\n- Génération de fiches de poste avec Claude\n- Templates de contrats IA\nROI attendu : 15h/semaine economisees\n\nMois 3-6 — Fondations (budget : 1500 EUR/mois) :\n- SIRH cloud (Lucca ou PayFit)\n- Centralisation des données RH\n- Formation équipe RH (2 jours)\nROI attendu : données propres + équipe formee\n\nMois 6-12 — Impact (budget : 2500 EUR/mois) :\n- ATS avec tri IA (Recruitee ou Workable)\n- Dashboard people analytics (Metabase)\n- Pulse surveys automatisees\nROI attendu : -30% time-to-hire, +15 eNPS" },
         { type: "video", videoId: "-F2NZhT4Tuc",
-      videoDurationMinutes: 10, label: "Construire sa stratégie RH augmentee" },
+      videoDurationMinutes: 10, label: "Construire sa stratégie RH augmentée" },
         { type: "key-point", content: "La clé du succès n'est pas la technologie — c'est la conduite du changement. Impliquez les équipes RH des le depart, formez-les, et celebrez les quick wins pour créer l'adhésion." },
         { type: "diagram", label: "La Feuille de Route IA RH", flow: "vertical", nodes: [
           { label: "Phase 1 : Quick Wins", sub: "Mois 1-3 — Chatbot, documents, tri CV", color: "blue" },

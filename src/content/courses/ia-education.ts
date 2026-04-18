@@ -6,7 +6,7 @@ const content: CourseContent = {
     {
       number: 1,
       title: "Introduction : L'IA dans l'Éducation",
-      description: "Comprendre comment l'IA transformé l'enseignement et l'apprentissage.",
+      description: "Comprendre comment l'IA transforme l'enseignement et l'apprentissage.",
       estimatedMinutes: 7,
       sections: [
         { type: "heading", content: "L'IA Révolutionne l'Éducation" },
@@ -27,7 +27,7 @@ const content: CourseContent = {
         ]},
         { type: "tip", content: "Commencez par observer comment vos élèves ou collègues utilisent déjà l'IA (ChatGPT, etc.). Comprendre les usages existants est la première étape pour une intégration pédagogique réussie." },
         { type: "summary", items: [
-          "L'IA transformé l'éducation sans remplacer les enseignants",
+          "L'IA transforme l'éducation sans remplacer les enseignants",
           "60% des systèmes éducatifs expérimentent des outils IA",
           "5 axes : personnalisation, assistance, accessibilité, évaluation, administration",
           "L'IA est un outil, pas une finalité pédagogique",
@@ -49,7 +49,7 @@ const content: CourseContent = {
         },
         {
           question: "Quels sont les 5 axes de l'IA en éducation ?",
-          options: ["Code, design, marketing, vente, finance", "Personnalisation, assistance, accessibilité, évaluation, administration", "Lecture, écriture, calcul, sciences, langues", "Primaire, collège, lycee, université, formation"],
+          options: ["Code, design, marketing, vente, finance", "Personnalisation, assistance, accessibilité, évaluation, administration", "Lecture, écriture, calcul, sciences, langues", "Primaire, collège, lycée, université, formation"],
           correctIndex: 1,
           explanation: "Les 5 axes sont : personnalisation de l'apprentissage, assistance aux enseignants, accessibilité, évaluation automatisée, et administration."
         },
@@ -252,7 +252,7 @@ const content: CourseContent = {
         { type: "paragraph", content: "L'IA ajuste en temps réel : si l'élève réussit facilement, elle augmente la difficulté. S'il bloque, elle propose des exercices supplémentaires, des explications alternatives, ou des ressources complémentaires. Chaque parcours est unique." },
         { type: "subheading", content: "Tuteurs IA Personnels" },
         { type: "paragraph", content: "Les chatbots éducatifs comme Khanmigo (Khan Academy) ou les LLM configures en mode tuteur offrent un accompagnement 1-a-1 permanent. L'élève peut poser des questions à tout moment, sans craindre le jugement, et recevoir des explications adaptées à son niveau." },
-        { type: "callout", content: "Étude Stanford 2025 : les élèves utilisant un tuteur IA personnalisé progressent 2x plus vite que le groupe temoin, avec une amélioration de 30% de la retention des connaissances à long terme." },
+        { type: "callout", content: "Étude Stanford 2025 : les élèves utilisant un tuteur IA personnalise progressent 2x plus vite que le groupe temoin, avec une amélioration de 30% de la retention des connaissances à long terme." },
         { type: "video", videoId: "EEbGYRW7feM",
       videoDurationMinutes: 9, label: "Personnalisation de l'apprentissage avec l'IA" },
         { type: "diagram", label: "L'Apprentissage Adaptatif en Action", flow: "cycle", nodes: [
@@ -262,7 +262,7 @@ const content: CourseContent = {
         ]},
         { type: "key-point", content: "La personnalisation ne signifie pas isoler l'élève derrière un écran. Les meilleurs résultats combinent le travail adaptatif individuel avec l'IA et les interactions sociales en classe." },
         { type: "summary", items: [
-          "L'IA personnalisé contenu, rythme et exercices pour chaque élève",
+          "L'IA personnalise contenu, rythme et exercices pour chaque élève",
           "Les plateformes adaptatives identifient les lacunes en continu",
           "Les tuteurs IA offrent un accompagnement 1-a-1 permanent",
           "Les élèves progressent 2x plus vite avec un tuteur IA",
@@ -280,7 +280,7 @@ const content: CourseContent = {
           question: "De combien les élèves avec tuteur IA progressent-ils plus vite ?",
           options: ["10% plus vite", "50% plus vite", "2x plus vite", "5x plus vite"],
           correctIndex: 2,
-          explanation: "Selon une étude Stanford 2025, les élèves utilisant un tuteur IA personnalisé progressent 2x plus vite que le groupe temoin."
+          explanation: "Selon une étude Stanford 2025, les élèves utilisant un tuteur IA personnalise progressent 2x plus vite que le groupe temoin."
         },
         {
           question: "Quel est l'avantage d'un tuteur IA pour un élève ?",
@@ -309,7 +309,7 @@ const content: CourseContent = {
         { type: "subheading", content: "Recherche et Rédaction" },
         { type: "paragraph", content: "Perplexity pour la recherche sourcer. Claude pour structurer un plan de dissertation. ChatGPT pour reformuler et améliorer un texte. L'IA aide à structurer la pensee, pas a la remplacer. L'étudiant doit toujours apporter ses propres idées et analyses." },
         { type: "subheading", content: "La Méthode Feynman + IA" },
-        { type: "paragraph", content: "Expliquez un concept à l'IA comme si elle était un enfant de 10 ans. Si l'IA détecte des erreurs ou des lacunes dans votre explication, c'est que vous ne maitrisez pas encore le sujet. C'est la méthode Feynman augmentee — et c'est extrêmement efficace." },
+        { type: "paragraph", content: "Expliquez un concept à l'IA comme si elle était un enfant de 10 ans. Si l'IA détecte des erreurs ou des lacunes dans votre explication, c'est que vous ne maitrisez pas encore le sujet. C'est la méthode Feynman augmentée — et c'est extrêmement efficace." },
         { type: "tip", content: "Règle d'or : si vous ne pouvez pas expliquer un concept sans l'IA, c'est que vous ne l'avez pas compris. L'IA est un outil pour approfondir votre compréhension, pas pour la remplacer." },
         { type: "video", videoId: "oeli5xkFZJo",
       videoDurationMinutes: 14, label: "L'IA pour les étudiants — guide pratique" },
@@ -328,10 +328,10 @@ const content: CourseContent = {
       ],
       quiz: [
         {
-          question: "Quelle est la méthode Feynman augmentee par l'IA ?",
+          question: "Quelle est la méthode Feynman augmentée par l'IA ?",
           options: ["Demander à l'IA de faire ses devoirs", "Expliquer un concept à l'IA comme a un enfant et identifier ses lacunes", "Memoriser les réponses de l'IA", "Copier les explications de l'IA"],
           correctIndex: 1,
-          explanation: "La méthode Feynman augmentee consiste à expliquer un concept à l'IA comme a un enfant de 10 ans. Si l'IA détecte des erreurs, c'est que vous n'avez pas compris."
+          explanation: "La méthode Feynman augmentée consiste à expliquer un concept à l'IA comme a un enfant de 10 ans. Si l'IA détecte des erreurs, c'est que vous n'avez pas compris."
         },
         {
           question: "Quel outil est recommandé pour la recherche sourcee ?",
@@ -362,7 +362,7 @@ const content: CourseContent = {
         { type: "heading", content: "L'IA Accélère la Recherche Académique" },
         { type: "paragraph", content: "La recherche académique est transformée par l'IA : découverte d'articles, analyse bibliographique, extraction de données, rédaction scientifique, et même génération d'hypotheses. Les chercheurs qui maitrisent ces outils publient plus et mieux." },
         { type: "subheading", content: "Découverte et Analyse d'Articles" },
-        { type: "paragraph", content: "Semantic Scholar, Elicit et Consensus utilisent l'IA pour trouver des articles pertinents, extraire les findings, et synthetiser les résultats de dizaines d'études en quelques minutes. Plus besoin de lire 50 articles pour une revue de litterature." },
+        { type: "paragraph", content: "Semantic Scholar, Elicit et Consensus utilisent l'IA pour trouver des articles pertinents, extraire les findings, et synthétiser les résultats de dizaines d'études en quelques minutes. Plus besoin de lire 50 articles pour une revue de litterature." },
         { type: "subheading", content: "Rédaction Scientifique Assistee" },
         { type: "paragraph", content: "Les LLM aident à structurer les articles, reformuler pour la clarte, et vérifier la cohérence. Writefull et Paperpal sont spécialisés dans la rédaction académique. Attention : la transparence sur l'utilisation de l'IA est de plus en plus exigee par les revues." },
         { type: "subheading", content: "Analyse de Données et Statistiques" },
@@ -370,10 +370,10 @@ const content: CourseContent = {
         { type: "callout", content: "Éthique académique : de plus en plus de revues scientifiques exigent la déclaration de l'utilisation de l'IA dans le processus de recherche et de rédaction. Soyez toujours transparent sur votre utilisation des outils IA." },
         { type: "video", videoId: "t9gmyvf7JYo",
       videoDurationMinutes: 10, label: "L'IA pour la recherche académique" },
-        { type: "prompt-example", prompt: "Synthetise les 5 principales conclusions de la litterature sur l'impact de l'IA sur les résultats scolaires des élèves du secondaire, avec les références les plus citées.", result: "Synthese — Impact de l'IA sur les Résultats Scolaires (Secondaire)\n\n1. Les tuteurs IA ameliorent les résultats de 20-30% en mathématiques (Chen et al., 2024; Li & Wang, 2025)\n2. L'apprentissage adaptatif réduit les ecarts entre élèves forts et faibles (UNESCO, 2025)\n3. Le feedback IA immédiat augmente la motivation et l'engagement (Ryan & Deci, 2024)\n4. Les effets sont plus marques chez les élèves en difficulté (OECD, 2025)\n5. Les risques de dépendance et de réduction de l'effort cognitif persistent (Selwyn, 2025)\n\nNote : toujours vérifier les références car l'IA peut générer des citations fictives." },
+        { type: "prompt-example", prompt: "Synthetise les 5 principales conclusions de la litterature sur l'impact de l'IA sur les résultats scolaires des élèves du secondaire, avec les références les plus citées.", result: "Synthèse — Impact de l'IA sur les Résultats Scolaires (Secondaire)\n\n1. Les tuteurs IA ameliorent les résultats de 20-30% en mathématiques (Chen et al., 2024; Li & Wang, 2025)\n2. L'apprentissage adaptatif réduit les ecarts entre élèves forts et faibles (UNESCO, 2025)\n3. Le feedback IA immédiat augmente la motivation et l'engagement (Ryan & Deci, 2024)\n4. Les effets sont plus marques chez les élèves en difficulté (OECD, 2025)\n5. Les risques de dépendance et de réduction de l'effort cognitif persistent (Selwyn, 2025)\n\nNote : toujours vérifier les références car l'IA peut générer des citations fictives." },
         { type: "diagram", label: "Le Workflow de Recherche Augmente", flow: "horizontal", nodes: [
           { label: "Découverte", sub: "Semantic Scholar, Elicit", color: "purple" },
-          { label: "Analyse", sub: "Synthese IA des findings", color: "blue" },
+          { label: "Analyse", sub: "Synthèse IA des findings", color: "blue" },
           { label: "Rédaction", sub: "LLM + Writefull", color: "emerald" },
           { label: "Vérification", sub: "Relecture humaine + sources", color: "amber" },
         ]},
@@ -390,7 +390,7 @@ const content: CourseContent = {
           question: "Quel outil IA est spécialisé dans la découverte d'articles scientifiques ?",
           options: ["ChatGPT", "Semantic Scholar", "Canva", "Grammarly"],
           correctIndex: 1,
-          explanation: "Semantic Scholar utilise l'IA pour trouver des articles scientifiques pertinents, extraire les findings et synthetiser les résultats."
+          explanation: "Semantic Scholar utilise l'IA pour trouver des articles scientifiques pertinents, extraire les findings et synthétiser les résultats."
         },
         {
           question: "Pourquoi faut-il vérifier les références générées par l'IA ?",
@@ -473,7 +473,7 @@ const content: CourseContent = {
     {
       number: 9,
       title: "Gamification et IA",
-      description: "Rendre l'apprentissage ludique avec la gamification augmentee par l'IA.",
+      description: "Rendre l'apprentissage ludique avec la gamification augmentée par l'IA.",
       estimatedMinutes: 7,
       sections: [
         { type: "heading", content: "La Gamification Augmentee par l'IA" },
@@ -495,7 +495,7 @@ const content: CourseContent = {
         ]},
         { type: "summary", items: [
           "La gamification appliqué les mécaniques du jeu à l'apprentissage",
-          "L'IA personnalisé difficulté, quetes et scénarios pour chaque élève",
+          "L'IA personnalise difficulté, quetes et scénarios pour chaque élève",
           "Zone de flow : ni trop facile, ni trop difficile — engagement optimal",
           "Outils : Kahoot, Quizizz, Classcraft, Duolingo",
           "Le jeu doit servir la pédagogie, pas l'inverse"
@@ -510,7 +510,7 @@ const content: CourseContent = {
         },
         {
           question: "Comment l'IA améliore-t-elle la gamification ?",
-          options: ["Elle crée des jeux video", "Elle personnalisé la difficulté et les quetes pour chaque élève", "Elle remplace les enseignants", "Elle supprime les examens"],
+          options: ["Elle crée des jeux video", "Elle personnalise la difficulté et les quetes pour chaque élève", "Elle remplace les enseignants", "Elle supprime les examens"],
           correctIndex: 1,
           explanation: "L'IA ajuste la difficulté en temps réel, génère des quetes personnalisées basées sur les lacunes, et créé des scénarios narratifs uniques."
         },
@@ -535,11 +535,11 @@ const content: CourseContent = {
       estimatedMinutes: 7,
       sections: [
         { type: "heading", content: "L'IA au Service de l'Inclusion" },
-        { type: "paragraph", content: "L'IA est peut-être l'outil le plus puissant que nous ayons jamais eu pour l'inclusion éducative. Transcription en temps réel pour les sourds, synthese vocale pour les malvoyants, simplification de texte pour la dyslexie, traduction instantanée pour les allophones — les barrieres tombent." },
+        { type: "paragraph", content: "L'IA est peut-être l'outil le plus puissant que nous ayons jamais eu pour l'inclusion éducative. Transcription en temps réel pour les sourds, synthèse vocale pour les malvoyants, simplification de texte pour la dyslexie, traduction instantanée pour les allophones — les barrieres tombent." },
         { type: "subheading", content: "Handicap Auditif" },
         { type: "paragraph", content: "La transcription en temps réel (Whisper, Otter.ai) permet aux élèves sourds de suivre un cours oral. Les sous-titres IA sur les vidéos éducatives sont désormais quasi parfaits. La langue des signes peut être traduite par vision par ordinateur." },
         { type: "subheading", content: "Handicap Visuel" },
-        { type: "paragraph", content: "La synthese vocale IA lit les documents avec une voix naturelle. La description d'images par IA (alt text automatique) rend le contenu visuel accessible. Les LLM peuvent reformater tout document en version accessible." },
+        { type: "paragraph", content: "La synthèse vocale IA lit les documents avec une voix naturelle. La description d'images par IA (alt text automatique) rend le contenu visuel accessible. Les LLM peuvent reformater tout document en version accessible." },
         { type: "subheading", content: "Troubles de l'Apprentissage" },
         { type: "paragraph", content: "Pour la dyslexie : police adaptee, espacement augmente, texte simplifie par l'IA. Pour le TDAH : micro-learning, rappels, structuration. Pour les DYS : outils de dictee, reformulation, et exercices adaptes générés par l'IA." },
         { type: "subheading", content: "Barriere Linguistique" },
@@ -549,14 +549,14 @@ const content: CourseContent = {
         { type: "key-point", content: "L'accessibilité n'est pas un \"bonus\" — c'est un droit. L'IA rend enfin l'éducation réellement accessible à tous, eliminant des barrieres qui existaient depuis des siecles." },
         { type: "diagram", label: "L'IA pour l'Accessibilité", flow: "horizontal", nodes: [
           { label: "Auditif", sub: "Transcription, sous-titres, LSF", color: "purple" },
-          { label: "Visuel", sub: "Synthese vocale, alt text IA", color: "blue" },
+          { label: "Visuel", sub: "Synthèse vocale, alt text IA", color: "blue" },
           { label: "DYS / TDAH", sub: "Police adaptee, micro-learning", color: "emerald" },
           { label: "Langue", sub: "Traduction instantanée", color: "amber" },
         ]},
         { type: "summary", items: [
           "L'IA élimine des barrieres éducatives qui existaient depuis des siecles",
           "Transcription et sous-titres en temps réel pour les sourds",
-          "Synthese vocale et description d'images pour les malvoyants",
+          "Synthèse vocale et description d'images pour les malvoyants",
           "Texte simplifie et micro-learning pour les troubles DYS et TDAH",
           "Traduction instantanée pour les élèves allophones"
         ]},
@@ -564,7 +564,7 @@ const content: CourseContent = {
       quiz: [
         {
           question: "Quelle technologie IA aide les élèves sourds à suivre un cours oral ?",
-          options: ["La génération d'images", "La transcription en temps réel", "La traduction automatique", "La synthese vocale"],
+          options: ["La génération d'images", "La transcription en temps réel", "La traduction automatique", "La synthèse vocale"],
           correctIndex: 1,
           explanation: "La transcription en temps réel (Whisper, Otter.ai) convertit la parole en texte instantanément, permettant aux élèves sourds de suivre un cours oral."
         },
@@ -631,7 +631,7 @@ const content: CourseContent = {
           question: "Quel est le risque principal des detecteurs d'IA ?",
           options: ["Ils sont trop lents", "Les faux positifs (accuser a tort un étudiant)", "Ils sont trop chers", "Ils ne fonctionnent qu'en anglais"],
           correctIndex: 1,
-          explanation: "Les faux positifs — marquer un texte humain comme génère par l'IA — sont un risque réel et grave qui peut nuire a un étudiant innocent."
+          explanation: "Les faux positifs — marquer un texte humain comme généré par l'IA — sont un risque réel et grave qui peut nuire a un étudiant innocent."
         },
         {
           question: "Quelle est la meilleure stratégie face à l'usage de l'IA par les étudiants ?",
@@ -654,11 +654,11 @@ const content: CourseContent = {
       estimatedMinutes: 8,
       sections: [
         { type: "heading", content: "Vers l'École de 2030" },
-        { type: "paragraph", content: "L'école du futur ne ressemblera plus a celle d'aujourd'hui. L'IA, la réalité augmentee, les espaces d'apprentissage flexibles, et les parcours personnalisés transformeront radicalement l'expérience éducative. Mais certaines choses ne changeront pas : le besoin de connexion humaine, de socialisation, et de guidance." },
+        { type: "paragraph", content: "L'école du futur ne ressemblera plus a celle d'aujourd'hui. L'IA, la réalité augmentée, les espaces d'apprentissage flexibles, et les parcours personnalisés transformeront radicalement l'expérience éducative. Mais certaines choses ne changeront pas : le besoin de connexion humaine, de socialisation, et de guidance." },
         { type: "subheading", content: "Tendance 1 : L'Hyper-Personnalisation" },
         { type: "paragraph", content: "Chaque élève aura un parcours unique, adapte en temps réel par l'IA. Les cours magistraux cederont la place a des sessions de projet, de débat, et de collaboration. L'enseignant deviendra un coach et un facilitateur plutôt qu'un transmetteur de connaissances." },
         { type: "subheading", content: "Tendance 2 : L'Apprentissage Immersif" },
-        { type: "paragraph", content: "La réalité virtuelle et augmentee permettront de visiter la Rome antique en histoire, de manipuler des molecules en chimie, et de dissequer une grenouille virtuelle en biologie. L'apprentissage experiential deviendra la norme, pas l'exception." },
+        { type: "paragraph", content: "La réalité virtuelle et augmentée permettront de visiter la Rome antique en histoire, de manipuler des molecules en chimie, et de dissequer une grenouille virtuelle en biologie. L'apprentissage experiential deviendra la norme, pas l'exception." },
         { type: "subheading", content: "Tendance 3 : Les Compétences du 21e Siecle" },
         { type: "paragraph", content: "Pensee critique, créativité, collaboration, communication, litteratie numérique, et intelligence émotionnelle remplaceront la memorisation. Savoir utiliser l'IA sera aussi fondamental que savoir lire et écrire." },
         { type: "subheading", content: "Tendance 4 : L'Apprentissage Continu" },

@@ -11,7 +11,7 @@ const content: CourseContent = {
       sections: [
         { type: "heading", content: "L'IA : Votre Avantage Competitif en Freelance" },
         { type: "paragraph", content: "En 2026, les freelances qui maitrisent l'IA gagnent en moyenne 40% de plus que ceux qui ne l'utilisent pas. Pas parce qu'ils travaillent plus — parce qu'ils livrent plus vite, prospectent mieux, et offrent des services a plus haute valeur ajoutée." },
-        { type: "paragraph", content: "L'IA ne menace pas les freelances — elle les libere. Elle automatisé les tâches répétitives (admin, facturation, prospection) pour que vous puissiez vous concentrer sur ce qui vous rend unique : votre expertise, votre créativité, et votre relation client." },
+        { type: "paragraph", content: "L'IA ne menace pas les freelances — elle les libere. Elle automatise les tâches répétitives (admin, facturation, prospection) pour que vous puissiez vous concentrer sur ce qui vous rend unique : votre expertise, votre créativité, et votre relation client." },
         { type: "callout", content: "73% des freelances utilisant l'IA quotidiennement rapportent avoir augmente leur chiffre d'affaires en moins de 6 mois (étude Malt x BCG, 2025)." },
         { type: "video", videoId: "p88IjbfMAJY",
       videoDurationMinutes: 6, label: "L'IA pour les freelances : pourquoi maintenant" },
@@ -28,7 +28,7 @@ const content: CourseContent = {
         ]},
         { type: "summary", items: [
           "Les freelances avec l'IA gagnent 40% de plus en moyenne",
-          "L'IA automatisé l'admin pour se concentrer sur l'expertise",
+          "L'IA automatise l'admin pour se concentrer sur l'expertise",
           "5 piliers : prospection, proposals, livrables, admin, branding",
           "Aucune compétence technique requise",
           "L'IA est un multiplicateur de force, pas un remplacement",
@@ -43,9 +43,9 @@ const content: CourseContent = {
         },
         {
           question: "Comment l'IA impacte-t-elle l'activité freelance ?",
-          options: ["Elle remplace les freelances", "Elle automatisé les tâches répétitives pour se concentrer sur l'expertise", "Elle réduit la qualité des livrables", "Elle augmente le temps de travail"],
+          options: ["Elle remplace les freelances", "Elle automatise les tâches répétitives pour se concentrer sur l'expertise", "Elle réduit la qualité des livrables", "Elle augmente le temps de travail"],
           correctIndex: 1,
-          explanation: "L'IA automatisé les tâches répétitives (admin, prospection, facturation) permettant aux freelances de se concentrer sur leur expertise et leur créativité.",
+          explanation: "L'IA automatise les tâches répétitives (admin, prospection, facturation) permettant aux freelances de se concentrer sur leur expertise et leur créativité.",
         },
         {
           question: "Faut-il des compétences techniques pour utiliser l'IA en freelance ?",
@@ -68,7 +68,7 @@ const content: CourseContent = {
       estimatedMinutes: 8,
       sections: [
         { type: "heading", content: "La Prospection Augmentee par l'IA" },
-        { type: "paragraph", content: "La prospection est la bete noire de nombreux freelances. L'IA transformé cette corvee en processus semi-automatisé : identification de prospects qualifies, personnalisation des messages, suivi automatique, et analyse des meilleurs canaux d'acquisition." },
+        { type: "paragraph", content: "La prospection est la bete noire de nombreux freelances. L'IA transforme cette corvee en processus semi-automatisé : identification de prospects qualifies, personnalisation des messages, suivi automatique, et analyse des meilleurs canaux d'acquisition." },
         { type: "paragraph", content: "En 2026, les outils d'IA peuvent scanner LinkedIn, les plateformes freelance, et les annonces d'emploi pour identifier les prospects qui correspondent exactement à votre profil. Ils generent ensuite des messages personnalisés qui convertissent 3x mieux que les templates génériques." },
         { type: "subheading", content: "Identifier les Bons Prospects" },
         { type: "paragraph", content: "Utilisez Claude ou ChatGPT pour définir votre ICP (Idéal Customer Profile). Decrivez votre offre et l'IA vous aide à identifier les critères clés : taille d'entreprise, secteur, budget, problematiques, signaux d'achat." },
@@ -76,7 +76,7 @@ const content: CourseContent = {
         { type: "paragraph", content: "L'IA génère des messages de prospection personnalisés pour chaque prospect. Elle analyse le profil LinkedIn, le site web de l'entreprise, et les actualités récentes pour créer un message qui resonne avec les problematiques spécifiques du prospect." },
         { type: "prompt-example", prompt: "Je suis désigner UX freelance. Voici le profil LinkedIn de mon prospect [lien]. Genere un message de prospection personnalisé qui mentionne un problème UX visible sur leur site et propose une solution concrète.", result: "L'IA génère un message de 4 lignes qui mentionne un problème de conversion identifié sur le site, cité un chiffre de leur secteur, et propose un audit gratuit de 15 minutes." },
         { type: "heading", content: "Automatiser le Suivi" },
-        { type: "paragraph", content: "Utilisez des outils comme Make ou Zapier + IA pour automatiser les suivis : relance a J+3 si pas de réponse, message de valeur a J+7, dernière relance a J+14. L'IA personnalisé chaque relance en fonction du contexte." },
+        { type: "paragraph", content: "Utilisez des outils comme Make ou Zapier + IA pour automatiser les suivis : relance a J+3 si pas de réponse, message de valeur a J+7, dernière relance a J+14. L'IA personnalise chaque relance en fonction du contexte." },
         { type: "callout", content: "Attention : la prospection automatisée doit rester humaine et authentique. L'objectif n'est pas d'envoyer 1000 messages génériques, mais 50 messages parfaitement personnalisés par semaine." },
         { type: "video", videoId: "oeli5xkFZJo",
       videoDurationMinutes: 14, label: "Prospection freelance avec l'IA" },
@@ -87,7 +87,7 @@ const content: CourseContent = {
           { label: "Suivi automatisé", sub: "Relances intelligentes J+3, J+7, J+14", color: "amber" },
         ]},
         { type: "summary", items: [
-          "L'IA transformé la prospection en processus semi-automatisé",
+          "L'IA transforme la prospection en processus semi-automatisé",
           "Messages personnalisés qui convertissent 3x mieux",
           "Definissez votre ICP (Idéal Customer Profile) avec l'IA",
           "Automatisez les relances avec Make/Zapier + IA",
@@ -123,12 +123,12 @@ const content: CourseContent = {
     },
     {
       number: 3,
-      title: "Propositions Commerciales Generees par l'IA",
+      title: "Propositions Commerciales Générées par l'IA",
       description: "Créer des propositions commerciales convaincantes en quelques minutes.",
       estimatedMinutes: 8,
       sections: [
         { type: "heading", content: "Des Proposals qui Convertissent" },
-        { type: "paragraph", content: "La proposition commerciale est le document le plus important de votre activité freelance. C'est elle qui transformé un prospect en client. L'IA vous permet de générer des proposals personnalisées et professionnelles en 15 minutes au lieu de 3 heures." },
+        { type: "paragraph", content: "La proposition commerciale est le document le plus important de votre activité freelance. C'est elle qui transforme un prospect en client. L'IA vous permet de générer des proposals personnalisées et professionnelles en 15 minutes au lieu de 3 heures." },
         { type: "paragraph", content: "Le secret n'est pas de laisser l'IA tout écrire — c'est de l'utiliser pour structurer, personnaliser et peaufiner rapidement. Votre expertise et votre compréhension du besoin client restent le coeur de la proposition." },
         { type: "heading", content: "Structure d'une Proposal Gagnante" },
         { type: "paragraph", content: "Contexte et compréhension du besoin (montrez que vous avez compris), solution proposée (livrables concrets), méthodologie et planning, investissement (prix), à propos de vous (credibilite), et prochaines étapes (call to action)." },
@@ -205,7 +205,7 @@ const content: CourseContent = {
           { label: "Communiquer", sub: "Reports auto pour le client", color: "purple" },
         ]},
         { type: "summary", items: [
-          "L'IA transformé un brief vague en plan de projet structure",
+          "L'IA transforme un brief vague en plan de projet structure",
           "Estimations en fourchettes : optimiste, probable, pessimiste",
           "Reports client hebdomadaires générés en 30 secondes",
           "Buffer de 15-20% toujours nécessaire sur les estimations IA",
@@ -321,7 +321,7 @@ const content: CourseContent = {
         { type: "video", videoId: "nkuPUJVzB_E",
       videoDurationMinutes: 12, label: "Automatiser l'admin freelance" },
         { type: "diagram", label: "Pipeline d'Administration Automatisee", flow: "vertical", nodes: [
-          { label: "Devis génère par l'IA", sub: "À partir du brief client", color: "blue" },
+          { label: "Devis généré par l'IA", sub: "À partir du brief client", color: "blue" },
           { label: "Facture automatique", sub: "Declenchee par les milestones", color: "purple" },
           { label: "Relances intelligentes", sub: "J+7, J+15, J+30 adaptes au ton", color: "amber" },
           { label: "Comptabilite simplifiee", sub: "Classification automatique des dépenses", color: "emerald" },
@@ -444,7 +444,7 @@ const content: CourseContent = {
       videoDurationMinutes: 14, label: "Pricing freelance à l'ère de l'IA" },
         { type: "diagram", label: "Du Taux Horaire a la Valeur", flow: "horizontal", nodes: [
           { label: "Taux horaire", sub: "Penalise la productivité IA", color: "pink" },
-          { label: "Forfait projet", sub: "Bon — marge augmentee", color: "blue" },
+          { label: "Forfait projet", sub: "Bon — marge augmentée", color: "blue" },
           { label: "Tarification valeur", sub: "Idéal — prix = impact business", color: "emerald" },
         ]},
         { type: "summary", items: [
@@ -566,7 +566,7 @@ const content: CourseContent = {
         { type: "diagram", label: "Les 4 Leviers de Scaling", flow: "vertical", nodes: [
           { label: "Productisation", sub: "Offres packagées et standardisees", color: "blue" },
           { label: "Revenus passifs", sub: "Templates, formations, produits digitaux", color: "purple" },
-          { label: "Délégation augmentee", sub: "SOPs + IA + sous-traitants", color: "emerald" },
+          { label: "Délégation augmentée", sub: "SOPs + IA + sous-traitants", color: "emerald" },
           { label: "Positionnement premium", sub: "Consulting high-level, thought leadership", color: "amber" },
         ]},
         { type: "diagram", label: "Évolution du Freelance avec l'IA", flow: "horizontal", nodes: [

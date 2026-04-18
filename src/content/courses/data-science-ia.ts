@@ -5,7 +5,7 @@ const content: CourseContent = {
   chapters: [
     {
       number: 1,
-      title: "Introduction a la Data Science avec l'IA",
+      title: "Introduction à la Data Science avec l'IA",
       description: "Découvrir le monde de la data science et comment l'IA révolutionne ce domaine.",
       estimatedMinutes: 7,
       sections: [
@@ -14,7 +14,7 @@ const content: CourseContent = {
         { type: "paragraph", content: "Un data scientist moderne ne travaille plus seul : il est assisté par des outils IA qui automatisent le nettoyage de données, suggerent des modèles, et generent des visualisations en quelques secondes. Le métier évolue du codage manuel vers l'orchestration intelligente." },
         { type: "callout", content: "Selon LinkedIn, la data science reste le métier le plus demande en tech en 2026, avec une augmentation de 35% des offres par rapport à 2024. L'IA n'a pas remplace les data scientists — elle les a rendus 10x plus productifs." },
         { type: "video", videoId: "ua-CiDNNj30",
-      videoDurationMinutes: 352, label: "Introduction a la Data Science avec l'IA" },
+      videoDurationMinutes: 352, label: "Introduction à la Data Science avec l'IA" },
         { type: "heading", content: "Le Pipeline Data Science" },
         { type: "paragraph", content: "Tout projet de data science suit un pipeline : collecte des données, nettoyage et préparation, exploration et visualisation, modélisation, évaluation, et déploiement. L'IA intervient désormais à chaque étape pour accélérer le travail." },
         { type: "subheading", content: "Data Science vs Machine Learning vs IA" },
@@ -247,7 +247,7 @@ const content: CourseContent = {
       estimatedMinutes: 9,
       sections: [
         { type: "heading", content: "Les Fondements du Machine Learning" },
-        { type: "paragraph", content: "Le machine learning permet aux ordinateurs d'apprendre des patterns à partir de données sans être explicitement programmés. En data science, c'est l'outil qui transformé les données en prédictions, classifications et recommandations." },
+        { type: "paragraph", content: "Le machine learning permet aux ordinateurs d'apprendre des patterns à partir de données sans être explicitement programmés. En data science, c'est l'outil qui transforme les données en prédictions, classifications et recommandations." },
         { type: "subheading", content: "Apprentissage Supervisé" },
         { type: "paragraph", content: "Le modèle apprend à partir d'exemples étiquetés. Donnez-lui des milliers d'emails classes comme spam ou non-spam, et il apprendra à distinguer les deux. Les algorithmes clés : régression lineaire, arbres de décision, Random Forest, SVM, et réseaux de neurones." },
         { type: "subheading", content: "Apprentissage Non Supervisé" },
@@ -641,7 +641,7 @@ const content: CourseContent = {
         },
         {
           question: "Que fait la méthode one-hot encoding ?",
-          options: ["Elle normalisé les données", "Elle transformé une variable categorielle en colonnes binaires", "Elle supprime les outliers", "Elle calcule la moyenne"],
+          options: ["Elle normalisé les données", "Elle transforme une variable categorielle en colonnes binaires", "Elle supprime les outliers", "Elle calcule la moyenne"],
           correctIndex: 1,
           explanation: "Le one-hot encoding transformé chaque valeur d'une variable categorielle en une colonne binaire (0 ou 1), permettant aux algorithmes ML de traiter des catégories."
         },
@@ -719,7 +719,7 @@ const content: CourseContent = {
       estimatedMinutes: 8,
       sections: [
         { type: "heading", content: "MLOps : Le DevOps du Machine Learning" },
-        { type: "paragraph", content: "Le MLOps est l'ensemble des pratiques qui gèrent le cycle de vie complet des modèles ML en production : versioning, entraînement automatisé, déploiement, monitoring, et retraining. C'est ce qui transformé un modèle one-shot en un système fiable et evolutif." },
+        { type: "paragraph", content: "Le MLOps est l'ensemble des pratiques qui gèrent le cycle de vie complet des modèles ML en production : versioning, entraînement automatisé, déploiement, monitoring, et retraining. C'est ce qui transforme un modèle one-shot en un système fiable et evolutif." },
         { type: "subheading", content: "Versioning des Données et Modèles" },
         { type: "paragraph", content: "Git pour le code, DVC (Data Version Control) pour les données, MLflow pour les modèles et les expériences. Le versioning permet de reproduire n'importé quelle expérience et de revenir a une version antérieure en cas de régression." },
         { type: "subheading", content: "Monitoring en Production" },

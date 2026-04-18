@@ -6,7 +6,7 @@ const content: CourseContent = {
     {
       number: 1,
       title: "Introduction à l'Automatisation IA",
-      description: "Comprendre ce qu'est l'automatisation IA et pourquoi elle transformé le travail en 2026.",
+      description: "Comprendre ce qu'est l'automatisation IA et pourquoi elle transforme le travail en 2026.",
       estimatedMinutes: 7,
       sections: [
         { type: "heading", content: "Qu'est-ce que l'Automatisation IA ?" },
@@ -396,7 +396,7 @@ const content: CourseContent = {
           { label: "Action", sub: "Execute avec un outil", color: "blue" },
           { label: "Observation", sub: "Evalue le résultat", color: "emerald" },
         ]},
-        { type: "tip", content: "Commencez par un agent simple avec 2-3 outils. Un agent trop complexe au depart sera difficile a debugger. Ajoutez des outils et des capacités progressivement." },
+        { type: "tip", content: "Commencez par un agent simple avec 2-3 outils. Un agent trop complexe au depart sera difficile à debugger. Ajoutez des outils et des capacités progressivement." },
         { type: "summary", items: [
           "Les agents IA planifient et s'adaptent, contrairement aux workflows fixes",
           "Architecture ReAct : réflexion → action → observation en boucle",
@@ -504,7 +504,7 @@ const content: CourseContent = {
         { type: "subheading", content: "1. Veille et Ideation" },
         { type: "paragraph", content: "L'IA surveille vos concurrents, les tendances de votre secteur, et les questions de votre audience. Elle génère des idées d'articles, de posts sociaux et de vidéos basées sur les données réelles." },
         { type: "subheading", content: "2. Rédaction et Optimisation" },
-        { type: "paragraph", content: "Claude ou GPT-5.4 redigent les premiers jets. L'IA optimisé ensuite pour le SEO (mots-clés, structure, meta-descriptions). Un editeur humain revoit et validé le contenu final." },
+        { type: "paragraph", content: "Claude ou GPT-5.4 redigent les premiers jets. L'IA optimise ensuite pour le SEO (mots-clés, structure, meta-descriptions). Un editeur humain revoit et validé le contenu final." },
         { type: "subheading", content: "3. Publication Multi-Plateforme" },
         { type: "paragraph", content: "Le contenu est automatiquement adapté à chaque plateforme (LinkedIn, Twitter/X, blog, newsletter) et publié selon un calendrier editorial predefini. Chaque format est optimisé pour la plateforme ciblé." },
         { type: "video", videoId: "JtdUgJGI_Oo",
@@ -520,7 +520,7 @@ const content: CourseContent = {
         { type: "summary", items: [
           "Le pipeline IA produit 10-20x plus de contenu qu'un processus manuel",
           "4 étapes : veille, rédaction, validation humaine, publication",
-          "L'IA optimisé automatiquement pour le SEO",
+          "L'IA optimise automatiquement pour le SEO",
           "Adaptation automatique du contenu à chaque plateforme",
           "La supervision humaine reste indispensable pour la qualité",
         ]},
@@ -567,18 +567,18 @@ const content: CourseContent = {
       videoDurationMinutes: 19, label: "Construire un système de veille IA" },
         { type: "subheading", content: "Filtrage Intelligent" },
         { type: "paragraph", content: "L'IA ne se contente pas de mots-clés : elle comprend le contexte. Elle peut filtrer par pertinence, détecter les sujets émergents, et identifier les signaux faibles qui pourraient devenir des tendances majeures." },
-        { type: "subheading", content: "Résumé et Synthese" },
+        { type: "subheading", content: "Résumé et Synthèse" },
         { type: "paragraph", content: "Claude ou GPT-5.4 resumient chaque article en 2-3 phrases, extraient les points clés, et evaluent l'impact potentiel pour votre activité. Vous obtenez l'essentiel en 5 minutes au lieu de 2 heures de lecture." },
         { type: "callout", content: "Perplexity AI est un excellent point de depart pour la veille automatisée. Il combiné recherche web et résumé IA pour fournir des réponses sourcees et actualisées." },
         { type: "diagram", label: "Pipeline de Veille Automatisee", flow: "horizontal", nodes: [
           { label: "Collecte", sub: "RSS, Twitter, newsletters", color: "blue" },
           { label: "Filtrage IA", sub: "Pertinence et contexte", color: "purple" },
-          { label: "Résumé IA", sub: "Synthese et points clés", color: "emerald" },
+          { label: "Résumé IA", sub: "Synthèse et points clés", color: "emerald" },
           { label: "Livraison", sub: "Slack, Telegram, email", color: "amber" },
         ]},
         { type: "prompt-example", prompt: "Cree un système de veille IA qui surveille 10 sources sur l'intelligence artificielle, filtre par pertinence, et m'envoie un résumé quotidien sur Telegram a 8h.", result: "Un workflow n8n : CRON 8h → HTTP (10 flux RSS) → Claude API (filtrage + résumé) → Telegram Bot (message formate avec les 5 infos les plus pertinentes du jour)." },
         { type: "summary", items: [
-          "La veille IA automatisé 90% du processus de surveillance informationnelle",
+          "La veille IA automatise 90% du processus de surveillance informationnelle",
           "Sources : RSS, Twitter, newsletters, podcasts, publications académiques",
           "L'IA filtre par contexte, pas seulement par mots-clés",
           "Résumé automatique : l'essentiel en 5 minutes au lieu de 2 heures",
@@ -662,7 +662,7 @@ const content: CourseContent = {
           question: "Pourquoi la validation humaine reste-t-elle nécessaire ?",
           options: ["L'IA est trop lente", "Pour la conformite légale", "L'IA est trop chère", "Ce n'est pas nécessaire"],
           correctIndex: 1,
-          explanation: "La validation humaine par un comptable est obligatoire pour la conformite légale. L'IA automatisé la saisie, mais la responsabilité légale reste humaine.",
+          explanation: "La validation humaine par un comptable est obligatoire pour la conformite légale. L'IA automatise la saisie, mais la responsabilité légale reste humaine.",
         },
         {
           question: "Par quelles factures est-il recommandé de commencer l'automatisation ?",

@@ -6,22 +6,22 @@ const content: CourseContent = {
     {
       number: 1,
       title: "Bienvenue dans l'Ère de l'IA",
-      description: "Comprendre pourquoi l'IA changé notre quotidien et comment en tirer parti des aujourd'hui.",
+      description: "Comprendre pourquoi l'IA change notre quotidien et comment en tirer parti des aujourd'hui.",
       estimatedMinutes: 6,
       sections: [
         { type: "heading", content: "Bienvenue dans l'Ère de l'IA" },
-        { type: "paragraph", content: "En 2026, l'intelligence artificielle n'est plus reservee aux experts ou aux grandes entreprises. Elle est dans votre poche, sur votre ordinateur, dans vos applications préférées. Chaque jour, des millions de personnes utilisent l'IA pour gagner du temps, mieux communiquer et être plus productifs." },
-        { type: "paragraph", content: "Ce cours va vous montrer comment utiliser concrètement l'IA dans votre vie de tous les jours. Pas de théorie abstraite — des cas pratiques, des outils réels et des méthodes eprouvees pour devenir efficace avec l'IA." },
+        { type: "paragraph", content: "En 2026, l'intelligence artificielle n'est plus réservée aux experts ou aux grandes entreprises. Elle est dans votre poche, sur votre ordinateur, dans vos applications préférées. Chaque jour, des millions de personnes utilisent l'IA pour gagner du temps, mieux communiquer et être plus productifs." },
+        { type: "paragraph", content: "Ce cours va vous montrer comment utiliser concrètement l'IA dans votre vie de tous les jours. Pas de théorie abstraite — des cas pratiques, des outils réels et des méthodes éprouvées pour devenir efficace avec l'IA." },
         { type: "callout", content: "Selon une étude McKinsey de 2025, les professionnels qui utilisent l'IA au quotidien gagnent en moyenne 3 heures par semaine — soit plus de 150 heures par an." },
         { type: "video", videoId: "oeli5xkFZJo",
       videoDurationMinutes: 14, label: "L'IA au quotidien : introduction" },
         { type: "heading", content: "Pourquoi l'IA Change Tout" },
-        { type: "paragraph", content: "L'IA générative a démocratise l'accès a des capacités qui étaient auparavant reservees a des spécialistes : rédiger un texte professionnel, analyser un document, traduire instantanément, créer des visuels, organiser des informations complexes. Aujourd'hui, un outil comme ChatGPT ou Claude peut vous aider dans presque toutes ces tâches." },
+        { type: "paragraph", content: "L'IA générative a démocratise l'accès a des capacités qui étaient auparavant réservées a des spécialistes : rédiger un texte professionnel, analyser un document, traduire instantanément, créer des visuels, organiser des informations complexes. Aujourd'hui, un outil comme ChatGPT ou Claude peut vous aider dans presque toutes ces tâches." },
         { type: "paragraph", content: "La clé n'est pas de tout automatiser, mais de savoir quand et comment utiliser l'IA pour amplifier vos compétences existantes. L'IA est un multiplicateur de force — elle rend les bons encore meilleurs." },
         { type: "key-point", content: "L'IA ne remplace pas votre expertise — elle l'amplifie. Votre valeur ajoutée reste dans votre jugement, votre créativité et votre connaissance du contexte." },
         { type: "diagram", label: "Les 3 Piliers de l'IA au Quotidien", flow: "horizontal", nodes: [
           { label: "Productivité", sub: "Gagner du temps sur les tâches répétitives", color: "amber" },
-          { label: "Communication", sub: "Mieux rédiger, traduire, synthetiser", color: "blue" },
+          { label: "Communication", sub: "Mieux rédiger, traduire, synthétiser", color: "blue" },
           { label: "Créativité", sub: "Générer des idées et du contenu", color: "emerald" },
         ]},
         { type: "tip", content: "Vous n'avez besoin d'aucune compétence technique. Si vous savez écrire un message, vous savez utiliser l'IA." },
@@ -75,7 +75,7 @@ const content: CourseContent = {
         { type: "heading", content: "Adapter le Ton et le Style" },
         { type: "paragraph", content: "L'IA peut adapter le même message a différents contextes. Un email de relance peut être formule de manière douce, ferme ou urgente selon la situation. Vous pouvez aussi demander à l'IA de reformuler un message que vous trouvez trop agressif ou trop passif." },
         { type: "tip", content: "Astuce : copiez-collez un email que vous avez reçu et demandez à l'IA de vous aider a y répondre. C'est souvent plus rapide que de partir de zéro." },
-        { type: "key-point", content: "Relisez toujours le texte génère par l'IA avant de l'envoyer. Verifiez les faits, les noms, les dates et ajustez le ton à votre style personnel." },
+        { type: "key-point", content: "Relisez toujours le texte généré par l'IA avant de l'envoyer. Verifiez les faits, les noms, les dates et ajustez le ton à votre style personnel." },
         { type: "diagram", label: "Workflow de Rédaction avec l'IA", flow: "horizontal", nodes: [
           { label: "Briefer l'IA", sub: "Contexte, ton, éléments clés", color: "blue" },
           { label: "Générer le brouillon", sub: "L'IA produit une première version", color: "purple" },
@@ -125,12 +125,12 @@ const content: CourseContent = {
       sections: [
         { type: "heading", content: "La Recherche Reinventee par l'IA" },
         { type: "paragraph", content: "Google vous donne des liens. L'IA vous donne des réponses. C'est la différence fondamentale. Au lieu de parcourir 10 pages de résultats pour trouver l'information, vous posez une question et obtenez une réponse synthetisee, contextualisee et sourcee." },
-        { type: "paragraph", content: "Des outils comme Perplexity AI, ChatGPT avec navigation web et Claude combinent la puissance des LLM avec l'accès en temps réel a Internet. Ils analysent des dizaines de sources et vous fournissent une synthese structuree." },
+        { type: "paragraph", content: "Des outils comme Perplexity AI, ChatGPT avec navigation web et Claude combinent la puissance des LLM avec l'accès en temps réel a Internet. Ils analysent des dizaines de sources et vous fournissent une synthèse structuree." },
         { type: "heading", content: "Les Outils de Recherche IA" },
         { type: "subheading", content: "Perplexity AI" },
         { type: "paragraph", content: "Perplexity est le moteur de recherche IA par excellence. Il cité ses sources, fournit des réponses détaillées et permet de poser des questions de suivi. Idéal pour la recherche factuelle, la veille et l'exploration de sujets complexes." },
         { type: "subheading", content: "ChatGPT et Claude avec Navigation Web" },
-        { type: "paragraph", content: "ChatGPT et Claude peuvent naviguer sur le web en temps réel. Ils sont particulièrement utiles quand vous avez besoin d'une analyse plus approfondie ou d'une synthese de plusieurs sources contradictoires." },
+        { type: "paragraph", content: "ChatGPT et Claude peuvent naviguer sur le web en temps réel. Ils sont particulièrement utiles quand vous avez besoin d'une analyse plus approfondie ou d'une synthèse de plusieurs sources contradictoires." },
         { type: "prompt-example", content: "Je cherche les meilleures pratiques pour le teletravail en 2026. Compare les recommandations de 3 sources différentes (études, articles d'experts, retours d'entreprises). Presente les points communs et les divergences dans un tableau." },
         { type: "key-point", content: "Verifiez toujours les informations critiques. L'IA peut halluciner des faits ou des sources. Croisez les informations pour les décisions importantes." },
         { type: "diagram", label: "Recherche Classique vs Recherche IA", flow: "horizontal", nodes: [
@@ -169,7 +169,7 @@ const content: CourseContent = {
           question: "Quand utiliser ChatGPT/Claude plutôt que Perplexity pour une recherche ?",
           options: ["Pour une recherche rapide", "Pour une analyse approfondie de sources contradictoires", "Pour trouver un site web", "Jamais, Perplexity est toujours meilleur"],
           correctIndex: 1,
-          explanation: "ChatGPT et Claude sont plus adaptes quand vous avez besoin d'une analyse approfondie, d'une synthese de sources contradictoires ou d'un raisonnement complexe."
+          explanation: "ChatGPT et Claude sont plus adaptes quand vous avez besoin d'une analyse approfondie, d'une synthèse de sources contradictoires ou d'un raisonnement complexe."
         },
       ],
     },
