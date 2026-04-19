@@ -45,12 +45,12 @@ export default function CoursPage() {
               <p className="text-xs text-muted-foreground">{t.coursesPage.freeStat}</p>
             </div>
             <div className="card-glass px-4 py-3 text-center">
-              <p className="text-xl font-bold gradient-text-animated">{totalChapters}</p>
-              <p className="text-xs text-muted-foreground">{t.coursesPage.chapters}</p>
-            </div>
-            <div className="card-glass px-4 py-3 text-center">
               <p className="text-xl font-bold gradient-text-animated">{courses.length}</p>
               <p className="text-xs text-muted-foreground">{t.coursesPage.formationsStat}</p>
+            </div>
+            <div className="card-glass px-4 py-3 text-center">
+              <p className="text-xl font-bold gradient-text-animated">{totalChapters}</p>
+              <p className="text-xs text-muted-foreground">{t.coursesPage.chapters}</p>
             </div>
           </div>
         </div>
