@@ -50,7 +50,9 @@ export function BuyButton({
       if (data.url) {
         window.location.href = data.url;
       } else {
-        setError(data.error || t.buy.error);
+        const base = data.error || t.buy.error;
+        const extra = data.detail ? ` — ${data.detail}` : "";
+        setError(`${base}${extra}`);
         setLoading(false);
       }
     } catch (err) {

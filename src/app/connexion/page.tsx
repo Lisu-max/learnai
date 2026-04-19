@@ -34,6 +34,13 @@ function ConnexionForm() {
   const [showPassword, setShowPassword] = useState(false);
 
   function translateError(message: string): string {
+    const rateLimitMatch = message.match(/after (\d+) seconds?/i);
+    if (rateLimitMatch) {
+      return t.auth.rateLimitSeconds.replace("{seconds}", rateLimitMatch[1]);
+    }
+    if (/rate limit|too many/i.test(message)) {
+      return t.auth.rateLimitGeneric;
+    }
     return t.auth.errors[message] || message;
   }
 
@@ -134,8 +141,9 @@ function ConnexionForm() {
       <InAppBrowserWarning />
 
       {justRegistered && (
-        <div className="mb-6 rounded-lg bg-emerald-500/10 px-4 py-3 text-center text-sm text-emerald-400">
-          {t.auth.accountCreated}
+        <div className="mb-6 space-y-2 rounded-lg bg-emerald-500/10 px-4 py-3 text-center text-sm text-emerald-400">
+          <p>{t.auth.accountCreated}</p>
+          <p className="text-xs text-emerald-300/80">{t.auth.checkEmailFirst}</p>
         </div>
       )}
 

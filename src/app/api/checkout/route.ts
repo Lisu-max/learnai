@@ -70,8 +70,19 @@ export async function POST(req: NextRequest) {
     );
   }
 
+  let customerId: string;
   try {
-    const customerId = await getOrCreateStripeCustomer(user.id, user.email);
+    customerId = await getOrCreateStripeCustomer(user.id, user.email);
+  } catch (e) {
+    logError("/api/checkout:customer", e, user.id);
+    const msg = e instanceof Error ? e.message : String(e);
+    return NextResponse.json(
+      { error: "Erreur lors de la préparation du compte client.", detail: msg },
+      { status: 500 }
+    );
+  }
+
+  try {
     const baseUrl = siteConfig.url;
 
     const session = await getStripe().checkout.sessions.create({
@@ -91,9 +102,15 @@ export async function POST(req: NextRequest) {
     logRequest("/api/checkout", 200, user.id);
     return NextResponse.json({ url: session.url });
   } catch (e) {
-    logError("/api/checkout", e, user.id);
+    logError("/api/checkout:session", e, user.id);
+    const stripeErr = e as { type?: string; code?: string; message?: string; param?: string };
     return NextResponse.json(
-      { error: "Erreur lors de la création du paiement." },
+      {
+        error: "Erreur lors de la création du paiement.",
+        detail: stripeErr?.message,
+        code: stripeErr?.code,
+        param: stripeErr?.param,
+      },
       { status: 500 }
     );
   }

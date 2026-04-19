@@ -217,6 +217,9 @@ export const translations = {
       passwordTooShort8: "Le mot de passe doit contenir au moins 8 caractères.",
       confirmingAccount: "Confirmation en cours...",
       confirmError: "Erreur de confirmation. Redirection...",
+      checkEmailFirst: "Un email de confirmation vient d'être envoyé. Ouvrez-le pour activer votre compte.",
+      rateLimitSeconds: "Patientez {seconds} secondes avant de redemander un email.",
+      rateLimitGeneric: "Trop de demandes. Patientez une minute avant de réessayer.",
       // Supabase error translations
       errors: {
         "Invalid login credentials": "Email ou mot de passe incorrect.",
@@ -623,6 +626,9 @@ export const translations = {
       passwordTooShort8: "Password must be at least 8 characters.",
       confirmingAccount: "Confirming your account...",
       confirmError: "Confirmation error. Redirecting...",
+      checkEmailFirst: "A confirmation email was just sent. Open it to activate your account.",
+      rateLimitSeconds: "Please wait {seconds} seconds before requesting another email.",
+      rateLimitGeneric: "Too many requests. Wait a minute before trying again.",
       errors: {
         "Invalid login credentials": "Incorrect email or password.",
         "User already registered": "An account already exists with this email.",
@@ -886,6 +892,8 @@ export interface Translations {
     passwordUpdated: string; passwordUpdatedRedirect: string;
     updatingPassword: string; savePassword: string;
     confirmingAccount: string; confirmError: string;
+    checkEmailFirst: string;
+    rateLimitSeconds: string; rateLimitGeneric: string;
     errors: Record<string, string>;
   };
   account: {
