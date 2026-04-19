@@ -22,7 +22,7 @@ const content: CourseContent = {
           { label: "Opérations", sub: "Factures, rapports, analyses auto", color: "emerald" },
           { label: "Décisions", sub: "Data analysis et recommandations IA", color: "amber" },
         ]},
-        { type: "video", videoId: "ad79nYk2keg",
+        { type: "video", videoId: { fr: "fENw2n2FmpQ", en: "ad79nYk2keg" },
       videoDurationMinutes: 5, label: "L'Intelligence Artificielle expliquée en 5 minutes" },
         { type: "summary", items: [
           "L'IA est passée de tendance à nécessité opérationnelle en 2026",
@@ -100,7 +100,7 @@ const content: CourseContent = {
           { label: "Niveau 2 — Email IA", sub: "Classification + réponse auto (<5 min)", color: "purple" },
           { label: "Niveau 3 — Escalade humaine", sub: "Réclamations complexes, clients VIP", color: "emerald" },
         ]},
-        { type: "video", videoId: "R9OHn5ZF4Uo",
+        { type: "video", videoId: { fr: "veUSMz1MZvU", en: "R9OHn5ZF4Uo" },
       videoDurationMinutes: 9, label: "Machine Learning et automatisation expliqués simplement" },
         { type: "summary", items: [
           "L'IA automatise 60 à 80% des interactions support sans sacrifier la qualité",
@@ -177,7 +177,7 @@ const content: CourseContent = {
           { label: "KPIs Financiers", sub: "Coût/lead, coût/ticket, heures économisées", color: "purple" },
           { label: "KPIs Qualité", sub: "CSAT, NPS, taux d'erreur, conversion", color: "emerald" },
         ]},
-        { type: "video", videoId: "oeli5xkFZJo",
+        { type: "video", videoId: { fr: "oeli5xkFZJo", en: "JhM7PWCv2EY" },
       videoDurationMinutes: 14, label: "Comment les outils IA transforment les workflows professionnels" },
         { type: "summary", items: [
           "Mesurer le ROI est essentiel pour justifier et optimiser les investissements IA",
@@ -295,7 +295,7 @@ const content: CourseContent = {
           { label: "Agent IA Autonome", sub: "Actions transactionnelles — 10% des cas", color: "emerald" },
           { label: "Escalade Humaine", sub: "Cas complexes et VIP — 20% des cas", color: "amber" },
         ]},
-        { type: "video", videoId: "lG7Uxts9SXs",
+        { type: "video", videoId: { fr: "uJJ6uP5IViA", en: "lG7Uxts9SXs" },
       videoDurationMinutes: 66, label: "Déployer un chatbot IA performant pour votre entreprise" },
         { type: "summary", items: [
           "73% des clients attendent une réponse en moins de 5 minutes",

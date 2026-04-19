@@ -13,7 +13,7 @@ const content: CourseContent = {
         { type: "paragraph", content: "L'éducation vit une transformation sans précédent. L'IA permet de personnaliser l'apprentissage pour chaque élève, d'automatiser les tâches administratives des enseignants, et de rendre l'éducation accessible à tous. En 2026, ignorer l'IA en éducation, c'est enseigner avec une main attachée dans le dos." },
         { type: "paragraph", content: "Cette révolution ne remplace pas les enseignants — elle les augmente. Un professeur assisté par l'IA peut mieux différencier sa pédagogie, détecter plus tôt les difficultés, et se concentrer sur ce qui compte : la relation avec ses élèves." },
         { type: "callout", content: "UNESCO 2026 : 60% des systèmes éducatifs dans le monde expérimentent des outils IA. La France a intégré l'IA dans les programmés officiels du secondaire. La question n'est plus \"faut-il utiliser l'IA ?\" mais \"comment bien l'utiliser ?\"." },
-        { type: "video", videoId: "t9gmyvf7JYo",
+        { type: "video", videoId: { fr: "XKqhmtg6EVg", en: "t9gmyvf7JYo" },
       videoDurationMinutes: 10, label: "L'IA dans l'éducation — vue d'ensemble" },
         { type: "heading", content: "Les Grands Axes de l'IA Éducative" },
         { type: "paragraph", content: "L'IA en éducation se déploie sur 5 axes : la personnalisation de l'apprentissage (parcours adaptatifs), l'assistance aux enseignants (correction, création de contenus), l'accessibilité (traduction, transcription, adaptation), l'évaluation (formative et sommative), et l'administration (gestion automatisée)." },
@@ -135,7 +135,7 @@ const content: CourseContent = {
         { type: "subheading", content: "Differentiation Automatique" },
         { type: "paragraph", content: "L'IA excelle dans la différenciation pédagogique. À partir d'un exercice standard, elle génère 3 niveaux de difficulté, des aides methodologiques, et des extensions pour les élèves avances — en quelques secondes." },
         { type: "prompt-example", prompt: "Cree une séquence pédagogique complète de 3 seances (1h chacune) sur la Révolution française pour une classe de 4eme. Inclus les objectifs Bloom, les activités, la différenciation (3 niveaux), et l'évaluation formative.", result: "Séquence : La Révolution Française (3 seances)\n\nSeance 1 — Les Causes (1h)\nObjectifs Bloom : mémoriser les causes, comprendre le contexte\nAccroche : image du Serment du Jeu de Paume (5 min)\nActivite : carte mentale collaborative (25 min)\nDifferenciation :\n- N1 : carte mentale pre-remplie a compléter\n- N2 : carte mentale à construire avec mots-clés\n- N3 : carte mentale libre + sources primaires\nEvaluation formative : quiz Kahoot 5 questions (10 min)\n\nSeance 2 — Les Événements Clés (1h)\n[...suite détaillée]\n\nSeance 3 — Les Consequences (1h)\n[...suite détaillée + évaluation sommative]" },
-        { type: "video", videoId: "oeli5xkFZJo",
+        { type: "video", videoId: { fr: "oeli5xkFZJo", en: "JhM7PWCv2EY" },
       videoDurationMinutes: 14, label: "Créer des cours avec l'IA" },
         { type: "callout", content: "L'IA génère un excellent point de depart, mais l'enseignant doit toujours adapter au contexte : niveau réel des élèves, matériel disponible, programmé officiel, et sa propre vision pédagogique." },
         { type: "diagram", label: "Le Processus de Création de Cours IA", flow: "horizontal", nodes: [
@@ -194,7 +194,7 @@ const content: CourseContent = {
         { type: "subheading", content: "Feedback Personnalisé à l'Échelle" },
         { type: "paragraph", content: "Le plus grand apport de l'IA est le feedback personnalisé. Au lieu d'un simple \"bien\" ou \"a revoir\", l'IA génère un commentaire détaillé pour chaque élève : points forts, points a améliorer, conseils spécifiques, et ressources recommandées." },
         { type: "tip", content: "Utilisez l'IA pour la première passe de correction (détection d'erreurs, feedback brut), puis revisez et personnalisez. Ce workflow hybride divise par 3 le temps de correction tout en maintenant la qualité." },
-        { type: "video", videoId: "t9gmyvf7JYo",
+        { type: "video", videoId: { fr: "XKqhmtg6EVg", en: "t9gmyvf7JYo" },
       videoDurationMinutes: 10, label: "Évaluation et correction avec l'IA" },
         { type: "key-point", content: "L'IA excelle dans l'évaluation formative (feedback continu pour l'apprentissage) plus que dans l'évaluation sommative (notation finale). Utilisez-la pour donner plus de feedback, plus souvent." },
         { type: "diagram", label: "Ce Que l'IA Corrige Bien (ou Pas)", flow: "horizontal", nodes: [
@@ -311,7 +311,7 @@ const content: CourseContent = {
         { type: "subheading", content: "La Méthode Feynman + IA" },
         { type: "paragraph", content: "Expliquez un concept à l'IA comme si elle était un enfant de 10 ans. Si l'IA détecte des erreurs ou des lacunes dans votre explication, c'est que vous ne maitrisez pas encore le sujet. C'est la méthode Feynman augmentée — et c'est extrêmement efficace." },
         { type: "tip", content: "Règle d'or : si vous ne pouvez pas expliquer un concept sans l'IA, c'est que vous ne l'avez pas compris. L'IA est un outil pour approfondir votre compréhension, pas pour la remplacer." },
-        { type: "video", videoId: "oeli5xkFZJo",
+        { type: "video", videoId: { fr: "oeli5xkFZJo", en: "JhM7PWCv2EY" },
       videoDurationMinutes: 14, label: "L'IA pour les étudiants — guide pratique" },
         { type: "diagram", label: "Usages Productifs vs Contre-Productifs", flow: "horizontal", nodes: [
           { label: "Productif", sub: "Expliquer, quizzer, structurer", color: "emerald" },
@@ -368,7 +368,7 @@ const content: CourseContent = {
         { type: "subheading", content: "Analyse de Données et Statistiques" },
         { type: "paragraph", content: "Claude et ChatGPT peuvent expliquer des méthodes statistiques, générer du code R ou Python pour l'analyse, interpréter des résultats, et même suggérer les tests statistiques adaptés à vos données et hypotheses." },
         { type: "callout", content: "Éthique académique : de plus en plus de revues scientifiques exigent la déclaration de l'utilisation de l'IA dans le processus de recherche et de rédaction. Soyez toujours transparent sur votre utilisation des outils IA." },
-        { type: "video", videoId: "t9gmyvf7JYo",
+        { type: "video", videoId: { fr: "XKqhmtg6EVg", en: "t9gmyvf7JYo" },
       videoDurationMinutes: 10, label: "L'IA pour la recherche académique" },
         { type: "prompt-example", prompt: "Synthetise les 5 principales conclusions de la litterature sur l'impact de l'IA sur les résultats scolaires des élèves du secondaire, avec les références les plus citées.", result: "Synthèse — Impact de l'IA sur les Résultats Scolaires (Secondaire)\n\n1. Les tuteurs IA ameliorent les résultats de 20-30% en mathématiques (Chen et al., 2024; Li & Wang, 2025)\n2. L'apprentissage adaptatif réduit les ecarts entre élèves forts et faibles (UNESCO, 2025)\n3. Le feedback IA immédiat augmente la motivation et l'engagement (Ryan & Deci, 2024)\n4. Les effets sont plus marques chez les élèves en difficulté (OECD, 2025)\n5. Les risques de dépendance et de réduction de l'effort cognitif persistent (Selwyn, 2025)\n\nNote : toujours vérifier les références car l'IA peut générer des citations fictives." },
         { type: "diagram", label: "Le Workflow de Recherche Augmente", flow: "horizontal", nodes: [
@@ -485,7 +485,7 @@ const content: CourseContent = {
         { type: "subheading", content: "Outils de Gamification" },
         { type: "paragraph", content: "Kahoot et Quizizz pour les quiz gamifies en classe. Classcraft pour transformer la classe en RPG. Duolingo comme modèle de gamification réussie. Les LLM pour générer des scénarios et des quetes personnalisées." },
         { type: "callout", content: "Attention : la gamification mal implementee peut être contre-productive. Si les élèves se concentrent sur les points plutôt que sur l'apprentissage, l'effet est négatif. Le jeu doit être au service de la pédagogie, pas l'inverse." },
-        { type: "video", videoId: "oeli5xkFZJo",
+        { type: "video", videoId: { fr: "oeli5xkFZJo", en: "JhM7PWCv2EY" },
       videoDurationMinutes: 14, label: "Gamification et IA en éducation" },
         { type: "diagram", label: "Les Mecaniques de Gamification", flow: "horizontal", nodes: [
           { label: "XP et Points", sub: "Récompense pour chaque activité", color: "purple" },
@@ -544,7 +544,7 @@ const content: CourseContent = {
         { type: "paragraph", content: "Pour la dyslexie : police adaptee, espacement augmente, texte simplifie par l'IA. Pour le TDAH : micro-learning, rappels, structuration. Pour les DYS : outils de dictee, reformulation, et exercices adaptes générés par l'IA." },
         { type: "subheading", content: "Barriere Linguistique" },
         { type: "paragraph", content: "Les élèves allophones bénéficient de la traduction instantanée des cours, du matériel pédagogique traduit par l'IA, et de tuteurs multilingues. L'IA nivele le terrain pour tous, quelle que soit la langue maternelle." },
-        { type: "video", videoId: "t9gmyvf7JYo",
+        { type: "video", videoId: { fr: "XKqhmtg6EVg", en: "t9gmyvf7JYo" },
       videoDurationMinutes: 10, label: "IA et accessibilité en éducation" },
         { type: "key-point", content: "L'accessibilité n'est pas un \"bonus\" — c'est un droit. L'IA rend enfin l'éducation réellement accessible à tous, eliminant des barrieres qui existaient depuis des siecles." },
         { type: "diagram", label: "L'IA pour l'Accessibilité", flow: "horizontal", nodes: [
@@ -663,7 +663,7 @@ const content: CourseContent = {
         { type: "paragraph", content: "Pensee critique, créativité, collaboration, communication, litteratie numérique, et intelligence émotionnelle remplaceront la memorisation. Savoir utiliser l'IA sera aussi fondamental que savoir lire et écrire." },
         { type: "subheading", content: "Tendance 4 : L'Apprentissage Continu" },
         { type: "paragraph", content: "La formation ne s'arretera plus au diplôme. L'apprentissage continu, les micro-certifications, et les parcours modulaires deviendront la norme. L'IA accompagnera chaque individu tout au long de sa vie, adaptant les recommandations à l'évolution de sa carrière." },
-        { type: "video", videoId: "oeli5xkFZJo",
+        { type: "video", videoId: { fr: "oeli5xkFZJo", en: "JhM7PWCv2EY" },
       videoDurationMinutes: 14, label: "L'école du futur avec l'IA" },
         { type: "key-point", content: "La technologie evoluera, mais le coeur de l'éducation restera humain. L'école du futur ne sera pas une salle pleine d'écrans — ce sera un lieu ou la technologie libere du temps pour la relation, la créativité, et l'epanouissement." },
         { type: "diagram", label: "L'École du Futur : 4 Piliers", flow: "horizontal", nodes: [

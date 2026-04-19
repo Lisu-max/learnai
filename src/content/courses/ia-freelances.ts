@@ -13,7 +13,7 @@ const content: CourseContent = {
         { type: "paragraph", content: "En 2026, les freelances qui maitrisent l'IA gagnent en moyenne 40% de plus que ceux qui ne l'utilisent pas. Pas parce qu'ils travaillent plus — parce qu'ils livrent plus vite, prospectent mieux, et offrent des services a plus haute valeur ajoutée." },
         { type: "paragraph", content: "L'IA ne menace pas les freelances — elle les libere. Elle automatise les tâches répétitives (admin, facturation, prospection) pour que vous puissiez vous concentrer sur ce qui vous rend unique : votre expertise, votre créativité, et votre relation client." },
         { type: "callout", content: "73% des freelances utilisant l'IA quotidiennement rapportent avoir augmente leur chiffre d'affaires en moins de 6 mois (étude Malt x BCG, 2025)." },
-        { type: "video", videoId: "p88IjbfMAJY",
+        { type: "video", videoId: { fr: "xkmHaEqM13A", en: "p88IjbfMAJY" },
       videoDurationMinutes: 6, label: "L'IA pour les freelances : pourquoi maintenant" },
         { type: "heading", content: "Les 5 Piliers de l'IA Freelance" },
         { type: "paragraph", content: "Ce cours couvre les 5 piliers qui transforment une activité freelance avec l'IA : la prospection automatisée, les propositions commerciales générées, les livrables acceleres, l'administration automatisée, et le personal branding amplifie." },
@@ -78,7 +78,7 @@ const content: CourseContent = {
         { type: "heading", content: "Automatiser le Suivi" },
         { type: "paragraph", content: "Utilisez des outils comme Make ou Zapier + IA pour automatiser les suivis : relance a J+3 si pas de réponse, message de valeur a J+7, dernière relance a J+14. L'IA personnalise chaque relance en fonction du contexte." },
         { type: "callout", content: "Attention : la prospection automatisée doit rester humaine et authentique. L'objectif n'est pas d'envoyer 1000 messages génériques, mais 50 messages parfaitement personnalisés par semaine." },
-        { type: "video", videoId: "oeli5xkFZJo",
+        { type: "video", videoId: { fr: "oeli5xkFZJo", en: "JhM7PWCv2EY" },
       videoDurationMinutes: 14, label: "Prospection freelance avec l'IA" },
         { type: "diagram", label: "Pipeline de Prospection IA", flow: "vertical", nodes: [
           { label: "Définir l'ICP", sub: "Profil client idéal avec l'IA", color: "blue" },
@@ -137,7 +137,7 @@ const content: CourseContent = {
         { type: "prompt-example", prompt: "Genere une proposition commerciale pour [client] qui veut refondre son site e-commerce. Budget : 8000€. Délai : 6 semaines. Mon expertise : UX/UI + dev Next.js. Inclus des KPIs mesurables.", result: "L'IA génère une proposal de 3 pages avec : diagnostic du site actuel, wireframes proposes, planning Agile, KPIs (taux de conversion +25%, temps de chargement -50%), et 3 formules tarifaires." },
         { type: "tip", content: "Creez un template de base avec l'IA puis personnalisez pour chaque client. Gardez un dossier de proposals gagnantes que l'IA peut utiliser comme référence." },
         { type: "key-point", content: "Une bonne proposal ne vend pas un prix — elle vend une transformation. Montrez le ROI : 'Pour 8000€ d'investissement, votre taux de conversion augmentera de 25%, soit 40 000€ de CA additionnel par an.'" },
-        { type: "video", videoId: "nkuPUJVzB_E",
+        { type: "video", videoId: { fr: "89Fo1aaqju0", en: "nkuPUJVzB_E" },
       videoDurationMinutes: 12, label: "Propositions commerciales avec l'IA" },
         { type: "diagram", label: "Structure d'une Proposal Gagnante", flow: "vertical", nodes: [
           { label: "Compréhension du besoin", sub: "Montrez que vous avez compris le client", color: "blue" },
@@ -197,7 +197,7 @@ const content: CourseContent = {
         { type: "heading", content: "Reporting et Communication Client" },
         { type: "paragraph", content: "L'IA génère des comptes-rendus hebdomadaires clairs pour vos clients : progression, prochaines étapes, risques identifiés, décisions requises. Un email professionnel en 30 secondes au lieu de 20 minutes." },
         { type: "tip", content: "Ajoutez toujours un buffer de 15-20% à vos estimations IA. L'IA tend à être optimiste car elle ne prend pas en compte les reunions, les allers-retours client, et les imprevus." },
-        { type: "video", videoId: "p88IjbfMAJY",
+        { type: "video", videoId: { fr: "xkmHaEqM13A", en: "p88IjbfMAJY" },
       videoDurationMinutes: 6, label: "Gestion de projet freelance avec l'IA" },
         { type: "diagram", label: "Cycle de Gestion de Projet IA", flow: "cycle", nodes: [
           { label: "Planifier", sub: "Découpage et estimation avec l'IA", color: "blue" },
@@ -258,7 +258,7 @@ const content: CourseContent = {
         { type: "subheading", content: "Consultants et Analystes" },
         { type: "paragraph", content: "L'IA analyse des documents, synthetise des données, génère des rapports structures. Perplexity pour la veille sectorielle. Claude pour l'analyse stratégique. Le freelance ajouté : interprétation, recommandations contextuelles, expérience." },
         { type: "key-point", content: "L'IA génère 80% du livrable en 20% du temps. Les 20% restants — peaufinage, expertise, touche personnelle — sont ce qui justifie votre tarif." },
-        { type: "video", videoId: "oeli5xkFZJo",
+        { type: "video", videoId: { fr: "oeli5xkFZJo", en: "JhM7PWCv2EY" },
       videoDurationMinutes: 14, label: "Livrables plus rapides avec l'IA" },
         { type: "diagram", label: "Gain de Temps par Métier", flow: "horizontal", nodes: [
           { label: "Rédaction", sub: "Gain de 60-70%", color: "blue" },
@@ -318,7 +318,7 @@ const content: CourseContent = {
         { type: "paragraph", content: "Automatisez les relances de paiement : rappel amical a J+7, rappel ferme a J+15, mise en demeure a J+30. L'IA adapte le ton selon le délai et la relation client." },
         { type: "prompt-example", prompt: "Genere un email de relance de paiement pour une facture de 3500€ en retard de 12 jours. Client : agence marketing avec qui j'ai une bonne relation. Ton : professionnel mais amical.", result: "L'IA génère un email court et professionnel qui rappelle le montant, la date d'echeance, propose un lien de paiement direct, et suggère un echeancier si besoin — tout en preservant la relation." },
         { type: "tip", content: "Regroupez votre admin au vendredi après-midi. Utilisez l'IA pour préparer tout en batch : factures, relances, rapports. 1h par semaine au lieu de 30min par jour." },
-        { type: "video", videoId: "nkuPUJVzB_E",
+        { type: "video", videoId: { fr: "89Fo1aaqju0", en: "nkuPUJVzB_E" },
       videoDurationMinutes: 12, label: "Automatiser l'admin freelance" },
         { type: "diagram", label: "Pipeline d'Administration Automatisee", flow: "vertical", nodes: [
           { label: "Devis généré par l'IA", sub: "À partir du brief client", color: "blue" },
@@ -378,7 +378,7 @@ const content: CourseContent = {
         { type: "paragraph", content: "Un seul contenu peut être adapte pour LinkedIn, Twitter/X, newsletter, blog, et Instagram. L'IA adapte le format, le ton et la longueur pour chaque plateforme automatiquement." },
         { type: "prompt-example", prompt: "J'ai termine une mission de refonte UX pour un e-commerce de mode. Le taux de conversion est passe de 1,2% a 3,1%. Genere un post LinkedIn storytelling qui partage cette victoire sans citer le client.", result: "L'IA génère un post en format storytelling : accroche chiffrée, problème initial, processus, résultat, leçon a retenir. Format optimisé pour l'algorithme LinkedIn (pas de liens externes, emojis stratégiques)." },
         { type: "tip", content: "Règle des 80/20 : 80% de contenu qui donne de la valeur (tips, retours d'expérience, analyses) et 20% qui parle de vos services. Les gens suivent ceux qui les aident, pas ceux qui se vendent." },
-        { type: "video", videoId: "p88IjbfMAJY",
+        { type: "video", videoId: { fr: "xkmHaEqM13A", en: "p88IjbfMAJY" },
       videoDurationMinutes: 6, label: "Personal branding freelance avec l'IA" },
         { type: "diagram", label: "Stratégie de Contenu Freelance", flow: "horizontal", nodes: [
           { label: "Piliers de contenu", sub: "3-5 sujets d'expertise", color: "blue" },
@@ -440,7 +440,7 @@ const content: CourseContent = {
         { type: "callout", content: "Un désigner qui utilise l'IA pour livrer une landing page en 2 jours au lieu de 8 ne devrait PAS baisser son prix. La valeur pour le client (une landing page qui convertit) est la même." },
         { type: "key-point", content: "L'IA augmente votre marge, pas vos prix. Si vous livrez plus vite a qualité égale, votre taux horaire implicite augmente. Ne donnez pas cet avantage au client." },
         { type: "tip", content: "Calculez votre 'taux horaire implicite' : prix du projet / heures réelles. Avec l'IA, ce taux devrait être 2x a 5x votre ancien taux horaire." },
-        { type: "video", videoId: "oeli5xkFZJo",
+        { type: "video", videoId: { fr: "oeli5xkFZJo", en: "JhM7PWCv2EY" },
       videoDurationMinutes: 14, label: "Pricing freelance à l'ère de l'IA" },
         { type: "diagram", label: "Du Taux Horaire a la Valeur", flow: "horizontal", nodes: [
           { label: "Taux horaire", sub: "Penalise la productivité IA", color: "pink" },
@@ -499,7 +499,7 @@ const content: CourseContent = {
         { type: "heading", content: "Onboarding Client" },
         { type: "paragraph", content: "L'IA génère un kit d'onboarding client personnalisé : questionnaire de découverte, document de cadrage, planning, outils de communication, et processus de feedback. Première impression professionnelle garantie." },
         { type: "key-point", content: "La communication n'est pas juste un 'soft skill' — c'est ce qui détermine si un client revient, vous recommandé, et accepte vos augmentations de tarif." },
-        { type: "video", videoId: "nkuPUJVzB_E",
+        { type: "video", videoId: { fr: "89Fo1aaqju0", en: "nkuPUJVzB_E" },
       videoDurationMinutes: 12, label: "Communication client avec l'IA" },
         { type: "diagram", label: "Cycle de Communication Client", flow: "cycle", nodes: [
           { label: "Onboarding", sub: "Kit de bienvenue professionnel", color: "blue" },
@@ -561,7 +561,7 @@ const content: CourseContent = {
         { type: "paragraph", content: "L'IA vous libere du temps pour le positionnement stratégique : conférences, articles de fond, podcast, consulting high-level. Montez en gamme pendant que l'IA gère la production." },
         { type: "callout", content: "Le freelance le plus rentable de 2026 n'est pas celui qui travaille le plus — c'est celui qui utilise le mieux l'IA pour multiplier son impact tout en limitant son temps de travail." },
         { type: "key-point", content: "L'objectif final : travailler 4 jours par semaine en gagnant plus qu'en 5. L'IA rend cet objectif réaliste pour les freelances qui optimisent leur workflow." },
-        { type: "video", videoId: "p88IjbfMAJY",
+        { type: "video", videoId: { fr: "xkmHaEqM13A", en: "p88IjbfMAJY" },
       videoDurationMinutes: 6, label: "Scaler son activité freelance avec l'IA" },
         { type: "diagram", label: "Les 4 Leviers de Scaling", flow: "vertical", nodes: [
           { label: "Productisation", sub: "Offres packagées et standardisees", color: "blue" },

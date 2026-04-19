@@ -30,7 +30,14 @@ function renderSection(section: ChapterSection, index: number) {
     case "summary":
       return <SummaryBox key={index} items={section.items || []} />;
     case "video":
-      return <VideoEmbed key={index} videoId={section.videoId || ""} label={section.label} />;
+      return (
+        <VideoEmbed
+          key={index}
+          videoId={section.videoId}
+          label={section.label}
+          labelEn={section.labelEn}
+        />
+      );
     case "prompt-example":
       return <PromptExample key={index} label={section.label} prompt={section.prompt} result={section.result} />;
     case "key-point":

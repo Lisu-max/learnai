@@ -4,6 +4,13 @@ export interface DiagramNode {
   color?: "purple" | "blue" | "emerald" | "amber" | "pink";
 }
 
+export type LocalizedVideoId =
+  | string
+  | {
+      fr?: string;
+      en?: string;
+    };
+
 export interface ChapterSection {
   type:
     | "paragraph"
@@ -20,7 +27,8 @@ export interface ChapterSection {
   content?: string;
   items?: string[];
   label?: string;
-  videoId?: string;
+  labelEn?: string;
+  videoId?: LocalizedVideoId;
   videoDurationMinutes?: number;
   prompt?: string;
   result?: string;

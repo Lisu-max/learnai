@@ -24,7 +24,7 @@ const content: CourseContent = {
           { label: "Audio", sub: "ElevenLabs, Suno, Udio", color: "amber" },
           { label: "Code", sub: "Cursor, Copilot, Claude Code", color: "pink" },
         ]},
-        { type: "video", videoId: "ad79nYk2keg",
+        { type: "video", videoId: { fr: "fENw2n2FmpQ", en: "ad79nYk2keg" },
       videoDurationMinutes: 5, label: "L'Intelligence Artificielle expliquée en 5 minutes" },
         { type: "summary", items: [
           "L'écosystème IA se divise en 7 catégories principales",
@@ -61,7 +61,7 @@ const content: CourseContent = {
           { label: "Thinking", sub: "Raisonnement étape par étape, problèmes complexes", color: "purple" },
           { label: "Pro", sub: "Capacité maximale, usage intensif", color: "emerald" },
         ]},
-        { type: "video", videoId: "7ell8KEbhJo",
+        { type: "video", videoId: { fr: "7ell8KEbhJo", en: "_8xvHnGpIyY" },
       videoDurationMinutes: 27, label: "Comment fonctionne ChatGPT ?" },
         { type: "summary", items: [
           "GPT-5.4 existe en 3 variantes : Standard, Thinking et Pro",
@@ -446,7 +446,7 @@ const content: CourseContent = {
           { label: "GitHub Copilot", sub: "Extension dans VS Code, JetBrains — 10$/mois", color: "blue" },
           { label: "Cursor", sub: "Éditeur repensé pour l'IA (fork VS Code)", color: "purple" },
         ]},
-        { type: "video", videoId: "kCc8FmEb1nY",
+        { type: "video", videoId: { fr: "UoBVumRnyds", en: "kCc8FmEb1nY" },
       videoDurationMinutes: 116, label: "Construire un GPT from scratch — Karpathy" },
         { type: "summary", items: [
           "L'IA augmente la productivité des développeurs de 30 à 55%",

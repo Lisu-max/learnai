@@ -13,7 +13,7 @@ const content: CourseContent = {
         { type: "paragraph", content: "En 2026, l'intelligence artificielle n'est plus réservée aux experts ou aux grandes entreprises. Elle est dans votre poche, sur votre ordinateur, dans vos applications préférées. Chaque jour, des millions de personnes utilisent l'IA pour gagner du temps, mieux communiquer et être plus productifs." },
         { type: "paragraph", content: "Ce cours va vous montrer comment utiliser concrètement l'IA dans votre vie de tous les jours. Pas de théorie abstraite — des cas pratiques, des outils réels et des méthodes éprouvées pour devenir efficace avec l'IA." },
         { type: "callout", content: "Selon une étude McKinsey de 2025, les professionnels qui utilisent l'IA au quotidien gagnent en moyenne 3 heures par semaine — soit plus de 150 heures par an." },
-        { type: "video", videoId: "oeli5xkFZJo",
+        { type: "video", videoId: { fr: "oeli5xkFZJo", en: "JhM7PWCv2EY" },
       videoDurationMinutes: 14, label: "L'IA au quotidien : introduction" },
         { type: "heading", content: "Pourquoi l'IA Change Tout" },
         { type: "paragraph", content: "L'IA générative a démocratise l'accès a des capacités qui étaient auparavant réservées a des spécialistes : rédiger un texte professionnel, analyser un document, traduire instantanément, créer des visuels, organiser des informations complexes. Aujourd'hui, un outil comme ChatGPT ou Claude peut vous aider dans presque toutes ces tâches." },
@@ -358,7 +358,7 @@ const content: CourseContent = {
         { type: "subheading", content: "Les GPTs Personnalises et Claude Projects" },
         { type: "paragraph", content: "Vous pouvez créer des assistants IA sur mesure pour des tâches spécifiques. Un GPT personnalise pour répondre aux questions clients, un Claude Project pour analyser vos rapports mensuels — ces assistants deviennent vos employés virtuels spécialisés." },
         { type: "prompt-example", content: "Je recois 50 candidatures par email chaque semaine. Cree-moi un workflow d'automatisation : 1) extraire les infos clés du CV (nom, expérience, compétences), 2) classifier en 3 catégories (prioritaire, a revoir, non qualifie), 3) envoyer un email de confirmation personnalisé, 4) mettre à jour un Google Sheet." },
-        { type: "video", videoId: "JtdUgJGI_Oo",
+        { type: "video", videoId: { fr: "gtvDkxYxW8g", en: "JtdUgJGI_Oo" },
       videoDurationMinutes: 20, label: "Automatiser avec l'IA : tutoriel pratique" },
         { type: "diagram", label: "Écosystème d'Automatisation IA", flow: "horizontal", nodes: [
           { label: "Make / Zapier", sub: "Connecter les apps sans code", color: "purple" },

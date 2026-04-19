@@ -13,7 +13,7 @@ const content: CourseContent = {
         { type: "paragraph", content: "La data science est l'art d'extraire des connaissances et des insights à partir de données brutes. Elle combiné statistiques, informatique et expertise métier pour transformer des volumes massifs de données en décisions eclairees. En 2026, l'IA a radicalement accélère chaque étape du processus." },
         { type: "paragraph", content: "Un data scientist moderne ne travaille plus seul : il est assisté par des outils IA qui automatisent le nettoyage de données, suggerent des modèles, et generent des visualisations en quelques secondes. Le métier évolue du codage manuel vers l'orchestration intelligente." },
         { type: "callout", content: "Selon LinkedIn, la data science reste le métier le plus demande en tech en 2026, avec une augmentation de 35% des offres par rapport à 2024. L'IA n'a pas remplace les data scientists — elle les a rendus 10x plus productifs." },
-        { type: "video", videoId: "ua-CiDNNj30",
+        { type: "video", videoId: { fr: "ehPOvOqorYs", en: "ua-CiDNNj30" },
       videoDurationMinutes: 352, label: "Introduction à la Data Science avec l'IA" },
         { type: "heading", content: "Le Pipeline Data Science" },
         { type: "paragraph", content: "Tout projet de data science suit un pipeline : collecte des données, nettoyage et préparation, exploration et visualisation, modélisation, évaluation, et déploiement. L'IA intervient désormais à chaque étape pour accélérer le travail." },
@@ -77,7 +77,7 @@ const content: CourseContent = {
         { type: "subheading", content: "NumPy : Le Calcul Numérique" },
         { type: "paragraph", content: "NumPy est la fondation du calcul scientifique en Python. Ses tableaux multidimensionnels (ndarray) permettent des opérations mathématiques vectorisees, jusqu'à 100x plus rapides que les boucles Python natives. C'est la base sur laquelle Pandas, Scikit-learn et TensorFlow sont construits." },
         { type: "prompt-example", prompt: "Ecris un script Python avec NumPy qui génère 1000 nombres aléatoires suivant une distribution normale, calcule la moyenne, la mediane et l'ecart-type, puis affiche un histogramme avec matplotlib.", result: "import numpy as np\nimport matplotlib.pyplot as plt\n\ndata = np.random.normal(loc=0, scale=1, size=1000)\nprint(f'Moyenne: {np.mean(data):.4f}')\nprint(f'Mediane: {np.median(data):.4f}')\nprint(f'Ecart-type: {np.std(data):.4f}')\n\nplt.hist(data, bins=30, edgecolor='black')\nplt.title('Distribution Normale')\nplt.show()" },
-        { type: "video", videoId: "vmEHCJofslg",
+        { type: "video", videoId: { fr: "ZAL5tsyjeAg", en: "vmEHCJofslg" },
       videoDurationMinutes: 60, label: "Python pour la Data Science — les bases" },
         { type: "key-point", content: "Ne cherchez pas à tout mémoriser. Utilisez l'IA pour générer le code, puis comprenez ce qu'il fait. La compréhension est plus importante que la memorisation en 2026." },
         { type: "diagram", label: "L'Écosystème Python Data Science", flow: "horizontal", nodes: [
@@ -136,7 +136,7 @@ const content: CourseContent = {
         { type: "paragraph", content: "80% du travail d'un data scientist est le nettoyage de données. Valeurs manquantes (dropna, fillna), doublons (drop_duplicates), types de données (astype), outliers, et normalisation. L'IA peut désormais automatiser une grande partie de ce nettoyage." },
         { type: "prompt-example", prompt: "J'ai un DataFrame Pandas avec des ventes mensuelles. Montre-moi comment nettoyer les valeurs manquantes, grouper par catégorie de produit, et calculer le total des ventes par catégorie.", result: "import pandas as pd\n\n# Nettoyage des valeurs manquantes\ndf = df.dropna(subset=['montant'])\ndf['catégorie'] = df['catégorie'].fillna('Inconnu')\n\n# Groupement et aggregation\nventes_par_cat = df.groupby('catégorie')['montant'].agg(['sum','mean','count'])\nventes_par_cat = ventes_par_cat.sort_values('sum', ascending=False)\nprint(ventes_par_cat)" },
         { type: "callout", content: "Astuce IA : demandez a ChatGPT ou Claude de générer vos pipelines Pandas. Decrivez vos données en langage naturel et l'IA produira le code optimisé. Verifiez toujours le résultat sur un echantillon." },
-        { type: "video", videoId: "i_LwzRVP7bg",
+        { type: "video", videoId: { fr: "EUD07IiviJg", en: "i_LwzRVP7bg" },
       videoDurationMinutes: 234, label: "Pandas en 20 minutes — tutoriel pratique" },
         { type: "diagram", label: "Le Workflow Pandas Typique", flow: "horizontal", nodes: [
           { label: "Charger", sub: "read_csv, read_excel, read_sql", color: "blue" },
@@ -195,7 +195,7 @@ const content: CourseContent = {
         { type: "subheading", content: "Plotly : L'Interactivite" },
         { type: "paragraph", content: "Plotly créé des graphiques interactifs pour le web. Zoom, survol, filtres dynamiques — idéal pour les dashboards et les présentations. Dash (par Plotly) permet de créer des applications web complètes de data visualization." },
         { type: "tip", content: "Demandez a ChatGPT ou Claude de générer vos graphiques. Decrivez ce que vous voulez visualiser et l'IA produira le code Matplotlib, Seaborn ou Plotly adapte. Vous pouvez même lui envoyer une capture d'écran du graphique souhaite." },
-        { type: "video", videoId: "OGxgnH8y2NM",
+        { type: "video", videoId: { fr: "NzDQTrqsxas", en: "OGxgnH8y2NM" },
       videoDurationMinutes: 6, label: "Visualisation de données avec Python" },
         { type: "key-point", content: "Le choix du graphique dépend de la question posee : barres pour comparer, lignes pour les tendances temporelles, scatter pour les correlations, pie pour les proportions, heatmap pour les matrices." },
         { type: "diagram", label: "Quel Graphique pour Quelle Question ?", flow: "horizontal", nodes: [
@@ -255,7 +255,7 @@ const content: CourseContent = {
         { type: "heading", content: "Le Workflow ML" },
         { type: "paragraph", content: "1) Split des données (train/test/validation). 2) Choix de l'algorithme. 3) Entraînement sur les données train. 4) Évaluation sur les données test. 5) Optimisation des hyperparametres. 6) Déploiement du modèle final." },
         { type: "key-point", content: "Le sur-apprentissage (overfitting) est le piege numero 1 en ML. Un modèle qui performe trop bien sur les données d'entraînement mais mal sur de nouvelles données est inutile. Le split train/test est votre première protection." },
-        { type: "video", videoId: "ua-CiDNNj30",
+        { type: "video", videoId: { fr: "ehPOvOqorYs", en: "ua-CiDNNj30" },
       videoDurationMinutes: 352, label: "Les concepts clés du Machine Learning" },
         { type: "diagram", label: "Le Workflow Machine Learning", flow: "horizontal", nodes: [
           { label: "Split données", sub: "Train / Test / Validation", color: "blue" },
@@ -316,7 +316,7 @@ const content: CourseContent = {
         { type: "paragraph", content: "La classification assigne une catégorie a une observation : spam ou non-spam, client fidèle ou desabonne, maladie presente ou absente. Les algorithmes courants : régression logistique, arbres de décision, Random Forest, SVM, et réseaux de neurones." },
         { type: "paragraph", content: "Les métriques de classification : accuracy, précision, recall, F1-score, et matrice de confusion. L'accuracy seule peut être trompeuse avec des classes desequilibrees — le F1-score est souvent plus fiable." },
         { type: "callout", content: "Attention aux classes desequilibrees ! Si 95% de vos emails sont non-spam, un modèle qui répond toujours \"non-spam\" aura 95% d'accuracy mais sera complètement inutile. Utilisez le F1-score ou l'AUC-ROC." },
-        { type: "video", videoId: "vmEHCJofslg",
+        { type: "video", videoId: { fr: "ZAL5tsyjeAg", en: "vmEHCJofslg" },
       videoDurationMinutes: 60, label: "Regression vs Classification expliquees" },
         { type: "prompt-example", prompt: "Entraîné un modèle Random Forest pour prédire si un client va se desabonner (churn), avec un rapport de classification complet.", result: "from sklearn.ensemble import RandomForestClassifier\nfrom sklearn.model_sélection import train_test_split\nfrom sklearn.metrics import classification_report\n\nX_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)\nmodel = RandomForestClassifier(n_estimators=100, random_state=42)\nmodel.fit(X_train, y_train)\ny_pred = model.predict(X_test)\nprint(classification_report(y_test, y_pred))" },
         { type: "diagram", label: "Regression vs Classification", flow: "horizontal", nodes: [
@@ -373,7 +373,7 @@ const content: CourseContent = {
         { type: "paragraph", content: "DBSCAN détecte des clusters de formes arbitraires et identifié automatiquement les points aberrants (outliers). Contrairement a K-Means, il ne nécessite pas de spécifier le nombre de clusters à l'avance — il les découvre automatiquement." },
         { type: "heading", content: "Cas d'Usage : La Segmentation Client" },
         { type: "paragraph", content: "La segmentation RFM (Recency, Frequency, Monetary) est un classique du marketing data-driven. En appliquant K-Means sur les scores RFM, vous identifiez vos meilleurs clients, les clients a risque, et les clients perdus — permettant des actions marketing ciblées." },
-        { type: "video", videoId: "i_LwzRVP7bg",
+        { type: "video", videoId: { fr: "EUD07IiviJg", en: "i_LwzRVP7bg" },
       videoDurationMinutes: 234, label: "Clustering et segmentation expliques" },
         { type: "diagram", label: "K-Means vs DBSCAN", flow: "horizontal", nodes: [
           { label: "K-Means", sub: "Clusters spheriques, K fixe", color: "blue" },
@@ -435,7 +435,7 @@ const content: CourseContent = {
         { type: "subheading", content: "Topic Modeling" },
         { type: "paragraph", content: "Découvrir les thèmes principaux dans un corpus de documents. LDA (Latent Dirichlet Allocation) et BERTopic sont les approches classiques. Les LLM offrent désormais une alternative plus simple : donnez un corpus a Claude et demandez-lui d'identifier les thèmes." },
         { type: "prompt-example", prompt: "Analyse le sentiment de ces 5 avis clients et classe-les en positif, neutre ou négatif. Explique ton raisonnement.", result: "Avis 1: \"Produit genial, livraison rapide\" → POSITIF (termes laudatifs)\nAvis 2: \"Correct mais rien d'exceptionnel\" → NEUTRE (nuance)\nAvis 3: \"Complètement decue, ne fonctionne pas\" → NEGATIF (deception)\nAvis 4: \"Bon rapport qualité-prix\" → POSITIF (satisfaction)\nAvis 5: \"Service client inexistant\" → NEGATIF (critique)" },
-        { type: "video", videoId: "OGxgnH8y2NM",
+        { type: "video", videoId: { fr: "NzDQTrqsxas", en: "OGxgnH8y2NM" },
       videoDurationMinutes: 6, label: "NLP et analyse de texte avec Python" },
         { type: "diagram", label: "Les Techniques NLP en Data Science", flow: "horizontal", nodes: [
           { label: "Sentiment", sub: "Positif / Négatif / Neutre", color: "purple" },
@@ -493,7 +493,7 @@ const content: CourseContent = {
         { type: "heading", content: "L'IA Multimodale Simplifie Tout" },
         { type: "paragraph", content: "En 2026, les modèles multimodaux comme GPT-5.4 et Claude 4.6 peuvent analyser des images directement. Plus besoin de pipelines complexes pour de nombreuses tâches : envoyez l'image à l'API et posez votre question en langage naturel." },
         { type: "callout", content: "Le transfer learning est votre meilleur ami en vision par ordinateur. Au lieu d'entraîner un modèle de zéro (nécessitant des millions d'images), utilisez un modèle pre-entraîné et affinez-le sur vos données — quelques centaines d'images suffisent souvent." },
-        { type: "video", videoId: "ua-CiDNNj30",
+        { type: "video", videoId: { fr: "ehPOvOqorYs", en: "ua-CiDNNj30" },
       videoDurationMinutes: 352, label: "Vision par ordinateur avec Python" },
         { type: "diagram", label: "Applications de la Vision par Ordinateur", flow: "horizontal", nodes: [
           { label: "Classification", sub: "Catégorie d'une image", color: "purple" },
@@ -551,7 +551,7 @@ const content: CourseContent = {
         { type: "heading", content: "Les LLM comme Outils AutoML" },
         { type: "paragraph", content: "En 2026, la façon la plus simple de faire du ML est de demander à Claude ou GPT. Decrivez votre dataset et votre objectif, et l'IA generera le code complet : preprocessing, feature engineering, entraînement, évaluation et visualisation." },
         { type: "tip", content: "L'AutoML est parfait pour le prototypage rapide et pour obtenir une baseline. Mais pour les modèles en production a haute performance, l'expertise humaine reste nécessaire pour le feature engineering et l'optimisation fine." },
-        { type: "video", videoId: "vmEHCJofslg",
+        { type: "video", videoId: { fr: "ZAL5tsyjeAg", en: "vmEHCJofslg" },
       videoDurationMinutes: 60, label: "AutoML — créer des modèles sans expertise" },
         { type: "diagram", label: "Du Code Manuel à l'AutoML", flow: "vertical", nodes: [
           { label: "Code manuel", sub: "Expert, flexible, long", color: "pink" },
@@ -609,7 +609,7 @@ const content: CourseContent = {
         { type: "heading", content: "L'IA Comme Assistant de Feature Engineering" },
         { type: "paragraph", content: "En 2026, les LLM excellent dans le feature engineering. Decrivez votre dataset a Claude ou GPT, et il suggerera des features pertinentes basées sur l'expertise du domaine. Il peut aussi générer le code de transformation complet." },
         { type: "prompt-example", prompt: "J'ai un dataset de ventes e-commerce avec : date_achat, montant, catégorie_produit, ville_client, age_client. Quelles features supplémentaires pourrais-je créer pour prédire la probabilité de rachat ?", result: "Features suggérées :\n1. recence_dernier_achat (jours depuis dernier achat)\n2. fréquence_achats_30j (nombre d'achats sur 30 jours)\n3. montant_moyen_par_achat\n4. jour_de_semaine (encodage cyclique)\n5. catégorie_préférée (mode)\n6. diversité_catégories (nombre unique)\n7. tendance_montant (hausse/baisse sur 3 derniers achats)\n8. distance_au_magasin (si données géographiques)\n9. saison_achat (printemps, été, automne, hiver)\n10. anciennete_client (jours depuis premier achat)" },
-        { type: "video", videoId: "i_LwzRVP7bg",
+        { type: "video", videoId: { fr: "EUD07IiviJg", en: "i_LwzRVP7bg" },
       videoDurationMinutes: 234, label: "Feature engineering avec Python et l'IA" },
         { type: "key-point", content: "Le feature engineering est l'étape ou l'expertise métier fait la plus grande différence. L'IA peut suggérer des features génériques, mais la connaissance du domaine permet de créer des features vraiment discriminantes." },
         { type: "diagram", label: "Le Pipeline de Feature Engineering", flow: "horizontal", nodes: [
@@ -668,7 +668,7 @@ const content: CourseContent = {
         { type: "subheading", content: "Déploiement Cloud" },
         { type: "paragraph", content: "AWS SageMaker, Google Vertex AI et Azure ML offrent des services manages pour déployer des modèles. Pour les projets plus simples, des plateformes comme Hugging Face Spaces, Streamlit Cloud et Railway permettent un déploiement en quelques clics." },
         { type: "callout", content: "En 2026, le déploiement de modèles est beaucoup plus simple qu'avant. Des outils comme BentoML et MLflow gèrent l'empaquetage, le versioning et le déploiement en quelques commandes." },
-        { type: "video", videoId: "OGxgnH8y2NM",
+        { type: "video", videoId: { fr: "NzDQTrqsxas", en: "OGxgnH8y2NM" },
       videoDurationMinutes: 6, label: "Déployer un modèle ML en production" },
         { type: "diagram", label: "Du Notebook a la Production", flow: "horizontal", nodes: [
           { label: "Jupyter Notebook", sub: "Prototype et expérimentation", color: "blue" },
@@ -727,7 +727,7 @@ const content: CourseContent = {
         { type: "subheading", content: "CI/CD pour le ML" },
         { type: "paragraph", content: "Les pipelines CI/CD automatisent les tests, la validation et le déploiement des modèles. À chaque push de code ou de données, le pipeline re-entraîné le modèle, validé ses performances, et le déploie automatiquement si les critères sont remplis." },
         { type: "key-point", content: "Le data drift est le problème numero 1 des modèles en production. Un modèle entraîné sur des données de 2024 peut devenir obsolète en quelques mois si les comportements des utilisateurs changent." },
-        { type: "video", videoId: "ua-CiDNNj30",
+        { type: "video", videoId: { fr: "ehPOvOqorYs", en: "ua-CiDNNj30" },
       videoDurationMinutes: 352, label: "MLOps — gérer des modèles en production" },
         { type: "diagram", label: "Le Cycle MLOps", flow: "cycle", nodes: [
           { label: "Entraînement", sub: "Données + algorithme → modèle", color: "blue" },
@@ -790,7 +790,7 @@ const content: CourseContent = {
         { type: "subheading", content: "IA Responsable" },
         { type: "paragraph", content: "L'IA responsable repose sur 4 piliers : equite (pas de discrimination), transparence (décisions explicables), sécurité (protection des données), et accountability (responsabilité des consequences). Ces principes doivent guider chaque décision en data science." },
         { type: "callout", content: "En 2026, l'AI Act européen est pleinement en vigueur. Les entreprises qui déploient des systèmes IA a haut risque (recrutement, santé, finance) doivent réaliser des évaluations d'impact et maintenir une documentation complète." },
-        { type: "video", videoId: "vmEHCJofslg",
+        { type: "video", videoId: { fr: "ZAL5tsyjeAg", en: "vmEHCJofslg" },
       videoDurationMinutes: 60, label: "Éthique et IA responsable" },
         { type: "diagram", label: "Les 4 Piliers de l'IA Responsable", flow: "horizontal", nodes: [
           { label: "Equite", sub: "Pas de discrimination", color: "purple" },
@@ -854,7 +854,7 @@ const content: CourseContent = {
         { type: "subheading", content: "Étape 6 : Déploiement" },
         { type: "paragraph", content: "Déployer le modèle final en API avec FastAPI, conteneuriser avec Docker, et mettre en place un monitoring pour détecter le data drift. Créer un dashboard Streamlit pour les équipes métier." },
         { type: "prompt-example", prompt: "Tu es un data scientist expert. Je te donne un dataset de clients telecom avec colonnes : tenure, monthly_charges, total_charges, contract_type, internet_service, tech_support, churn. Guide-moi pour prédire le churn avec XGBoost, en incluant feature engineering, validation croisee, et interprétation SHAP.", result: "import xgboost as xgb\nfrom sklearn.model_sélection import cross_val_score\nimport shap\n\n# Feature engineering\ndf['charge_par_mois_tenure'] = df['total_charges'] / (df['tenure'] + 1)\ndf['is_month_to_month'] = (df['contract_type'] == 'Month-to-month').astype(int)\n\n# Modèle XGBoost\nmodel = xgb.XGBClassifier(n_estimators=200, learning_rate=0.1)\nscores = cross_val_score(model, X, y, cv=5, scoring='f1')\nmodel.fit(X_train, y_train)\n\n# Interprétation SHAP\nexplainer = shap.TreeExplainer(model)\nshap_values = explainer.shap_values(X_test)\nshap.summary_plot(shap_values, X_test)" },
-        { type: "video", videoId: "i_LwzRVP7bg",
+        { type: "video", videoId: { fr: "EUD07IiviJg", en: "i_LwzRVP7bg" },
       videoDurationMinutes: 234, label: "Projet complet de data science de A à Z" },
         { type: "key-point", content: "Un projet data science réussi ne s'arrête pas au modèle. La valeur est dans l'impact business : combien de clients retenus, quel ROI ? Presentez toujours vos résultats en termes business, pas en métriques techniques." },
         { type: "diagram", label: "Le Projet Data Science de Bout en Bout", flow: "vertical", nodes: [

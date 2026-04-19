@@ -13,7 +13,7 @@ const content: CourseContent = {
         { type: "paragraph", content: "L'intelligence artificielle prend des décisions qui affectent nos vies chaque jour : les contenus que nous voyons sur les réseaux sociaux, les candidatures retenues pour un emploi, les diagnostics médicaux, les taux d'intérêt proposes par nos banques. Quand une technologie a autant d'impact, la question n'est plus seulement \"que peut-elle faire ?\" mais \"que devrait-elle faire ?\"." },
         { type: "paragraph", content: "L'ethique de l'IA est le domaine qui étudie les consequences morales, sociales et juridiques de ces systèmes. Ce n'est pas un sujet réservé aux philosophes — c'est une préoccupation pratique pour chaque utilisateur, développeur et decideur." },
         { type: "callout", content: "En 2026, plus de 80% des entreprises du Fortune 500 utilisent l'IA dans leurs processus decisionnels. La question de l'ethique n'est plus théorique — elle est opérationnelle." },
-        { type: "video", videoId: "t9gmyvf7JYo",
+        { type: "video", videoId: { fr: "XKqhmtg6EVg", en: "t9gmyvf7JYo" },
       videoDurationMinutes: 10, label: "Introduction à l'ethique de l'IA" },
         { type: "heading", content: "Les Grands Principes Ethiques" },
         { type: "paragraph", content: "Les principaux cadres ethiques pour l'IA s'articulent autour de 5 principes : la bienfaisance (l'IA doit faire le bien), la non-malfaisance (ne pas causer de tort), l'autonomie (respecter les choix humains), la justice (equite et non-discrimination), et l'explicabilite (pouvoir comprendre les décisions de l'IA)." },

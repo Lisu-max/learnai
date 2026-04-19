@@ -13,7 +13,7 @@ const content: CourseContent = {
         { type: "paragraph", content: "En 2026, coder sans IA c'est comme coder sans IDE : techniquement possible, mais personne ne le fait volontairement. Les outils de développement assistés par l'IA ont transformé la façon dont on écrit, testé, debogue et déploie du code. Que vous soyez débutant ou senior, l'IA amplifie votre productivité de 2x a 10x selon les tâches." },
         { type: "paragraph", content: "Cette révolution ne remplace pas les développeurs — elle les augmente. Les meilleurs devs de 2026 sont ceux qui maitrisent l'art de collaborer avec l'IA : savoir quand la laisser générer, quand la guider, et quand reprendre la main." },
         { type: "callout", content: "Selon une étude GitHub de 2025, les développeurs utilisant Copilot completent leurs tâches 55% plus vite et rapportent une satisfaction accrue au travail." },
-        { type: "video", videoId: "ocMOZpuAMw4",
+        { type: "video", videoId: { fr: "18oAWvzjmTw", en: "ocMOZpuAMw4" },
       videoDurationMinutes: 15, label: "Introduction au développement assisté par l'IA" },
         { type: "heading", content: "Le Paysage des Outils de Dev IA en 2026" },
         { type: "paragraph", content: "L'écosystème se divise en plusieurs catégories : les completions en ligne (Copilot), les IDE IA natifs (Cursor), les agents de code conversationnels (Claude Code), et les générateurs d'apps complètes (Bolt, v0). Chaque outil a ses forces et son cas d'usage idéal." },
@@ -76,7 +76,7 @@ const content: CourseContent = {
         { type: "paragraph", content: "Ecrivez des commentaires descriptifs avant votre code — Copilot les utilise comme contexte. Ouvrez les fichiers pertinents dans des onglets adjacents pour enrichir le contexte. Utilisez des noms de variables et de fonctions explicites pour guider les suggestions." },
         { type: "tip", content: "Raccourci essentiel : Tab pour accepter, Esc pour rejeter, Alt+] pour voir la suggestion suivante, Ctrl+Enter pour voir toutes les suggestions dans un panneau." },
         { type: "prompt-example", prompt: "// Fonction qui validé un email avec regex, retourné true/false et un message d'erreur", result: "Copilot génère automatiquement la fonction complète avec la regex, les cas limites, et les messages d'erreur adaptes." },
-        { type: "video", videoId: "n0NlxUyA7FI",
+        { type: "video", videoId: { fr: "Xagh-g3zyuw", en: "n0NlxUyA7FI" },
       videoDurationMinutes: 11, label: "GitHub Copilot : guide complet 2026" },
         { type: "diagram", label: "Fonctionnalites de GitHub Copilot", flow: "horizontal", nodes: [
           { label: "Completion inline", sub: "Suggestions en temps réel", color: "blue" },
@@ -136,7 +136,7 @@ const content: CourseContent = {
         { type: "paragraph", content: "Le chat Cursor (Cmd+L) permet des conversations avec votre codebase. L'Agent mode va plus loin : il peut créer des fichiers, modifier plusieurs fichiers simultanement, exécuter des commandes terminal, et iterer jusqu'à ce que la tâche soit complète." },
         { type: "callout", content: "Cursor propose des règles (.cursorrules) pour personnaliser le comportement de l'IA. Definissez votre stack, vos conventions de code, et vos préférences — l'IA les respectera dans toutes ses générations." },
         { type: "key-point", content: "La force de Cursor est l'indexation du codebase. Plus votre projet est gros, plus l'avantage de Cursor sur les outils génériques est important." },
-        { type: "video", videoId: "Fi3AJZZregI",
+        { type: "video", videoId: { fr: "Xagh-g3zyuw", en: "Fi3AJZZregI" },
       videoDurationMinutes: 15, label: "Cursor IDE : tutoriel complet" },
         { type: "diagram", label: "Les Fonctionnalites Clés de Cursor", flow: "vertical", nodes: [
           { label: "Tab — Completion prédictive", sub: "Anticipe vos edits multi-lignes", color: "blue" },
@@ -195,7 +195,7 @@ const content: CourseContent = {
         { type: "prompt-example", prompt: "Refactore le système d'authentification pour utiliser JWT au lieu des sessions. Mets à jour les routes, le middleware, et les tests.", result: "Claude Code analyse le code existant, planifie les modifications, edite les fichiers un par un, exécute les tests, et corrige les erreurs jusqu'à ce que tout passe." },
         { type: "tip", content: "Utilisez un fichier CLAUDE.md a la racine de votre projet pour donner du contexte permanent a Claude Code : stack, conventions, commandes utiles, architecture." },
         { type: "key-point", content: "La force de Claude Code est sa capacité a maintenir une tâche pendant des heures (jusqu'à 14,5h avec Opus 4.6), ce qui le rend idéal pour les refactorings massifs et les migrations." },
-        { type: "video", videoId: "oeli5xkFZJo",
+        { type: "video", videoId: { fr: "oeli5xkFZJo", en: "JhM7PWCv2EY" },
       videoDurationMinutes: 14, label: "Claude Code : présentation et demo" },
         { type: "diagram", label: "Workflow Claude Code", flow: "vertical", nodes: [
           { label: "Commande en langage naturel", sub: "Decrivez la tâche a accomplir", color: "blue" },
@@ -253,7 +253,7 @@ const content: CourseContent = {
         { type: "paragraph", content: "Bolt va plus loin en generant des applications full-stack complètes dans un environnement WebContainer. Il crée le frontend, le backend, la base de données, l'authentification — le tout en quelques minutes. L'app tourne directement dans le navigateur." },
         { type: "callout", content: "Bolt et v0 sont parfaits pour le prototypage rapide et les MVPs. Pour des applications de production complexes, combinez-les avec Cursor ou Claude Code pour le peaufinage." },
         { type: "prompt-example", prompt: "Cree un dashboard de gestion de tâches avec authentification, drag-and-drop Kanban, et mode sombre", result: "Bolt génère une app Next.js complète avec auth, base de données SQLite, board Kanban fonctionnel, et toggle dark mode — prêt en 3 minutes." },
-        { type: "video", videoId: "ocMOZpuAMw4",
+        { type: "video", videoId: { fr: "18oAWvzjmTw", en: "ocMOZpuAMw4" },
       videoDurationMinutes: 15, label: "Bolt et v0 : créer des apps avec l'IA" },
         { type: "diagram", label: "Bolt vs v0 : Comparatif", flow: "horizontal", nodes: [
           { label: "v0 (Vercel)", sub: "UI/composants React + Next.js", color: "blue" },
@@ -313,7 +313,7 @@ const content: CourseContent = {
         { type: "prompt-example", prompt: "TypeError: Cannot read properties of undefined (reading 'map')\n  at UserList (UserList.tsx:15)\n  at renderWithHooks (react-dom.js:1234)\n\nVoici le code de UserList.tsx : [code]", result: "L'IA identifie que 'users' est undefined au premier rendu, recommandé un optional chaining (users?.map) ou un état initial vide, et expliqué le cycle de vie React." },
         { type: "tip", content: "Pour les bugs complexes, utilisez Claude Code avec son million de tokens de contexte. Il peut analyser des dizaines de fichiers simultanement pour trouver la cause racine." },
         { type: "key-point", content: "L'IA excelle en debugging parce qu'elle a \"vu\" des millions de bugs similaires dans ses données d'entraînement. Elle reconnait les patterns d'erreur instantanément." },
-        { type: "video", videoId: "n0NlxUyA7FI",
+        { type: "video", videoId: { fr: "Xagh-g3zyuw", en: "n0NlxUyA7FI" },
       videoDurationMinutes: 11, label: "Debugger 10x plus vite avec l'IA" },
         { type: "diagram", label: "Workflow de Debugging IA", flow: "vertical", nodes: [
           { label: "Erreur détectée", sub: "Message d'erreur ou comportement inattendu", color: "pink" },
@@ -371,7 +371,7 @@ const content: CourseContent = {
         { type: "paragraph", content: "Demandez à l'IA de vérifier des aspects spécifiques : sécurité, performance, gestion d'erreurs, edge cases. Ne vous contentez pas d'un 'review ce code'. Plus votre demande est précise, plus la review sera utile." },
         { type: "prompt-example", prompt: "Review ce composant React pour : 1) fuites mémoire potentielles 2) re-renders inutiles 3) accessibilité 4) gestion d'erreurs", result: "L'IA identifie un useEffect sans cleanup, un objet inline recreee à chaque render, un bouton sans aria-label, et une absence de error boundary." },
         { type: "callout", content: "La review IA ne remplace pas la review humaine. Elle la complement en attrapant les problèmes techniques que les humains peuvent manquer par fatigue ou familiarite avec le code." },
-        { type: "video", videoId: "Fi3AJZZregI",
+        { type: "video", videoId: { fr: "Xagh-g3zyuw", en: "Fi3AJZZregI" },
       videoDurationMinutes: 15, label: "Code review automatisée avec l'IA" },
         { type: "diagram", label: "Review IA vs Review Humaine", flow: "horizontal", nodes: [
           { label: "Review IA", sub: "Bugs, sécurité, conventions, performance", color: "blue" },
@@ -428,7 +428,7 @@ const content: CourseContent = {
         { type: "paragraph", content: "Pour les tests end-to-end, l'IA peut générer des scénarios Playwright ou Cypress à partir de descriptions en langage naturel. Decrivez le parcours utilisateur et l'IA génère le test complet avec les selecteurs, les assertions et les attentes." },
         { type: "prompt-example", prompt: "Genere des tests Vitest pour cette fonction de panier d'achat : ajout, suppression, calcul total, codes promo, limites de stock", result: "L'IA génère 15 tests couvrant : ajout simple, ajout multiple, suppression, total correct, code promo validé/invalide/expire, stock insuffisant, panier vide, quantité zéro." },
         { type: "tip", content: "Utilisez l'approche TDD avec l'IA : demandez-lui de générer les tests AVANT d'écrire le code. Puis demandez-lui d'implementer le code qui fait passer les tests." },
-        { type: "video", videoId: "oeli5xkFZJo",
+        { type: "video", videoId: { fr: "oeli5xkFZJo", en: "JhM7PWCv2EY" },
       videoDurationMinutes: 14, label: "Tests automatises avec l'IA" },
         { type: "diagram", label: "Types de Tests Generes par l'IA", flow: "horizontal", nodes: [
           { label: "Tests unitaires", sub: "Fonctions et méthodes isolees", color: "blue" },
@@ -485,7 +485,7 @@ const content: CourseContent = {
         { type: "paragraph", content: "L'IA peut analyser votre code pour identifier les goulots d'etranglement : requêtes N+1, re-renders inutiles, imports lourds, boucles inefficaces. Elle propose des solutions concrètes : memoisation, lazy loading, pagination, indexation." },
         { type: "prompt-example", prompt: "Identifie les problèmes de performance dans ce composant React et optimisé-le", result: "L'IA détecte : un useMemo manquant, un mapping recreee à chaque render, un composant enfant qui re-render inutilement. Elle ajoute useMemo, useCallback et React.memo." },
         { type: "key-point", content: "Le refactoring IA est plus sur quand il est accompagné de tests. Generez les tests d'abord, puis refactorez — les tests garantissent que le comportement ne changé pas." },
-        { type: "video", videoId: "ocMOZpuAMw4",
+        { type: "video", videoId: { fr: "18oAWvzjmTw", en: "ocMOZpuAMw4" },
       videoDurationMinutes: 15, label: "Refactoring et optimisation avec l'IA" },
         { type: "diagram", label: "Processus de Refactoring IA", flow: "vertical", nodes: [
           { label: "Analyse du code", sub: "Détection des code smells et dettes", color: "blue" },
@@ -543,7 +543,7 @@ const content: CourseContent = {
         { type: "paragraph", content: "L'IA peut générer un design system complet : tokens de couleur, typographie, espacements, variantes de composants. shadcn/ui + Tailwind est la combinaison préférée car v0 et Cursor la maitrisent parfaitement." },
         { type: "tip", content: "Commencez par générer un composant de base avec v0, puis peaufinez-le dans Cursor. Cette approche combiné la rapidité de v0 avec la précision de Cursor." },
         { type: "prompt-example", prompt: "Cree un composant DataTable React avec tri par colonne, pagination, recherche, et sélection multiple. Utilise shadcn/ui et Tailwind.", result: "L'IA génère un DataTable complet avec hooks personnalisés, types TypeScript, accessibilité clavier, et responsive design." },
-        { type: "video", videoId: "n0NlxUyA7FI",
+        { type: "video", videoId: { fr: "Xagh-g3zyuw", en: "n0NlxUyA7FI" },
       videoDurationMinutes: 11, label: "Frontend React/Next.js avec l'IA" },
         { type: "diagram", label: "Workflow Frontend IA", flow: "horizontal", nodes: [
           { label: "v0", sub: "Génération rapide de composants", color: "blue" },
@@ -602,7 +602,7 @@ const content: CourseContent = {
         { type: "prompt-example", prompt: "Cree une API REST Node.js/Express pour un système de reservations avec auth JWT, validation Zod, et pagination", result: "L'IA génère : routes CRUD, middleware JWT, schémas Zod, pagination cursor-based, gestion d'erreurs centralisee, et types TypeScript." },
         { type: "callout", content: "Attention : toujours vérifier le code de sécurité généré par l'IA. Les LLM peuvent introduire des vulnérabilités subtiles (injection SQL, XSS, IDOR). Un audit de sécurité humain reste indispensable." },
         { type: "key-point", content: "L'IA est excellente pour le boilerplate backend, mais les décisions d'architecture (microservices vs monolithe, choix de base de données, stratégies de cache) nécessitent toujours une expertise humaine." },
-        { type: "video", videoId: "Fi3AJZZregI",
+        { type: "video", videoId: { fr: "Xagh-g3zyuw", en: "Fi3AJZZregI" },
       videoDurationMinutes: 15, label: "APIs et backend avec l'IA" },
         { type: "diagram", label: "Génération Backend avec l'IA", flow: "horizontal", nodes: [
           { label: "API REST/GraphQL", sub: "Routes, controllers, validation", color: "blue" },
@@ -660,7 +660,7 @@ const content: CourseContent = {
         { type: "paragraph", content: "Joins multiples, sous-requêtes, window functions, CTEs (Common Table Expressions), requêtes recursives — l'IA génère tout cela à partir de descriptions naturelles. Elle expliqué aussi la logique de chaque requête générée." },
         { type: "prompt-example", prompt: "Ecris une requête SQL qui retourné le top 10 des produits les plus vendus par catégorie pour le mois dernier, avec le total des ventes et la variation par rapport au mois précédent", result: "L'IA génère une CTE avec window functions (LAG, ROW_NUMBER, SUM) qui calcule les ventes mensuelles, la variation, et le classement par catégorie." },
         { type: "tip", content: "Utilisez Claude Code pour analyser les plans d'exécution (EXPLAIN ANALYZE) et identifier les index manquants. Il peut optimiser des requêtes lentes en quelques secondes." },
-        { type: "video", videoId: "oeli5xkFZJo",
+        { type: "video", videoId: { fr: "oeli5xkFZJo", en: "JhM7PWCv2EY" },
       videoDurationMinutes: 14, label: "SQL et bases de données avec l'IA" },
         { type: "diagram", label: "Tâches SQL Assistees par l'IA", flow: "horizontal", nodes: [
           { label: "Conception de schéma", sub: "Tables, index, relations", color: "blue" },
@@ -718,7 +718,7 @@ const content: CourseContent = {
         { type: "paragraph", content: "L'IA génère des pipelines GitHub Actions ou GitLab CI complets : lint, tests, build, deploy. Elle configure les environments, les secrets, les conditions de déploiement, et les notifications." },
         { type: "prompt-example", prompt: "Cree un pipeline GitHub Actions pour une app Next.js : lint, tests, build, preview deploy sur Vercel pour les PRs, et production deploy sur merge dans main", result: "L'IA génère un workflow YAML complet avec les jobs parallelises, les caches npm, les secrets Vercel, et les conditions de trigger." },
         { type: "callout", content: "L'IA peut aussi analyser vos logs de déploiement et diagnostiquer les échecs. Collez le log d'erreur de votre pipeline et obtenez un diagnostic précis en secondes." },
-        { type: "video", videoId: "ocMOZpuAMw4",
+        { type: "video", videoId: { fr: "18oAWvzjmTw", en: "ocMOZpuAMw4" },
       videoDurationMinutes: 15, label: "DevOps et CI/CD avec l'IA" },
         { type: "diagram", label: "Pipeline CI/CD Genere par l'IA", flow: "horizontal", nodes: [
           { label: "Lint & Format", sub: "ESLint, Prettier", color: "blue" },
@@ -776,7 +776,7 @@ const content: CourseContent = {
         { type: "paragraph", content: "Demandez a Claude Code ou Cursor d'auditer votre code pour les vulnérabilités OWASP Top 10. L'IA analyse les inputs non validés, les requêtes parametrables, les headers de sécurité, et les secrets exposes." },
         { type: "key-point", content: "L'IA génère parfois du code avec des vulnérabilités. Ne faites JAMAIS confiance aveuglement au code de sécurité généré par l'IA. Un audit humain expert reste indispensable pour les systèmes critiques." },
         { type: "tip", content: "Integrez des outils SAST (Static Application Security Testing) comme Snyk ou SonarQube dans votre CI/CD pour une détection automatique continue." },
-        { type: "video", videoId: "n0NlxUyA7FI",
+        { type: "video", videoId: { fr: "Xagh-g3zyuw", en: "n0NlxUyA7FI" },
       videoDurationMinutes: 11, label: "Sécurité du code avec l'IA" },
         { type: "diagram", label: "OWASP Top 10 — Vulnerabilites Clés", flow: "vertical", nodes: [
           { label: "Injection (SQL, XSS)", sub: "Inputs non sanitizes", color: "pink" },
@@ -834,7 +834,7 @@ const content: CourseContent = {
         { type: "paragraph", content: "Integrez la génération de documentation dans votre workflow : après chaque modification, demandez à l'IA de mettre à jour la doc correspondante. Certains outils peuvent détecter automatiquement les changements de code et mettre à jour la documentation." },
         { type: "prompt-example", prompt: "Genere la documentation TSDoc pour toutes les fonctions exportées de ce module, avec exemples d'usage", result: "L'IA génère des blocs TSDoc complets pour chaque fonction : description, @param, @returns, @throws, @example — avec des exemples réalistes." },
         { type: "tip", content: "Demandez à l'IA de générer la documentation comme si elle expliquait a un développeur junior qui découvre le projet. Cela produit des docs plus claires et plus utiles." },
-        { type: "video", videoId: "Fi3AJZZregI",
+        { type: "video", videoId: { fr: "Xagh-g3zyuw", en: "Fi3AJZZregI" },
       videoDurationMinutes: 15, label: "Documentation automatique avec l'IA" },
         { type: "diagram", label: "Types de Documentation IA", flow: "horizontal", nodes: [
           { label: "Code (JSDoc)", sub: "Fonctions, classes, types", color: "blue" },
@@ -894,7 +894,7 @@ const content: CourseContent = {
         { type: "subheading", content: "Phase 3 : Développement Iteratif" },
         { type: "paragraph", content: "Passez dans Cursor ou Claude Code pour le développement réel. Implementez feature par feature, avec l'IA comme copilote permanent. Tests et reviews à chaque étape." },
         { type: "callout", content: "Pro tip : gardez un fichier ARCHITECTURE.md a la racine du projet. L'IA le lira à chaque session et generera du code cohérent avec votre vision globale." },
-        { type: "video", videoId: "oeli5xkFZJo",
+        { type: "video", videoId: { fr: "oeli5xkFZJo", en: "JhM7PWCv2EY" },
       videoDurationMinutes: 14, label: "Projet full-stack avec l'IA de A à Z" },
         { type: "diagram", label: "Phases d'un Projet Full-Stack IA", flow: "vertical", nodes: [
           { label: "Phase 1 — Architecture", sub: "Claude/ChatGPT : stack, schéma, API", color: "blue" },
@@ -954,7 +954,7 @@ const content: CourseContent = {
         { type: "paragraph", content: "L'IA est le partenaire de pair programming idéal : disponible 24/7, patient, et connaissant une immense base de code. Mais attention a ne pas devenir dépendant — chaque membre de l'équipe doit comprendre le code génère." },
         { type: "key-point", content: "Règle d'or : si un développeur ne peut pas expliquer le code généré par l'IA, ce code ne devrait pas être merge. La compréhension humaine reste le garde-fou essentiel." },
         { type: "tip", content: "Organisez des sessions de partage 'IA tips' hebdomadaires ou chaque membre de l'équipe partage une technique ou un prompt utile." },
-        { type: "video", videoId: "ocMOZpuAMw4",
+        { type: "video", videoId: { fr: "18oAWvzjmTw", en: "ocMOZpuAMw4" },
       videoDurationMinutes: 15, label: "Travailler en équipe avec l'IA" },
         { type: "diagram", label: "IA Stack d'Équipe", flow: "horizontal", nodes: [
           { label: "IDE IA", sub: "Cursor ou VS Code + Copilot", color: "blue" },
@@ -1017,7 +1017,7 @@ const content: CourseContent = {
         { type: "paragraph", content: "GitHub Actions pour le CI/CD, Copilot Review pour les PRs, et des scripts custom avec Claude API pour les tâches répétitives spécifiques à votre projet." },
         { type: "callout", content: "Commencez simple : Cursor + Claude Code suffisent pour 90% des tâches. Ajoutez des outils au fur et à mesure que vous identifiez des besoins spécifiques." },
         { type: "key-point", content: "Le workflow idéal évolue avec le temps. Revoyez-le chaque mois : quels outils utilisez-vous vraiment ? Lesquels sont superflus ? Quels nouveaux outils valent la peine d'être testés ?" },
-        { type: "video", videoId: "n0NlxUyA7FI",
+        { type: "video", videoId: { fr: "Xagh-g3zyuw", en: "n0NlxUyA7FI" },
       videoDurationMinutes: 11, label: "Construire son workflow de dev IA" },
         { type: "diagram", label: "Workflow de Dev IA Complet", flow: "vertical", nodes: [
           { label: "IDE — Cursor / VS Code + Copilot", sub: "Développement quotidien", color: "blue" },

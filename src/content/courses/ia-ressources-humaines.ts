@@ -135,7 +135,7 @@ const content: CourseContent = {
         { type: "subheading", content: "Analyse Vidéo des Entretiens" },
         { type: "paragraph", content: "Attention : l'analyse video des entretiens par l'IA (expressions faciales, ton de voix) est controversee et regulee. L'AI Act européen classe les systèmes de reconnaissance d'émotions comme a haut risque. Privilegiez les outils qui analysent le contenu des réponses, pas le non-verbal." },
         { type: "callout", content: "Alerte ethique : l'IA de screening doit être auditee régulièrement pour les biais. Un système entraîné sur des données historiques peut discriminer involontairement certains profils (age, genre, origine). L'audit est une obligation légale sous l'AI Act." },
-        { type: "video", videoId: "oeli5xkFZJo",
+        { type: "video", videoId: { fr: "oeli5xkFZJo", en: "JhM7PWCv2EY" },
       videoDurationMinutes: 14, label: "Screening et évaluation IA des candidats" },
         { type: "key-point", content: "L'IA de screening est un outil d'aide à la décision, jamais un decideur. Le recruteur doit toujours valider les recommandations de l'IA et garder un oeil critique sur les résultats." },
         { type: "diagram", label: "Le Pipeline de Screening IA", flow: "horizontal", nodes: [
@@ -310,7 +310,7 @@ const content: CourseContent = {
         { type: "subheading", content: "Actions de Retention Personnalisees" },
         { type: "paragraph", content: "L'IA ne se contente pas de prédire — elle recommandé des actions : entretien avec le manager, revue salariale, changement de projet, formation, flexibilité horaire. Chaque recommandation est adaptee au profil et aux motivations de l'individu." },
         { type: "callout", content: "Attention à l'ethique : la prédiction du turnover ne doit jamais être utilisée contre les collaborateurs (refuser une promotion parce qu'ils \"risquent de partir\"). L'objectif est d'améliorer leur expérience, pas de les surveiller." },
-        { type: "video", videoId: "oeli5xkFZJo",
+        { type: "video", videoId: { fr: "oeli5xkFZJo", en: "JhM7PWCv2EY" },
       videoDurationMinutes: 14, label: "Engagement et retention avec l'IA" },
         { type: "diagram", label: "Le Cycle de Retention IA", flow: "cycle", nodes: [
           { label: "Mesurer", sub: "Pulse surveys + analyse de sentiment", color: "blue" },
@@ -486,7 +486,7 @@ const content: CourseContent = {
         { type: "heading", content: "Bonnes Pratiques Juridiques" },
         { type: "paragraph", content: "Informer les candidats et employés de l'utilisation de l'IA. Documenter les décisions. Maintenir une supervision humaine pour toute décision significative. Auditer régulièrement les algorithmes. Designez un referent IA au sein de l'équipe juridique." },
         { type: "callout", content: "Sanctions RGPD : jusqu'à 20 millions d'euros ou 4% du CA mondial. Sanctions AI Act : jusqu'à 35 millions d'euros ou 7% du CA mondial. Le coût de la conformite est infiniment inférieur au coût de la non-conformite." },
-        { type: "video", videoId: "oeli5xkFZJo",
+        { type: "video", videoId: { fr: "oeli5xkFZJo", en: "JhM7PWCv2EY" },
       videoDurationMinutes: 14, label: "Droit du travail et IA en RH" },
         { type: "diagram", label: "Le Cadre Juridique de l'IA en RH", flow: "horizontal", nodes: [
           { label: "RGPD", sub: "Protection des données personnelles", color: "blue" },
