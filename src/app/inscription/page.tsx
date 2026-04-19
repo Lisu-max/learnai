@@ -8,10 +8,13 @@ import { Brain, Loader2, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { PasswordInput } from "@/components/ui/password-input";
 import { useTranslation } from "@/lib/i18n/context";
+import { InAppBrowserWarning } from "@/components/auth/in-app-browser-warning";
+import { useInAppBrowser } from "@/hooks/useInAppBrowser";
 
 export default function InscriptionPage() {
   const router = useRouter();
   const { t } = useTranslation();
+  const { isInApp } = useInAppBrowser();
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
 
@@ -111,10 +114,13 @@ export default function InscriptionPage() {
             </p>
           </div>
 
+          <InAppBrowserWarning />
+
           <div className="rounded-xl border border-border/50 bg-card/50 p-6 backdrop-blur-sm">
             <button
               onClick={handleGoogle}
-              className="flex w-full items-center justify-center gap-3 rounded-lg border border-border/50 bg-background px-4 py-3 text-sm font-medium transition-colors hover:bg-accent"
+              disabled={isInApp}
+              className="flex w-full items-center justify-center gap-3 rounded-lg border border-border/50 bg-background px-4 py-3 text-sm font-medium transition-colors hover:bg-accent disabled:cursor-not-allowed disabled:opacity-60"
             >
               <svg className="h-5 w-5" viewBox="0 0 24 24">
                 <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4" />

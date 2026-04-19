@@ -9,11 +9,14 @@ import { Brain, Loader2, LogIn, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { PasswordInput } from "@/components/ui/password-input";
 import { useTranslation } from "@/lib/i18n/context";
+import { InAppBrowserWarning } from "@/components/auth/in-app-browser-warning";
+import { useInAppBrowser } from "@/hooks/useInAppBrowser";
 
 function ConnexionForm() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const { t } = useTranslation();
+  const { isInApp } = useInAppBrowser();
   const justRegistered = searchParams.get("verified") === "check";
   const authError = searchParams.get("error") === "auth";
   const rawNext = searchParams.get("next");
@@ -128,6 +131,8 @@ function ConnexionForm() {
         <p className="mt-2 text-sm text-muted-foreground">{t.auth.loginSubtitle}</p>
       </div>
 
+      <InAppBrowserWarning />
+
       {justRegistered && (
         <div className="mb-6 rounded-lg bg-emerald-500/10 px-4 py-3 text-center text-sm text-emerald-400">
           {t.auth.accountCreated}
@@ -226,7 +231,7 @@ function ConnexionForm() {
 
         <button
           onClick={handleGoogle}
-          disabled={anyLoading}
+          disabled={anyLoading || isInApp}
           className="flex w-full items-center justify-center gap-3 rounded-lg border border-border/50 bg-background px-4 py-3 text-sm font-medium transition-colors hover:bg-accent disabled:cursor-not-allowed disabled:opacity-60"
         >
           {googleLoading ? (
